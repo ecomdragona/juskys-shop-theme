@@ -1,0 +1,64 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "96fe3083-5173-4126-a0d9-de2835112d1b": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20174418968879__96fe3083-5173-4126-a0d9-de2835112d1b-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<h1>Hoppla, die Seite wurde nicht gefunden...</h1>"
+          }
+        },
+        "fe1c6d71-8a30-441a-93ad-6ba8b9c55997": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p><a href=\"/\" title=\"/\">Klicke hier, um weiter einzukaufen →</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--20174418968879__96fe3083-5173-4126-a0d9-de2835112d1b-text-1",
+        "fe1c6d71-8a30-441a-93ad-6ba8b9c55997"
+      ],
+      "settings": {
+        "spacings_desktop_top": 30,
+        "spacings_desktop_bottom": 70,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 50,
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "main": {
+      "type": "main-404",
+      "disabled": true,
+      "settings": {}
+    },
+    "6263405c-deb1-40b7-ae32-4e430ba1ab1c": {
+      "type": "featured-collection-slider_new",
+      "settings": {
+        "title": "",
+        "collection": "frontpage",
+        "per_row": 4,
+        "per_row_mobile": 2
+      }
+    }
+  },
+  "order": [
+    "96fe3083-5173-4126-a0d9-de2835112d1b",
+    "main",
+    "6263405c-deb1-40b7-ae32-4e430ba1ab1c"
+  ]
+}

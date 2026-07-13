@@ -1,0 +1,826 @@
+{%- liquid
+  assign current_filter_size = 0
+
+  for filter in collection.filters
+    assign current_filter_size = current_filter_size | plus: filter.active_values.size
+  endfor
+-%}
+<div
+  class="collection-content"
+  data-section-id="{{ section.id }}"
+  data-section-type="collection-grid"
+>
+  <div id="CollectionAjaxContent">
+    <div class="mn_collection">
+      <div class="page-width">
+      {%- render 'breadcrumbs' -%}
+      </div>
+      <div class="grid">
+        <div class="page-width">
+        <div class="grid__item medium-up--one-fifth grid__item--sidebar">
+          {%- render 'collection-grid-filters',
+            collection: collection,
+            enable_sidebar: section.settings.enable_sidebar,
+            filter_style: section.settings.filter_style,
+            collapsed: section.settings.collapsed,
+            enable_color_swatches: section.settings.enable_color_swatches
+          -%}
+        </div>
+        </div>
+        <div class="grid__item medium-up--four-fifths grid__item--content">
+          {%- liquid
+            for block in section.blocks
+              case block.type
+              when 'product_grid'
+                assign paginate_by = block.settings.per_row | times: block.settings.rows_per_page
+              endcase
+            endfor
+          -%}
+          {%- paginate collection.products by paginate_by -%}
+          {%- for block in section.blocks -%}
+            <div {{ block.shopify_attributes }} {%- if block.type == 'product-grid' -%}data-scroll-to{%- endif -%}>
+              {%- case block.type -%}
+              {%- when 'collection_usp' -%}
+                 <div class="page-width">
+               {% render 'ups_section_snip' , block:block ,section:section%}
+                 </div>
+              {%- when 'collection_description' -%}
+                {%- if collection.description != blank and current_filter_size == 0 -%}
+                   <div class="page-width">
+                  {% comment %} START Customization by Better Sell Online GmbH (BSO) - add id="mehr" for anchor {% endcomment %}
+                  <div id="mehr" class="rte collection__description">
+                    {{ collection.description }}
+                  </div>
+                  {% comment %} END Customization by Better Sell Online GmbH (BSO) - add id="mehr" for anchor {% endcomment %}
+                   </div>
+                {%- endif -%}
+              {%- when 'subcollections' -%}
+                {%- if paginate.current_page == 1 and current_filter_size == 0 -%}
+                   <div class="page-width">
+                  {%- render 'subcollections', per_row: block.settings.subcollections_per_row -%}
+                   </div>
+                {%- endif -%}
+              {%- when 'product_grid' -%}
+              
+                <div data-scroll-to>
+                  {% render 'collection-grid',
+                    collection: collection,
+                    items: collection.products,
+                    enable_sidebar: section.settings.enable_sidebar,
+                    filter_style: section.settings.filter_style,
+                    enable_sort: section.settings.enable_sort,
+                    enable_collection_count: block.settings.enable_collection_count,
+                    per_row: block.settings.per_row,
+                    mobile_flush_grid: block.settings.mobile_flush_grid,
+                    quick_shop_enable: settings.quick_shop_enable
+                  %}
+                  {%- if paginate.pages > 1 -%}
+                    {%- render 'pagination', paginate: paginate -%}
+                  {%- endif -%}
+                </div>
+                 
+              {%- endcase -%}
+            </div>
+          {%- endfor -%}
+
+          {%- endpaginate -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{%- if section.settings.enable_sidebar == false or section.settings.filter_style == 'drawer' or collection.filters.size == 0 -%}
+{% comment %}
+  Override grid styles if sidebar is disabled
+{% endcomment %}
+{% style %}
+  .collection-content .grid__item--sidebar { width: 0; padding:0; }
+  .collection-content .grid__item--content { width: 100%; }
+  .grid__item--sidebar { position: static; overflow: hidden; }
+{% endstyle %}
+{%- endif -%}
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "CollectionPage",
+  {% if collection.description != blank %}
+    "description": {{ collection.description | strip_html | json }},
+  {% endif %}
+  {% if page_image %}
+    {% assign image_size = page_image.width | append: 'x' %}
+    "image": {
+      "@type": "ImageObject",
+      "height": {{ page_image.height | json }},
+      "url": {{ page_image | img_url: image_size | prepend: "https:" | json }},
+      "width": {{ page_image.width | json }}
+    },
+  {% endif %}
+  "name": {{ collection.title | json }}
+}
+</script>
+
+
+{% comment %} ondevi - Viewed Collection Script - START {% endcomment %}
+<script>
+var _learnq = _learnq || [];
+{% if collection %}
+var products = [{% for product in collection.products %}{ 'id': '{{ product.id }}', 'name': '{{ product.title }}', 'price': {{ product.price | money_without_currency | replace: ',', '.' }} }{% unless forloop.last %}, {% endunless %}{% endfor %}];
+var klav_variants = {};{% for product in collection.products %}{% if product.variants and product.variants.size > 0 %}{% for variant in product.variants %}klav_variants["{{ variant.id }}"] = {"product_id": "{{ product.id }}",{% for option in product.options %}{% unless forloop.first %},{% endunless %}"option{{ forloop.index }}": "{{ variant.options[forloop.index0] }}"{% endfor %}};{% endfor %}{% endif %}{% endfor %}
+var klav_products = {};{% for product in collection.products %}klav_products["{{ product.id }}"] = {"Name": {{ product.title | json }},"Categories": {{ product.collections | map: 'title' | json }},"ImageURL": "https:{{ product.featured_image.src | img_url: 'grande' }}","URL": "{{ shop.secure_url }}{{ product.url }}","Brand": {{ product.vendor | json }},"Price": {{ product.price | money | json }},"CompareAtPrice": {{ product.compare_at_price_max | money | json }}};{% endfor %}
+var viewedCollection = {{ collection.title | json }};
+var viewedCollectionId = {{ collection.id }};
+{% endif %}
+_learnq.push(['track', 'Viewed Collection', {  
+  '$collection_id': viewedCollectionId,
+  '$products_viewed': products,  
+  '$collection_name': viewedCollection}]);
+
+var klav_classname = document.getElementsByClassName("usf-swym-item");
+
+var klav_addToCart = function(event) {
+    // Access the 'data-variant-id' attribute from the clicked element
+    var variantID = event.currentTarget.getAttribute('data-variant-id');
+    var productID = event.currentTarget.getAttribute('data-product-id');
+
+    var item = {
+      Name: klav_products[productID]["Name"],
+      ProductID: productID,
+      Categories: klav_products[productID]["Categories"],
+      ImageURL: klav_products[productID]["ImageURL"],
+      URL: klav_products[productID]["URL"],
+      Brand: klav_products[productID]["Brand"],
+      Price: klav_products[productID]["Price"],
+      CompareAtPrice: klav_products[productID]["CompareAtPrice"],
+      VariantID: variantID
+    };
+
+    if (klav_variants[variantID]) {
+      var variantAttributes = klav_variants[variantID];
+
+      // Add each variant attribute to item
+      for (var key in variantAttributes) {
+        item[key] = variantAttributes[key];
+      }
+    }
+
+    _learnq.push(['track', 'Added to Cart', item]);
+};
+
+function attachListeners() {
+    var klav_classname = document.getElementsByClassName("usf-swym-item");
+    for (var i = 0; i < klav_classname.length; i++) {
+        // To ensure the event listener isn't attached multiple times, we'll mark the element
+        if (!klav_classname[i].classList.contains('listener-attached')) {
+            klav_classname[i].addEventListener('click', klav_addToCart, false);
+            klav_classname[i].classList.add('listener-attached');  // Mark element as having the listener attached
+        }
+    }
+}
+
+var klav_observer = new MutationObserver(function(mutations) {
+    attachListeners();
+});
+
+klav_observer.observe(document, { childList: true, subtree: true });
+attachListeners();
+</script>
+{% comment %} ondevi - Viewed Collection Script - END{% endcomment %}
+
+{% schema %}
+{
+  "name": "t:sections.main-collection.name",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.main-collection.settings.header_filtering_and_sorting"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sidebar",
+      "label": "t:sections.main-collection.settings.enable_sidebar.label",
+      "default": true,
+      "info": "t:sections.main-collection.settings.enable_sidebar.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "collapsed",
+      "label": "t:sections.main-collection.settings.collapsed.label",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "filter_style",
+      "label": "t:sections.main-collection.settings.filter_style.label",
+      "default": "sidebar",
+      "options": [
+        {
+          "value": "sidebar",
+          "label": "t:sections.main-collection.settings.filter_style.options.sidebar.label"
+        },
+        {
+          "value": "drawer",
+          "label": "t:sections.main-collection.settings.filter_style.options.drawer.label"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_color_swatches",
+      "label": "t:sections.main-collection.settings.enable_color_swatches.label",
+      "info": "t:sections.main-collection.settings.enable_color_swatches.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sort",
+      "label": "t:sections.main-collection.settings.enable_sort.label",
+      "default": true
+    },
+    {
+        "type": "color",
+        "id":"bg_color",
+        "label":"Background Color"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "t:common.text_with_icons.settings.title.label"
+      },
+      {
+        "type": "select",
+        "id": "align_text",
+        "label": "t:common.text_with_icons.settings.align_text.label",
+        "default": "center",
+        "options": [
+          {
+            "value": "left",
+            "label": "t:common.text_with_icons.settings.align_text.options.left.label"
+          },
+          {
+            "value": "center",
+            "label": "t:common.text_with_icons.settings.align_text.options.center.label"
+          }
+        ]
+      },
+      {
+        "type": "range",
+        "id": "desktop_columns_per_row",
+        "label": "t:common.text_with_icons.settings.desktop_columns_per_row.label",
+        "default": 3,
+        "min": 2,
+        "max": 4,
+        "step": 1
+      },
+      {
+        "type": "color",
+        "id": "icon_color",
+        "label": "t:common.text_with_icons.settings.icon_color.label",
+        "default": "#000"
+      },
+      {
+        "type": "checkbox",
+        "id": "divider",
+        "label": "t:common.text_with_icons.settings.divider.label",
+        "default": false
+      },
+      {
+        "type": "header",
+        "content": "Desktop"
+      },
+      {
+        "type": "range",
+        "id":"title_size",
+        "label":"Title Font-Size",
+        "min":8,
+        "max":50,
+        "step":1,
+        "default":16
+      },
+      {
+        "type": "range",
+        "id":"subtitle_size",
+        "label":"Sub-Title Font-Size",
+        "min":8,
+        "max":50,
+        "step":1,
+        "default":16
+      },
+      {
+        "type": "header",
+        "content": "Mobile"
+      },
+      {
+        "type": "range",
+        "id":"title_size_m",
+        "label":"Title Font-Size",
+        "min":8,
+        "max":50,
+        "step":1,
+        "default":16
+      },
+      {
+        "type": "range",
+        "id":"subtitle_size_m",
+        "label":"Sub-Title Font-Size",
+        "min":8,
+        "max":50,
+        "step":1,
+        "default":16
+      },
+      {
+        "type": "checkbox",
+        "id": "hide_subtext",
+        "label":"Hide Sub-Title On Mobile ?"
+      }
+  ],
+  "blocks": [
+    {
+      "type": "collection_description",
+      "name": "t:sections.main-collection.blocks.collection_description.name",
+      "limit": 1
+    },
+    {
+      "type": "product_grid",
+      "name": "t:sections.main-collection.blocks.products.name",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "enable_collection_count",
+          "label": "t:sections.main-collection.blocks.products.settings.enable_collection_count.label",
+          "default": true
+        },
+        {
+          "type": "range",
+          "id": "per_row",
+          "label": "t:sections.main-collection.blocks.products.settings.per_row.label",
+          "default": 4,
+          "min": 2,
+          "max": 5,
+          "step": 1
+        },
+        {
+          "type": "range",
+          "id": "rows_per_page",
+          "label": "t:sections.main-collection.blocks.products.settings.rows_per_page.label",
+          "default": 7,
+          "min": 3,
+          "max": 20,
+          "step": 1
+        },
+        {
+          "type": "checkbox",
+          "id": "mobile_flush_grid",
+          "label": "t:sections.main-collection.blocks.products.settings.mobile_flush_grid.label",
+          "default": false
+        }
+      ],
+      "limit": 1
+    },
+    {
+      "type": "subcollections",
+      "name": "t:sections.main-collection.blocks.subcollections.name",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "t:sections.main-collection.blocks.subcollections.settings.content"
+        },
+        {
+          "type": "range",
+          "id": "subcollections_per_row",
+          "label": "t:sections.main-collection.blocks.subcollections.settings.subcollections_per_row.label",
+          "default": 5,
+          "min": 2,
+          "max": 5,
+          "step": 1
+        }
+      ],
+      "limit": 1
+    },
+    {
+      "type": "review_io_spotlight",
+      "name":"Spotlight Review Mobile"
+    },
+    {
+      "type": "spotlight_review_desktop",
+      "name":"Spotlight Review Desktop",
+      "limit": 1
+    },
+  {
+      "type": "collection_usp",
+      "name": "USP collection",
+      "limit": 1,
+      "settings": [
+          {
+            "type": "header",
+            "content": "USP 1"
+          },
+          {
+              "type": "liquid",
+              "id": "icon_svg",
+              "label": "Icon SVG"
+          },
+          {
+              "type": "image_picker",
+              "id": "icon_img",
+              "label": "Icon"
+          },
+          {
+              "type": "select",
+              "id": "icon",
+              "label": "t:common.text_with_icons.blocks.column.settings.icon.label",
+              "default": "chat",
+              "options": [
+                  {
+                      "value": "none",
+                      "label": "None"
+                  },
+                  {
+                      "value": "bills",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.bills.label"
+                  },
+                  {
+                      "value": "calendar",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.calendar.label"
+                  },
+                  {
+                      "value": "cart",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.cart.label"
+                  },
+                  {
+                      "value": "charity",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.charity.label"
+                  },
+                  {
+                      "value": "chat",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.chat.label"
+                  },
+                  {
+                      "value": "envelope",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.envelope.label"
+                  },
+                  {
+                      "value": "gears",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.gears.label"
+                  },
+                  {
+                      "value": "gift",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.gift.label"
+                  },
+                  {
+                      "value": "globe",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.globe.label"
+                  },
+                  {
+                      "value": "package",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.package.label"
+                  },
+                  {
+                      "value": "phone",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.phone.label"
+                  },
+                  {
+                      "value": "plant",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.plant.label"
+                  },
+                  {
+                      "value": "recycle",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.recycle.label"
+                  },
+                  {
+                      "value": "ribbon",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.ribbon.label"
+                  },
+                  {
+                      "value": "sales-tag",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.sales-tag.label"
+                  },
+                  {
+                      "value": "shield",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.shield.label"
+                  },
+                  {
+                      "value": "stopwatch",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.stopwatch.label"
+                  },
+                  {
+                      "value": "store",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.store.label"
+                  },
+                  {
+                      "value": "thumbs-up",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.thumbs-up.label"
+                  },
+                  {
+                      "value": "trophy",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.trophy.label"
+                  },
+                  {
+                      "value": "truck",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.truck.label"
+                  },
+                  {
+                      "value": "wallet",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.wallet.label"
+                  }
+              ]
+          },
+          {
+              "type": "richtext",
+              "id": "title",
+              "label": "t:common.text_with_icons.blocks.column.settings.title.label"
+          },
+          {
+              "type": "richtext",
+              "id": "subtitle",
+              "label": "Sub-Title",
+              "default": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products.</p>"
+          },
+          {
+              "type": "text",
+              "id": "link_text",
+              "label": "Link Text",
+              "default": "mehr erfahren"
+          },
+          {
+              "type": "url",
+              "id": "link",
+              "label": "Link"
+          },
+          {
+            "type": "header",
+            "content": "USP 2"
+          },
+          {
+              "type": "liquid",
+              "id": "icon_svg_one",
+              "label": "Icon SVG"
+          },
+          {
+              "type": "image_picker",
+              "id": "icon_img_one",
+              "label": "Icon"
+          },
+          {
+              "type": "select",
+              "id": "icon_one",
+              "label": "t:common.text_with_icons.blocks.column.settings.icon.label",
+              "default": "chat",
+              "options": [
+                  {
+                      "value": "none",
+                      "label": "None"
+                  },
+                  {
+                      "value": "bills",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.bills.label"
+                  },
+                  {
+                      "value": "calendar",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.calendar.label"
+                  },
+                  {
+                      "value": "cart",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.cart.label"
+                  },
+                  {
+                      "value": "charity",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.charity.label"
+                  },
+                  {
+                      "value": "chat",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.chat.label"
+                  },
+                  {
+                      "value": "envelope",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.envelope.label"
+                  },
+                  {
+                      "value": "gears",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.gears.label"
+                  },
+                  {
+                      "value": "gift",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.gift.label"
+                  },
+                  {
+                      "value": "globe",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.globe.label"
+                  },
+                  {
+                      "value": "package",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.package.label"
+                  },
+                  {
+                      "value": "phone",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.phone.label"
+                  },
+                  {
+                      "value": "plant",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.plant.label"
+                  },
+                  {
+                      "value": "recycle",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.recycle.label"
+                  },
+                  {
+                      "value": "ribbon",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.ribbon.label"
+                  },
+                  {
+                      "value": "sales-tag",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.sales-tag.label"
+                  },
+                  {
+                      "value": "shield",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.shield.label"
+                  },
+                  {
+                      "value": "stopwatch",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.stopwatch.label"
+                  },
+                  {
+                      "value": "store",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.store.label"
+                  },
+                  {
+                      "value": "thumbs-up",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.thumbs-up.label"
+                  },
+                  {
+                      "value": "trophy",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.trophy.label"
+                  },
+                  {
+                      "value": "truck",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.truck.label"
+                  },
+                  {
+                      "value": "wallet",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.wallet.label"
+                  }
+              ]
+          },
+          {
+              "type": "richtext",
+              "id": "title_one",
+              "label": "t:common.text_with_icons.blocks.column.settings.title.label"
+          },
+          {
+              "type": "richtext",
+              "id": "subtitle_one",
+              "label": "Sub-Title",
+              "default": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products.</p>"
+          },
+          {
+              "type": "text",
+              "id": "link_text_one",
+              "label": "Link Text",
+              "default": "mehr erfahren"
+          },
+          {
+              "type": "url",
+              "id": "link_one",
+              "label": "Link"
+          },
+          {
+            "type": "header",
+            "content": "USP 3"
+          },
+          {
+              "type": "liquid",
+              "id": "icon_svg_two",
+              "label": "Icon SVG"
+          },
+          {
+              "type": "image_picker",
+              "id": "icon_img_two",
+              "label": "Icon"
+          },
+          {
+              "type": "select",
+              "id": "icon_two",
+              "label": "t:common.text_with_icons.blocks.column.settings.icon.label",
+              "default": "chat",
+              "options": [
+                  {
+                      "value": "none",
+                      "label": "None"
+                  },
+                  {
+                      "value": "bills",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.bills.label"
+                  },
+                  {
+                      "value": "calendar",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.calendar.label"
+                  },
+                  {
+                      "value": "cart",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.cart.label"
+                  },
+                  {
+                      "value": "charity",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.charity.label"
+                  },
+                  {
+                      "value": "chat",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.chat.label"
+                  },
+                  {
+                      "value": "envelope",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.envelope.label"
+                  },
+                  {
+                      "value": "gears",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.gears.label"
+                  },
+                  {
+                      "value": "gift",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.gift.label"
+                  },
+                  {
+                      "value": "globe",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.globe.label"
+                  },
+                  {
+                      "value": "package",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.package.label"
+                  },
+                  {
+                      "value": "phone",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.phone.label"
+                  },
+                  {
+                      "value": "plant",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.plant.label"
+                  },
+                  {
+                      "value": "recycle",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.recycle.label"
+                  },
+                  {
+                      "value": "ribbon",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.ribbon.label"
+                  },
+                  {
+                      "value": "sales-tag",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.sales-tag.label"
+                  },
+                  {
+                      "value": "shield",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.shield.label"
+                  },
+                  {
+                      "value": "stopwatch",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.stopwatch.label"
+                  },
+                  {
+                      "value": "store",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.store.label"
+                  },
+                  {
+                      "value": "thumbs-up",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.thumbs-up.label"
+                  },
+                  {
+                      "value": "trophy",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.trophy.label"
+                  },
+                  {
+                      "value": "truck",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.truck.label"
+                  },
+                  {
+                      "value": "wallet",
+                      "label": "t:common.text_with_icons.blocks.column.settings.icon.options.wallet.label"
+                  }
+              ]
+          },
+          {
+              "type": "richtext",
+              "id": "title_two",
+              "label": "t:common.text_with_icons.blocks.column.settings.title.label"
+          },
+          {
+              "type": "richtext",
+              "id": "subtitle_two",
+              "label": "Sub-Title",
+              "default": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products.</p>"
+          },
+          {
+              "type": "text",
+              "id": "link_text_two",
+              "label": "Link Text",
+              "default": "mehr erfahren"
+          },
+          {
+              "type": "url",
+              "id": "link_two",
+              "label": "Link"
+          }
+      ],
+    }
+  ]
+}
+{% endschema %}

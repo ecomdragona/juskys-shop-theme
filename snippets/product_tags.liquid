@@ -1,0 +1,108 @@
+{% if request.page_type == 'product' %}
+  <style>
+    @media only screen and (max-width:768px){
+      .grid-product__tags{
+        top: unset;
+      }
+    }
+  </style>
+{% endif %}
+
+<style>
+  .grid-product__tag--new{
+    background-color: {{ settings.color_label_new }};
+    color: {{ settings.label_color_text }};
+  }
+
+  .grid-product__tag--bundle{
+    background-color: {{ settings.color_label_bundle }};
+    color: {{ settings.label_color_text }};
+  }
+  .grid-product__tag--s{
+    background-color: {{ settings.color_label_sale }};
+    color: {{ settings.label_color_text }};
+  }
+  .grid-product__tag-percentage-no-border {
+    border-radius: unset;
+  }
+</style>
+
+{% liquid
+  unless used_variant != blank
+    assign used_variant = product
+    if used_variant.variants
+      assign used_variant = product.selected_or_first_available_variant
+    endif
+  endunless
+%}
+
+{% assign product_tags = product.tags | join: ',' %}
+{% assign has_custom_label = false %}
+<div class="grid-product__tags">
+  {% if template.name != 'product' %}
+    {% if used_variant.compare_at_price %}
+      {% if used_variant.compare_at_price > 0 %}
+        {%- capture saved_amount -%}{{ used_variant.compare_at_price | minus: used_variant.price | times: 100.0 | divided_by: used_variant.compare_at_price | round | prepend: '-' }}%{%- endcapture -%}
+
+        {% if on_sale %}
+          <div class="tag-color grid-product__tag-percentage-no-border percentage-container percentage-text-grid-item">
+            {{ saved_amount }}
+          </div>
+        {% endif %}
+      {% endif %}
+    {% endif %}
+  {% endif %}
+  {% if product_tags contains '_label_' %}
+    {% assign has_custom_label = true %}
+  {% endif %}
+  {% assign has_sale_label = false %}
+  {% if product_tags contains '_label_sale' %}
+    {% assign has_sale_label = true %}
+  {% endif %}
+  {% for tag in product.tags %}
+    {% if tag contains '_label_' %}
+      {% if has_sale_label and tag contains '_label_sale' %}
+        {% comment %}
+        {% if used_variant.compare_at_price > used_variant.price %}
+          <div class="grid-product__tag_c grid-product__tag--s">
+            {{ 'Sale' | capitalize }}
+          </div>
+        {% endif %}
+        {% endcomment %}
+        <div class="grid-product__tag_c grid-product__tag--s" style="{% unless used_variant.compare_at_price > used_variant.price %} display:none;{% endunless %}">
+            {{ 'Sale' | capitalize }}
+          </div>
+        {% continue %}
+      {% elsif tag contains '_label_neu' %}
+        {% if has_sale_label == true %}
+          {% continue %}
+        {% else %}
+          <div class="grid-product__tag_c grid-product__tag--new">
+            {{ 'Neu' | capitalize }}
+          </div>
+          {% continue %}
+        {% endif %}
+      {% endif %}
+
+      {% assign custom_label = tag | replace: '_label_', '' %}
+      <div class="grid-product__tag_c {% if custom_label contains 'bundle' %} grid-product__tag--bundle {% else %}  grid-product__tag--custom {% endif %}">
+        {{ custom_label | capitalize }}
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+
+{%- unless has_custom_label -%}
+  {%- unless product.available -%}
+    <div class="grid-product__tag grid-product__tag--sold-out">
+      {{ 'products.product.sold_out' | t }}
+    </div>
+  {%- endunless -%}
+  {% unless settings.sale_t_disable %}
+    {%- if on_sale and product.available -%}
+      <div class="grid-product__tag grid-product__tag--sale">
+        {{ 'products.general.sale' | t }}
+      </div>
+    {%- endif -%}
+  {% endunless %}
+{% endunless %}

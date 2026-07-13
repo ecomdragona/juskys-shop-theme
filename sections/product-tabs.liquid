@@ -1,0 +1,148 @@
+{{ 'product-tabs.css' | asset_url | stylesheet_tag }}
+
+<div class="product-tabs-main">
+    <div class="page-width">
+      <div class="variant-tabs-nav">
+        <ul>
+          {% for block in section.blocks %}
+          <li {% if forloop.index == 1 %}class="active"{% endif %}>
+            <a href="#tab-{{ forloop.index }}">{{ block.settings.tab_heading }}</a>
+          </li>
+          {% capture tab_content %}{{ tab_content }}
+            <div id="tab-{{ forloop.index }}" class="tab_content_main" {% if forloop.index != 1 %} style="display:none" {% endif %}>
+              {% if block.settings.content != blank %}{{ block.settings.content }}{% endif %}
+              {% if block.settings.variant_metafield != blank %}
+                  {% assign metafields = block.settings.variant_metafield | split: '.' %}
+                  {% assign namespace = metafields | first %}
+                  {% assign key = metafields | last %}
+                    {% for variant in product.variants %}
+                      <div id="tab-{{variant.id}}" {% if product.selected_or_first_available_variant != variant %} style="display:none" {% endif %} data-tab-layout-variant>
+                        {% capture meta_content -%}{{variant.metafields[namespace][key] | metafield_tag }}{%- endcapture %}
+                     
+                          {{ meta_content | remove_first: '<p>' | remove_first: '</p>' }}
+
+                      </div>
+                    {% endfor %}
+              {% endif %}
+              <div class="tab_overlay_viewmore">
+                <span class="tab_viewmore_btn">Lese mehr</span>
+                <span class="tab_viewless_btn">Weniger anzeigen</span>
+              </div>
+            </div>
+          {% endcapture %}
+          {% endfor %}
+        </ul>
+      </div>
+    
+      <div class="tabs-content">
+        {{ tab_content }}
+      </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const tabs = document.querySelectorAll(".variant-tabs-nav a");
+  
+  tabs.forEach(tab => {
+    tab.addEventListener("click", function (event) {
+      event.preventDefault();
+      
+      // Remove active class from all tab navigation items
+      document.querySelectorAll(".variant-tabs-nav li").forEach(item => {
+        item.classList.remove("active");
+      });
+
+      // Add active class to the clicked tab
+      this.parentElement.classList.add("active");
+
+      // Hide all tab contents
+      document.querySelectorAll(".tabs-content .tab_content_main").forEach(content => {
+        content.style.display = "none";
+      });
+
+      // Show the clicked tab content
+      const currentTab = document.querySelector(this.getAttribute("href"));
+      if (currentTab) {
+        currentTab.style.display = "block";
+
+        // Get the height of the current tab
+        const rect = currentTab.getBoundingClientRect();
+        
+        // Find the ".tab_overlay_viewmore" inside currentTab
+        const viewMoreBtn = currentTab.querySelector('.tab_overlay_viewmore');
+
+        if (viewMoreBtn) {
+          if (rect.height > 700) {
+            viewMoreBtn.style.display = 'flex';
+          } else {
+            viewMoreBtn.style.display = 'none';
+          }
+        }
+      }
+    });
+  });
+
+    const tabs_viewmore = document.querySelectorAll(".tab_viewmore_btn");
+    const tabs_viewless = document.querySelectorAll(".tab_viewless_btn");
+    
+    tabs_viewmore.forEach(item => {
+      item.addEventListener("click", function () {
+        const tabContent = this.closest('.tab_content_main');
+        if (tabContent) {
+          tabContent.classList.toggle('full_view');
+        }
+      });
+    });
+    tabs_viewless.forEach(item => {
+      item.addEventListener("click", function () {
+        const tabContent = this.closest('.tab_content_main');
+        if (tabContent) {
+          tabContent.classList.toggle('full_view');
+        }
+      });
+    });
+
+  
+});
+
+
+</script>
+
+{% schema %}
+  {
+    "name": "Product Tabs",
+    "settings": [],
+    "blocks":[
+      {
+        "type": "tab",
+        "name":"Tab",
+        "settings": [
+          {
+            "type": "text",
+            "id":"tab_heading",
+            "label":"Tab Heading"
+          },
+          {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content",
+            "default": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.</p><p>Ex: Shipping and return policies, size guides, and other common questions.</p>"
+          },
+          {
+            "type": "text",
+            "id": "variant_metafield",
+            "label": "Variant Metafield",
+            "info": "Please, insert it as namespace.key",
+            "default": "product.details"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Product Tabs"
+      }
+    ]
+  }
+{% endschema %}

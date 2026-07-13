@@ -1,0 +1,294 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "spacing_bottom": 50,
+        "spacing_bottom_header": 30
+      }
+    },
+    "d17b8af8-df76-4aa9-a29d-4ae7acfd674a": {
+      "type": "slideshow",
+      "blocks": {
+        "template--20758329098543__d17b8af8-df76-4aa9-a29d-4ae7acfd674a-image-1": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "subheading_desktop_font_size": 18,
+            "top_subheading_m": "",
+            "subheading_mobile_font_size": 17,
+            "title": "",
+            "title_size": 80,
+            "title_m": "",
+            "title_size_m": 20,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "text_align": "vertical-center horizontal-center",
+            "text_align_m": "m-vertical-center m-horizontal-center",
+            "image": "shopify://shop_images/2880x1621_Vertrieb_9ed6e039-a642-4881-a887-0316845823f7.jpg",
+            "image_mobile": "shopify://shop_images/800x800-Vertrieb_79f16d9b-358e-460f-9bf7-a97049e3686a.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 0,
+            "color_subheading": "#ffffff",
+            "color_heading": "#ffffff",
+            "color_text": "#ffffff",
+            "color_accent_1": "rgba(0,0,0,0)",
+            "color_accent_2": "rgba(0,0,0,0)",
+            "color_btn_text_check": true,
+            "color_accent_t_1": "#000000",
+            "color_accent_t_2": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "template--20758329098543__d17b8af8-df76-4aa9-a29d-4ae7acfd674a-image-1"
+      ],
+      "settings": {
+        "section_height": "650px",
+        "mobile_height": "auto",
+        "parallax": true,
+        "style": "bars",
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "lazyload_images": true
+      }
+    },
+    "18b86be1-d8df-442f-ba77-44c98d123f3d": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20758329098543__18b86be1-d8df-442f-ba77-44c98d123f3d-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "Die Multichannel Vertriebsstrategie von Juskys"
+          }
+        },
+        "template--20758329098543__18b86be1-d8df-442f-ba77-44c98d123f3d-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<h2><strong>Eigene Onlineshops und ausgewählte Marktplatz Partner</strong></h2><p>In einer nahezu vollständig digitalisierten Welt ist eine permanente und breitgefächerte Erreichbarkeit nicht nur wichtig, sondern unabdingbar. Deshalb vertreiben wir unser wachsendes Produktsortiment über zahlreiche Vertriebskanäle. Die beiden Onlineshops Juskys und Artsauna bilden dabei unsere Aushängeschilder. Darüber hinaus verkaufen wir unsere Produkte sehr erfolgreich über eine zunehmende Anzahl an namhaften Marktplatz Partnern. Durch diese Kombination erreichen wir unsere Zielgruppen optimal.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--20758329098543__18b86be1-d8df-442f-ba77-44c98d123f3d-heading-1",
+        "template--20758329098543__18b86be1-d8df-442f-ba77-44c98d123f3d-text-1"
+      ],
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "tag": "h1",
+        "align_text": "center",
+        "narrow_column": false,
+        "divider": false
+      }
+    },
+    "9a56e87e-28b3-4114-8ba5-ed745d00b8e0": {
+      "type": "text-and-image",
+      "settings": {
+        "image_mask": "none",
+        "image2": "shopify://shop_images/1_Vertrieb_Kategorie_Juskys_800x669px.jpg",
+        "image2_mask": "none",
+        "subtitle": "JUSKYS.DE",
+        "title": "",
+        "text": "<h3><strong>Onlineshop rund um die Themen Haus, Garten, Freizeit & Fitness</strong></h3><p><br/>Seit 2011 verkaufen wir im Juskys Onlineshop hochwertige Produkte aus den Bereichen Wohnen, Garten, Sport und Freizeit. Alle Produkte erfüllen höchste Qualitätsansprüche und sind zu fairen Preisen erhältlich. Ein gemütlicher Garten und ein stilvolles Zuhause sind so garantiert. Außerdem bieten wir eine große Auswahl an Fitness- und Sportgeräten für das effektive Heimtraining. Produkte aus dem Tier- und Heimwerkerbedarf runden das umfangreiche Sortiment ab. Die Artikel lassen sich nach Preisen, Beliebtheit oder Artikelbezeichnung filtern und sind in übersichtliche Kategorien eingeteilt. Regelmäßige Aktionen, Sonderpreise und neue Produkte sorgen für Abwechslung in dem seit Jahren bewährten Onlineshop.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "dfa00216-59c5-4bbb-bdec-f29de28f7e48": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/2_Vertrieb_Kategorie_Artsauna_800x669px.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "ARTSAUNA.DE",
+        "title": "",
+        "text": "<h3><strong>Dein Onlineshop für hochwertige Sauna- & Infrarotkabinen für Zuhause</strong><br/></h3><p><br/>Im Artsauna Onlineshop vertreiben wir seit 2006 Infrarot- und Saunakabinen. Mit der stetig wachsenden Produktpalette haben wir uns in den letzten Jahren einen ausgezeichneten Ruf erarbeitet. Unsere kompetenten Servicekräfte bieten freundliche Unterstützung und Beratung für unsere Kunden. Zudem profitieren Sie von flexiblen Zahlungsweisen und einem kostenlosen Versand innerhalb Deutschlands. Durch die jahrelange Erfahrung und die Optimierung sämtlicher Prozesse ist eine pünktliche Auslieferung sichergestellt. Verständliche Anleitungen, hilfreiche Aufbauvideos auf Youtube und die bewährten Klickverschlüsse erleichtern den Aufbau der gelieferten Wärmekabinen. </p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "left",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "d066ea6f-5b14-427c-9a0b-8954472c4e78": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20758329098543__d066ea6f-5b14-427c-9a0b-8954472c4e78-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "MARKTPLÄTZE"
+          }
+        },
+        "template--20758329098543__d066ea6f-5b14-427c-9a0b-8954472c4e78-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<h3><strong>Unsere Marktplatz Partner</strong></h3><p>Schon seit unserer Gründung im Jahr 2005 arbeiten wir sehr erfolgreich mit renommierten Marktplatz Partnern eng zusammen. Den Anfang machten Ebay und Amazon, wo wir inzwischen zu den bedeutendsten Handelspartnern im deutschen Markt zählen. Mit Kaufland, Netto, Manomano und Check24 erweiterten wir in der Folgezeit unsere Vertriebskanäle weiter. Demnächst starten wir die Zusammenarbeit mit weiteren Handelsgrößen.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--20758329098543__d066ea6f-5b14-427c-9a0b-8954472c4e78-heading-1",
+        "template--20758329098543__d066ea6f-5b14-427c-9a0b-8954472c4e78-text-1"
+      ],
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "tag": "h2",
+        "align_text": "center",
+        "narrow_column": false,
+        "divider": false
+      }
+    },
+    "22983f1e-2e58-4b84-8d09-e1636c16045b": {
+      "type": "logo-list",
+      "blocks": {
+        "template--20758329098543__22983f1e-2e58-4b84-8d09-e1636c16045b-logo_image-1": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/Amazon_Logo_500px_breit.png",
+            "link": ""
+          }
+        },
+        "template--20758329098543__22983f1e-2e58-4b84-8d09-e1636c16045b-logo_image-2": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/1200px-Kaufland_201x_logo_svg.png",
+            "link": ""
+          }
+        },
+        "template--20758329098543__22983f1e-2e58-4b84-8d09-e1636c16045b-logo_image-3": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/Netto_logo_200x200px.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--20758329098543__22983f1e-2e58-4b84-8d09-e1636c16045b-logo_image-1",
+        "template--20758329098543__22983f1e-2e58-4b84-8d09-e1636c16045b-logo_image-2",
+        "template--20758329098543__22983f1e-2e58-4b84-8d09-e1636c16045b-logo_image-3"
+      ],
+      "settings": {
+        "title": "",
+        "logo_opacity": 76,
+        "divider": false
+      }
+    },
+    "b15dd040-8989-4988-86c1-9bd82fd1e32e": {
+      "type": "logo-list",
+      "blocks": {
+        "template--20758329098543__b15dd040-8989-4988-86c1-9bd82fd1e32e-logo_image-1": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/ManoMano_Logo_RGB_500px_breit.png",
+            "link": ""
+          }
+        },
+        "template--20758329098543__b15dd040-8989-4988-86c1-9bd82fd1e32e-logo_image-2": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/Ebay_Logo_500px_breit.png",
+            "link": ""
+          }
+        },
+        "template--20758329098543__b15dd040-8989-4988-86c1-9bd82fd1e32e-logo_image-3": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/Otto_GmbH_logo_svg.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--20758329098543__b15dd040-8989-4988-86c1-9bd82fd1e32e-logo_image-1",
+        "template--20758329098543__b15dd040-8989-4988-86c1-9bd82fd1e32e-logo_image-2",
+        "template--20758329098543__b15dd040-8989-4988-86c1-9bd82fd1e32e-logo_image-3"
+      ],
+      "settings": {
+        "title": "",
+        "logo_opacity": 76,
+        "divider": false
+      }
+    },
+    "rich_text_FDHipq": {
+      "type": "rich-text",
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "tag": "h1",
+        "align_text": "center",
+        "narrow_column": false,
+        "divider": false
+      }
+    },
+    "text_and_image_H6C9az": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/unternehmenswachstum-linie-pfeil-nach-oben---kleiner-ausschnitt.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "",
+        "text": "<h2><strong>Juskys auch international aktiv</strong><br/></h2><p><br/>Wir sind nicht nur auf dem deutschen Markt erfolgreich, sondern seit 2023 spielt auch die Internationalisierung eine wichtige Rolle. Nach einem gelungenen Start bei Amazon Frankreich erschließen wir mit Amazon Italien und Spanien neue europäische Märkte, mit denen wir weiterwachsen. Dabei profitieren wir von unserer langjährigen Erfahrung mit der Plattform. Generell bietet uns die internationale Ausrichtung große Chancen, die Juskys Produkte über Deutschland hinaus einem größeren Publikum anzubieten. Zudem etablieren wir uns als vertrauenswürdiger E-Commerce-Händler, der sich auf neuen Märkten mit anderen Gegebenheiten wie Sprache, Kultur und Kaufverhalten auseinandersetzt.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "d17b8af8-df76-4aa9-a29d-4ae7acfd674a",
+    "18b86be1-d8df-442f-ba77-44c98d123f3d",
+    "9a56e87e-28b3-4114-8ba5-ed745d00b8e0",
+    "dfa00216-59c5-4bbb-bdec-f29de28f7e48",
+    "d066ea6f-5b14-427c-9a0b-8954472c4e78",
+    "22983f1e-2e58-4b84-8d09-e1636c16045b",
+    "b15dd040-8989-4988-86c1-9bd82fd1e32e",
+    "rich_text_FDHipq",
+    "text_and_image_H6C9az"
+  ]
+}

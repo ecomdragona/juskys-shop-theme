@@ -1,0 +1,33 @@
+{% comment %}
+{% assign pagespeed_template_suffix_liquid = template.suffix | append: ".liquid" %} {% assign pagespeed_page_type = template.name | replace: template_suffix_liquid, "" %} {%- if blank -%} <script type="text/javascript">var flspdx = new Worker("data:text/javascript;base64," + btoa('onmessage=function(e){var t=new Request(" https://prefetch-cdn.myshopify.com/cdn/shop/t/1/assets/worker-min.js?v=69406592365571008391721802707 ",{redirect:"follow"});fetch(t).then(e=>e.text()).then(e=>{postMessage(e)})};'));flspdx.onmessage = function (t) {var e = document.createElement("script");e.type = "text/javascript", e.textContent = t.data, document.head.appendChild(e)}, flspdx.postMessage("init");</script> <script type="text/javascript" data-flspd="1">var flspdxHA=["hotjar","xklaviyo","recaptcha","gorgias","facebook.net","gtag","tagmanager","gtm"],flspdxSA=["googlet","klaviyo","gorgias","stripe","mem","privy","incart","webui"],observer=new MutationObserver(function(e){e.forEach(function(e){e.addedNodes.forEach(function(e){if("SCRIPT"===e.tagName&&1===e.nodeType)if(e.innerHTML.includes("asyncLoad")||"analytics"===e.className)e.type="text/flspdscript";else{for(var t=0;t<flspdxSA.length;t++)if(e.src.includes(flspdxSA[t]))return void(e.type="text/flspdscript");for(var r=0;r<flspdxHA.length;r++)if(e.innerHTML.includes(flspdxHA[r]))return void(e.type="text/flspdscript")}})})}),ua=navigator.userAgent.toLowerCase();ua.match(new RegExp("chrome|firefox"))&&-1===window.location.href.indexOf("no-optimization")&&observer.observe(document.documentElement,{childList:!0,subtree:!0});</script> {%- endif -%} <div style="position:absolute;font-size:1200px;line-height:1;word-wrap:break-word;top:0;left:0;width:96vw;height:96vh;max-width:99vw;max-height:99vh;pointer-events:none;z-index:99999999999;color:transparent;overflow:hidden;" data-optimizer="Speed Boost: pagespeed-javascript">□</div> <script src=" https://prefetch-cdn.myshopify.com/cdn/shop/t/1/assets/worker.js?v=88534424583722824481721802675 "></script>
+{% endcomment %}
+<link rel="dns-prefetch" href="//cdn.shopify.com" crossorigin>
+<link rel="dns-prefetch" href="//fonts.shopify.com" crossorigin>
+<link rel="dns-prefetch" href="//monorail-edge.shopifysvc.com">
+<link rel="dns-prefetch"  href="//www.googletagmanager.com">
+<link rel="dns-prefetch"  href="//static.rolex.com">
+<link rel="dns-prefetch"  href="//retailers.rolex.com">
+<link rel="dns-prefetch"  href="//swymprem.azureedge.net">
+<link rel="dns-prefetch"  href="//a.klaviyo.com">
+<link rel="dns-prefetch"  href="//static.klaviyo.com">
+<link rel="dns-prefetch"  href="//pay.shopify.com">
+<link rel="dns-prefetch"  href="//shop.app">
+<link rel="dns-prefetch"  href="//store-prem.swymrelay.com">
+<link rel="dns-prefetch"  href="//fast.a.klaviyo.com">
+<link rel="dns-prefetch"  href="//connect.facebook.net">
+<link rel="dns-prefetch"  href="//www.google-analytics.com">
+<link rel="dns-prefetch"  href="//www.googleadservices.com">
+<link rel="dns-prefetch"  href="//www.facebook.com">
+{%- capture seo_title -%}
+  {{ page_title }}
+  {%- if current_tags -%}
+    {%- assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags -}}
+  {%- endif -%}
+  {%- if current_page != 1 -%}
+    &ndash; {{ 'general.meta.page' | t: page: current_page }}
+  {%- endif -%}
+  {%- if template == 'password' -%}
+    {{ shop.name }}
+  {%- endif -%}
+{%- endcapture -%}
+<title>{{ seo_title }}</title>

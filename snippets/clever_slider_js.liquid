@@ -1,0 +1,457 @@
+{%- comment -%}
+  Clever Slider by beeclever
+  Author: André Neder
+  Version 1.2.0
+  Uses Embla Carousel
+{%- endcomment -%}
+
+{%- liquid
+    assign breakpoint_small = breakpoint_small | default: settings.breakpoint_small
+    assign breakpoint_medium = breakpoint_medium | default: settings.breakpoint_medium
+  -%}
+  
+  <script type="text/template" id="slider_nav_item_template">
+    <cs-nav-item class="slider_nav_item"></cs-nav-item>
+  </script>
+
+  <script type="module" src="{{ 'embla-carousel.umd.js' | asset_url }}" defer="defer"></script>
+  <script type="module">
+  
+    /*import "{{ 'embla-carousel.umd.js' | asset_url }}"*/
+  
+    customElements.define('cs-prev', class extends HTMLElement {});
+    customElements.define('cs-next', class extends HTMLElement {});
+    customElements.define('cs-nav', class extends HTMLElement {});
+    customElements.define('cs-nav-item', class extends HTMLElement {});
+    customElements.define('cs-track', class extends HTMLElement {});
+    customElements.define('cs-slides', class extends HTMLElement {});
+    customElements.define('cs-slide', class extends HTMLElement {});
+  
+    class CleverSlider extends HTMLElement {
+      static breakpoints = {
+        medium: Number('{{ breakpoint_medium }}'),
+        small: Number('{{ breakpoint_small }}'),
+      };
+  
+      constructor() {
+        super();
+      }
+      connectedCallback() {
+        this.init();
+      }
+  
+      init() {
+        const that = this;
+        this.track = that.querySelector('cs-track');
+        this.slides = that.track.querySelectorAll('cs-slide');
+        this.slidesWrapper = that.track.querySelector('cs-slides');
+        //Nav
+        this.nav = this.querySelector('cs-nav:not([for])') || document.querySelector('cs-nav[for="' + that.id + '"]') || null;
+        //Controls
+        this.controls = {
+          prev:
+            that.querySelector('cs-prev:not([for])') || document.querySelector('cs-prev[for="' + that.id + '"]') || null,
+          next:
+            that.querySelector('cs-next:not([for])') || document.querySelector('cs-next[for="' + that.id + '"]') || null,
+        };
+        //Is thumbnail for
+        this.for = document.querySelector('#' + that.getAttribute('for')) || null;
+        //options
+        this.optionsDesktop = this.getOptions('options-large') || {};
+        this.optionsMedium = this.getOptions('options-medium') || this.optionsDesktop;
+        this.optionsSmall = this.getOptions('options-small') || this.optionsDesktop;
+  
+        this.options = this.optionsDesktop
+        //Auto height
+        this.autoHeight = this.hasAttribute('auto-height');
+        //Fade
+        this.fadeEnabled = this.hasAttribute('fade') || null;
+        this.fadeSpeed = this.getAttribute('fade') || 300;
+        //autoplay
+        this.autoplayEnabled = this.hasAttribute('autoplay');
+        this.autoplayInterval = Number(this.getAttribute('autoplay')) || 3000;
+        this.pauseOnHover = this.hasAttribute('pause-on-hover');
+        //plugins
+        this.plugins = new Array();
+  
+        this.createSlider();
+      }
+      getOptions(attribute) {
+        let options = this.getAttribute(attribute);
+        if (options != null && options.trim().startsWith('{')) {
+          return this.getOptionsJson(options);
+        } else if (options != null) {
+          return this.getOptionsSimple(options);
+        } else {
+          return undefined;
+        }
+      }
+  
+      getOptionsJson(options) {
+        return JSON.parse(options.replaceAll("'", '"'));
+      }
+  
+      getOptionsSimple(options) {
+        let json_string = '';
+        options.split(',').forEach((option) => {
+          let option_name = option.split(':')[0].trim();
+          let option_value = option.split(':')[1].trim();
+          option_name = '"' + option_name + '"';
+          if (!isNaN(option_value)) {
+            option_value = Number(option_value);
+          } else if (option_value == 'false' || option_value == 'true') {
+          } else {
+            option_value = '"' + option_value + '"';
+          }
+          json_string += ',' + option_name + ':' + option_value;
+        });
+        json_string = '{' + json_string.substring(1) + '}';
+        return JSON.parse(json_string);
+      }
+  
+      createSlider() {
+        const that = this;
+        //Autoplay plugin
+        if (this.autoplayEnabled) {
+          this.autoPlayPlugin = EmblaCarouselAutoplay({
+            delay: that.autoplayInterval,
+            stopOnMouseEnter: that.pauseOnHover,
+            stopOnLastSnap: false,
+            stopOnInteraction: true,
+            playOnInit: false,
+          });
+          this.plugins.push(that.autoPlayPlugin);
+        }
+        //Auto height plugin
+        if (this.autoHeight) {
+          this.autoHeightPlugin = EmblaCarouselAutoHeight({
+            destroyHeight: 'auto',
+          });
+          this.plugins.push(that.autoHeightPlugin);
+        }
+        //Wheel gestures plugin
+        this.wheelGesturesPlugin = EmblaCarouselWheelGestures({
+          forceWheelAxis: 'x',
+          wheelDraggingClass: 'is-wheel-dragging',
+        });
+        this.plugins.push(that.wheelGesturesPlugin);
+  
+        this.classNames = {
+          selected: 'in-view',
+          current: 'is-selected',
+          draggable: 'is-draggable',
+          dragging: 'is-dragging',
+        }
+  
+        //Class names
+        this.classNamesPlugin = EmblaCarouselClassNames({
+          selected:  this.classNames.selected,
+          draggable: this.classNames.draggable,
+          dragging:  this.classNames.dragging,
+        });
+        this.plugins.push(that.classNamesPlugin);
+  
+        //Create Embla object
+        this.embla = EmblaCarousel(this.track, this.options, this.plugins);
+        this.removeHiddenSlides()
+        this.matchMedia()
+        //Nav
+        if (!!this.nav) {
+          this.navArray = this.generateDotBtns();
+          this.setupDotBtns();
+        }
+        // Prev / Next
+        if (!!this.controls.prev && !!this.controls.next) {
+          this.setupPrevNextBtns();
+        }
+  
+        //Events
+        if (this.autoplayEnabled) {
+          this.embla.on('init', () => {
+            setTimeout(() => {
+              that.autoPlayPlugin.play();
+            }, 7000);
+          });
+        }
+  
+        if (!!this.fadeEnabled) {
+          this.embla.on('init', () => {
+            that.embla.internalEngine().translate.toggleActive(false);
+            that.setSliderHeight();
+          });
+        }
+  
+        if (!!this.nav) {
+          this.embla.on('select', () => {
+            that.selectDotBtn();
+          });
+          this.embla.on('init', () => {
+            that.selectDotBtn();
+          });
+        }
+        this.embla.on('init', () => {
+          that.updateProgress();
+          that.setSelectedSlide();
+        });
+        this.embla.on('scroll', () => {
+          that.updateProgress();
+        });
+        this.embla.on('select', () => {
+          that.setSelectedSlide();
+        });
+  
+  
+        if (!!this.controls.prev && !!this.controls.next) {
+          this.embla.on('select', () => {
+            that.disablePrevNextBtns();
+          });
+          this.embla.on('init', () => {
+            that.disablePrevNextBtns();
+          });
+        }
+  
+        if (!!this.for) {
+          this.embla.slideNodes().forEach((thumbNode, index) => {
+            thumbNode.addEventListener('click', () => {
+              that.onThumbClick(index);
+            });
+          });
+          this.embla.on('init', () => {
+            that.followMainCarousel(that.for, that);
+          });
+  
+          (async () => {
+            while (!that.for || !that.for.embla) {
+              await new Promise((resolve) => setTimeout(resolve, 500));
+            }
+            that.for.embla.on('select', () => {
+              that.for.followMainCarousel(that.for, that);
+            });
+          })();
+        }
+        if (Shopify.designMode) {
+          that.listenForThemeEditorEvents();
+        }
+        window.addEventListener('resize', () => {
+          that.rebuild();
+          that.updateProgress();
+        });
+        window.addEventListener('load', () => {
+          that.rebuild();
+          that.updateProgress();
+        });
+      }
+  
+      setSelectedSlide(index = null){
+        if(this.slides.length == 0){
+          return;
+        }
+        const currentIndex = !!index ? index : this.embla.selectedScrollSnap()
+  
+        this.slides.forEach(slide => {
+          slide.classList.remove(this.classNames.current)
+        })
+        
+        this.slides[currentIndex].classList.add(this.classNames.current)
+      }
+  
+      removeHiddenSlides(){
+        let slidesToRemove = Array.from(this.slides).filter(s => window.getComputedStyle(s).getPropertyValue('display') == 'none')
+        this.hiddenSlides = new Map()
+        slidesToRemove.forEach(slide => {
+          this.hiddenSlides.set(Array.from(this.slides).indexOf(slide), slide)
+        })
+        this.removeSlides(slidesToRemove)
+      }
+  
+      resetSlides(){
+        for(const [index, slide] of this.hiddenSlides){
+          this.insertSlide(slide, index)
+        }
+      }
+  
+      insertSlide(slide, index){
+        this.embla.containerNode().insertBefore(slide,  this.embla.containerNode().children[index])
+        this.embla.reInit()
+      }
+  
+      addSlides(slidesToAdd){
+        slidesToAdd.forEach((s) => this.embla.containerNode().appendChild(s))
+        this.embla.reInit()
+      }
+  
+      removeSlides(slidesToRemove){
+        slidesToRemove.forEach((s) => this.embla.containerNode().removeChild(s))
+        this.embla.reInit()
+      }
+  
+      setSliderHeight() {
+        const that = this;
+        this.slidesWrapper.style.height = this.slides[0].offsetHeight + 'px';
+        this.slides.forEach((slide) => {
+          slide.style.position = 'absolute';
+          slide.style.transition = 'opacity ' + that.fadeSpeed + 'ms';
+        });
+      }
+  
+      updateProgress() {
+        const that = this;
+        let scrollProgress = that.embla.scrollProgress();
+        const scrollSnapList = that.embla.scrollSnapList();
+        const snapCount = scrollSnapList.length;
+        const maxScrollProgress = scrollSnapList[scrollSnapList.length -1];
+        if(maxScrollProgress >= 0.99999)
+          scrollProgress = (that.embla.scrollProgress() / snapCount) * (snapCount - 1);
+        if(scrollProgress <= maxScrollProgress) {
+          that.style.setProperty(
+            '--progress',
+            Math.max(0, Math.min(scrollProgress, (snapCount-1)/snapCount))
+          );
+        } else {
+          that.style.setProperty(
+            '--progress',
+            Math.max(0, maxScrollProgress - (scrollProgress - maxScrollProgress) * (snapCount-1))
+          );
+        }
+        that.style.setProperty('--slide-count', snapCount);
+      }
+  
+      resetSliderHeight() {
+        const that = this;
+        that.slidesWrapper.style.height = '';
+        that.slides.forEach((slide) => {
+          slide.style.position = '';
+          slide.style.transition = '';
+        });
+      }
+  
+      reInitDots() {
+        const that = this;
+        if (!!that.nav) {
+          that.removeDotBtns();
+  
+          that.navArray = that.generateDotBtns();
+          that.setupDotBtns();
+          that.embla.on('select', () => {
+            that.selectDotBtn();
+          });
+          that.selectDotBtn();
+        }
+      }
+  
+      matchMedia(){
+        if(window.innerWidth > CleverSlider.breakpoints.medium){
+          this.embla.reInit(this.optionsDesktop);
+        }
+        else if(window.innerWidth <= CleverSlider.breakpoints.medium && window.innerWidth > CleverSlider.breakpoints.small){
+          this.embla.reInit(this.optionsMedium);
+        }
+        else if(window.innerWidth < CleverSlider.breakpoints.small){
+          this.embla.reInit(this.optionsSmall);
+        }
+      }
+  
+      rebuild() {
+        if (!!this.fadeEnabled) {
+          this.resetSliderHeight();
+        }
+        this.resetSlides()
+        this.removeHiddenSlides()
+        this.matchMedia()
+        this.disablePrevNextBtns();
+  
+        if (!!this.fadeEnabled) {
+          this.setSliderHeight();
+        }
+      }
+  
+      setupPrevNextBtns() {
+        this.controls.prev.addEventListener('click', this.embla.scrollPrev, false);
+        this.controls.next.addEventListener('click', this.embla.scrollNext, false);
+      }
+  
+      disablePrevNextBtns() {
+        if (this.embla.canScrollPrev()) {
+          if (!!this.controls.prev) this.controls.prev.removeAttribute('disabled');
+        } else {
+          if (!!this.controls.prev) this.controls.prev.setAttribute('disabled', '');
+        }
+        if (this.embla.canScrollNext()) {
+          if (!!this.controls.next) this.controls.next.removeAttribute('disabled');
+        } else {
+          if (!!this.controls.next) this.controls.next.setAttribute('disabled', '');
+        }
+      }
+  
+      setupDotBtns() {
+        this.navArray.forEach((dotNode, i) => {
+          dotNode.addEventListener('click', () => this.embla.scrollTo(i), false);
+        });
+      }
+  
+      generateDotBtns() {
+        let template = document.getElementById('slider_nav_item_template').innerHTML;
+        this.nav.innerHTML = Array.from(this.slides).reduce((acc) => acc + template, '');
+        return [].slice.call(this.nav.querySelectorAll('.slider_nav_item'));
+      }
+  
+      removeDotBtns() {
+        this.nav.innerHTML = '';
+      }
+  
+      selectDotBtn() {
+        let previous = this.embla.previousScrollSnap();
+        let selected = this.embla.selectedScrollSnap();
+        this.navArray[previous].classList.remove(this.classNames.selected);
+        this.navArray[selected].classList.add(this.classNames.selected);
+      }
+  
+      onThumbClick(index) {
+        if (!this.embla.clickAllowed()) return;
+        this.for.embla.scrollTo(index);
+        this.embla.scrollTo(index)
+        this.setSelectedSlide(index)
+      }
+  
+      followMainCarousel(mainCarousel, thumbCarousel) {
+        thumbCarousel.embla.scrollTo(mainCarousel.embla.selectedScrollSnap());
+        thumbCarousel.selectThumbBtn(mainCarousel, thumbCarousel); //this = thumb
+      }
+  
+      selectThumbBtn(mainCarousel, thumbCarousel) {
+        let selected = mainCarousel.embla.selectedScrollSnap();
+        thumbCarousel.embla.scrollTo(selected)
+        thumbCarousel.setSelectedSlide(selected)
+      }
+  
+      listenForPrevBtnClick() {
+        const scrollPrev = () => {
+          this.autoplayer.stop();
+          this.embla.scrollPrev();
+        };
+        this.controls.prev.addEventListener('click', scrollPrev, false);
+      }
+  
+      listenForNextBtnClick() {
+        const scrollNext = () => {
+          this.autoplayer.stop();
+          this.embla.scrollNext();
+        };
+        this.controls.next.addEventListener('click', scrollNext, false);
+      }
+  
+      listenForThemeEditorEvents() {
+        window.addEventListener('shopify:block:select', (e) => {
+          let block_id = e.detail.blockId;
+          let block_index = Array.from(this.slides).findIndex(
+            (slide) =>
+              slide.hasAttribute('data-shopify-editor-block') &&
+              JSON.parse(slide.getAttribute('data-shopify-editor-block')).id == block_id
+          );
+          if (block_index != -1) this.embla.scrollTo(Number(block_index));
+        });
+      }
+    }
+  
+    customElements.define('clever-slider', CleverSlider);
+</script>

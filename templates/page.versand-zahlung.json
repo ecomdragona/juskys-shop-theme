@@ -1,0 +1,57 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "spacing_bottom": 50,
+        "spacing_bottom_header": 30
+      }
+    },
+    "a6d683fe-f8be-4681-a6af-1c097cc6252b": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21589645361455__a6d683fe-f8be-4681-a6af-1c097cc6252b-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "Versand & Zahlung"
+          }
+        },
+        "template--21589645361455__a6d683fe-f8be-4681-a6af-1c097cc6252b-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<h3>Versand</h3><p><strong>Der Versand von Speditionsartikeln erfolgt versichert per Spedition bis zur Bordsteinkante und der Versand von Paketware erfolgt versichert per Paketdienst bis zur Wohnungstür:</strong></p><p>Deutschland: Die Lieferung innerhalb von Deutschland ist <strong>kostenlos</strong>, ein besonderer Service für Sie!</p><h4>Speditionsversand<br/>( Speditionsartikel )</h4><p><strong>Deutschland: </strong>kostenlos</p><p><strong>Österreich: </strong>105,00 Euro pro Palette</p><p><strong>Schweiz: </strong>169,00 Euro pro Palette</p><p><strong>Belgien: </strong>59,00 Euro pro Palette</p><p><strong>Frankreich:</strong> 129,00 Euro pro Palette</p><p><strong>Luxemburg: </strong>119,00 Euro pro Palette</p><p><strong>Niederlande:</strong> 45,00 Euro pro Palette</p><h4>Paketversand<br/>( Paketfähige Artikel )</h4><p><strong>Deutschland: </strong>kostenlos</p><p><strong>Österreich: </strong>14,99 Euro pro Paket</p><p><strong>Schweiz: </strong>24,99 Euro pro Paket</p><p><strong>Belgien: </strong>18,99 Euro pro Paket</p><p><strong>Frankreich:</strong> 16,99 Euro pro Paket</p><p><strong>Luxemburg: </strong>16,99 Euro pro Paket</p><p><strong>Niederlande:</strong> 13,99 Euro pro Paket</p><p>Der Versand von Paketware und Speditionsartikeln in alle anderen Länder ist nur auf Anfrage möglich. Setzen Sie sich dazu bitte mit unserem Kundenservice unter <a href=\"mailto:service@shop.juskys.de\" target=\"_blank\" title=\"mailto:service@shop.juskys.de\"><strong>service@shop.juskys.de</strong></a> in Verbindung und nennen Sie Ihren Lieferort inklusive PLZ und Bestimmungsland. Unsere Mitarbeiter können Ihnen schnell Auskunft geben, ob der Versand möglich ist und wie hoch die Versandkosten ausfallen.<br/></p><h3>Bezahlung</h3><p>Nach Erhalt Ihrer Bestellung erhalten Sie von uns eine Email, in der Sie alle benötigen Informationen finden. Von dort aus gelangen Sie automatisch zur Kaufabwicklung. Dort können Sie ggf. Ihre Angaben ergänzen.<br/><br/>Folgende Zahlungsmöglichkeiten bieten wir Ihnen an:</p><ul><li>Vorkasse per Banküberweisung</li><li>PayPal</li><li>Klarna (Mehr Infos <a href=\"https://www.klarna.com/de/smoooth-mehrzuklarna/\" target=\"_blank\" title=\"Mehr Infos zu Klarna\">hier</a>)</li><li>Kreditkarte</li><li>Lastschrift</li></ul><p><strong>Für den Fall, dass Sie unsere Bankverbindung nicht erhalten haben:</strong></p><p>Kontoinhaber: Juskys Gruppe GmbH</p><p>Bank: Volksbank Wolfenbüttel / Salzgitter</p><p>IBAN: DE41270925555020766000</p><p>BIC: GENODEF1WFV</p><p>Bitte geben Sie bitte bei jeder Überweisung in dem Verwendungszweck ihre Kunden- oder Auftragsnummer an!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--21589645361455__a6d683fe-f8be-4681-a6af-1c097cc6252b-heading-1",
+        "template--21589645361455__a6d683fe-f8be-4681-a6af-1c097cc6252b-text-1"
+      ],
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "tag": "h1",
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "a6d683fe-f8be-4681-a6af-1c097cc6252b"
+  ]
+}

@@ -1,0 +1,768 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "c4c59faa-a381-4cc2-847e-3a5d28f9733c": {
+      "type": "advanced-content",
+      "blocks": {
+        "template--20174418936111__c4c59faa-a381-4cc2-847e-3a5d28f9733c-liquid-1": {
+          "type": "liquid",
+          "disabled": true,
+          "settings": {
+            "code": "<style>\nnav#uncomplicated-breadcrumbs {\n    margin-top: -100px;\n    margin-bottom: -30px;\ntext-align: left;\n}\n</style>",
+            "width": "50%",
+            "alignment": "center"
+          }
+        },
+        "1a5b62d7-8091-4c25-90f6-c97c1ed2a2ad": {
+          "type": "liquid",
+          "disabled": true,
+          "settings": {
+            "code": "<style>\nnav#uncomplicated-breadcrumbs {\ntext-align: left;\n}\n</style>",
+            "width": "50%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--20174418936111__c4c59faa-a381-4cc2-847e-3a5d28f9733c-liquid-1",
+        "1a5b62d7-8091-4c25-90f6-c97c1ed2a2ad"
+      ],
+      "disabled": true,
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "full_width": false,
+        "space_around": true,
+        "lazyload_images": true
+      }
+    },
+    "1701933927667f3d5a": {
+      "type": "apps",
+      "blocks": {
+        "a6da699d-272a-4761-995a-b1a34b0d09e0": {
+          "type": "shopify://apps/breadcrumbs-uncomplicated/blocks/category-breadcrumbs/dba51573-4328-452d-90db-1ad2dc5be363",
+          "settings": {
+            "override_linktext_colour": false,
+            "linktext_colour": "#0000ee",
+            "separator_colour": "#555555",
+            "producttitle_colour": "#555555",
+            "title_decoration": "",
+            "title_transform": "",
+            "spacing_above": 0,
+            "spacing_below": 0,
+            "sep_plus_class": "breadcrumb__sep_plus5",
+            "separator_char_code": "rsaquo;",
+            "hide_old_breadcrumb": false,
+            "show_catroot": true,
+            "link_catroot": "/",
+            "text_catroot": "Startseite",
+            "show_tags": true,
+            "show_finalbread_as_textonly": false,
+            "insert_jsonld": true,
+            "insert_shortlinkfix": false,
+            "prod_multicat_sel": "leastprod",
+            "link_catall": "/collections/all",
+            "text_catall": "All Products",
+            "show_product_title": false,
+            "truncate_limit": 0,
+            "prod_ignore_referrer": false,
+            "old_breadcrumb_class": "breadcrumb"
+          }
+        }
+      },
+      "block_order": [
+        "a6da699d-272a-4761-995a-b1a34b0d09e0"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": false
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "d3718cb3-da27-477e-b804-5d9078f0bdd7": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.product.subtitle.value }}"
+          }
+        },
+        "reviews_io_reviewsio_rating_output_3rwYw7": {
+          "type": "shopify://apps/reviews-io/blocks/reviewsio-rating-output/92a082e5-b297-4e88-b428-ac96cbc505f9",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "font_size_compare_price": 20,
+            "font_weight_compare_price": 400,
+            "font_size_compare_price_mobile": 20,
+            "font_weight_compare_price_mobile": 400,
+            "font_color_compare_price": "#000000",
+            "font_size_price": 19,
+            "font_weight_price": 400,
+            "font_size_price_mobile": 20,
+            "font_weight_price_mobile": 400,
+            "font_color_price": "#000000"
+          }
+        },
+        "klip_coupons_klip_app_section_product_tmHPFW": {
+          "type": "shopify://apps/klip-coupons/blocks/klip-app-section-product/df38e221-ede4-4ad4-b47d-56524361a5be",
+          "settings": {
+            "margin_top": 0,
+            "margin_bottom": 10
+          }
+        },
+        "separator": {
+          "type": "separator",
+          "settings": {}
+        },
+        "e4144135-1384-47f2-aa75-9d4d078c6c23": {
+          "type": "delivery_time",
+          "settings": {
+            "in_stock_time": "1-3",
+            "digital_product_text": "Digitaler Versand: Sofort nach dem Kauf per E-Mail verfügbar.",
+            "custom_text": ""
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": true
+          }
+        },
+        "9fd55169-5e06-4f51-8137-06690050bfca": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "ed7dc5e3-a456-4885-828d-535e50ce9a3f": {
+          "type": "shopify://apps/wishlist-king/blocks/wishlist-button-block/194f5011-a43c-4b22-b12e-eaf20dc4506a",
+          "settings": {
+            "button_style": "plain_accent_1",
+            "button_alignment": "left",
+            "button_content_alignment": "right",
+            "button_margin_top": 0,
+            "button_margin_bottom": 0,
+            "button_max_width": 0,
+            "button_padding_horizontal": 15,
+            "button_full_width": true,
+            "button_show_text": true,
+            "button_show_icon": true,
+            "icon_size": 18,
+            "icon_stroke_width": 1.2,
+            "icon_offset_vertical": -1
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "surface_pickup_enable": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "is_tab": true
+          }
+        },
+        "tab": {
+          "type": "tab",
+          "disabled": true,
+          "settings": {
+            "title": "Shipping information",
+            "content": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.</p><p>Ex: Shipping and return policies, size guides, and other common questions.</p>",
+            "page": ""
+          }
+        },
+        "contact": {
+          "type": "contact",
+          "disabled": true,
+          "settings": {
+            "title": "Ask a question",
+            "phone": false
+          }
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {}
+        },
+        "0444c82f-598b-4b28-a7d3-d33fc73d31fb": {
+          "type": "b2b_pdf",
+          "settings": {
+            "title": "Additional information"
+          }
+        },
+        "d07d5f68-bae4-493e-9c78-31645755ccdd": {
+          "type": "usp",
+          "settings": {
+            "image": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 27.6.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 508.7 353.9\" style=\"enable-background:new 0 0 508.7 353.9;\" xml:space=\"preserve\">\n<style type=\"text/css\">\n\t.st0{fill:#1D1D1B;}\n\t.st1{fill:none;stroke:#1D1D1B;stroke-width:11;stroke-miterlimit:10;}\n\t.st2{fill:none;stroke:#1D1D1B;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n\t.st3{fill:none;stroke:#1D1D1B;stroke-width:17;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n\t.st4{fill:none;stroke:#1D1D1B;stroke-width:13;stroke-miterlimit:10;}\n\t.st5{fill:#1D1D1B;stroke:#1D1D1B;stroke-width:2.5725;stroke-miterlimit:10;}\n\t.st6{fill:#222221;stroke:#222221;stroke-width:2;stroke-miterlimit:10;}\n\t.st7{fill:none;stroke:#222221;stroke-width:11.4926;stroke-miterlimit:10;}\n\t.st8{fill:#222221;}\n\t.st9{fill:none;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;}\n\t.st10{fill:none;stroke:#000000;stroke-width:8.1863;stroke-miterlimit:10;}\n\t.st11{stroke:#000000;stroke-width:8.1863;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n\t.st12{fill:none;stroke:#000000;stroke-width:8.1863;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n\t.st13{stroke:#000000;stroke-width:2;stroke-miterlimit:10;}\n\t.st14{fill-rule:evenodd;clip-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}\n</style>\n<g id=\"Ebene_1\">\n</g>\n<g id=\"Layer_1\">\n</g>\n<g id=\"Objects\">\n\t<g id=\"Foretrukne\">\n\t</g>\n\t<g>\n\t\t<path class=\"st5\" d=\"M466.1,202.5l-38.2-68.6c-2.8-5.1-8.2-8.2-14-8.2h-54V74.3c0-6-4.9-10.9-10.9-10.9H112.4\n\t\t\tc-6,0-10.9,4.9-10.9,10.9v25.3H69.1c-2.8,0-5.1,2.3-5.1,5.1c0,2.8,2.3,5.1,5.1,5.1h86.3c2.8,0,5.1-2.3,5.1-5.1\n\t\t\tc0-2.8-2.3-5.1-5.1-5.1h-43.6V74.3c0-0.3,0.3-0.6,0.6-0.6h236.5c0.3,0,0.6,0.3,0.6,0.6v56.6v131.4H242.3\n\t\t\tc-2.5-17.8-17.7-31.7-36.3-31.7c-18.5,0-33.7,13.8-36.3,31.7h-58v-41.4h22.8c2.8,0,5.1-2.3,5.1-5.1c0-2.8-2.3-5.1-5.1-5.1H44.9\n\t\t\tc-2.8,0-5.1,2.3-5.1,5.1c0,2.8,2.3,5.1,5.1,5.1h56.6v46.6c0,2.8,2.3,5.1,5.1,5.1h63.1c2.5,17.9,17.7,31.7,36.3,31.7\n\t\t\tc18.5,0,33.7-13.8,36.3-31.7h112.4h19.2c2.5,17.9,17.7,31.7,36.3,31.7c18.5,0,33.7-13.8,36.3-31.7h14.7c5.6,0,10.2-4.6,10.2-10.2\n\t\t\tv-39.5C471.4,215.8,469.6,208.8,466.1,202.5z M206.1,294c-14.6,0-26.5-11.9-26.5-26.5c0-14.6,11.9-26.5,26.5-26.5\n\t\t\tc14.6,0,26.5,11.9,26.5,26.5C232.6,282.1,220.7,294,206.1,294z M410.2,294c-14.6,0-26.5-11.9-26.5-26.5\n\t\t\tc0-14.6,11.9-26.5,26.5-26.5s26.5,11.9,26.5,26.5C436.7,282.1,424.8,294,410.2,294z M446.5,262.3c-2.5-17.8-17.7-31.7-36.3-31.7\n\t\t\tc-18.5,0-33.7,13.8-36.3,31.7h-14.1V136h54c2.1,0,4,1.1,5,2.9l38.3,68.6c2.6,4.7,4,10,4,15.4l0.1,39.4H446.5z\"/>\n\t\t<path class=\"st5\" d=\"M415,148.3c-2.3-4.2-6.7-6.7-11.5-6.7h-22c-4.5,0-8.1,3.6-8.1,8.1v52.3c0,4.5,3.6,8.1,8.1,8.1l54.1,0.1\n\t\t\tc0,0,0,0,0,0c2.9,0,5.5-1.5,7-4c1.5-2.5,1.5-5.5,0.1-8.1L415,148.3z M383.7,199.8v-47.9h19.8c1,0,2,0.6,2.5,1.5l26,46.5\n\t\t\tL383.7,199.8z\"/>\n\t\t<path class=\"st5\" d=\"M106.7,120.9c-2.8,0-5.1,2.3-5.1,5.1v47.5H80.9c-2.8,0-5.1,2.3-5.1,5.1c0,2.8,2.3,5.1,5.1,5.1h20.6v15.3\n\t\t\tc0,2.8,2.3,5.1,5.1,5.1c2.8,0,5.1-2.3,5.1-5.1v-15.3h94.2c2.8,0,5.1-2.3,5.1-5.1c0-2.8-2.3-5.1-5.1-5.1h-94.2v-47.5\n\t\t\tC111.8,123.2,109.5,120.9,106.7,120.9z\"/>\n\t\t<path class=\"st5\" d=\"M86.1,141.7c0-2.8-2.3-5.1-5.1-5.1H28.1c-2.8,0-5.1,2.3-5.1,5.1c0,2.8,2.3,5.1,5.1,5.1h52.8\n\t\t\tC83.7,146.8,86.1,144.5,86.1,141.7z\"/>\n\t</g>\n</g>\n</svg>",
+            "text": "Blitzschnell & digital versendet"
+          }
+        },
+        "0d0f1ddb-0de9-4d8b-8e7a-5d7f9a868a30": {
+          "type": "usp",
+          "settings": {
+            "image": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 27.6.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 345 353.9\" style=\"enable-background:new 0 0 345 353.9;\" xml:space=\"preserve\">\n<style type=\"text/css\">\n\t.st0{fill:#1D1D1B;}\n\t.st1{fill:none;stroke:#1D1D1B;stroke-width:11;stroke-miterlimit:10;}\n\t.st2{fill:none;stroke:#1D1D1B;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n\t.st3{fill:none;stroke:#1D1D1B;stroke-width:17;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n\t.st4{fill:none;stroke:#1D1D1B;stroke-width:13;stroke-miterlimit:10;}\n\t.st5{fill:#1D1D1B;stroke:#1D1D1B;stroke-width:2.5725;stroke-miterlimit:10;}\n\t.st6{fill:#222221;stroke:#222221;stroke-width:2;stroke-miterlimit:10;}\n\t.st7{fill:none;stroke:#222221;stroke-width:11.4926;stroke-miterlimit:10;}\n\t.st8{fill:#222221;}\n\t.st9{fill:none;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;}\n\t.st10{fill:none;stroke:#000000;stroke-width:8.1863;stroke-miterlimit:10;}\n\t.st11{stroke:#000000;stroke-width:8.1863;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n\t.st12{fill:none;stroke:#000000;stroke-width:8.1863;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n\t.st13{font-family:'Roboto-Regular';}\n\t.st14{font-size:101.8209px;}\n\t.st15{stroke:#000000;stroke-width:2;stroke-miterlimit:10;}\n\t.st16{fill-rule:evenodd;clip-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}\n</style>\n<g id=\"Ebene_1\">\n</g>\n<g id=\"Layer_1\">\n</g>\n<g id=\"Objects\">\n\t<g id=\"Foretrukne\">\n\t</g>\n\t<text transform=\"matrix(1.1294 0 0 1 140.0845 193.5671)\" class=\"st13 st14\">€</text>\n\t<path class=\"st16\" d=\"M295.7,153.4c0-0.1-0.1-0.2-0.2-0.3c0,0,0,0,0-0.1c-0.2-0.5-0.6-0.9-1-1.1l-50.9-44.2l0-29.8\n\t\tc0-1.7-1.3-2.9-2.9-2.9h-34.9l-27.3-23.6c-3.3-2.9-9-2.9-12.3,0l-27.3,23.6h-34.4c-1.7,0-2.9,1.3-2.9,2.9l0,29.4l-51.7,44.9\n\t\tc-0.6,0.6-1,1.5-1,2.3c0,0,0,0.1,0,0.1c-0.2,0.8-0.4,1.6-0.4,2.6v140.4c0,2.1,0.8,4.1,2.2,5.6c0.1,0.2,0.2,0.3,0.3,0.4\n\t\tc0.2,0.2,0.5,0.4,0.7,0.6c1.5,1.2,3.3,1.9,5.3,1.9h231.2c2.1,0,4.1-0.9,5.6-2.2c0,0,0.1,0,0.1-0.1c0,0,0,0,0.1-0.1\n\t\tc1.6-1.6,2.7-3.8,2.7-6.2V157.2C296.5,155.5,296.1,154.2,295.7,153.4z M290.7,297.1l-79.1-68.3l79.1-68.4V297.1z M54.5,160.7\n\t\tl78.7,68l-78.7,67.8V160.7z M137.7,232.7l28.3,24.5c1.9,1.5,4,2.3,6.3,2.3c2.3,0,4.6-0.6,6.3-2.1l28.5-24.7l78.2,67.4H59.5\n\t\tL137.7,232.7z M288,154.2l-44.4,38.5l0-77.2L288,154.2z M170.2,55.7c1-1,3.3-1,4.4,0l22.2,19.2H148L170.2,55.7z M237.8,81l0,26.9\n\t\tc-0.3,0.7-0.3,1.4,0,2.1l0,87.8l-63.4,55c-1,1-3.3,1-4.4,0l-62.6-54.1V81H237.8z M101.6,115.1l0,78.4l-45-38.9L101.6,115.1z\"/>\n</g>\n</svg>",
+            "text": "Kauf auf Rechnung"
+          }
+        },
+        "a2811a82-c23e-4b3f-bfdb-ca0ee19c0dcc": {
+          "type": "usp_payment",
+          "settings": {
+            "image": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 27.6.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 345 353.9\" style=\"enable-background:new 0 0 345 353.9;\" xml:space=\"preserve\">\n<style type=\"text/css\">\n\t.st0{fill:#1D1D1B;}\n\t.st1{fill:none;stroke:#1D1D1B;stroke-width:11;stroke-miterlimit:10;}\n\t.st2{fill:none;stroke:#1D1D1B;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n\t.st3{fill:none;stroke:#1D1D1B;stroke-width:17;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n\t.st4{fill:none;stroke:#1D1D1B;stroke-width:13;stroke-miterlimit:10;}\n\t.st5{fill:#1D1D1B;stroke:#1D1D1B;stroke-width:2.5725;stroke-miterlimit:10;}\n\t.st6{fill:#222221;stroke:#222221;stroke-width:2;stroke-miterlimit:10;}\n\t.st7{fill:none;stroke:#222221;stroke-width:11.4926;stroke-miterlimit:10;}\n\t.st8{fill:#222221;}\n\t.st9{fill:none;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;}\n\t.st10{fill:none;stroke:#000000;stroke-width:8.1863;stroke-miterlimit:10;}\n\t.st11{stroke:#000000;stroke-width:8.1863;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n\t.st12{fill:none;stroke:#000000;stroke-width:8.1863;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n\t.st13{stroke:#000000;stroke-width:2;stroke-miterlimit:10;}\n\t.st14{font-family:'Roboto-Regular';}\n\t.st15{font-size:100.7667px;}\n\t.st16{fill-rule:evenodd;clip-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}\n</style>\n<g id=\"Ebene_1\">\n</g>\n<g id=\"Layer_1\">\n</g>\n<g id=\"Objects\">\n\t<g id=\"Foretrukne\">\n\t</g>\n\t<path d=\"M77.1,206.4c-8.9,0-16.1-7.2-16.1-16.1c0-8.9,7.2-16.1,16.1-16.1c8.9,0,16.1,7.2,16.1,16.1\n\t\tC93.2,199.2,85.9,206.4,77.1,206.4z M77.1,183c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3\n\t\tC84.4,186.3,81.1,183,77.1,183z\"/>\n\t<path d=\"M77.1,246.1c-8.9,0-16.1-7.2-16.1-16.1c0-8.9,7.2-16.1,16.1-16.1c8.9,0,16.1,7.2,16.1,16.1\n\t\tC93.2,238.9,85.9,246.1,77.1,246.1z M77.1,222.7c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3\n\t\tC84.4,226,81.1,222.7,77.1,222.7z\"/>\n\t<path d=\"M119.4,206.4c-8.9,0-16.1-7.2-16.1-16.1c0-8.9,7.2-16.1,16.1-16.1c8.9,0,16.1,7.2,16.1,16.1\n\t\tC135.5,199.2,128.3,206.4,119.4,206.4z M119.4,183c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3\n\t\tC126.7,186.3,123.4,183,119.4,183z\"/>\n\t<path d=\"M119.4,246.1c-8.9,0-16.1-7.2-16.1-16.1c0-8.9,7.2-16.1,16.1-16.1c8.9,0,16.1,7.2,16.1,16.1\n\t\tC135.5,238.9,128.3,246.1,119.4,246.1z M119.4,222.7c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3\n\t\tC126.7,226,123.4,222.7,119.4,222.7z\"/>\n\t<path d=\"M161.7,166.6c-8.9,0-16.1-7.2-16.1-16.1c0-8.9,7.2-16.1,16.1-16.1c8.9,0,16.1,7.2,16.1,16.1\n\t\tC177.8,159.4,170.6,166.6,161.7,166.6z M161.7,143.2c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3\n\t\tC169,146.5,165.7,143.2,161.7,143.2z\"/>\n\t<path d=\"M119.4,166.6c-8.9,0-16.1-7.2-16.1-16.1c0-8.9,7.2-16.1,16.1-16.1c8.9,0,16.1,7.2,16.1,16.1\n\t\tC135.5,159.4,128.3,166.6,119.4,166.6z M119.4,143.2c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3\n\t\tC126.7,146.5,123.4,143.2,119.4,143.2z\"/>\n\t<path d=\"M161.7,206.4c-8.9,0-16.1-7.2-16.1-16.1c0-8.9,7.2-16.1,16.1-16.1c8.9,0,16.1,7.2,16.1,16.1\n\t\tC177.8,199.2,170.6,206.4,161.7,206.4z M161.7,183c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3\n\t\tC169,186.3,165.7,183,161.7,183z\"/>\n\t<path d=\"M161.7,246.1c-8.9,0-16.1-7.2-16.1-16.1c0-8.9,7.2-16.1,16.1-16.1c8.9,0,16.1,7.2,16.1,16.1\n\t\tC177.8,238.9,170.6,246.1,161.7,246.1z M161.7,222.7c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3\n\t\tC169,226,165.7,222.7,161.7,222.7z\"/>\n\t<path d=\"M204.1,166.6c-8.9,0-16.1-7.2-16.1-16.1c0-8.9,7.2-16.1,16.1-16.1c8.9,0,16.1,7.2,16.1,16.1\n\t\tC220.2,159.4,212.9,166.6,204.1,166.6z M204.1,143.2c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3\n\t\tC211.3,146.5,208.1,143.2,204.1,143.2z\"/>\n\t<path d=\"M246.4,166.6c-8.9,0-16.1-7.2-16.1-16.1c0-8.9,7.2-16.1,16.1-16.1c8.9,0,16.1,7.2,16.1,16.1\n\t\tC262.5,159.4,255.3,166.6,246.4,166.6z M246.4,143.2c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3\n\t\tC253.7,146.5,250.4,143.2,246.4,143.2z\"/>\n\t<g>\n\t\t<path class=\"st13\" d=\"M83.4,92.2c2.4,0,4.4-2,4.4-4.4V76.2h33.5v11.6c0,2.4,2,4.4,4.4,4.4s4.4-2,4.4-4.4v-16c0,0,0,0,0,0\n\t\t\tc0,0,0,0,0,0V52.7c0-2.4-2-4.4-4.4-4.4s-4.4,2-4.4,4.4v14.7H87.8V52.7c0-2.4-2-4.4-4.4-4.4c-2.4,0-4.4,2-4.4,4.4v35.1\n\t\t\tC79,90.2,81,92.2,83.4,92.2z\"/>\n\t\t<path class=\"st13\" d=\"M140.6,92.2c2.4,0,4.4-2,4.4-4.4V76.2h33.5v11.6c0,2.4,2,4.4,4.4,4.4c2.4,0,4.4-2,4.4-4.4V52.7\n\t\t\tc0-2.4-2-4.4-4.4-4.4c-2.4,0-4.4,2-4.4,4.4v14.7H145V52.7c0-2.4-2-4.4-4.4-4.4c-2.4,0-4.4,2-4.4,4.4v35.1\n\t\t\tC136.2,90.2,138.1,92.2,140.6,92.2z\"/>\n\t\t<path class=\"st13\" d=\"M197.7,92.2c2.4,0,4.4-2,4.4-4.4V76.2h33.5v11.6c0,2.4,2,4.4,4.4,4.4c2.4,0,4.4-2,4.4-4.4V52.7\n\t\t\tc0-2.4-2-4.4-4.4-4.4c-2.4,0-4.4,2-4.4,4.4v14.7h-33.5V52.7c0-2.4-2-4.4-4.4-4.4c-2.4,0-4.4,2-4.4,4.4v35.1\n\t\t\tC193.3,90.2,195.3,92.2,197.7,92.2z\"/>\n\t\t<path class=\"st13\" d=\"M284.2,172.2v-80c0-13.7-11.2-24.9-24.9-24.9h-0.1V52.7c0-2.4-2-4.4-4.4-4.4c-2.4,0-4.4,2-4.4,4.4v19.1\n\t\t\tc0,0,0,0,0,0c0,0,0,0,0,0v16c0,2.4,2,4.4,4.4,4.4c2.4,0,4.4-2,4.4-4.4V76.2h0.1c8.9,0,16.1,7.2,16.1,16.1v13.7H50.3V92.2\n\t\t\tc0-8.1,6.1-14.9,13.9-15.9v11.4c0,2.4,2,4.4,4.4,4.4c2.4,0,4.4-2,4.4-4.4V52.7c0-2.4-2-4.4-4.4-4.4c-2.4,0-4.4,2-4.4,4.4v14.8\n\t\t\tc-12.7,1.1-22.7,11.8-22.7,24.8v155.5c0,13.7,11.2,24.9,24.9,24.9h137.9c12,19.8,33.8,33,58.5,33c37.7,0,68.4-30.7,68.4-68.4\n\t\t\tC331.2,207,311.5,181.3,284.2,172.2z M199.7,263.8H66.4c-8.9,0-16.1-7.2-16.1-16.1v-133h225.1V170c-0.2,0-0.5-0.1-0.7-0.1\n\t\t\tc-0.7-0.1-1.4-0.2-2.1-0.3c-0.4-0.1-0.8-0.1-1.3-0.2c-0.6-0.1-1.3-0.2-1.9-0.2c-0.6-0.1-1.2-0.1-1.7-0.1c-0.5,0-1-0.1-1.5-0.1\n\t\t\tc-1.1-0.1-2.2-0.1-3.3-0.1c-37.7,0-68.4,30.7-68.4,68.4c0,1.1,0,2.3,0.1,3.4c0.4,7.9,2.1,15.4,5,22.4\n\t\t\tC199.5,263.3,199.6,263.6,199.7,263.8z M262.8,296.8c-24.6,0-45.8-15-54.9-36.3c-0.1-0.1-0.1-0.3-0.2-0.4\n\t\t\tc-0.3-0.7-0.6-1.4-0.8-2.1c-0.1-0.2-0.1-0.3-0.2-0.5c-0.3-0.7-0.5-1.4-0.7-2.2c-0.1-0.3-0.2-0.7-0.3-1c-0.1-0.5-0.3-1-0.4-1.5\n\t\t\tc-0.2-0.6-0.3-1.1-0.4-1.7c-0.1-0.4-0.2-0.9-0.3-1.3c-0.1-0.4-0.2-0.8-0.3-1.2c-0.1-0.7-0.3-1.4-0.4-2.1c-0.1-0.3-0.1-0.7-0.1-1\n\t\t\tc-0.1-0.6-0.2-1.1-0.2-1.7c0-0.3-0.1-0.6-0.1-0.9c-0.1-0.8-0.1-1.6-0.2-2.5c0-0.2,0-0.5,0-0.7c0-0.9-0.1-1.8-0.1-2.7\n\t\t\tc0-32.9,26.7-59.6,59.6-59.6c0.9,0,1.8,0,2.7,0.1c0.3,0,0.5,0,0.8,0c0.8,0,1.5,0.1,2.3,0.2c0.4,0,0.7,0.1,1.1,0.1\n\t\t\tc0.5,0.1,1.1,0.1,1.6,0.2c0.4,0.1,0.8,0.1,1.3,0.2c0.4,0.1,0.8,0.1,1.2,0.2c0.7,0.1,1.5,0.3,2.2,0.5c0.3,0.1,0.7,0.2,1,0.2\n\t\t\tc0.5,0.1,0.9,0.2,1.4,0.4c25.4,6.9,44.1,30.1,44.1,57.5C322.4,270.1,295.7,296.8,262.8,296.8z\"/>\n\t</g>\n\t<text transform=\"matrix(1.1412 0 0 1 224.8139 274.6013)\" class=\"st14 st15\">€</text>\n</g>\n</svg>",
+            "text": "Sicher & schnell bezahlen"
+          }
+        },
+        "5d42fa49-ddfd-4497-901a-4a554be6a41a": {
+          "type": "usp",
+          "disabled": true,
+          "settings": {
+            "image": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 27.6.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 331.7 353.9\" style=\"enable-background:new 0 0 331.7 353.9;\" xml:space=\"preserve\">\n<style type=\"text/css\">\n\t.st0{fill:#1D1D1B;}\n\t.st1{fill:none;stroke:#1D1D1B;stroke-width:11;stroke-miterlimit:10;}\n\t.st2{fill:none;stroke:#1D1D1B;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n\t.st3{fill:none;stroke:#1D1D1B;stroke-width:17;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n\t.st4{fill:none;stroke:#1D1D1B;stroke-width:13;stroke-miterlimit:10;}\n\t.st5{fill:#1D1D1B;stroke:#1D1D1B;stroke-width:2.5725;stroke-miterlimit:10;}\n\t.st6{fill:#222221;stroke:#222221;stroke-width:2;stroke-miterlimit:10;}\n\t.st7{fill:none;stroke:#222221;stroke-width:11.4926;stroke-miterlimit:10;}\n\t.st8{fill:#222221;}\n\t.st9{fill:none;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;}\n\t.st10{fill:none;stroke:#000000;stroke-width:8.1863;stroke-miterlimit:10;}\n\t.st11{stroke:#000000;stroke-width:8.1863;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n\t.st12{fill:none;stroke:#000000;stroke-width:8.1863;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n\t.st13{stroke:#000000;stroke-width:2;stroke-miterlimit:10;}\n\t.st14{fill-rule:evenodd;clip-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}\n</style>\n<g id=\"Ebene_1\">\n</g>\n<g id=\"Layer_1\">\n</g>\n<g id=\"Objects\">\n\t<g id=\"Foretrukne\">\n\t</g>\n\t<g>\n\t\t<path class=\"st9\" d=\"M64,210.8c0,0,37.9-66.2,45.7-80.4c5-9.1,12.4-16.3,20.2-18.6s18.6-3.9,18.6-3.9\"/>\n\t\t<path class=\"st9\" d=\"M221.1,158.3c0,0,3.5,8.5-0.4,17.1c-3.9,8.5-24.8,23.3-28.7,24.8c-3.9,1.6-9.3-0.8-9.3-0.8\"/>\n\t\t<g>\n\t\t\t<path class=\"st10\" d=\"M154.7,148.3l-8.4-68.7c-0.7-5.8,3.4-11.1,9.2-11.9l133.1-16.6c5.8-0.7,11.1,3.4,11.9,9.2l9.4,75.8\n\t\t\t\tc0.7,5.8-3.4,11.1-9.2,11.9l-96.3,12.1\"/>\n\t\t\t\n\t\t\t\t<ellipse transform=\"matrix(0.2426 -0.9701 0.9701 0.2426 39.0645 238.3669)\" class=\"st11\" cx=\"172.2\" cy=\"94.2\" rx=\"4.7\" ry=\"4.7\"/>\n\t\t\t<g>\n\t\t\t\t<polygon points=\"175.7,141.6 153.5,144.2 151.5,127.6 211.4,120.3 \t\t\t\t\"/>\n\t\t\t\t<polygon points=\"218,119.3 304.9,108.5 306.9,125.1 230,134.6 \t\t\t\t\"/>\n\t\t\t</g>\n\t\t\t<line class=\"st12\" x1=\"191.1\" y1=\"91.4\" x2=\"229.4\" y2=\"86.6\"/>\n\t\t</g>\n\t\t<path class=\"st9\" d=\"M177.3,213.7c0,0,7.8,2.3,14.7,0.8c7-1.6,17.8-11.6,21-14.7c3.1-3.1,3.9-9.3,3.1-15.5\"/>\n\t\t<path class=\"st9\" d=\"M171.1,227.1c0,0,6.3,5.6,13.2,3.9c9.3-2.3,21-8.5,24.1-12.4c5.4-6.8,3.9-14.7,3.9-14.7\"/>\n\t\t<polygon class=\"st9\" points=\"82.1,301 23,227 54.5,203.1 113.6,277.1 \t\t\"/>\n\t\t<path class=\"st9\" d=\"M136.1,158c0,0,58.6-28.5,69.1-34.6c18.6-10.9,34.1,12.4,15.5,24.8c-11.5,7.7-28.7,21.7-28.7,21.7\n\t\t\ts-13.2,47.3-32.6,67.5s-54.5,28.3-54.5,28.3\"/>\n\t</g>\n</g>\n</svg>",
+            "text": "Einfache Ratenzahlung"
+          }
+        },
+        "e5d5a5cf-c929-43ee-9900-59be5ec5faed": {
+          "type": "shopify://apps/wishlist-king/blocks/wishlist-button-block/194f5011-a43c-4b22-b12e-eaf20dc4506a",
+          "disabled": true,
+          "settings": {
+            "button_style": "plain_accent_1",
+            "button_alignment": "right",
+            "button_content_alignment": "right",
+            "button_margin_top": 0,
+            "button_margin_bottom": 0,
+            "button_max_width": 0,
+            "button_padding_horizontal": 15,
+            "button_full_width": true,
+            "button_show_text": true,
+            "button_show_icon": true,
+            "icon_size": 18,
+            "icon_stroke_width": 1.2,
+            "icon_offset_vertical": 0
+          }
+        }
+      },
+      "block_order": [
+        "d3718cb3-da27-477e-b804-5d9078f0bdd7",
+        "reviews_io_reviewsio_rating_output_3rwYw7",
+        "price",
+        "klip_coupons_klip_app_section_product_tmHPFW",
+        "separator",
+        "e4144135-1384-47f2-aa75-9d4d078c6c23",
+        "variant_picker",
+        "9fd55169-5e06-4f51-8137-06690050bfca",
+        "ed7dc5e3-a456-4885-828d-535e50ce9a3f",
+        "buy_buttons",
+        "description",
+        "tab",
+        "contact",
+        "share",
+        "0444c82f-598b-4b28-a7d3-d33fc73d31fb",
+        "d07d5f68-bae4-493e-9c78-31645755ccdd",
+        "0d0f1ddb-0de9-4d8b-8e7a-5d7f9a868a30",
+        "a2811a82-c23e-4b3f-bfdb-ca0ee19c0dcc",
+        "5d42fa49-ddfd-4497-901a-4a554be6a41a",
+        "e5d5a5cf-c929-43ee-9900-59be5ec5faed"
+      ],
+      "settings": {
+        "sku_enable": true,
+        "image_position": "left",
+        "image_size": "medium",
+        "product_zoom_enable": true,
+        "thumbnail_position": "beside",
+        "thumbnail_height": "flexible",
+        "thumbnail_arrows": false,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "main_product_new_8EgNzz": {
+      "type": "main-product-new",
+      "blocks": {
+        "text_6n9xdJ": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.product.subtitle.value }}"
+          }
+        },
+        "product_sku_xJUmtH": {
+          "type": "product_sku",
+          "settings": {
+            "text": "Artikelnummer:"
+          }
+        },
+        "reviews_io_reviewsio_rating_output_xnYQwt": {
+          "type": "shopify://apps/reviews-io/blocks/reviewsio-rating-output/92a082e5-b297-4e88-b428-ac96cbc505f9",
+          "settings": {}
+        },
+        "bullet_points_KJHzyG": {
+          "type": "bullet_points",
+          "settings": {}
+        },
+        "price_G36Rx3": {
+          "type": "price",
+          "settings": {
+            "font_size_compare_price": 20,
+            "font_weight_compare_price": 400,
+            "font_size_compare_price_mobile": 20,
+            "font_weight_compare_price_mobile": 400,
+            "font_color_compare_price": "#000000",
+            "font_size_price": 19,
+            "font_weight_price": 400,
+            "font_size_price_mobile": 20,
+            "font_weight_price_mobile": 400,
+            "font_color_price": "#000000"
+          }
+        },
+        "klip_coupons_klip_app_section_product_NMgVxy": {
+          "type": "shopify://apps/klip-coupons/blocks/klip-app-section-product/df38e221-ede4-4ad4-b47d-56524361a5be",
+          "settings": {
+            "margin_top": 0,
+            "margin_bottom": 10
+          }
+        },
+        "variant_picker_J7D9Ch": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": true
+          }
+        },
+        "quantity_selector_BTTkFD": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "random_visitors_4fh4jV": {
+          "type": "random_visitors",
+          "settings": {
+            "in_stock_time": "1-3",
+            "random_visit": "Aktuell betrachten [random] dieses Produkt"
+          }
+        },
+        "buy_buttons_X4dEpV": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "surface_pickup_enable": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "payment_icons_MypwHN": {
+          "type": "payment_icons",
+          "settings": {}
+        },
+        "b2b_pdf_pQ8dd6": {
+          "type": "b2b_pdf",
+          "settings": {
+            "title": "Additional information"
+          }
+        },
+        "usp_4CJVFd": {
+          "type": "usp",
+          "settings": {
+            "image": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 27.6.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 508.7 353.9\" style=\"enable-background:new 0 0 508.7 353.9;\" xml:space=\"preserve\">\n<style type=\"text/css\">\n\t.st0{fill:#1D1D1B;}\n\t.st1{fill:none;stroke:#1D1D1B;stroke-width:11;stroke-miterlimit:10;}\n\t.st2{fill:none;stroke:#1D1D1B;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n\t.st3{fill:none;stroke:#1D1D1B;stroke-width:17;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n\t.st4{fill:none;stroke:#1D1D1B;stroke-width:13;stroke-miterlimit:10;}\n\t.st5{fill:#1D1D1B;stroke:#1D1D1B;stroke-width:2.5725;stroke-miterlimit:10;}\n\t.st6{fill:#222221;stroke:#222221;stroke-width:2;stroke-miterlimit:10;}\n\t.st7{fill:none;stroke:#222221;stroke-width:11.4926;stroke-miterlimit:10;}\n\t.st8{fill:#222221;}\n\t.st9{fill:none;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;}\n\t.st10{fill:none;stroke:#000000;stroke-width:8.1863;stroke-miterlimit:10;}\n\t.st11{stroke:#000000;stroke-width:8.1863;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n\t.st12{fill:none;stroke:#000000;stroke-width:8.1863;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n\t.st13{stroke:#000000;stroke-width:2;stroke-miterlimit:10;}\n\t.st14{fill-rule:evenodd;clip-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}\n</style>\n<g id=\"Ebene_1\">\n</g>\n<g id=\"Layer_1\">\n</g>\n<g id=\"Objects\">\n\t<g id=\"Foretrukne\">\n\t</g>\n\t<g>\n\t\t<path class=\"st5\" d=\"M466.1,202.5l-38.2-68.6c-2.8-5.1-8.2-8.2-14-8.2h-54V74.3c0-6-4.9-10.9-10.9-10.9H112.4\n\t\t\tc-6,0-10.9,4.9-10.9,10.9v25.3H69.1c-2.8,0-5.1,2.3-5.1,5.1c0,2.8,2.3,5.1,5.1,5.1h86.3c2.8,0,5.1-2.3,5.1-5.1\n\t\t\tc0-2.8-2.3-5.1-5.1-5.1h-43.6V74.3c0-0.3,0.3-0.6,0.6-0.6h236.5c0.3,0,0.6,0.3,0.6,0.6v56.6v131.4H242.3\n\t\t\tc-2.5-17.8-17.7-31.7-36.3-31.7c-18.5,0-33.7,13.8-36.3,31.7h-58v-41.4h22.8c2.8,0,5.1-2.3,5.1-5.1c0-2.8-2.3-5.1-5.1-5.1H44.9\n\t\t\tc-2.8,0-5.1,2.3-5.1,5.1c0,2.8,2.3,5.1,5.1,5.1h56.6v46.6c0,2.8,2.3,5.1,5.1,5.1h63.1c2.5,17.9,17.7,31.7,36.3,31.7\n\t\t\tc18.5,0,33.7-13.8,36.3-31.7h112.4h19.2c2.5,17.9,17.7,31.7,36.3,31.7c18.5,0,33.7-13.8,36.3-31.7h14.7c5.6,0,10.2-4.6,10.2-10.2\n\t\t\tv-39.5C471.4,215.8,469.6,208.8,466.1,202.5z M206.1,294c-14.6,0-26.5-11.9-26.5-26.5c0-14.6,11.9-26.5,26.5-26.5\n\t\t\tc14.6,0,26.5,11.9,26.5,26.5C232.6,282.1,220.7,294,206.1,294z M410.2,294c-14.6,0-26.5-11.9-26.5-26.5\n\t\t\tc0-14.6,11.9-26.5,26.5-26.5s26.5,11.9,26.5,26.5C436.7,282.1,424.8,294,410.2,294z M446.5,262.3c-2.5-17.8-17.7-31.7-36.3-31.7\n\t\t\tc-18.5,0-33.7,13.8-36.3,31.7h-14.1V136h54c2.1,0,4,1.1,5,2.9l38.3,68.6c2.6,4.7,4,10,4,15.4l0.1,39.4H446.5z\"/>\n\t\t<path class=\"st5\" d=\"M415,148.3c-2.3-4.2-6.7-6.7-11.5-6.7h-22c-4.5,0-8.1,3.6-8.1,8.1v52.3c0,4.5,3.6,8.1,8.1,8.1l54.1,0.1\n\t\t\tc0,0,0,0,0,0c2.9,0,5.5-1.5,7-4c1.5-2.5,1.5-5.5,0.1-8.1L415,148.3z M383.7,199.8v-47.9h19.8c1,0,2,0.6,2.5,1.5l26,46.5\n\t\t\tL383.7,199.8z\"/>\n\t\t<path class=\"st5\" d=\"M106.7,120.9c-2.8,0-5.1,2.3-5.1,5.1v47.5H80.9c-2.8,0-5.1,2.3-5.1,5.1c0,2.8,2.3,5.1,5.1,5.1h20.6v15.3\n\t\t\tc0,2.8,2.3,5.1,5.1,5.1c2.8,0,5.1-2.3,5.1-5.1v-15.3h94.2c2.8,0,5.1-2.3,5.1-5.1c0-2.8-2.3-5.1-5.1-5.1h-94.2v-47.5\n\t\t\tC111.8,123.2,109.5,120.9,106.7,120.9z\"/>\n\t\t<path class=\"st5\" d=\"M86.1,141.7c0-2.8-2.3-5.1-5.1-5.1H28.1c-2.8,0-5.1,2.3-5.1,5.1c0,2.8,2.3,5.1,5.1,5.1h52.8\n\t\t\tC83.7,146.8,86.1,144.5,86.1,141.7z\"/>\n\t</g>\n</g>\n</svg>",
+            "text": "Kostenloser Versand innerhalb Deutschlands"
+          }
+        },
+        "usp_UFUUbc": {
+          "type": "usp",
+          "settings": {
+            "image": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<svg id=\"Objects\" xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" viewBox=\"0 0 508.7 353.9\">\n  <defs>\n    <style>\n      .cls-1 {\n        fill: #000;\n        stroke-width: 0px;\n      }\n    </style>\n  </defs>\n  <path class=\"cls-1\" d=\"M397.2,45.4H111.4c-8.9,0-16.1,7.2-16.1,16.1v230.9c0,8.9,7.2,16.1,16.1,16.1h285.8c8.9,0,16.1-7.2,16.1-16.1V61.5c0-8.9-7.2-16.1-16.1-16.1ZM282.2,55.7v58l-3.5-1.8c-1.5-.7-3.2-.7-4.6,0l-8.7,4.3-8.7-4.3c-1.4-.7-3.2-.7-4.6,0l-8.7,4.3-8.7-4.3c-.7-.4-1.5-.5-2.3-.5s-1.6.2-2.3.5l-3.5,1.8v-58s55.7,0,55.7,0ZM403.1,292.4c0,3.2-2.6,5.8-5.8,5.8H111.4c-3.2,0-5.8-2.6-5.8-5.8V61.5c0-3.2,2.6-5.8,5.8-5.8h104.8v66.3c0,1.8.9,3.4,2.4,4.4,1.5.9,3.4,1,5,.2l8.7-4.3,8.7,4.3c1.4.7,3.2.7,4.6,0l8.7-4.3,8.7,4.3c1.5.7,3.2.7,4.6,0l8.7-4.3,8.7,4.3c.7.4,1.5.5,2.3.5s1.9-.3,2.7-.8c1.5-.9,2.4-2.6,2.4-4.4V55.7h104.8c3.2,0,5.8,2.6,5.8,5.8v230.9h0Z\"/>\n  <path class=\"cls-1\" d=\"M292.8,177.3h-101.5l21.6-12.4c2.5-1.4,3.3-4.6,1.9-7-1.4-2.5-4.6-3.3-7-1.9l-30.1,17.2c-3,1.7-4.9,4.6-5.3,8-.1.4-.2.8-.2,1.3s0,.9.2,1.3c.4,3.3,2.3,6.3,5.3,8l30.1,17.2c.8.5,1.7.7,2.6.7,1.8,0,3.5-.9,4.5-2.6,1.4-2.5.6-5.6-1.9-7l-21.6-12.4h101.5c18.4,0,33.3,14.9,33.3,33.3s-14.9,33.3-33.3,33.3h-66c-2.8,0-5.2,2.3-5.2,5.2s2.3,5.2,5.2,5.2h66c24.1,0,43.6-19.6,43.6-43.6s-19.6-43.6-43.6-43.6Z\"/>\n</svg>",
+            "text": "Kostenlose Rücksendung innerhalb Deutschlands"
+          }
+        },
+        "new_usp_payment_tA9jeA": {
+          "type": "new_usp_payment",
+          "settings": {
+            "image": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 27.6.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 345 353.9\" style=\"enable-background:new 0 0 345 353.9;\" xml:space=\"preserve\">\n<style type=\"text/css\">\n\t.st0{fill:#1D1D1B;}\n\t.st1{fill:none;stroke:#1D1D1B;stroke-width:11;stroke-miterlimit:10;}\n\t.st2{fill:none;stroke:#1D1D1B;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n\t.st3{fill:none;stroke:#1D1D1B;stroke-width:17;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n\t.st4{fill:none;stroke:#1D1D1B;stroke-width:13;stroke-miterlimit:10;}\n\t.st5{fill:#1D1D1B;stroke:#1D1D1B;stroke-width:2.5725;stroke-miterlimit:10;}\n\t.st6{fill:#222221;stroke:#222221;stroke-width:2;stroke-miterlimit:10;}\n\t.st7{fill:none;stroke:#222221;stroke-width:11.4926;stroke-miterlimit:10;}\n\t.st8{fill:#222221;}\n\t.st9{fill:none;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;}\n\t.st10{fill:none;stroke:#000000;stroke-width:8.1863;stroke-miterlimit:10;}\n\t.st11{stroke:#000000;stroke-width:8.1863;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n\t.st12{fill:none;stroke:#000000;stroke-width:8.1863;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n\t.st13{stroke:#000000;stroke-width:2;stroke-miterlimit:10;}\n\t.st14{font-family:'Roboto-Regular';}\n\t.st15{font-size:100.7667px;}\n\t.st16{fill-rule:evenodd;clip-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}\n</style>\n<g id=\"Ebene_1\">\n</g>\n<g id=\"Layer_1\">\n</g>\n<g id=\"Objects\">\n\t<g id=\"Foretrukne\">\n\t</g>\n\t<path d=\"M77.1,206.4c-8.9,0-16.1-7.2-16.1-16.1c0-8.9,7.2-16.1,16.1-16.1c8.9,0,16.1,7.2,16.1,16.1\n\t\tC93.2,199.2,85.9,206.4,77.1,206.4z M77.1,183c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3\n\t\tC84.4,186.3,81.1,183,77.1,183z\"/>\n\t<path d=\"M77.1,246.1c-8.9,0-16.1-7.2-16.1-16.1c0-8.9,7.2-16.1,16.1-16.1c8.9,0,16.1,7.2,16.1,16.1\n\t\tC93.2,238.9,85.9,246.1,77.1,246.1z M77.1,222.7c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3\n\t\tC84.4,226,81.1,222.7,77.1,222.7z\"/>\n\t<path d=\"M119.4,206.4c-8.9,0-16.1-7.2-16.1-16.1c0-8.9,7.2-16.1,16.1-16.1c8.9,0,16.1,7.2,16.1,16.1\n\t\tC135.5,199.2,128.3,206.4,119.4,206.4z M119.4,183c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3\n\t\tC126.7,186.3,123.4,183,119.4,183z\"/>\n\t<path d=\"M119.4,246.1c-8.9,0-16.1-7.2-16.1-16.1c0-8.9,7.2-16.1,16.1-16.1c8.9,0,16.1,7.2,16.1,16.1\n\t\tC135.5,238.9,128.3,246.1,119.4,246.1z M119.4,222.7c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3\n\t\tC126.7,226,123.4,222.7,119.4,222.7z\"/>\n\t<path d=\"M161.7,166.6c-8.9,0-16.1-7.2-16.1-16.1c0-8.9,7.2-16.1,16.1-16.1c8.9,0,16.1,7.2,16.1,16.1\n\t\tC177.8,159.4,170.6,166.6,161.7,166.6z M161.7,143.2c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3\n\t\tC169,146.5,165.7,143.2,161.7,143.2z\"/>\n\t<path d=\"M119.4,166.6c-8.9,0-16.1-7.2-16.1-16.1c0-8.9,7.2-16.1,16.1-16.1c8.9,0,16.1,7.2,16.1,16.1\n\t\tC135.5,159.4,128.3,166.6,119.4,166.6z M119.4,143.2c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3\n\t\tC126.7,146.5,123.4,143.2,119.4,143.2z\"/>\n\t<path d=\"M161.7,206.4c-8.9,0-16.1-7.2-16.1-16.1c0-8.9,7.2-16.1,16.1-16.1c8.9,0,16.1,7.2,16.1,16.1\n\t\tC177.8,199.2,170.6,206.4,161.7,206.4z M161.7,183c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3\n\t\tC169,186.3,165.7,183,161.7,183z\"/>\n\t<path d=\"M161.7,246.1c-8.9,0-16.1-7.2-16.1-16.1c0-8.9,7.2-16.1,16.1-16.1c8.9,0,16.1,7.2,16.1,16.1\n\t\tC177.8,238.9,170.6,246.1,161.7,246.1z M161.7,222.7c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3\n\t\tC169,226,165.7,222.7,161.7,222.7z\"/>\n\t<path d=\"M204.1,166.6c-8.9,0-16.1-7.2-16.1-16.1c0-8.9,7.2-16.1,16.1-16.1c8.9,0,16.1,7.2,16.1,16.1\n\t\tC220.2,159.4,212.9,166.6,204.1,166.6z M204.1,143.2c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3\n\t\tC211.3,146.5,208.1,143.2,204.1,143.2z\"/>\n\t<path d=\"M246.4,166.6c-8.9,0-16.1-7.2-16.1-16.1c0-8.9,7.2-16.1,16.1-16.1c8.9,0,16.1,7.2,16.1,16.1\n\t\tC262.5,159.4,255.3,166.6,246.4,166.6z M246.4,143.2c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3c4,0,7.3-3.3,7.3-7.3\n\t\tC253.7,146.5,250.4,143.2,246.4,143.2z\"/>\n\t<g>\n\t\t<path class=\"st13\" d=\"M83.4,92.2c2.4,0,4.4-2,4.4-4.4V76.2h33.5v11.6c0,2.4,2,4.4,4.4,4.4s4.4-2,4.4-4.4v-16c0,0,0,0,0,0\n\t\t\tc0,0,0,0,0,0V52.7c0-2.4-2-4.4-4.4-4.4s-4.4,2-4.4,4.4v14.7H87.8V52.7c0-2.4-2-4.4-4.4-4.4c-2.4,0-4.4,2-4.4,4.4v35.1\n\t\t\tC79,90.2,81,92.2,83.4,92.2z\"/>\n\t\t<path class=\"st13\" d=\"M140.6,92.2c2.4,0,4.4-2,4.4-4.4V76.2h33.5v11.6c0,2.4,2,4.4,4.4,4.4c2.4,0,4.4-2,4.4-4.4V52.7\n\t\t\tc0-2.4-2-4.4-4.4-4.4c-2.4,0-4.4,2-4.4,4.4v14.7H145V52.7c0-2.4-2-4.4-4.4-4.4c-2.4,0-4.4,2-4.4,4.4v35.1\n\t\t\tC136.2,90.2,138.1,92.2,140.6,92.2z\"/>\n\t\t<path class=\"st13\" d=\"M197.7,92.2c2.4,0,4.4-2,4.4-4.4V76.2h33.5v11.6c0,2.4,2,4.4,4.4,4.4c2.4,0,4.4-2,4.4-4.4V52.7\n\t\t\tc0-2.4-2-4.4-4.4-4.4c-2.4,0-4.4,2-4.4,4.4v14.7h-33.5V52.7c0-2.4-2-4.4-4.4-4.4c-2.4,0-4.4,2-4.4,4.4v35.1\n\t\t\tC193.3,90.2,195.3,92.2,197.7,92.2z\"/>\n\t\t<path class=\"st13\" d=\"M284.2,172.2v-80c0-13.7-11.2-24.9-24.9-24.9h-0.1V52.7c0-2.4-2-4.4-4.4-4.4c-2.4,0-4.4,2-4.4,4.4v19.1\n\t\t\tc0,0,0,0,0,0c0,0,0,0,0,0v16c0,2.4,2,4.4,4.4,4.4c2.4,0,4.4-2,4.4-4.4V76.2h0.1c8.9,0,16.1,7.2,16.1,16.1v13.7H50.3V92.2\n\t\t\tc0-8.1,6.1-14.9,13.9-15.9v11.4c0,2.4,2,4.4,4.4,4.4c2.4,0,4.4-2,4.4-4.4V52.7c0-2.4-2-4.4-4.4-4.4c-2.4,0-4.4,2-4.4,4.4v14.8\n\t\t\tc-12.7,1.1-22.7,11.8-22.7,24.8v155.5c0,13.7,11.2,24.9,24.9,24.9h137.9c12,19.8,33.8,33,58.5,33c37.7,0,68.4-30.7,68.4-68.4\n\t\t\tC331.2,207,311.5,181.3,284.2,172.2z M199.7,263.8H66.4c-8.9,0-16.1-7.2-16.1-16.1v-133h225.1V170c-0.2,0-0.5-0.1-0.7-0.1\n\t\t\tc-0.7-0.1-1.4-0.2-2.1-0.3c-0.4-0.1-0.8-0.1-1.3-0.2c-0.6-0.1-1.3-0.2-1.9-0.2c-0.6-0.1-1.2-0.1-1.7-0.1c-0.5,0-1-0.1-1.5-0.1\n\t\t\tc-1.1-0.1-2.2-0.1-3.3-0.1c-37.7,0-68.4,30.7-68.4,68.4c0,1.1,0,2.3,0.1,3.4c0.4,7.9,2.1,15.4,5,22.4\n\t\t\tC199.5,263.3,199.6,263.6,199.7,263.8z M262.8,296.8c-24.6,0-45.8-15-54.9-36.3c-0.1-0.1-0.1-0.3-0.2-0.4\n\t\t\tc-0.3-0.7-0.6-1.4-0.8-2.1c-0.1-0.2-0.1-0.3-0.2-0.5c-0.3-0.7-0.5-1.4-0.7-2.2c-0.1-0.3-0.2-0.7-0.3-1c-0.1-0.5-0.3-1-0.4-1.5\n\t\t\tc-0.2-0.6-0.3-1.1-0.4-1.7c-0.1-0.4-0.2-0.9-0.3-1.3c-0.1-0.4-0.2-0.8-0.3-1.2c-0.1-0.7-0.3-1.4-0.4-2.1c-0.1-0.3-0.1-0.7-0.1-1\n\t\t\tc-0.1-0.6-0.2-1.1-0.2-1.7c0-0.3-0.1-0.6-0.1-0.9c-0.1-0.8-0.1-1.6-0.2-2.5c0-0.2,0-0.5,0-0.7c0-0.9-0.1-1.8-0.1-2.7\n\t\t\tc0-32.9,26.7-59.6,59.6-59.6c0.9,0,1.8,0,2.7,0.1c0.3,0,0.5,0,0.8,0c0.8,0,1.5,0.1,2.3,0.2c0.4,0,0.7,0.1,1.1,0.1\n\t\t\tc0.5,0.1,1.1,0.1,1.6,0.2c0.4,0.1,0.8,0.1,1.3,0.2c0.4,0.1,0.8,0.1,1.2,0.2c0.7,0.1,1.5,0.3,2.2,0.5c0.3,0.1,0.7,0.2,1,0.2\n\t\t\tc0.5,0.1,0.9,0.2,1.4,0.4c25.4,6.9,44.1,30.1,44.1,57.5C322.4,270.1,295.7,296.8,262.8,296.8z\"/>\n\t</g>\n\t<text transform=\"matrix(1.1412 0 0 1 224.8139 274.6013)\" class=\"st14 st15\">€</text>\n</g>\n</svg>",
+            "text": "Sicher & schnell beszahlen",
+            "icon_1": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"30\" height=\"18\" viewBox=\"0 0 30 18\" fill=\"none\">\n<rect x=\"0.5\" y=\"0.75\" width=\"28.6342\" height=\"15.9338\" rx=\"4.5\" fill=\"#FEB4C7\" stroke=\"#DEDEDE\"/>\n<path d=\"M25.5368 10.0085C25.2017 10.0085 24.9299 10.2837 24.9299 10.6222C24.9299 10.9613 25.2017 11.2365 25.5368 11.2365C25.8725 11.2365 26.1442 10.9613 26.1442 10.6222C26.145 10.4602 26.0814 10.3047 25.9675 10.1896C25.8536 10.0745 25.6987 10.0094 25.5368 10.0085ZM23.5395 9.53374C23.5395 9.06866 23.1473 8.69233 22.663 8.69233C22.1786 8.69233 21.7865 9.06866 21.7865 9.53306C21.7865 9.99745 22.1786 10.3745 22.663 10.3745C23.1473 10.3745 23.5395 9.99745 23.5395 9.53306V9.53374ZM23.5429 7.89907H24.5103V11.167H23.5429V10.9586C23.2612 11.1537 22.9266 11.2581 22.5839 11.2579C21.642 11.2579 20.879 10.4859 20.879 9.53306C20.879 8.58087 21.6427 7.80894 22.5839 7.80894C22.9396 7.80894 23.2691 7.91902 23.5429 8.10822V7.89907ZM15.8009 8.32494V7.89907H14.8102V11.167H15.803V9.64176C15.803 9.12645 16.3548 8.85057 16.738 8.85057H16.749V7.89976C16.3568 7.89976 15.9949 8.06969 15.8009 8.32494ZM13.3338 9.53306C13.3338 9.06866 12.9416 8.69233 12.4573 8.69233C11.9736 8.69233 11.5808 9.06866 11.5808 9.53306C11.5808 9.99745 11.9729 10.3745 12.4573 10.3745C12.9416 10.3745 13.3338 9.99745 13.3338 9.53306ZM13.3372 7.89907H14.3045V11.167H13.3372V10.9586C13.0553 11.1538 12.7204 11.2582 12.3775 11.2579C11.4363 11.2579 10.6726 10.4859 10.6726 9.53306C10.6726 8.58087 11.4363 7.80894 12.3775 7.80894C12.7332 7.80894 13.0634 7.91902 13.3365 8.10822L13.3372 7.89907ZM19.1597 7.811C18.7738 7.811 18.4077 7.93278 18.1635 8.26715V7.89907H17.2003V11.167H18.1752V9.44981C18.1752 8.95308 18.5048 8.70953 18.901 8.70953C19.3262 8.70953 19.5705 8.96684 19.5705 9.44293V11.1677H20.5371V9.0893C20.5371 8.32838 19.9385 7.811 19.1597 7.811ZM9.26429 11.1684H10.277V6.44189H9.26429V11.167V11.1684ZM4.81641 11.1684H5.8883V6.44189H4.81641V11.1684ZM8.56598 6.44189C8.5687 6.93923 8.4733 7.43222 8.28523 7.89264C8.09717 8.35306 7.82014 8.77186 7.47 9.12507L8.95194 11.1684H7.62755L6.01696 8.94757L6.43251 8.63247C6.77148 8.37708 7.0461 8.04602 7.23447 7.6657C7.42284 7.28538 7.51975 6.8663 7.51747 6.44189H8.56598Z\" fill=\"#0A0B09\"/>\n</svg>",
+            "icon_2": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"31\" height=\"18\" viewBox=\"0 0 31 18\" fill=\"none\">\n<rect x=\"1.21973\" y=\"0.75\" width=\"28.6342\" height=\"15.9338\" rx=\"4.5\" fill=\"white\" stroke=\"#DEDEDE\"/>\n<g clip-path=\"url(#clip0_173_645)\">\n<path d=\"M12.6213 7.02002H11.3691C11.2834 7.02002 11.2106 7.08382 11.1972 7.1705L10.6908 10.4611C10.6807 10.526 10.7298 10.5845 10.794 10.5845H11.3918C11.4775 10.5845 11.5504 10.5207 11.5638 10.4339L11.7004 9.54634C11.7135 9.45946 11.7866 9.39567 11.8721 9.39567H12.2685C13.0933 9.39567 13.5694 8.98662 13.6937 8.17604C13.7497 7.82141 13.6961 7.54277 13.5341 7.34763C13.3561 7.13335 13.0404 7.02002 12.6213 7.02002ZM12.7658 8.22182C12.6973 8.68228 12.354 8.68228 12.0221 8.68228H11.8331L11.9657 7.82235C11.9735 7.77037 12.0175 7.73209 12.0687 7.73209H12.1553C12.3815 7.73209 12.5948 7.73209 12.705 7.86419C12.7707 7.943 12.7909 8.06008 12.7658 8.22182Z\" fill=\"#253B80\"/>\n<path d=\"M16.3645 8.20721H15.7648C15.7137 8.20721 15.6696 8.24548 15.6617 8.29746L15.6352 8.46933L15.5933 8.40704C15.4635 8.21396 15.174 8.14941 14.8851 8.14941C14.2224 8.14941 13.6565 8.66372 13.5463 9.38518C13.4889 9.74506 13.5704 10.0892 13.7696 10.3292C13.9524 10.5498 14.2138 10.6418 14.5249 10.6418C15.0588 10.6418 15.3549 10.29 15.3549 10.29L15.3281 10.4607C15.3181 10.526 15.3671 10.5845 15.431 10.5845H15.9712C16.057 10.5845 16.1296 10.5207 16.1431 10.4339L16.4672 8.33067C16.4774 8.26594 16.4285 8.20721 16.3645 8.20721ZM15.5286 9.40319C15.4708 9.75426 15.1989 9.98993 14.8521 9.98993C14.678 9.98993 14.5388 9.9327 14.4495 9.82424C14.3609 9.71654 14.3272 9.56324 14.3554 9.3925C14.4094 9.04443 14.6858 8.80107 15.0273 8.80107C15.1976 8.80107 15.336 8.85905 15.4272 8.96844C15.5186 9.07896 15.5548 9.23319 15.5286 9.40319Z\" fill=\"#253B80\"/>\n<path d=\"M19.5575 8.20703H18.9549C18.8974 8.20703 18.8434 8.2363 18.8108 8.28528L17.9797 9.5398L17.6274 8.33425C17.6053 8.25882 17.5374 8.20703 17.4605 8.20703H16.8683C16.7964 8.20703 16.7464 8.27908 16.7693 8.34851L17.433 10.3446L16.809 11.2473C16.7599 11.3184 16.8094 11.4162 16.8942 11.4162H17.496C17.5531 11.4162 17.6066 11.3876 17.639 11.3396L19.6431 8.37496C19.6911 8.30404 19.6419 8.20703 19.5575 8.20703Z\" fill=\"#253B80\"/>\n<path d=\"M21.553 7.02002H20.3006C20.2151 7.02002 20.1422 7.08382 20.1289 7.1705L19.6224 10.4611C19.6123 10.526 19.6614 10.5845 19.7253 10.5845H20.368C20.4277 10.5845 20.4787 10.5399 20.4881 10.4791L20.6318 9.54634C20.645 9.45946 20.7181 9.39567 20.8036 9.39567H21.1998C22.0248 9.39567 22.5007 8.98662 22.6252 8.17604C22.6814 7.82141 22.6274 7.54277 22.4653 7.34763C22.2876 7.13335 21.9721 7.02002 21.553 7.02002ZM21.6974 8.22182C21.6291 8.68228 21.2858 8.68228 20.9537 8.68228H20.7649L20.8977 7.82235C20.9055 7.77037 20.9491 7.73209 21.0006 7.73209H21.0872C21.3131 7.73209 21.5266 7.73209 21.6368 7.86419C21.7026 7.943 21.7225 8.06008 21.6974 8.22182Z\" fill=\"#179BD7\"/>\n<path d=\"M25.2953 8.20721H24.6961C24.6446 8.20721 24.6008 8.24548 24.5932 8.29746L24.5666 8.46933L24.5245 8.40704C24.3947 8.21396 24.1054 8.14941 23.8165 8.14941C23.1538 8.14941 22.5881 8.66372 22.4778 9.38518C22.4207 9.74506 22.5018 10.0892 22.701 10.3292C22.8841 10.5498 23.1452 10.6418 23.4563 10.6418C23.9902 10.6418 24.2863 10.29 24.2863 10.29L24.2596 10.4607C24.2495 10.526 24.2986 10.5845 24.3628 10.5845H24.9028C24.9883 10.5845 25.0611 10.5207 25.0745 10.4339L25.3988 8.33067C25.4087 8.26594 25.3596 8.20721 25.2953 8.20721ZM24.4595 9.40319C24.402 9.75426 24.1297 9.98993 23.783 9.98993C23.6092 9.98993 23.4697 9.9327 23.3803 9.82424C23.2917 9.71654 23.2584 9.56324 23.2862 9.3925C23.3406 9.04443 23.6167 8.80107 23.9582 8.80107C24.1285 8.80107 24.2669 8.85905 24.3581 8.96844C24.4498 9.07896 24.486 9.23319 24.4595 9.40319Z\" fill=\"#179BD7\"/>\n<path d=\"M26.0026 7.11046L25.4886 10.4612C25.4785 10.5262 25.5276 10.5847 25.5915 10.5847H26.1082C26.1941 10.5847 26.267 10.5209 26.2801 10.434L26.7869 7.14367C26.797 7.07875 26.7479 7.02002 26.684 7.02002H26.1055C26.0544 7.02021 26.0104 7.05848 26.0026 7.11046Z\" fill=\"#179BD7\"/>\n<path d=\"M5.4906 11.2245L5.58636 10.6011L5.37305 10.5961H4.35449L5.06234 5.99658C5.06454 5.98269 5.07168 5.96974 5.08211 5.96055C5.09255 5.95136 5.10592 5.94629 5.11983 5.94629H6.83727C7.40743 5.94629 7.8009 6.06788 8.00633 6.30786C8.10264 6.42044 8.16398 6.53809 8.19364 6.66756C8.22476 6.80341 8.22531 6.96571 8.19492 7.16367L8.19272 7.17811V7.30495L8.28903 7.36087C8.37014 7.40496 8.43459 7.45544 8.48403 7.51323C8.56642 7.60949 8.6197 7.73182 8.64222 7.87687C8.66547 8.02604 8.65778 8.20354 8.6197 8.4045C8.57576 8.63566 8.50472 8.83699 8.40877 9.00174C8.32052 9.15354 8.2081 9.27944 8.07463 9.37701C7.94719 9.4697 7.79577 9.54006 7.62458 9.5851C7.45869 9.62938 7.26955 9.65171 7.06211 9.65171H6.92845C6.83287 9.65171 6.74004 9.68698 6.66717 9.75021C6.59412 9.81476 6.54578 9.90295 6.53095 9.99939L6.52088 10.0555L6.3517 11.1541L6.34401 11.1944C6.34199 11.2072 6.33851 11.2136 6.33339 11.2179C6.32881 11.2218 6.32222 11.2245 6.31581 11.2245H5.4906Z\" fill=\"#253B80\"/>\n<path d=\"M8.3799 7.19238C8.37477 7.22597 8.36891 7.26031 8.36232 7.29558C8.13583 8.48725 7.36097 8.89892 6.37134 8.89892H5.86746C5.74644 8.89892 5.64445 8.98899 5.62559 9.11133L5.36761 10.788L5.29456 11.2633C5.28229 11.3436 5.34271 11.416 5.42181 11.416H6.3155C6.42133 11.416 6.51122 11.3372 6.52789 11.2303L6.53668 11.1838L6.70494 10.0895L6.71574 10.0294C6.73222 9.9221 6.8223 9.84329 6.92813 9.84329H7.06179C7.92765 9.84329 8.60547 9.48303 8.80358 8.44053C8.88634 8.00503 8.8435 7.64139 8.62451 7.38565C8.55823 7.30853 8.47602 7.24455 8.3799 7.19238Z\" fill=\"#179BD7\"/>\n<path d=\"M8.14336 7.09552C8.10875 7.0852 8.07305 7.07582 8.03643 7.06737C7.99963 7.05912 7.96191 7.0518 7.92309 7.04542C7.78724 7.0229 7.63838 7.01221 7.4789 7.01221H6.13278C6.09964 7.01221 6.06815 7.0199 6.03996 7.03379C5.97789 7.06437 5.93175 7.1246 5.92058 7.19834L5.63422 9.05705L5.62598 9.11128C5.64484 8.98894 5.74682 8.89888 5.86785 8.89888H6.37172C7.36136 8.89888 8.13622 8.48702 8.3627 7.29554C8.36948 7.26026 8.37515 7.22592 8.38028 7.19234C8.32297 7.16119 8.2609 7.13455 8.19407 7.11184C8.17759 7.10621 8.16057 7.10077 8.14336 7.09552Z\" fill=\"#222D65\"/>\n<path d=\"M5.92043 7.19851C5.9316 7.12477 5.97774 7.06454 6.03981 7.03414C6.06819 7.02026 6.0995 7.01256 6.13264 7.01256H7.47876C7.63824 7.01256 7.78709 7.02326 7.92295 7.04577C7.96177 7.05215 7.99948 7.05947 8.03629 7.06773C8.07291 7.07617 8.10861 7.08555 8.14321 7.09587C8.16042 7.10113 8.17745 7.10657 8.19411 7.11201C8.26094 7.13471 8.32301 7.16154 8.38032 7.1925C8.4477 6.75212 8.37977 6.45228 8.14742 6.18078C7.89127 5.88187 7.42896 5.75391 6.83738 5.75391H5.11994C4.9991 5.75391 4.89602 5.84397 4.87734 5.9665L4.16199 10.6133C4.14789 10.7052 4.2171 10.7882 4.30755 10.7882H5.36785L5.63407 9.05722L5.92043 7.19851Z\" fill=\"#253B80\"/>\n</g>\n<defs>\n<clipPath id=\"clip0_173_645\">\n<rect width=\"22.7038\" height=\"6.19196\" fill=\"white\" transform=\"translate(4.16016 5.75391)\"/>\n</clipPath>\n</defs>\n</svg>"
+          }
+        },
+        "usp_fgKGpw": {
+          "type": "usp",
+          "settings": {
+            "image": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 27.6.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 345 353.9\" style=\"enable-background:new 0 0 345 353.9;\" xml:space=\"preserve\">\n<style type=\"text/css\">\n\t.st0{fill:#1D1D1B;}\n\t.st1{fill:none;stroke:#1D1D1B;stroke-width:11;stroke-miterlimit:10;}\n\t.st2{fill:none;stroke:#1D1D1B;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n\t.st3{fill:none;stroke:#1D1D1B;stroke-width:17;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n\t.st4{fill:none;stroke:#1D1D1B;stroke-width:13;stroke-miterlimit:10;}\n\t.st5{fill:#1D1D1B;stroke:#1D1D1B;stroke-width:2.5725;stroke-miterlimit:10;}\n\t.st6{fill:#222221;stroke:#222221;stroke-width:2;stroke-miterlimit:10;}\n\t.st7{fill:none;stroke:#222221;stroke-width:11.4926;stroke-miterlimit:10;}\n\t.st8{fill:#222221;}\n\t.st9{fill:none;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;}\n\t.st10{fill:none;stroke:#000000;stroke-width:8.1863;stroke-miterlimit:10;}\n\t.st11{stroke:#000000;stroke-width:8.1863;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n\t.st12{fill:none;stroke:#000000;stroke-width:8.1863;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n\t.st13{font-family:'Roboto-Regular';}\n\t.st14{font-size:101.8209px;}\n\t.st15{stroke:#000000;stroke-width:2;stroke-miterlimit:10;}\n\t.st16{fill-rule:evenodd;clip-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}\n</style>\n<g id=\"Ebene_1\">\n</g>\n<g id=\"Layer_1\">\n</g>\n<g id=\"Objects\">\n\t<g id=\"Foretrukne\">\n\t</g>\n\t<text transform=\"matrix(1.1294 0 0 1 140.0845 193.5671)\" class=\"st13 st14\">€</text>\n\t<path class=\"st16\" d=\"M295.7,153.4c0-0.1-0.1-0.2-0.2-0.3c0,0,0,0,0-0.1c-0.2-0.5-0.6-0.9-1-1.1l-50.9-44.2l0-29.8\n\t\tc0-1.7-1.3-2.9-2.9-2.9h-34.9l-27.3-23.6c-3.3-2.9-9-2.9-12.3,0l-27.3,23.6h-34.4c-1.7,0-2.9,1.3-2.9,2.9l0,29.4l-51.7,44.9\n\t\tc-0.6,0.6-1,1.5-1,2.3c0,0,0,0.1,0,0.1c-0.2,0.8-0.4,1.6-0.4,2.6v140.4c0,2.1,0.8,4.1,2.2,5.6c0.1,0.2,0.2,0.3,0.3,0.4\n\t\tc0.2,0.2,0.5,0.4,0.7,0.6c1.5,1.2,3.3,1.9,5.3,1.9h231.2c2.1,0,4.1-0.9,5.6-2.2c0,0,0.1,0,0.1-0.1c0,0,0,0,0.1-0.1\n\t\tc1.6-1.6,2.7-3.8,2.7-6.2V157.2C296.5,155.5,296.1,154.2,295.7,153.4z M290.7,297.1l-79.1-68.3l79.1-68.4V297.1z M54.5,160.7\n\t\tl78.7,68l-78.7,67.8V160.7z M137.7,232.7l28.3,24.5c1.9,1.5,4,2.3,6.3,2.3c2.3,0,4.6-0.6,6.3-2.1l28.5-24.7l78.2,67.4H59.5\n\t\tL137.7,232.7z M288,154.2l-44.4,38.5l0-77.2L288,154.2z M170.2,55.7c1-1,3.3-1,4.4,0l22.2,19.2H148L170.2,55.7z M237.8,81l0,26.9\n\t\tc-0.3,0.7-0.3,1.4,0,2.1l0,87.8l-63.4,55c-1,1-3.3,1-4.4,0l-62.6-54.1V81H237.8z M101.6,115.1l0,78.4l-45-38.9L101.6,115.1z\"/>\n</g>\n</svg>",
+            "text": "Kauf auf Rechnung"
+          }
+        }
+      },
+      "block_order": [
+        "text_6n9xdJ",
+        "product_sku_xJUmtH",
+        "reviews_io_reviewsio_rating_output_xnYQwt",
+        "bullet_points_KJHzyG",
+        "price_G36Rx3",
+        "klip_coupons_klip_app_section_product_NMgVxy",
+        "variant_picker_J7D9Ch",
+        "quantity_selector_BTTkFD",
+        "random_visitors_4fh4jV",
+        "buy_buttons_X4dEpV",
+        "payment_icons_MypwHN",
+        "b2b_pdf_pQ8dd6",
+        "usp_4CJVFd",
+        "usp_UFUUbc",
+        "new_usp_payment_tA9jeA",
+        "usp_fgKGpw"
+      ],
+      "settings": {
+        "sku_enable": true,
+        "image_position": "left",
+        "image_size": "medium",
+        "product_zoom_enable": true,
+        "thumbnail_position": "beside",
+        "thumbnail_height": "flexible",
+        "thumbnail_arrows": false,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "blocks": {
+        "e0db12c7-9d3c-4ee7-83a7-766f1371dd65": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "is_tab": true
+          }
+        },
+        "1045992e-99ac-45a1-94ad-740ac8b88015": {
+          "type": "custom_tab",
+          "settings": {
+            "title": "Beschreibung",
+            "variant_metafield": "product.description"
+          }
+        },
+        "d35e1b31-f930-438f-a20d-8f58e7a952d5": {
+          "type": "tab",
+          "disabled": true,
+          "settings": {
+            "title": "Details",
+            "content": "<p>{{ product.title }}</p>",
+            "page": ""
+          }
+        },
+        "06b6fab4-5a9f-4691-95e8-3468731e9aa9": {
+          "type": "custom_tab",
+          "settings": {
+            "title": "Details",
+            "variant_metafield": "product.details"
+          }
+        },
+        "custom_tab_6YTVFi": {
+          "type": "custom_tab",
+          "settings": {
+            "title": "FAQ",
+            "variant_metafield": "product.buildup"
+          }
+        },
+        "505549ea-30d1-49cc-8f1c-70aa8f258a58": {
+          "type": "tab",
+          "disabled": true,
+          "settings": {
+            "title": "Versand",
+            "content": "<h5>Versand:</h5><p>Die Lieferung erfolgt gut verpackt per Paketdienst. Lieferungen an Paketstationen und Postfächer sind nicht möglich. Auch die Anlieferung auf Inseln ist nicht möglich.</p><h5>Versandkosten:</h5><p>Innerhalb Deutschlands ist der <strong>Versand kostenfrei</strong>. Für Lieferungen an eine ausländische Lieferadresse hingegen fallen Versandkosten an. <br/><br/>Informationen zu den Versandkosten an eine ausländische Adresse finden Sie unter <a href=\"https://www.juskys.de/versand-zahlung\" title=\"Versandkosten Ausland\">Versand- und Zahlungsbedingungen</a>.</p><p>Weitere häufig gestellte Fragen rund um die Bestellung haben wir <a href=\"https://www.juskys.de/bestellvorgang\" title=\"Fragen zum Bestellvorgang\">hier</a> zusammengestellt.</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>",
+            "page": ""
+          }
+        },
+        "6119d42f-e978-4378-9a71-6bcf628bb5f8": {
+          "type": "tab",
+          "disabled": true,
+          "settings": {
+            "title": "Bewertung",
+            "content": "<p>trustami</p><p></p><p></p><p></p>",
+            "page": ""
+          }
+        },
+        "custom_tab_y7eDhL": {
+          "type": "custom_tab",
+          "settings": {
+            "title": "Versand",
+            "variant_metafield": "product.shipping_description"
+          }
+        },
+        "tab_mVh6E6": {
+          "type": "tab",
+          "settings": {
+            "title": "Sicherheits- & Produktressourcen",
+            "content": "<ul><li><strong>Herstellerinformationen</strong></li><li>Zu den Herstellungsinformationen gehören die Adresse und zugehörige Informationen des Herstellers des Produkts.</li></ul><p></p><p></p><ul><li><strong>Juskys Gruppe GmbH</strong></li><li>Lindener Bergsfeld 9</li><li>Holle, Niedersachsen, DE, 31188</li><li>+495062965660</li><li>info@juskys.de</li></ul><p></p><p></p><ul><li><strong>Verantwortliche Person für die EU</strong></li><li>In der EU ansässiger Wirtschaftsbeteiligter, der sicherstellt, dass das Produkt den erforderlichen Vorschriften entspricht.</li></ul><p></p><p></p><ul><li><strong>Juskys</strong></li><li>Juskys Gruppe GmbH</li><li>Lindener Bergsfeld 9</li><li>Holle, Niedersachsen, DE, 31188</li><li>+495062965660</li><li>info@juskys.de</li></ul><p></p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "e0db12c7-9d3c-4ee7-83a7-766f1371dd65",
+        "1045992e-99ac-45a1-94ad-740ac8b88015",
+        "d35e1b31-f930-438f-a20d-8f58e7a952d5",
+        "06b6fab4-5a9f-4691-95e8-3468731e9aa9",
+        "custom_tab_6YTVFi",
+        "505549ea-30d1-49cc-8f1c-70aa8f258a58",
+        "6119d42f-e978-4378-9a71-6bcf628bb5f8",
+        "custom_tab_y7eDhL",
+        "tab_mVh6E6"
+      ],
+      "custom_css": [
+        "h2,h3 {font-weight: bold; text-align: center;}",
+        "h2 {margin: 0 0 20px 0;}",
+        "h3 {margin: 40px 0 0px 0;}",
+        "p {margin: 0; text-align: center;}",
+        ".tre,.quattro {padding: 15px 0; margin: 0; display: inline-block;}",
+        "ul {text-align: center; list-style-type: none; margin: 0;}",
+        ".rm_article_description_right h3 {margin: 0;}",
+        "@media (pointer: fine), (pointer: none) {img {float: left; max-width: 300px; } .tre > h3, .quattro > h3 {margin: 0 0 30px 30px; font-size: calc(var(--typeHeaderSize) * 0.5); } .tre > p, .quattro > p {float: left; max-width: calc(100% - 330px); margin: 0 0 15px 30px; }}"
+      ],
+      "settings": {
+        "max_width": true,
+        "letter_size": "capitalize",
+        "text_align": "center",
+        "background_color": "#e6e6e6",
+        "border_color": "#000000"
+      }
+    },
+    "f0240e3c-f9ee-4ac9-9984-3c0f009fab68": {
+      "type": "rich-text",
+      "blocks": {
+        "template--19928941822255__f0240e3c-f9ee-4ac9-9984-3c0f009fab68-168915126085bff47d-0": {
+          "type": "heading",
+          "settings": {
+            "title": "Rich text"
+          }
+        },
+        "template--19928941822255__f0240e3c-f9ee-4ac9-9984-3c0f009fab68-168915126085bff47d-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--19928941822255__f0240e3c-f9ee-4ac9-9984-3c0f009fab68-168915126085bff47d-0",
+        "template--19928941822255__f0240e3c-f9ee-4ac9-9984-3c0f009fab68-168915126085bff47d-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "82d6faf9-9728-4da7-bcc0-a4567c33bfa6": {
+      "type": "text-columns",
+      "blocks": {
+        "template--19928941822255__82d6faf9-9728-4da7-bcc0-a4567c33bfa6-16891512419e37ed7f-0": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Merkmal 1",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "template--19928941822255__82d6faf9-9728-4da7-bcc0-a4567c33bfa6-16891512419e37ed7f-1": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Merkmal 2",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "template--19928941822255__82d6faf9-9728-4da7-bcc0-a4567c33bfa6-16891512419e37ed7f-2": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Merkmal 3",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "187e281e-ab44-4e70-88a7-abd5f893f57f": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Merkmal 4",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19928941822255__82d6faf9-9728-4da7-bcc0-a4567c33bfa6-16891512419e37ed7f-0",
+        "template--19928941822255__82d6faf9-9728-4da7-bcc0-a4567c33bfa6-16891512419e37ed7f-1",
+        "template--19928941822255__82d6faf9-9728-4da7-bcc0-a4567c33bfa6-16891512419e37ed7f-2",
+        "187e281e-ab44-4e70-88a7-abd5f893f57f"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "align_text": "center",
+        "divider": false
+      }
+    },
+    "8d7bdeac-5ff0-4e76-b7bc-d45084dc82d0": {
+      "type": "rich-text",
+      "blocks": {
+        "template--19928941822255__8d7bdeac-5ff0-4e76-b7bc-d45084dc82d0-168915126085bff47d-0": {
+          "type": "heading",
+          "settings": {
+            "title": "SEO Text"
+          }
+        },
+        "template--19928941822255__8d7bdeac-5ff0-4e76-b7bc-d45084dc82d0-168915126085bff47d-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--19928941822255__8d7bdeac-5ff0-4e76-b7bc-d45084dc82d0-168915126085bff47d-0",
+        "template--19928941822255__8d7bdeac-5ff0-4e76-b7bc-d45084dc82d0-168915126085bff47d-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "product_recommendations_heading": "Das könnte dir auch gefallen",
+        "related_count": 5,
+        "products_per_row": 5
+      }
+    },
+    "collection-return": {
+      "type": "collection-return",
+      "custom_css": [
+        "h2 {margin: 0;}"
+      ],
+      "settings": {}
+    },
+    "1721807993aff8e418": {
+      "type": "apps",
+      "blocks": {
+        "reviews_io_reviewsio_polaris_VYtYPj": {
+          "type": "shopify://apps/reviews-io/blocks/reviewsio-polaris/92a082e5-b297-4e88-b428-ac96cbc505f9",
+          "disabled": true,
+          "settings": {
+            "star": "#ffc310",
+            "review_type": "product_review",
+            "per_page": 12,
+            "primary_btn_bg_color": "#000000",
+            "primary_btn_border_color": "#000000",
+            "primary_btn_text_color": "#ffffff",
+            "secondary_btn_border_color": "#000000",
+            "secondary_btn_text_color": "#000000",
+            "border_color": "#000000",
+            "heading_text_color": "#000000",
+            "heading_font": "roboto_n4",
+            "body_text_color": "#000000",
+            "badge_icon_color": "#ffc310",
+            "badge_text_color": "#000000",
+            "enable_rich_snippets": true,
+            "show_location": true,
+            "show_tab_selector": false,
+            "show_dates": true,
+            "show_avatar": true,
+            "enable_sentiment_analysis": false,
+            "enable_replies": false,
+            "widget_spacing": 0,
+            "capitalise_headers_and_buttons": false,
+            "show_review_title": true,
+            "default_sort": "highest_rating"
+          }
+        },
+        "liquid_tfrVyV": {
+          "type": "liquid",
+          "disabled": true,
+          "settings": {
+            "liquid": "<script src=\"https://widget.reviews.io/polaris/build.js\"></script>\n<div id=\"ReviewsWidget\"></div>\n<script>\nnew ReviewsWidget('#ReviewsWidget', {\n//Your REVIEWS.io Store ID and widget type:\nstore: 'juskys.de',\nwidget: 'polaris',\n\n//Content settings (store_review,product_review,third_party_review,questions). Choose what to display in this widget:\noptions: {\n    types: 'product_review,questions',\n    lang: 'de',\n    //Possible layout options: bordered, large and reverse.\n    layout: '',\n    //How many reviews & questions to show per page?\n    per_page: 15,\n    store_review:{\n      hide_if_no_results: false,\n    },\n    third_party_review:{\n      hide_if_no_results: false,\n    },\n    //Product specific settings. Provide product SKU for which reviews should be displayed:\n    product_review:{\n\t\tsku: \"{{ product.variants | map: 'sku' | join: ';' }};{{ product.variants | map: 'id' | join: ';' }}\",\n\t\tenable_rich_snippets: true,\n\t\t/* Your custom Structured Data */\n\t\tstructured_data: {\n\t\tcategory: {{ product.type | json }},\n\t\t{% capture gtin_length %}{{ product.variants.first.barcode | size }}{% endcapture %}\n\t\t{% if gtin_length == \"14\" %}\n\t\tgtin14:\"{{product.variants.first.barcode}}\",\n\t\t{% elsif gtin_length == \"13\" %}\n\t\tgtin13:\"{{product.variants.first.barcode}}\",\n\t\t{% elsif gtin_length == \"12\" %}\n\t\tgtin12:\"{{product.variants.first.barcode}}\",\n\t\t{% endif %}\n\t\turl: \"{{ shop.url }}{{ product.url }}\",\n\t\t{%- if product.featured_image -%}\n\t\timage: \"https:{{ product.featured_image | product_img_url: 'grande' }}\",\n\t\t{%- endif -%}\n\t\t{% if variant.image %}\n\t\t{% assign variant_image_size = variant.image.width | append: 'x' %}\n\t\timage: \"http:{{ variant.image.src | img_url: variant_image_size }}\",\n\t\t{% endif %}\n\t\tdescription: \"{{ product.description | strip_html | strip_newlines | escape }}\",\n\t\t{% assign ruk_current_variant = product.selected_or_first_available_variant %}\n\t\t{% assign ruk_variant_count = product.variants | size %}\n\t\t{% assign ruk_count = 0 %}\n\t\t{% if product.variants %}\n\t\t{% assign ruk_count = ruk_count | plus: 1 %}\n\t\toffers: [{\n\t\ttype: \"Offer\",\n\t\tpriceCurrency: \"{{ cart.currency.iso_code }}\",\n\t\tprice: \"{{ ruk_current_variant.price | money_without_currency | replace: ',', '.' }}\",\n\t\titemCondition: \"http://schema.org/NewCondition\",\n\t\tavailability: \"http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}\",\n\t\turl: \"{{ shop.url }}{{ ruk_current_variant.url }}\",\n\t\t{% if ruk_current_variant.image %}\n\t\t{% assign variant_image_size = ruk_current_variant.image.width | append: 'x' %}\n\t\timage: \"https:{{ ruk_current_variant.image.src | img_url: variant_image_size }}\",\n\t\t{% else %}\n\t\timage: \"https:{{ product.featured_image.src | img_url: 'grande' }}\",\n\t\t{% endif %}\n\t\t{% if ruk_current_variant.title != 'Default Title' %}\n\t\tname: \"{{ product.title | strip_html | escape }} - {{ fa_current_variant.title | escape }}\",\n\t\t{% else %}\n\t\tname: \"{{ product.title | strip_html | escape }}\",\n\t\t{% endif %}\n\t\t{% if ruk_current_variant.barcode.size == 12 %}\n\t\tgtin12: \"{{ ruk_current_variant.barcode }}\",\n\t\t{% endif %}\n\t\t{% if ruk_current_variant.barcode.size == 13 %}\n\t\tgtin13: \"{{ ruk_current_variant.barcode }}\",\n\t\t{% endif %}\n\t\t{% if ruk_current_variant.barcode.size == 14 %}\n\t\tgtin14: \"{{ ruk_current_variant.barcode }}\",\n\t\t{% endif %}\n\t\t{% if ruk_current_variant.sku != blank %}\n\t\tsku: \"{{ ruk_current_variant.sku }}\",\n\t\t{% else %}\n\t\tsku: \"{{ ruk_current_variant.id }}\",\n\t\t{% endif %}\n\t\t{% if product.description != blank %}\n\t\tdescription: \"{{ product.description | strip_html | escape | strip_newlines }}\",\n\t\t{% endif %}\n\t\tpriceValidUntil: \"{{ 'now' | date: '%s' | plus: 31536000 | date: '%Y-%m-%d' | replace:' ','%20' }}\"\n\t\t}],\n\t\t{% endif %}\n\t\tbrand: {\n\t\ttype: 'Brand',\n\t\tname: '{{ product.vendor | escape }}',\n\t\t},\n\t\t},\n\t\t},\n    //Questions settings:\n    questions:{\n        hide_if_no_results: false,\n        enable_ask_question: true,\n        show_dates: true,\n        //Display group questions by providing a grouping variable, new questions will be assigned to this group.\n        grouping:'[Group questions by providing a grouping variable here or a specific product SKU]'\n    },\n    //Header settings:\n    header:{\n        enable_summary: true, //Show overall rating & review count\n        enable_ratings: true,\n        enable_attributes: true,\n        enable_image_gallery: true, //Show photo & video gallery\n        enable_percent_recommended: false, //Show what percentage of reviewers recommend it\n        enable_write_review: true, //Show \"Write Review\" button\n        enable_ask_question: true, //Show \"Ask Question\" button\n        enable_sub_header: true, //Show subheader\n        rating_decimal_places: 2,\n        use_write_review_button:  true, //Show \"be the first to leave a review\" text as a button\n    },\n\n    //Filtering settings:\n    filtering:{\n        enable: true, //Show filtering options\n        enable_text_search: true, //Show search field\n        enable_sorting: true, //Show sorting options (most recent, most popular)\n        enable_product_filter: false, //Show product options filter\n        enable_media_filter: true, //Show reviews with images/video/media options\n        enable_overall_rating_filter: true, //Show overall rating breakdown filter\n        enable_language_filter: false, // Filter by review language\n        enable_language_filter_language_change: false, // Update widget language based on language selected\n        enable_ratings_filters: true, //Show product attributes filter\n        enable_attributes_filters: true, //Show author attributes filter\n        enable_expanded_filters: false, //Show filters as a section instead of dropdown\n    },\n\n    //Review settings:\n    reviews:{\n        enable_avatar: true, //Show author avatar\n        enable_reviewer_name:  true, //Show author name\n        enable_reviewer_address:  true, //Show author location\n        reviewer_address_format: 'city, country', //Author location display format\n        enable_verified_badge: true, //Show \"Verified Customer\" badge\n        enable_subscriber_badge: true, //Show \"Verified Subscriber\" badge\n        review_content_filter: 'undefined', //Filter content\n        enable_reviewer_recommends: true, //Show \"I recommend it\" badge\n        enable_attributes: true, //Show author attributes\n        enable_product_name: true, //Show display product name\n        enable_review_title: undefined, //Show review title\n        enable_replies: true, //Show review replies\n        enable_images: true, //Show display review photos\n        enable_ratings: true, //Show product attributes (additional ratings)\n        enable_share: true, //Show share buttons\n        enable_helpful_vote: true, //Show \"was this helpful?\" section\n        enable_helpful_display: true, //Show how many times times review upvoted\n        enable_report: true, //Show report button\n        enable_date: true, //Show when review was published\n        enable_third_party_source: true, //Show third party source\n        enable_duplicate_reviews: undefined, //Show multiple reviews from the same user\n\n    },\n},\n//Translation settings\ntranslations: {\n    'Verified Customer': 'Verified Customer'\n},\n//Style settings:\nstyles: {\n    //Base font size is a reference size for all text elements. When base value gets changed, all TextHeading and TexBody elements get proportionally adjusted.\n    '--base-font-size': '16px',\n\n    //Button styles (shared between buttons):\n    '--common-button-font-family': 'inherit',\n    '--common-button-font-size':'16px',\n    '--common-button-font-weight':'500',\n    '--common-button-letter-spacing':'0',\n    '--common-button-text-transform':'none',\n    '--common-button-vertical-padding':'10px',\n    '--common-button-horizontal-padding':'20px',\n    '--common-button-border-width':'2px',\n    '--common-button-border-radius':'0px',\n\n    //Primary button styles:\n    '--primary-button-bg-color': '#0E1311',\n    '--primary-button-border-color': '#0E1311',\n    '--primary-button-text-color': '#ffffff',\n\n    //Secondary button styles:\n    '--secondary-button-bg-color': 'transparent',\n    '--secondary-button-border-color': '#0E1311',\n    '--secondary-button-text-color': '#0E1311',\n\n    //Star styles:\n    '--common-star-color': '#0E1311',\n    '--common-star-disabled-color': 'rgba(0,0,0,0.25)',\n    '--medium-star-size': '22px',\n    '--small-star-size': '19px',\n\n    //Heading styles:\n    '--heading-text-color': '#0E1311',\n    '--heading-text-font-weight': '600',\n    '--heading-text-font-family': 'inherit',\n    '--heading-text-line-height': '1.4',\n    '--heading-text-letter-spacing': '0',\n    '--heading-text-transform': 'none',\n\n    //Body text styles:\n    '--body-text-color': '#0E1311',\n    '--body-text-font-weight': '400',\n    '--body-text-font-family': 'inherit',\n    '--body-text-line-height': '1.4',\n    '--body-text-letter-spacing': '0',\n    '--body-text-transform': 'none',\n\n    //Input field styles:\n    '--inputfield-text-font-family': 'inherit',\n    '--input-text-font-size': '14px',\n    '--inputfield-text-font-weight': '400',\n    '--inputfield-text-color': '#0E1311',\n    '--inputfield-border-color': 'rgba(0,0,0,0.2)',\n    '--inputfield-background-color': 'transparent',\n    '--inputfield-border-width': '1px',\n    '--inputfield-border-radius': '0px',\n\n    '--common-border-color': 'rgba(0,0,0,0.15)',\n    '--common-border-width': '1px',\n    '--common-sidebar-width': '190px',\n\n    //Filters panel styles:\n    '--filters-panel-bg-color': 'transparent',\n    '--filters-panel-font-size': '16px',\n    '--filters-panel-text-color': '16px',\n    '--filters-panel-horizontal-padding': '0',\n    '--filters-panel-vertical-padding': '0',\n\n    //Slider indicator (for attributes) styles:\n    '--slider-indicator-bg-color': 'rgba(0,0,0,0.1)',\n    '--slider-indicator-button-color': '#0E1311',\n    '--slider-indicator-width': '190px',\n\n    //Badge styles:\n    '--badge-icon-color': '#0E1311',\n    '--badge-icon-font-size': 'inherit',\n    '--badge-text-color': '#0E1311',\n    '--badge-text-font-size': 'inherit',\n    '--badge-text-letter-spacing': 'inherit',\n    '--badge-text-transform': 'inherit',\n\n    //Author styles:\n    '--author-font-size': 'inherit',\n    '--author-text-transform': 'none',\n\n    //Author avatar styles:\n    '--avatar-thumbnail-size': '60px',\n    '--avatar-thumbnail-border-radius': '100px',\n    '--avatar-thumbnail-text-color': '#0E1311',\n    '--avatar-thumbnail-bg-color': 'rgba(0,0,0,0.1)',\n\n    //Product photo or review photo styles:\n    '--photo-video-thumbnail-size': '80px',\n    '--photo-video-thumbnail-border-radius': '0px',\n\n    //Media (photo & video) slider styles:\n    '--mediaslider-scroll-button-icon-color': '#0E1311',\n    '--mediaslider-scroll-button-bg-color': 'rgba(255, 255, 255, 0.85)',\n    '--mediaslider-overlay-text-color': '#ffffff',\n    '--mediaslider-overlay-bg-color': 'rgba(0, 0, 0, 0.8))',\n    '--mediaslider-item-size': '110px',\n\n    //Pagination & tabs styles (normal):\n    '--pagination-tab-text-color': '#0E1311',\n    '--pagination-tab-text-transform': 'none',\n    '--pagination-tab-text-letter-spacing': '0',\n    '--pagination-tab-text-font-size': '16px',\n    '--pagination-tab-text-font-weight': '600',\n\n    //Pagination & tabs styles (active):\n    '--pagination-tab-active-text-color': '#0E1311',\n    '--pagination-tab-active-text-font-weight': '600',\n    '--pagination-tab-active-border-color': '#0E1311',\n    '--pagination-tab-border-width': '3px',\n},\n});\n</script>"
+          }
+        },
+        "liquid_z9keFD": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<script src=\"https://widget.reviews.io/polaris/build.js\"></script>\n<div id=\"ReviewsWidget\"></div>\n<script>\nnew ReviewsWidget('#ReviewsWidget', {\n//Your REVIEWS.io Store ID and widget type:\nstore: 'juskys.de',\nwidget: 'polaris',\n\n//Content settings (store_review,product_review,third_party_review,questions). Choose what to display in this widget:\noptions: {\n    types: 'product_review',\n    enable_sentiment_analysis: false,\n    lang: 'de',\n    //Possible layout options: bordered, large and reverse.\n    layout: '',\n    //How many reviews & questions to show per page?\n    per_page: 15,\n    store_review:{\n      hide_if_no_results: false,\n    },\n    third_party_review:{\n      hide_if_no_results: false,\n    },\n    product_review: {\n      sku: \"{{ product.variants | map: 'sku' | join: ';' }};{{ product.variants | map: 'id' | join: ';' }}\",\n      enable_rich_snippets: true,\n\n      /* Your custom Structured Data */\n      structured_data: {\n\n        category: {{ product.type | json }},\n        {% capture gtin_length %}{{ product.variants.first.barcode | size }}{% endcapture %}\n\n\n        {% if gtin_length == \"14\" %}\n           gtin14:\"{{product.variants.first.barcode}}\",\n        {% elsif gtin_length == \"13\" %}\n           gtin13:\"{{product.variants.first.barcode}}\",\n        {% elsif gtin_length == \"12\" %}\n           gtin12:\"{{product.variants.first.barcode}}\",\n        {% endif %}\n\n        url: \"{{ shop.url }}{{ product.url }}\",\n\n        {%- if product.featured_image -%}\n          image: \"https:{{ product.featured_image | product_img_url: 'grande' }}\",\n        {%- endif -%}\n\n        {% if variant.image %}\n          {% assign variant_image_size = variant.image.width | append: 'x' %}\n          image: \"http:{{ variant.image.src | img_url: variant_image_size }}\",\n        {% endif %}\n\n        description: \"{{ product.description | strip_html | strip_newlines | escape }}\",\n        {% assign ruk_current_variant = product.selected_or_first_available_variant %}\n        {% assign ruk_variant_count = product.variants | size %}\n        {% assign ruk_count = 0 %}\n\n        {% if product.variants %}\n          {% assign ruk_count = ruk_count | plus: 1 %}\n\n          offers: [{\n              type: \"Offer\",\n              priceCurrency: \"{{ cart.currency.iso_code }}\",\n              price: \"{{ ruk_current_variant.price | money_without_currency }}\",\n              itemCondition: \"http://schema.org/NewCondition\",\n              availability: \"http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}\",\n              url: \"{{ shop.url }}{{ ruk_current_variant.url }}\",\n\n              {% if ruk_current_variant.image %}\n                  {% assign variant_image_size = ruk_current_variant.image.width | append: 'x' %}\n                  image: \"https:{{ ruk_current_variant.image.src | img_url: variant_image_size }}\",\n              {% else %}\n                  image: \"https:{{ product.featured_image.src | img_url: 'grande' }}\",\n              {% endif %}\n\n              {% if ruk_current_variant.title != 'Default Title' %}\n                  name: \"{{ product.title | strip_html | escape }} - {{ fa_current_variant.title | escape }}\",\n              {% else %}\n                  name: \"{{ product.title | strip_html | escape }}\",\n              {% endif %}\n\n              {% if ruk_current_variant.barcode.size == 12 %}\n                  gtin12: \"{{ ruk_current_variant.barcode }}\",\n              {% endif %}\n\n              {% if ruk_current_variant.barcode.size == 13 %}\n                  gtin13: \"{{ ruk_current_variant.barcode }}\",\n              {% endif %}\n\n              {% if ruk_current_variant.barcode.size == 14 %}\n                  gtin14: \"{{ ruk_current_variant.barcode }}\",\n              {% endif %}\n\n              {% if ruk_current_variant.sku != blank %}\n                  sku: \"{{ ruk_current_variant.sku }}\",\n              {% else %}\n                  sku: \"{{ ruk_current_variant.id }}\",\n              {% endif %}\n\n              {% if product.description != blank %}\n                  description: \"{{ product.description | strip_html | escape | strip_newlines }}\",\n              {% endif %}\n\n              priceValidUntil: \"{{ 'now' | date: '%s' | plus: 31536000 | date: '%Y-%m-%d' | replace:' ','%20' }}\"\n          }],\n        {% endif %}\n\n        brand: {\n          type: 'Brand',\n          name: '{{ product.vendor | escape }}',\n        },\n      },\n    },\n\n    /* Toggle Options */\n    questions:{\n          hide_if_no_results:false,\n          enable_ask_question:true,\n          show_dates:true,\n          grouping:\"{{ product.variants | map: 'sku' | join: ';' }};{{ product.variants | map: 'id' | join: ';' }}\"\n    },\n\n    //Header settings:\n    header:{\n        enable_summary: true, //Show overall rating & review count\n        enable_ratings: true,\n        enable_attributes: false,\n        enable_image_gallery: false, //Show photo & video gallery\n        enable_percent_recommended: false, //Show what percentage of reviewers recommend it\n        enable_write_review: true, //Show \"Write Review\" button\n        enable_ask_question: false, //Show \"Ask Question\" button\n        enable_sub_header: true, //Show subheader\n        rating_decimal_places: 2,\n        use_write_review_button:  true, //Show \"be the first to leave a review\" text as a button\n        enable_if_no_results:  false, //Show header when there are no results\n    },\n\n    //AI summary settings\n    sentiment:{\n        badge_text: 'Our Customers Say'\n    },\n\n    //Filtering settings:\n    filtering:{\n        enable: true, //Show filtering options\n        enable_text_search: true, //Show search field\n        enable_sorting: true, //Show sorting options (most recent, most popular)\n        enable_product_filter: false, //Show product options filter\n        enable_media_filter: true, //Show reviews with images/video/media options\n        enable_overall_rating_filter: true, //Show overall rating breakdown filter\n        enable_language_filter: false, // Filter by review language\n        enable_language_filter_language_change: false, // Update widget language based on language selected\n        enable_ratings_filters: true, //Show product attributes filter\n        enable_attributes_filters: true, //Show author attributes filter\n        enable_expanded_filters: false, //Show filters as a section instead of dropdown\n    },\n\n    //Review settings:\n    reviews:{\n        enable_avatar: true, //Show author avatar\n        enable_reviewer_name:  true, //Show author name\n        enable_reviewer_address:  true, //Show author location\n        reviewer_address_format: 'city, country', //Author location display format\n        enable_verified_badge: true, //Show \"Verified Customer\" badge\n        enable_subscriber_badge: true, //Show \"Verified Subscriber\" badge\n        review_content_filter: 'undefined', //Filter content\n        enable_reviewer_recommends: true, //Show \"I recommend it\" badge\n        enable_attributes: true, //Show author attributes\n        enable_product_name: true, //Show display product name\n        enable_review_title: undefined, //Show review title\n        enable_replies: true, //Show review replies\n        enable_images: true, //Show display review photos\n        enable_ratings: true, //Show product attributes (additional ratings)\n        enable_share: true, //Show share buttons\n        enable_helpful_vote: true, //Show \"was this helpful?\" section\n        enable_helpful_display: true, //Show how many times times review upvoted\n        enable_report: true, //Show report button\n        enable_date: true, //Show when review was published\n        enable_third_party_source: true, //Show third party source\n        enable_duplicate_reviews: undefined, //Show multiple reviews from the same user\n\n    },\n},\n//Translation settings\ntranslations: {\n    'Verified Customer': 'Verified Customer'\n},\n//Style settings:\nstyles: {\n    //Base font size is a reference size for all text elements. When base value gets changed, all TextHeading and TexBody elements get proportionally adjusted.\n    '--base-font-size': '16px',\n\n    //Button styles (shared between buttons):\n    '--common-button-font-family': 'inherit',\n    '--common-button-font-size':'16px',\n    '--common-button-font-weight':'500',\n    '--common-button-letter-spacing':'0',\n    '--common-button-text-transform':'none',\n    '--common-button-vertical-padding':'10px',\n    '--common-button-horizontal-padding':'20px',\n    '--common-button-border-width':'2px',\n    '--common-button-border-radius':'0px',\n\n    //Primary button styles:\n    '--primary-button-bg-color': '#0E1311',\n    '--primary-button-border-color': '#0E1311',\n    '--primary-button-text-color': '#ffffff',\n\n    //Secondary button styles:\n    '--secondary-button-bg-color': 'transparent',\n    '--secondary-button-border-color': '#0E1311',\n    '--secondary-button-text-color': '#0E1311',\n\n    //Star styles:\n    '--common-star-color': '#0E1311',\n    '--common-star-disabled-color': 'rgba(0,0,0,0.25)',\n    '--medium-star-size': '22px',\n    '--small-star-size': '19px',\n\n    //Heading styles:\n    '--heading-text-color': '#0E1311',\n    '--heading-text-font-weight': '600',\n    '--heading-text-font-family': 'inherit',\n    '--heading-text-line-height': '1.4',\n    '--heading-text-letter-spacing': '0',\n    '--heading-text-transform': 'none',\n\n    //Body text styles:\n    '--body-text-color': '#0E1311',\n    '--body-text-font-weight': '400',\n    '--body-text-font-family': 'inherit',\n    '--body-text-line-height': '1.4',\n    '--body-text-letter-spacing': '0',\n    '--body-text-transform': 'none',\n\n    //Input field styles:\n    '--inputfield-text-font-family': 'inherit',\n    '--input-text-font-size': '14px',\n    '--inputfield-text-font-weight': '400',\n    '--inputfield-text-color': '#0E1311',\n    '--inputfield-border-color': 'rgba(0,0,0,0.2)',\n    '--inputfield-background-color': 'transparent',\n    '--inputfield-border-width': '1px',\n    '--inputfield-border-radius': '0px',\n\n    '--common-border-color': 'rgba(0,0,0,0.15)',\n    '--common-border-width': '1px',\n    '--common-sidebar-width': '190px',\n\n    //Filters panel styles:\n    '--filters-panel-bg-color': 'transparent',\n    '--filters-panel-font-size': '16px',\n    '--filters-panel-text-color': '16px',\n    '--filters-panel-horizontal-padding': '0',\n    '--filters-panel-vertical-padding': '0',\n\n    //Slider indicator (for attributes) styles:\n    '--slider-indicator-bg-color': 'rgba(0,0,0,0.1)',\n    '--slider-indicator-button-color': '#0E1311',\n    '--slider-indicator-width': '190px',\n\n    //Badge styles:\n    '--badge-icon-color': '#0E1311',\n    '--badge-icon-font-size': 'inherit',\n    '--badge-text-color': '#0E1311',\n    '--badge-text-font-size': 'inherit',\n    '--badge-text-letter-spacing': 'inherit',\n    '--badge-text-transform': 'inherit',\n\n    //Author styles:\n    '--author-font-size': 'inherit',\n    '--author-text-transform': 'none',\n\n    //Author avatar styles:\n    '--avatar-thumbnail-size': '60px',\n    '--avatar-thumbnail-border-radius': '100px',\n    '--avatar-thumbnail-text-color': '#0E1311',\n    '--avatar-thumbnail-bg-color': 'rgba(0,0,0,0.1)',\n\n    //Product photo or review photo styles:\n    '--photo-video-thumbnail-size': '80px',\n    '--photo-video-thumbnail-border-radius': '0px',\n\n    //Media (photo & video) slider styles:\n    '--mediaslider-scroll-button-icon-color': '#0E1311',\n    '--mediaslider-scroll-button-bg-color': 'rgba(255, 255, 255, 0.85)',\n    '--mediaslider-overlay-text-color': '#ffffff',\n    '--mediaslider-overlay-bg-color': 'rgba(0, 0, 0, 0.8))',\n    '--mediaslider-item-size': '110px',\n\n    //Pagination & tabs styles (normal):\n    '--pagination-tab-text-color': '#0E1311',\n    '--pagination-tab-text-transform': 'none',\n    '--pagination-tab-text-letter-spacing': '0',\n    '--pagination-tab-text-font-size': '16px',\n    '--pagination-tab-text-font-weight': '600',\n\n    //Pagination & tabs styles (active):\n    '--pagination-tab-active-text-color': '#0E1311',\n    '--pagination-tab-active-text-font-weight': '600',\n    '--pagination-tab-active-border-color': '#0E1311',\n    '--pagination-tab-border-width': '3px',\n\n    //AI summary styles\n    '--sentiment-base-font-size': '15px',\n    '--sentiment-panel-bg-color': 'transparent',\n    '--sentiment-panel-border-size': '1px',\n    '--sentiment-panel-border-color': 'rgba(0, 0, 0, 0.1)',\n    '--sentiment-panel-border-radius': '0px',\n    '--sentiment-panel-shadow-size': '0px',\n    '--sentiment-panel-shadow-color': 'rgba(0, 0, 0, 0.1)',\n    '--sentiment-heading-text-color': '#0E1311',\n    '--sentiment-heading-text-font-weight': '600',\n    '--sentiment-heading-text-font-family': 'inherit',\n    '--sentiment-heading-text-line-height': '1.4',\n    '--sentiment-heading-text-letter-spacing': '0',\n    '--sentiment-heading-text-transform': 'none',\n    '--sentiment-body-text-color': '#0E1311',\n    '--sentiment-body-text-font-weight': '400',\n    '--sentiment-body-text-font-family': 'inherit',\n    '--sentiment-body-text-line-height': '1.4',\n    '--sentiment-body-text-letter-spacing': '0',\n    '--sentiment-body-text-transform': 'none',\n    '--sentiment-panel-vertical-padding': '25px',\n    '--sentiment-panel-horizontal-padding': '20px',\n    '--sentiment-header-text-color': 'inherit',\n    '--sentiment-header-text-font-size': '12px',\n    '--sentiment-header-text-font-weight': 'inherit',\n    '--sentiment-header-bg-color': 'rgba(0, 0, 0, 0.04)',\n    '--sentiment-header-border-radius': '50px',\n    '--sentiment-header-shadow-size': '0px',\n    '--sentiment-header-shadow-color': 'rgba(0, 0, 0, 0.1)',\n    '--sentiment-header-vertical-padding': '7px',\n    '--sentiment-header-horizontal-padding': '10px',\n    '--sentiment-pagination-tab-text-font-size': '13px',\n    '--sentiment-pagination-tab-text-font-weight': '600',\n    '--sentiment-pagination-tab-text-color': '#0E1311',\n    '--sentiment-pagination-tab-text-transform': 'none',\n    '--sentiment-pagination-tab-text-letter-spacing': '0',\n    '--sentiment-pagination-tab-active-text-color': '#0E1311',\n    '--sentiment-pagination-tab-active-text-font-weight': '600',\n    '--sentiment-pagination-tab-active-border-color': '#0E1311',\n    '--sentiment-pagination-tab-border-width': '3px',\n},\n});\n</script>"
+          }
+        }
+      },
+      "block_order": [
+        "reviews_io_reviewsio_polaris_VYtYPj",
+        "liquid_tfrVyV",
+        "liquid_z9keFD"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "settings": {
+        "recent_count": 5
+      }
+    }
+  },
+  "order": [
+    "c4c59faa-a381-4cc2-847e-3a5d28f9733c",
+    "1701933927667f3d5a",
+    "main",
+    "main_product_new_8EgNzz",
+    "sub",
+    "f0240e3c-f9ee-4ac9-9984-3c0f009fab68",
+    "82d6faf9-9728-4da7-bcc0-a4567c33bfa6",
+    "8d7bdeac-5ff0-4e76-b7bc-d45084dc82d0",
+    "product-recommendations",
+    "collection-return",
+    "1721807993aff8e418",
+    "recently-viewed"
+  ]
+}

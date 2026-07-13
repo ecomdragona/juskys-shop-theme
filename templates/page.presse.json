@@ -1,0 +1,145 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "spacing_bottom": 50,
+        "spacing_bottom_header": 30
+      }
+    },
+    "ad6fcc6c-8eb0-423e-a7d2-5e865aa2b7f4": {
+      "type": "slideshow",
+      "blocks": {
+        "template--20758332604719__ad6fcc6c-8eb0-423e-a7d2-5e865aa2b7f4-image-1": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "Presse",
+            "subheading_desktop_font_size": 18,
+            "top_subheading_m": "",
+            "subheading_mobile_font_size": 17,
+            "title": "Verpassen Sie keine Neuigkeiten",
+            "title_size": 80,
+            "title_m": "",
+            "title_size_m": 20,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "text_align": "vertical-center horizontal-center",
+            "text_align_m": "m-vertical-center m-horizontal-center",
+            "image": "shopify://shop_images/2880x1621_Presse_65e3168c-7f41-4c9d-9290-fc5b83197327.jpg",
+            "image_mobile": "shopify://shop_images/800x800-Presse_c092092a-45c7-4fee-a8fa-2ca533ad5939.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 0,
+            "color_subheading": "#ffffff",
+            "color_heading": "#ffffff",
+            "color_text": "#ffffff",
+            "color_accent_1": "rgba(0,0,0,0)",
+            "color_accent_2": "rgba(0,0,0,0)",
+            "color_btn_text_check": true,
+            "color_accent_t_1": "#000000",
+            "color_accent_t_2": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "template--20758332604719__ad6fcc6c-8eb0-423e-a7d2-5e865aa2b7f4-image-1"
+      ],
+      "settings": {
+        "section_height": "650px",
+        "mobile_height": "auto",
+        "parallax": true,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5,
+        "lazyload_images": true
+      }
+    },
+    "f6a04f11-c24e-4c96-80ee-d319c0563ee8": {
+      "type": "blog-posts",
+      "settings": {
+        "title": "News & Updates",
+        "blog": "news-updates",
+        "post_limit": 6,
+        "blog_show_tags": false,
+        "blog_show_date": true,
+        "blog_show_comments": false,
+        "blog_show_author": false,
+        "view_all": true,
+        "blog_image_size": "wide",
+        "divider": false
+      }
+    },
+    "rich_text_wPwyaa": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_7jADLc": {
+          "type": "heading",
+          "settings": {
+            "title": "Kundeninformation"
+          }
+        },
+        "button_YQF4E4": {
+          "type": "button",
+          "settings": {
+            "link": "shopify://blogs/kundeninformation",
+            "link_text": "Mehr erfahren"
+          }
+        }
+      },
+      "block_order": [
+        "heading_7jADLc",
+        "button_YQF4E4"
+      ],
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "tag": "h1",
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "819de4a0-6cfc-4a3e-849d-01790d83ff8e": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/Juskys_Logo_2021-2_ico-min.png",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Pressekontakt",
+        "text": "<h3>Mario Antic</h3><h4>PR & Kommunikation</h4><p>Tel.: +49 (0)5062 965660<br/>E-Mail: presse@juskys.de</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "33",
+        "layout": "right",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ad6fcc6c-8eb0-423e-a7d2-5e865aa2b7f4",
+    "f6a04f11-c24e-4c96-80ee-d319c0563ee8",
+    "rich_text_wPwyaa",
+    "819de4a0-6cfc-4a3e-849d-01790d83ff8e"
+  ]
+}

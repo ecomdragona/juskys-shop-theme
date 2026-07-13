@@ -1,0 +1,56 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "spacing_bottom": 50,
+        "spacing_bottom_header": 30
+      }
+    },
+    "4ae48e13-ebf1-4c01-b1df-80db515cad48": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21475311681839__4ae48e13-ebf1-4c01-b1df-80db515cad48-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "Impressum"
+          }
+        },
+        "template--21475311681839__4ae48e13-ebf1-4c01-b1df-80db515cad48-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p><strong>Adresse</strong><br/>Juskys Gruppe GmbH<br/>Geschäftsführer: Philipp Juskys, Daniel Heidrich<br/>Lindener Bergsfeld 9<br/>31188 Holle</p><p><br/><strong>Telefon</strong><br/>+49 (0)5062 - 965660<br/><br/><strong>Fax</strong><br/>05062 - 9656609<br/><br/><strong>eMail</strong><br/><a href=\"mailto:info@juskys.de\">info@juskys.de</a><br/><br/><strong>Sitz und Registergericht</strong><br/>Amtsgericht Hildesheim<br/><br/><strong>Steuernummer</strong> 51/205/00354<br/><strong>Handelsregisternummer:</strong> HRB 209166<br/><br/><strong>UStID</strong> DE262656199<br/><br/>WEEE-Reg.-Nr.: DE 290 733 43</p><p><strong>Plattform der EU-Kommission zur Online-Streitbeilegung:</strong><br/><a href=\"https://www.ec.europa.eu/consumers/odr\" target=\"_blank\" title=\"https://www.ec.europa.eu/consumers/odr\">https://www.ec.europa.eu/consumers/odr</a></p><p>Wir sind zur Teilnahme an einem Streitbeilegungsverfahren vor einer<br/>Verbraucherschlichtungsstelle weder verpflichtet noch bereit.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--21475311681839__4ae48e13-ebf1-4c01-b1df-80db515cad48-heading-1",
+        "template--21475311681839__4ae48e13-ebf1-4c01-b1df-80db515cad48-text-1"
+      ],
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "4ae48e13-ebf1-4c01-b1df-80db515cad48"
+  ]
+}

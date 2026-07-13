@@ -1,0 +1,47 @@
+<style>
+  .collapsibles-wrapper.custom.collapsibles-wrapper--border-bottom {
+    margin-top: 0px !important;
+}
+  .collapsible-trigger-btn.custom.collapsible-trigger-btn--borders{
+    margin-top: 0px !important;
+  }
+  .collapsible-content.collapsible-content--all.custom.is-open {
+    height: auto !important;
+}
+</style>
+{%- liquid
+  assign output_tab = true
+  if title == blank
+    assign output_tab = false
+  endif
+-%}
+{% if block.settings.variant_metafield != blank %}
+    {% assign metafields = block.settings.variant_metafield | split: '.' %}
+    {% assign namespace = metafields | first %}
+    {% assign key = metafields | last %}
+{% endif %}
+{%- if output_tab -%}
+    <div id="Variant-content-{{variant.id}}" class="collapsibles-wrapper custom collapsibles-wrapper--border-bottom">
+    <button type="button" onclick="changeIcon(this)"
+        class="tab label collapsible-trigger collapsible-trigger-btn custom collapsible-trigger-btn--borders collapsible--auto-height{% if force_open %} is-open{% endif %}" aria-controls="Product-content-{{ id }}"
+        {% if force_open %}aria-expanded="true"{% endif %}>
+        <span class="spacing">{{ title }}</span>
+        {%- render 'collapsible-icons', icon: icon -%}
+    </button>
+    <div id="Product-content-{{ id }}"
+        class="collapsible-content collapsible-content--all custom{% if force_open %} is-open{% endif %}"
+        {% if force_open %}style="height: auto;"{% endif %}>
+        <div class="collapsible-content__inner rte">
+            {% for variant in product.variants %}
+                <div id="Variant-{{variant.id}}" {% if product.selected_or_first_available_variant != variant %} style="display:none" {% endif %} data-tab-variant>
+                    {% capture content -%}
+                    {{variant.metafields[namespace][key] | metafield_tag }}
+                    {%- endcapture %}
+                    {{ content | remove_first: '<p>' | remove_first: '</p>' }}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    </div>
+{%- endif -%}
+    

@@ -1,0 +1,276 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "t:sections.footer-group.name",
+  "sections": {
+    "1710326457ccf4555b": {
+      "type": "apps",
+      "blocks": {
+        "klaviyo_email_marketing_sms_form_embed_block_8weCmL": {
+          "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/form-embed-block/2632fe16-c075-4321-a88b-50b567f42507",
+          "settings": {
+            "formId": "WqkKu5"
+          }
+        },
+        "klaviyo_email_marketing_sms_form_embed_block_dYeJn9": {
+          "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/form-embed-block/2632fe16-c075-4321-a88b-50b567f42507",
+          "settings": {
+            "formId": "T7pYWs"
+          }
+        }
+      },
+      "block_order": [
+        "klaviyo_email_marketing_sms_form_embed_block_8weCmL",
+        "klaviyo_email_marketing_sms_form_embed_block_dYeJn9"
+      ],
+      "settings": {
+        "full_width": true,
+        "space_around": true
+      }
+    },
+    "88ae0897-de75-4b3e-83b8-e99b4a75a7ee": {
+      "type": "newsletter",
+      "blocks": {
+        "8dcd4b2f-14c8-4383-aff4-965e92f8e1d9": {
+          "type": "text_expanded",
+          "settings": {
+            "text": "<p>Spare 10€ bei deiner ersten Bestellung!</p>",
+            "color_text": "#000000",
+            "size_text": 29
+          }
+        },
+        "sections--20174418182447__88ae0897-de75-4b3e-83b8-e99b4a75a7ee-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Melde dich jetzt zu unserem Newsletter an und verpasse keine Rabatte & Aktionen. Und das Beste: für deine erste Bestellung gibt's direkt einen Willkommens-Gutschein 😍</p>"
+          }
+        },
+        "sections--20174418182447__88ae0897-de75-4b3e-83b8-e99b4a75a7ee-form-1": {
+          "type": "form",
+          "settings": {}
+        },
+        "451880bb-c547-4127-b204-afa3f8d84dfa": {
+          "type": "text_expanded",
+          "settings": {
+            "text": "<p>Eine Abmeldung ist jederzeit möglich. Hier findest du unsere <a href=\"/policies/privacy-policy\" target=\"_blank\" title=\"Privacy Policy\">Datenschutzerklärung</a>.</p>",
+            "color_text": "#808080",
+            "size_text": 13
+          }
+        }
+      },
+      "block_order": [
+        "8dcd4b2f-14c8-4383-aff4-965e92f8e1d9",
+        "sections--20174418182447__88ae0897-de75-4b3e-83b8-e99b4a75a7ee-text-1",
+        "sections--20174418182447__88ae0897-de75-4b3e-83b8-e99b4a75a7ee-form-1",
+        "451880bb-c547-4127-b204-afa3f8d84dfa"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "p {font-size: 17px;}",
+        "h2 {margin: 0; padding: 0;}",
+        "h3 {font-size: 13px; color: grey;}",
+        "a {color: grey;}"
+      ],
+      "settings": {
+        "align_text": "left",
+        "image": "shopify://shop_images/NL-Juskys_1.jpg",
+        "image_width": "33",
+        "image_mask": "landscape",
+        "image_position": "left",
+        "color_background": "#e6e6e6",
+        "color_text": "#1c1d1d",
+        "top_padding": true,
+        "bottom_padding": true
+      }
+    },
+    "d26c04ce-7008-4ee9-ba3e-f22693b19744": {
+      "type": "countdown",
+      "blocks": {
+        "sections--19928941986095__d26c04ce-7008-4ee9-ba3e-f22693b19744-1689146933a893b0b8-0": {
+          "type": "content",
+          "settings": {
+            "heading_desktop": "Countdown",
+            "heading_mobile": "Spieglein, Spieglein an der Wand",
+            "heading_size": "h1",
+            "countdown_heading_size_mobile": 57,
+            "countdown_text_size_mobile": 50,
+            "text_desktop": "<p>Use this timer to create urgency and boost sales.</p>",
+            "text_mobile": "<p>-15% auf die gesamte Schminktisch Kategorie. Code: BEAUTY15</p>",
+            "content_alignment": "center"
+          }
+        },
+        "sections--19928941986095__d26c04ce-7008-4ee9-ba3e-f22693b19744-1689146933a893b0b8-1": {
+          "type": "timer",
+          "settings": {
+            "year": "2023",
+            "month": "10",
+            "day": "19",
+            "hour": "15",
+            "minute": "13",
+            "show_success_message": false,
+            "text": "<p>Abgeschlossen</p>"
+          }
+        },
+        "cb1973d3-a535-4ac2-bd68-7f707ee35708": {
+          "type": "button",
+          "settings": {
+            "button_link": "",
+            "button": "Mehr dazu",
+            "button_color": "#f9f9f9",
+            "button_style": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "sections--19928941986095__d26c04ce-7008-4ee9-ba3e-f22693b19744-1689146933a893b0b8-0",
+        "sections--19928941986095__d26c04ce-7008-4ee9-ba3e-f22693b19744-1689146933a893b0b8-1",
+        "cb1973d3-a535-4ac2-bd68-7f707ee35708"
+      ],
+      "disabled": true,
+      "settings": {
+        "sticky": "sticky_top",
+        "text_color": "#f9f9f9",
+        "background_color": "#ff4f33",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0,
+        "lazyload_images": true
+      }
+    },
+    "footer-promotions": {
+      "type": "footer-promotions",
+      "blocks": {
+        "footer-promotions-0": {
+          "type": "promotion",
+          "settings": {
+            "enable_image": true,
+            "image_mask": "none",
+            "title": "Site-wide promotion",
+            "text": "<p>Use this section to promote content throughout every page of your site. Add images for further impact.</p>",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
+        },
+        "footer-promotions-1": {
+          "type": "promotion",
+          "settings": {
+            "enable_image": true,
+            "image_mask": "none",
+            "title": "Site-wide promotion",
+            "text": "<p>Use this section to promote content throughout every page of your site. Add images for further impact.</p>",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
+        },
+        "footer-promotions-2": {
+          "type": "promotion",
+          "settings": {
+            "enable_image": true,
+            "image_mask": "none",
+            "title": "Site-wide promotion",
+            "text": "<p>Use this section to promote content throughout every page of your site. Add images for further impact.</p>",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "footer-promotions-0",
+        "footer-promotions-1",
+        "footer-promotions-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "hide_homepage": false,
+        "image_size": "wide"
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "b9314d4d-95e6-4b8b-8ccf-9296cbedd6bc": {
+          "type": "custom",
+          "settings": {
+            "show_footer_title": true,
+            "title": "JUSKYS GRUPPE GMBH",
+            "text": "<p>Lindener Bergsfeld 9<br/>31188 Holle<br/>(Bürokomplex - Keine Produktausstellungen)</p><p><strong>SERVICE & BERATUNG</strong></p><p>Chat: <a href=\"https://api.whatsapp.com/send/?phone=4915906417635&text&type=phone_number&app_absent=0\" target=\"_blank\" title=\"WhatsApp Support\">WhatsApp Support ➞</a></p><p>E-Mail: <a href=\"mailto:service@shop.juskys.de\" title=\"mailto:service@shop.juskys.de\">service@shop.juskys.de</a></p>",
+            "container_width": 25
+          }
+        },
+        "footer-1": {
+          "type": "menu",
+          "settings": {
+            "show_footer_title": true,
+            "menu": "footer",
+            "container_width": 25
+          }
+        },
+        "1b1f1932-e0dd-4e4b-a35b-8764a6df8493": {
+          "type": "menu",
+          "settings": {
+            "show_footer_title": true,
+            "menu": "rechtliches",
+            "container_width": 25
+          }
+        },
+        "2ef60e8c-6dd0-4614-9d7c-cdc292ad9bae": {
+          "type": "menu",
+          "settings": {
+            "show_footer_title": true,
+            "menu": "juskys",
+            "container_width": 25
+          }
+        },
+        "menu_6THLhC": {
+          "type": "menu",
+          "settings": {
+            "show_footer_title": true,
+            "menu": "top-garten-kategorien",
+            "container_width": 25
+          }
+        },
+        "custom_6pTwHQ": {
+          "type": "custom",
+          "disabled": true,
+          "settings": {
+            "show_footer_title": true,
+            "title": "",
+            "text": "<p>*Von der Aktion ausgeschlossen sind alle Wochendeals.</p>",
+            "container_width": 73
+          }
+        }
+      },
+      "block_order": [
+        "b9314d4d-95e6-4b8b-8ccf-9296cbedd6bc",
+        "footer-1",
+        "1b1f1932-e0dd-4e4b-a35b-8764a6df8493",
+        "2ef60e8c-6dd0-4614-9d7c-cdc292ad9bae",
+        "menu_6THLhC",
+        "custom_6pTwHQ"
+      ],
+      "settings": {
+        "show_locale_selector": true,
+        "show_currency_selector": false,
+        "show_currency_flags": false,
+        "show_payment_icons": true,
+        "show_copyright": false,
+        "show_social_icons": true,
+        "copyright_text": ""
+      }
+    }
+  },
+  "order": [
+    "1710326457ccf4555b",
+    "88ae0897-de75-4b3e-83b8-e99b4a75a7ee",
+    "d26c04ce-7008-4ee9-ba3e-f22693b19744",
+    "footer-promotions",
+    "footer"
+  ]
+}

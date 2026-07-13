@@ -1,0 +1,50 @@
+{% if settings.show_upsell == true %}
+  {% assign last_item = cart.items[0].product %}
+  {% assign upsell_item = all_products[last_item.metafields.custom.cart_drawer_upsell_product] %}
+  {% if upsell_item == blank %}
+    {% assign upsell_item = settings.upsell_pd %}
+  {% endif %}
+  {% for item in cart.items %}
+    {% if item.product == upsell_item %}
+      {% assign upsell_item = "" %}
+    {% break %}
+    {% endif %}
+  {% endfor %}
+  {% if upsell_item != blank %}
+    <div class="cart_upsell_main">
+      <h3 class="cart_upsell_title">{{ settings.upsell_heading }}</h3>
+      <div class="cart_upsell_item">
+        <div class="cart_upsell_item_image">
+          <img src="{{ upsell_item.selected_or_first_available_variant.featured_image | image_url }}" width="auto" height="auto"/>
+        </div>
+        <div class="cart_upsell_item_content">
+          <div class="upsell_title_price">
+          <h3 class="upsell_item_title">{{ upsell_item.title }}</h3>
+          <span class="upsell_item_price"><span class="upsell_Item__price">{{ upsell_item.selected_or_first_available_variant.price | money_without_currency }}</span> {{ cart.currency.symbol }}</span>
+          </div>
+          {% unless upsell_item.has_only_default_variant %}
+            <div class="upsell_item_form">
+              <form method="post" action="/cart/add" class="upsell_form">
+                {% for option in upsell_item.options_with_values %}
+                  <select name="option{{ forloop.index }}" class="upsell_variant_selector" data-index="{{ forloop.index }}">
+                    {% comment %}<option value="{{ option.values[0] }}">{{ option.name }}</option>{% endcomment %}
+                    {% for value in option.values %}
+                      <option value="{{ value }}">{{ value }}</option>
+                    {% endfor %}
+                  </select>
+                {% endfor %}
+              </form>
+            </div>
+          {% endunless %}
+          <div class="upsell_item_atc">
+            <span class="upsell_add_to_cart" first_variant="{{ upsell_item.variants.first.id }}">HINZUFÜGEN</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="upsell_variants_data" upsell_variants='{{ upsell_item.variants | json }}'></div>
+    <script>
+      window.variants = {{ upsell_item.variants | json }};
+    </script>
+  {% endif %}
+{% endif %}

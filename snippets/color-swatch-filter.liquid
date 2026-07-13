@@ -1,0 +1,41 @@
+{%- for filter in collection.filters -%}
+  {% if filter.label == 'Farbe' %}
+    <div class="cp_swatch_heading">
+      Nach Farben filtern
+    </div>
+    <div class="cp_swatches_list">
+    {%- liquid
+      assign is_color_swatch = false
+      assign swatch_file_extension = 'png'
+          assign swatch_trigger = 'products.general.color_swatch_trigger' | t | downcase
+          assign downcased_label = filter.label | downcase
+          if downcased_label contains swatch_trigger
+          assign is_color_swatch = true
+          elsif swatch_trigger == 'color' and downcased_label contains 'colour'
+          assign is_color_swatch = true
+          endif
+    -%}
+
+    {%- assign tag_count = filter.values.size -%}
+    {%- for filter_value in filter.values -%}
+      {%- liquid
+      assign tag_count = tag_count | plus: 1
+
+      assign color_file_name = filter_value.label | handle | append: '.' | append: swatch_file_extension
+      assign color_image = color_file_name | file_img_url: '50x50' | prepend: 'https:' | split: '?' | first
+      assign color_swatch_fallback = filter_value.label | split: ' ' | last | handle
+    -%}
+
+      {%- if is_color_swatch -%}
+        <span
+            class="color_swatch_filter color-swatch--{{ filter_value.label | handle }} {% if filter_value.active %}color_active{% endif %}"
+            title="{{ filter_value.label }}" filter_value="{{ filter_value.label }}"
+            style="background-color: {{ color_swatch_fallback }};{% if images[color_file_name] != blank %}  background-image: url({{ color_image }});{% endif %}"
+        ></span>
+      {% endif %}
+
+    {% endfor %}
+    </div>
+    {% break %}
+  {% endif %}
+{% endfor %}

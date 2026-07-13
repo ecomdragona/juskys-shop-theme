@@ -1,0 +1,491 @@
+{%- if settings.cart_type == 'drawer' -%}
+  <style>
+    #CartDrawer.is-empty .cart_announcement {
+    display: none;
+    }
+    #CartDrawer:not(.is-empty) .drawer__header{
+      border-bottom-color: transparent;
+    }
+    .cart_announcement .announcement_inner p {
+        margin: 0;
+    }
+    .cart_announcement {
+        text-align: center;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        border-top: 1px solid #ddd;
+    }
+   /* -----------abtest---------------------------- */
+    .compate_totla_price .ajaxcartc__total {
+     font-size: .8em;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+    }
+    .compate_totla_price {
+      display: none;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      order: 2;
+    }
+    small.cart__price.cart__price--strikethrough {
+      display: none;
+  }
+      span.cart__price.cart__discount {
+        color: #000;
+    }
+  .discount-applied small {
+    display: flex;
+    align-items: center;
+    background: #00000024;
+    width: fit-content;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    padding-left: 9px;
+  }
+    /* -----------abtest---------------------------- */
+    .accordion__content {
+      display: flex;
+      align-items: center;
+      padding: 16px 0;
+      width: 100%;
+      margin: 0 auto;
+    }
+    
+    #discount-input {
+      flex: 1;
+      padding: 10px 12px;
+      font-size: 16px;
+      border: 1px solid #AEAEAE;
+      outline: none;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      width:75%;
+    }
+    #discount-input::placeholder {
+      font-size: 12px;
+    }
+  #apply-discount {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 12px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #535353;
+      background-color: #E7E7E7;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.1s ease;
+      text-transform: uppercase;
+      border: 1px solid #AEAEAE;
+      letter-spacing: 1.5px;
+      margin-left: 8px;
+      position: relative;
+  }
+  #apply-discount.discount_triggered {
+    color: transparent;
+  }
+    
+    #apply-discount:active {
+      transform: scale(0.98);
+    }
+    
+    #apply-discount svg {
+      width: 20px;
+      height: 20px;
+      display: none;
+      width: 32px;
+      height: 32px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    
+    #apply-discount.loading svg {
+      display: inline-block;
+    }
+  </style>
+  <div id="CartDrawer" class="drawer drawer--right">
+    <form id="CartDrawerForm" action="{{ routes.cart_url }}" method="post" novalidate class="drawer__contents" data-location="cart-drawer">
+      <div class="drawer__fixed-header">
+        <div class="drawer__header appear-animation appear-delay-1">
+          <div class="h2 drawer__title">{{ 'cart.general.title' | t }}</div>
+          <div class="drawer__close">
+            <button type="button" class="drawer__close-button js-drawer-close">
+              <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 64 64"><title>icon-X</title><path d="m19 17.61 27.12 27.13m0-27.12L19 44.74"/></svg>
+              <span class="icon__fallback-text">{{ 'cart.general.close_cart' | t }}</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {% comment %}
+                
+      {
+        "type": "richtext",
+        "label": "Cart Announcement",
+        "id": "cart_announcement"
+      },
+      {
+        "type": "color",
+        "label": "Announcement Text Color",
+        "id": "announcement_text_color"
+      },
+      {
+        "type": "color",
+        "label": "Announcement BG Color",
+        "id": "announcement_bg_color"
+      }
+      <div class="cart_announcement" style="background-color: {{ settings.announcement_bg_color }};">
+        <div class="announcement_inner" style="color: {{ settings.announcement_text_color }};">
+          {{ settings.cart_announcement }}
+        </div>
+      </div>
+
+  {% endcomment %}
+
+      <div class="drawer__inner">
+        {% if settings.enable_timer == true %}
+          <div class="cartCountdown_main">
+            <div class="cartCountdownAlert">
+              <div class="cart_coundown_text">
+                {{ settings.timer_text | replace:"[countdown]",'<span id="cartCountdown">10:00</span>' }}
+              </div>
+            </div>
+          </div>
+        {% endif %}
+        <div class="drawer__scrollable">
+          <div data-products class="appear-animation appear-delay-2"></div>
+
+          {% if settings.cart_notes_enable %}
+            <div class="appear-animation appear-delay-3">
+              <label for="CartNoteDrawer">{{ 'cart.general.note' | t }}</label>
+              <textarea name="note" class="input-full cart-notes" id="CartNoteDrawer">{{ cart.note }}</textarea>
+            </div>
+          {% endif %}
+          {% comment %}{% render 'cart-drawer-upsell' %}{% endcomment %}
+        </div>
+
+        <div class="drawer__footer appear-animation appear-delay-4">
+                 <div class="accordion__content">
+                  <input type="text" id="discount-input" placeholder="Rabattcode oder Geschenkgutschein">
+                  <button type="button" id="apply-discount">
+                    Anwenden
+                    <svg
+                      version="1.1"
+                      id="L9"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px"
+                      y="0px"
+                      viewBox="0 0 100 100"
+                      enable-background="new 0 0 0 0"
+                      xml:space="preserve"
+                      style="display: none;"
+                    >
+                      <path fill="#535353" d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50">
+                        <animateTransform
+                          attributeName="transform"
+                          attributeType="XML"
+                          type="rotate"
+                          dur="1s"
+                          from="0 50 50"
+                          to="360 50 50"
+                          repeatCount="indefinite" />
+                      </path>
+                    </svg>
+                  </button>
+                  <div class="discount-error-message" style="color: red; display: none; margin-top: 5px;"></div>
+                </div>
+          <div data-discounts>
+            {% if cart.cart_level_discount_applications != blank %}
+              <div class="cart__discounts cart__item-sub cart__item-row">
+                <div class="ajaxcart__subtotal">{{ 'cart.general.discounts' | t }}</div>
+                <div class="text-right">
+                  {% for cart_discount in cart.cart_level_discount_applications %}
+                    <div class="cart__discount">
+                      {{ cart_discount.title }} (-{{ cart_discount.total_allocated_amount | money }})
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            {% endif %}
+          </div>
+         <div class="compate_totla_price">
+            {% assign total_compare_price = 0 %}
+            {% assign total_original_price = 0 %}
+            {%- for item in cart.items -%}
+              {% assign item_compare_price = item.variant.compare_at_price | default: item.variant.price %}
+              {% assign item_total_compare = item_compare_price | times: item.quantity %}
+              {% assign item_total_original = item.variant.price | times: item.quantity %}
+              {% assign total_compare_price = total_compare_price | plus: item_total_compare %}
+              {% assign total_original_price = total_original_price | plus: item_total_original %}
+            {% endfor %}
+            {% if total_compare_price > total_original_price or cart.discounts > 0 %}
+              <div class="ajaxcartc__total">Rabatt</div>
+              <div class="ajaxcartc__discount">-{{ total_compare_price | minus: total_original_price | plus:cart.total_discount | money }}</div>
+            {% endif %}
+          </div>             
+          <div class="cart__item-sub cart__item-row sub_total_hide" style="display: none !important;">
+            <div class="ajaxcart__subtotal">{{ 'cart.general.subtotal' | t }}</div>
+            <div data-subtotal>{{ cart.total_price | money }}</div>
+          </div>
+          <div class="cart__item-sub cart__item-row hide_cart_item" style="display: none !important;">
+            <div class="ajaxcart__subtotal">Versandkosten</div>
+            <div data-shipping style="color:#92BF20;">Kostenlos in DE</div>
+          </div>
+          <div class="cart__item-sub cart__item-row hide_cart_item">
+            <div class="ajaxcart__subtotal">Zwischensumme</div>
+            <div data-finaltotal>{{ cart.total_price | money }}</div>
+          </div>
+
+          <div class="cart__item-row text-left product__policies">
+            <span>{{ 'cart.general.shipping_at_checkout_html' | t }} </span>
+              <a href="{{shop.shipping_policy.url}}">
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="15px" height="15px" viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
+                  <style type="text/css">
+                    .st0{fill:#999999;}
+                    .st1{fill:none;stroke:#999999;stroke-width:0.3;stroke-miterlimit:10;}
+                    .st2{fill:#FFFFFF;}
+                    .st3{display:none;}
+                    .st4{display:inline;}
+                  </style>
+                  <g id="Ebene_1">
+                  </g>
+                  <g id="Ebene_3">
+                    <g>
+                      <path class="st0" d="M15.01,1.57C7.59,1.57,1.56,7.59,1.56,15c0,7.41,6.03,13.43,13.45,13.43c7.4,0,13.43-6.02,13.43-13.43    C28.44,7.59,22.41,1.57,15.01,1.57z M26.56,15c0,6.37-5.18,11.56-11.55,11.56S3.46,21.37,3.46,15S8.63,3.44,15.01,3.44    S26.56,8.63,26.56,15z"/>
+                      <rect x="13.23" y="10.72" class="st0" width="3.52" height="13.12"/>
+                      <path class="st0" d="M14.99,5.52c-0.61,0-1.08,0.17-1.44,0.51c-0.35,0.34-0.53,0.77-0.53,1.3c0,0.53,0.18,0.97,0.54,1.31    c0.36,0.34,0.83,0.51,1.42,0.51s1.06-0.17,1.42-0.51c0.36-0.34,0.54-0.78,0.54-1.31c0-0.52-0.18-0.96-0.53-1.3    C16.07,5.69,15.59,5.52,14.99,5.52z"/>
+                    </g>
+                  </g>
+                  <g id="Ebene_2" class="st3">
+                  </g>
+                  </svg>
+                </span>
+              </a>
+           
+          </div>
+
+          {% if settings.cart_terms_conditions_enable %}
+            <div class="cart__item-row cart__terms">
+              <input type="checkbox" id="CartTermsDrawer" class="cart__terms-checkbox">
+              <label for="CartTermsDrawer">
+                {% if settings.cart_terms_conditions_page != blank %}
+                  {{ 'cart.general.terms_html' | t: url: settings.cart_terms_conditions_page.url }}
+                {% else %}
+                  {{ 'cart.general.terms' | t }}
+                {% endif %}
+              </label>
+            </div>
+          {% endif %}
+
+          <div class="cart__checkout-wrapper">
+            <button type="submit" name="checkout" data-terms-required="{{ settings.cart_terms_conditions_enable }}" class="btn cart__checkout">
+              {{ 'cart.general.checkout' | t }}
+            </button>
+
+            {% if additional_checkout_buttons and settings.cart_additional_buttons %}
+              <div class="additional-checkout-buttons additional-checkout-buttons--vertical">
+                <span class="additional-checkout-btns-seperater">oder direkt bezahlen mit:</span>
+                {{ content_for_additional_checkout_buttons }}
+              </div>
+            {% endif %}
+          </div>
+
+        {% if settings.show_benefits == true %}
+          {% if settings.benefits_icon_1 != blank or settings.benefits_text_1 != blank or settings.benefits_icon_2 != blank or settings.benefits_text_2 != blank %}
+            <div class="cart_drawer_benefits">
+              <div class="cart_benefits_item">
+                {% if settings.benefits_icon_1 != blank %}<img src="{{ settings.benefits_icon_1 | image_url }}" width="" height=""/>{% endif %}
+                <span>{{ settings.benefits_text_1 }}</span>
+              </div>
+              <div class="cart_benefits_item">
+                {% if settings.benefits_icon_2 != blank %}<img src="{{ settings.benefits_icon_2 | image_url }}" width="" height=""/>{% endif %}
+                <span>{{ settings.benefits_text_2 }}</span>
+              </div>
+            </div>
+          {% endif %}
+        {% endif %}
+  
+        </div>
+      </div>
+
+      <div class="drawer__cart-empty appear-animation appear-delay-2">
+        <div class="drawer__scrollable">
+          {{ 'cart.general.empty' | t }}
+        </div>
+      </div>
+    </form>
+  </div>
+{%- endif -%}
+<script>
+  // ===================== abtestJS=====================
+  function updateCartDrawer() {
+  fetch("/cart")
+  .then(response => response.text())
+  .then(html => {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, "text/html");
+      const newDrawerContent = doc.querySelector(".compate_totla_price");
+      if (newDrawerContent) {
+          document.querySelector(".compate_totla_price").innerHTML = newDrawerContent.innerHTML;
+      }
+  })
+  .catch(error => {
+      console.error("Error updating cart drawer", error);
+  });
+  }
+  document.addEventListener('cart:updated', function(evt) {
+    setTimeout(()=>{
+      updateCartDrawer()
+    },100)
+  });
+  document.addEventListener('ajaxProduct:added', function(evt) {
+    setTimeout(()=>{
+      updateCartDrawer()
+    },100)
+  });
+function checkAppliedDiscount() {
+  const currentEle = $('.accordion__content #apply-discount');
+  const errorMessage = $('.discount-error-message');
+  const discountContainer = $('.discount-applied-container');
+
+  fetch('/cart.js')
+    .then(response => response.json())
+    .then(cartData => {
+      console.log("Cart Data on Load:", JSON.stringify(cartData, null, 2));
+
+      if (cartData.discount_codes && cartData.discount_codes.length > 0) {
+        const discountCode = cartData.discount_codes[0].code; // Assuming one discount code
+        const successHtml = `
+          <div class="discount-applied">
+            <small>
+              ${discountCode}
+              <button type="button" class="remove-discount" aria-label="Remove discount">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 2L10 10M10 2L2 10" stroke="currentColor" stroke-width="2"/>
+                </svg>
+              </button>
+            </small>
+          </div>
+        `;
+        
+        if (!discountContainer.length) {
+          $('<div class="discount-applied-container"></div>').insertAfter(currentEle.parent());
+        }
+        $('.discount-applied-container').html(successHtml).show();
+      }
+    })
+    .catch(error => {
+      console.error("Error checking applied discount on load:", error);
+      errorMessage.text("Error loading discount information.").show();
+    });
+}
+
+$(document).ready(function() {
+  checkAppliedDiscount();
+});
+
+$(document).on('click', '.accordion__content #apply-discount', function () {
+  let discountValue = $("#discount-input").val().trim();
+  let currentEle = $(this);
+  let errorMessage = $(".discount-error-message");
+  let discountContainer = $(".discount-applied-container");
+
+  if (discountValue.length > 0) {
+    currentEle.find('svg').show();
+    currentEle.addClass('discount_triggered');
+    errorMessage.hide().text("");
+    if (discountContainer.length) {
+      discountContainer.hide().empty();
+    }
+
+    fetch(`/discount/${discountValue}`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Failed to apply discount code.");
+        }
+        return new Promise(resolve => setTimeout(resolve, 1000));
+      })
+      .then(() => fetch('/cart.js'))
+      .then(response => response.json())
+      .then(cartData => {
+        console.log("Cart Data after apply:", JSON.stringify(cartData, null, 2));
+        const discountCode = cartData.discount_codes && cartData.discount_codes.find(code => 
+          code.code.toLowerCase() === discountValue.toLowerCase()
+        );
+
+        if (!discountCode) {
+          throw new Error("Discount code not found in cart.");
+        }
+        const successHtml = `
+          <div class="discount-applied">
+            <small>
+             ${discountValue}
+              <button type="button" class="remove-discount" aria-label="Remove discount">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 2L10 10M10 2L2 10" stroke="currentColor" stroke-width="2"/>
+                </svg>
+              </button>
+            </small>
+          </div>
+        `;
+        
+        if (!discountContainer.length) {
+          discountContainer = $('<div class="discount-applied-container"></div>').insertAfter(currentEle.parent());
+        }
+        discountContainer.html(successHtml).show();
+
+        return fetch('/cart/update.js', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ updates: {} }),
+        });
+      })
+      .then(response => {
+        setTimeout(() => {
+          document.dispatchEvent(new CustomEvent('cart:build'));
+          currentEle.find('svg').hide();
+          currentEle.removeClass('discount_triggered');
+        }, 100);
+      })
+      .catch(error => {
+        console.error("Error applying discount code:", error);
+        errorMessage.text("Invalid discount code. Please try again.").show();
+        currentEle.find('svg').hide();
+        currentEle.removeClass('discount_triggered');
+      });
+  } 
+});
+
+$(document).on('click', '.remove-discount', function() {
+  const currentEle = $('.accordion__content #apply-discount');
+  const errorMessage = $(".discount-error-message");
+  const discountContainer = $(".discount-applied-container");
+  
+  currentEle.find('svg').show();
+  currentEle.addClass('discount_triggered');
+  errorMessage.hide().text("");
+
+  fetch('/discount/CLEAR')
+    .then(() => {
+      return new Promise(resolve => setTimeout(resolve, 1000));
+    })
+    .then(() => fetch('/cart.js'))
+    .then(response => response.json())
+    .then(cartData => {
+      console.log("Cart Data after clear:", JSON.stringify(cartData, null, 2));
+      discountContainer.hide().empty();
+      document.dispatchEvent(new CustomEvent('cart:build'));
+      currentEle.find('svg').hide();
+      currentEle.removeClass('discount_triggered');
+    })
+    .catch(error => {
+      console.error("Error removing discount:", error);
+      errorMessage.text("Error removing discount. Please try again.").show();
+      currentEle.find('svg').hide();
+      currentEle.removeClass('discount_triggered');
+    });
+});
+</script>

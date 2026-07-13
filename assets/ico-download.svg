@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Objects" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 344.96 353.91">
+  <path class="cls-2" style="
+        fill: none;
+        stroke: #1d1d1b;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 17px;" d="m60.72,228.63v60.97c0,10.45,8.48,18.93,18.93,18.93h185.66c10.45,0,18.93-8.48,18.93-18.93v-60.97"/>
+  <g>
+    <line class="cls-1" style="stroke-width: 18px;
+        fill: none;
+        stroke: #1d1d1b;
+        stroke-linecap: round;
+        stroke-linejoin: round;" x1="172.48" y1="94.5" x2="172.48" y2="260.71"/>
+    <polyline class="cls-1" style="stroke-width: 18px;
+        fill: none;
+        stroke: #1d1d1b;
+        stroke-linecap: round;
+        stroke-linejoin: round;" points="240.88 186.69 172.6 260.71 104.07 186.69"/>
+  </g>
+</svg>

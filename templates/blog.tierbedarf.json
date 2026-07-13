@@ -1,0 +1,185 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_eJXi7t": {
+      "type": "slideshow",
+      "blocks": {
+        "image_KELYRK": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "Haustiere & Tierbedarf",
+            "title_size": 50,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/thema_tierbedarf.jpg",
+            "image_mobile": "shopify://shop_images/thema_tierbedarf.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 0,
+            "color_subheading": "#ffffff",
+            "color_heading": "#ffffff",
+            "color_text": "#ffffff",
+            "color_accent_1": "rgba(0,0,0,0)",
+            "color_accent_2": "rgba(0,0,0,0)",
+            "color_btn_text_check": true,
+            "color_accent_t_1": "#000000",
+            "color_accent_t_2": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "image_KELYRK"
+      ],
+      "settings": {
+        "section_height": "natural",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5,
+        "lazyload_images": true
+      }
+    },
+    "5be5ea83-909b-4603-a37f-166c09b4aef6": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20174418477359__5be5ea83-909b-4603-a37f-166c09b4aef6-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Dein Haustier verdient ein gemütliches und sicheres Heim, um ein glückliches Leben zu führen. Wir stehen dir zur Seite, um das perfekte Zuhause für deine geliebten Vierbeiner zu gestalten. Darüber hinaus versorgen wir dich mit wertvollen Ratschlägen für eine artgerechte Tierhaltung und den sicheren Transport deiner Lieblinge. Entdecke mit unseren Expertentipps rund um <strong>Haustiere & Tierbedarf </strong>eine perfekte Heimat für dich und deine tierischen Freunde. Lass uns gemeinsam das Leben deiner Fellnasen auf ein neues Level heben!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--20174418477359__5be5ea83-909b-4603-a37f-166c09b4aef6-text-1"
+      ],
+      "settings": {
+        "spacings_desktop_top": 50,
+        "spacings_desktop_bottom": 0,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "align_text": "left",
+        "narrow_column": false,
+        "divider": false
+      }
+    },
+    "main": {
+      "type": "blog-template",
+      "settings": {
+        "blog_show_tag_filter": true,
+        "blog_show_rss": false,
+        "blog_show_tags": false,
+        "blog_show_date": false,
+        "blog_show_comments": true,
+        "blog_show_author": false,
+        "blog_show_excerpt": false,
+        "blog_image_size": "wide"
+      }
+    },
+    "39864f71-17f0-40f3-a0a6-07f4de6cae9a": {
+      "type": "blog-posts",
+      "disabled": true,
+      "settings": {
+        "title": "Aktuell relevante Themen & neue Beiträge:",
+        "blog": "tiere",
+        "post_limit": 9,
+        "blog_show_tags": false,
+        "blog_show_date": false,
+        "blog_show_comments": false,
+        "blog_show_author": false,
+        "view_all": false,
+        "blog_image_size": "wide",
+        "divider": false
+      }
+    },
+    "logo_list_rLhrPJ": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_image_HcfwfT": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/icon_wohnen.jpg",
+            "link": "shopify://blogs/wohnen"
+          }
+        },
+        "logo_image_KtyEdy": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/icon_garten.jpg",
+            "link": "shopify://blogs/garten"
+          }
+        },
+        "logo_image_Jqgnd9": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/icon_fitness.jpg",
+            "link": "shopify://blogs/freizeit"
+          }
+        },
+        "logo_image_PnB3KE": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/icon_wellness.jpg",
+            "link": "shopify://blogs/sauna"
+          }
+        }
+      },
+      "block_order": [
+        "logo_image_HcfwfT",
+        "logo_image_KtyEdy",
+        "logo_image_Jqgnd9",
+        "logo_image_PnB3KE"
+      ],
+      "settings": {
+        "title": "",
+        "logo_opacity": 100,
+        "divider": false
+      }
+    },
+    "rich_text_wEJ4Cz": {
+      "type": "rich-text",
+      "blocks": {
+        "button_dpQTBf": {
+          "type": "button",
+          "settings": {
+            "link": "shopify://blogs/heim-garten-ratgeber",
+            "link_text": "Heim & Garten Ratgeber"
+          }
+        }
+      },
+      "block_order": [
+        "button_dpQTBf"
+      ],
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "slideshow_eJXi7t",
+    "5be5ea83-909b-4603-a37f-166c09b4aef6",
+    "main",
+    "39864f71-17f0-40f3-a0a6-07f4de6cae9a",
+    "logo_list_rLhrPJ",
+    "rich_text_wEJ4Cz"
+  ]
+}

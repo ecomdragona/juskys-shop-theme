@@ -1,0 +1,531 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "article-template",
+      "disabled": true,
+      "settings": {
+        "image_hero": false,
+        "blog_show_tags": false,
+        "blog_show_date": false,
+        "blog_show_comments": false,
+        "blog_show_author": false,
+        "social_sharing_blog": false
+      }
+    },
+    "ff03a477-10b4-47e2-9935-cce009cf91ad": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21068250153263__ff03a477-10b4-47e2-9935-cce009cf91ad-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "Wie schaffe ich Hygge im Garten?"
+          }
+        }
+      },
+      "block_order": [
+        "template--21068250153263__ff03a477-10b4-47e2-9935-cce009cf91ad-heading-1"
+      ],
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "f53c28af-5963-40c0-bb3a-7c5e586d8120": {
+      "type": "slideshow",
+      "blocks": {
+        "template--21068250153263__f53c28af-5963-40c0-bb3a-7c5e586d8120-image-1": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 80,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/hygge-gemuetliche-terrasse-banner.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "template--21068250153263__f53c28af-5963-40c0-bb3a-7c5e586d8120-image-1"
+      ],
+      "settings": {
+        "section_height": "natural",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5,
+        "lazyload_images": true
+      }
+    },
+    "03df5c15-86c9-4ca7-abaa-c92e000ffb1d": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21068250153263__03df5c15-86c9-4ca7-abaa-c92e000ffb1d-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Du hast sicher schon einmal von dem Begriff Hygge gehört. Darunter versteht man einen bewährten, <strong>nordischen Lifestyle</strong>, der seit einigen Jahren wieder voll im Trend ist. Dieser bringt mehr Gemütlichkeit in dein Zuhause und hilft beim Glücklichsein.</p><p>In diesem Artikel geht es um Hygge im Garten. Hier erfährst du mehr über die Entstehung und wie du einen <strong>hyggeligen Garten</strong> einrichtest, welche Gartenmöbel und Elemente dabei nicht fehlen dürfen und wie du den Hyggekrog, eine <a href=\"https://www.juskys.de/garten/gartenmoebel/gartenmoebel-set\" target=\"_blank\">gemütliche Sitzecke</a> schaffst. Auch gemeinsame Zeit verbringen ist ein wichtiger Aspekt – dazu geben wir Tipps, wie du ein hyggeliges Gartenfest organisierst.</p><ul><li><a href=\"https://www.juskys.de/wie-schaffe-ich-hygge-im-garten#hyggegarten1\"><em>Was ist Hygge?</em></a></li><li><a href=\"https://www.juskys.de/wie-schaffe-ich-hygge-im-garten#hyggegarten2\"><em>Wie gestalte ich meinen Garten hyggelig?</em></a></li><li><a href=\"https://www.juskys.de/wie-schaffe-ich-hygge-im-garten#hyggegarten3\"><em>Gemütliche Atmosphäre im Garten schaffen</em></a></li><li><a href=\"https://www.juskys.de/wie-schaffe-ich-hygge-im-garten#hyggegarten4\"><em>Den hyggeligen Garten genießen - Gartenfest & Co.</em></a></li><li><a href=\"https://www.juskys.de/wie-schaffe-ich-hygge-im-garten#hyggegarten5\"><em>Zusammenfassung: So wird dein Garten hyggelig</em></a></li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "template--21068250153263__03df5c15-86c9-4ca7-abaa-c92e000ffb1d-text-1"
+      ],
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "a8f31ea2-a8ae-4ad2-bb6b-e61c3dc76406": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21068250153263__a8f31ea2-a8ae-4ad2-bb6b-e61c3dc76406-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<h2><strong>Was ist Hygge?</strong></h2><p>Hygge - dänisch für Gemütlichkeit, Lebensfreude, Geborgenheit, Wohlbefinden und Entspannung, ausgesprochen: „Hügge“ - ist eine dänische Tradition, das <strong>Zuhause gemütlicher</strong> zu machen. Es geht um die Schaffung einer herzlichen Umgebung, sowohl drinnen als auch draußen. Einfach das Leben mit geliebten Menschen genießen. Das macht glücklich! Mit dieser Lebensweise wird Glück und Zufriedenheit in das tägliche Leben gebracht.</p><p>Einfach die Zeit nehmen, um kleine und einfache Freuden zu genießen. Ob Zeit im Garten verbringen, draußen spazieren gehen oder auf das Sofa kuscheln – Hygge bedeutet, das Leben mit Absicht und Wertschätzung zu leben. Mit Hygge schaffst du <strong>Momente der Freude</strong>, Ruhe und bringst Wohlbefinden in deinen Alltag! Der Wohn- und Lifestyletrend aus Dänemark bringt ein gutes Lebensgefühl.</p><p>Hygge erfährst du im sogenannten Hyggekrog, ein gemütlicher Bereich in deinem Zuhause. Den <strong>Hygge Moment</strong> erlebst du, indem du es in einer besonderen Ecke zuhause gemütlich machst. Einfach den Moment genießen. Ob alleine mit einem Buch, beim Musik hören oder einfach die Ruhe genießen. Aber auch Zeit mit Familie und Freunden verbringen - bis hin zum Gartenfest.</p><p></p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--21068250153263__a8f31ea2-a8ae-4ad2-bb6b-e61c3dc76406-text-1"
+      ],
+      "settings": {
+        "align_text": "left",
+        "narrow_column": false,
+        "divider": false
+      }
+    },
+    "42635bf3-7082-4089-82bd-bcac82629d12": {
+      "type": "advanced-content",
+      "blocks": {
+        "template--21068250153263__42635bf3-7082-4089-82bd-bcac82629d12-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/gemuetlich-platznehmen.jpg",
+            "link": "",
+            "width": "50%",
+            "alignment": "center"
+          }
+        },
+        "template--21068250153263__42635bf3-7082-4089-82bd-bcac82629d12-liquid-1": {
+          "type": "liquid",
+          "settings": {
+            "code": "<h2>Wie entstand Hygge?</h2><p>Hygge ist ein dänisches Konzept, das es seit Jahrhunderten gibt und das in den letzten Jahren weltweit populär geworden ist. Mit dieser Tradition wird eine warme und gemütliche Atmosphäre geschaffen, wozu Familienfeiern, Hausmannskost und Entspannung gehören. Die Hygge Tradition steht als Ausdruck der Wertschätzung für die kleinen Dinge im Leben, die uns zufrieden und glücklich machen.\n\nEs wurde von den Dänen erfunden, um den langen, dunklen Winter zu überstehen. Im Laufe der Zeit hat es sich zu einer Lebensweise entwickelt, bei der die wertvolle Zeit mit Freunden und Familie, gutem Essen und Trinken in einer angenehmen Umgebung im Fokus stehen.",
+            "width": "50%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--21068250153263__42635bf3-7082-4089-82bd-bcac82629d12-image-1",
+        "template--21068250153263__42635bf3-7082-4089-82bd-bcac82629d12-liquid-1"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true,
+        "lazyload_images": true
+      }
+    },
+    "15452c44-5e76-40a5-807a-e228fbdef493": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21068250153263__15452c44-5e76-40a5-807a-e228fbdef493-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<h2><strong>Wie gestalte ich meinen Garten hyggelig?</strong></h2><p>Der nordische Trend Hygge ist eine hervorragende Möglichkeit, den Garten einladend und gemütlich zu gestalten. Mit bequemen Möbeln und warmer Beleuchtung bis hin zur Integration natürlicher Elemente wie Pflanzen und Wasserspiele gibt es <strong>viele Möglichkeiten</strong>, die Terrasse, den Balkon oder Garten hyggelig zu gestalten. Mit den richtigen Handgriffen verwandelst du deinen Außenbereich in eine Oase der Behaglichkeit und Schönheit.</p><p>Beginne damit, <strong>bequeme Gartenmöbel</strong> wie Sonnenliegen, Korbstühle oder Hängemattenschaukeln hinzuzufügen. Prima sind auch <a href=\"https://www.juskys.de/garten/gartenmoebel/korbhaengesessel?etcc_cu=onsite&etcc_cmp_onsite=Korbh%C3%A4ngesessel&etcc_med_onsite=sidebar\">Hängeschaukeln</a> für Kinder oder Erwachsene. Vergiss nicht, <strong>Sonnenschutz</strong> wie Sonnenschirme oder Markisen anzubringen. Mit den richtigen Details schaffst du einen Außenbereich, der sich perfekt zum Entspannen mit Freunden und Familie eignet.</p><h3>Welche Elemente sind grundsätzlich wichtig für Hygge?</h3><p>Hygge ist ein dänisches Konzept, bei dem es darum geht, eine gemütliche Atmosphäre Zuhause zu schaffen. Um es wirklich zu erleben, sind die richtigen Elemente wichtig. Eines dieser Elemente sind <strong>Gartenmöbel</strong> im Allgemeinen. Diese tragen zu einem Außenbereich bei, in dem du dich wohlfühlst. Dadurch erlebst du Hygge noch besser. Sie verleihen auch ein ästhetisches Erscheinungsbild und wirken einladend. Mit den richtigen <a href=\"https://www.juskys.de/garten/gartenmoebel?etcc_cu=onsite&etcc_cmp_onsite=Gartenm%C3%B6bel&etcc_med_onsite=topnav\">Gartenmöbeln</a> kreierst du eine gemütliche Atmosphäre, die dein Zuhause in eine wahre Oase der Ruhe und Entspannung verwandelt. Welche Hygge Möbel konkret infrage kommen, liest du im nächsten Kapitel.</p><h3>Wie wähle ich die passenden Möbel für Gemütlichkeit im Garten aus?</h3><p>Die Wahl der Gartenmöbel kann eine herausfordernde Aufgabe sein. Bei so vielen verfügbaren Optionen fällt es nicht so leicht, sich zu entscheiden. Erfreulicherweise gibt es einige Tipps, um die richtigen Möbel für den Außenbereich auszuwählen, die den maximalen Komfort bieten. Wenn du Aspekte wie <strong>Größe, Material</strong> und <strong>Stil</strong> berücksichtigst, wird dein Garten oder Balkon ein angenehmer Ort zum Genießen der Natur. Besonders Möbel aus Holz, Polyrattan oder auch Markamee im Boho-Stil bringen einen natürlichen Look. Hier haben wir einige gemütliche Gartenmöbel aufgeführt.</p><p><strong>Entspannt sitzen und liegen</strong></p><p>Von <a href=\"https://www.juskys.de/garten/gartenmoebel/gartenliegen?etcc_cu=onsite&etcc_cmp_onsite=Gartenliegen&etcc_med_onsite=sidebar\">Gartenliege</a>, Gartenlounge, <a href=\"https://www.juskys.de/garten/gartenmoebel/gartenmoebel-set?etcc_cu=onsite&etcc_cmp_onsite=Gartenm%C3%B6bel-Sets&etcc_med_onsite=sidebar\">Gartenmöbel-Set</a> bis hin zur Hängeschaukel gibt es eine große Auswahl an Sitzmöbeln für deinen Garten.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--21068250153263__15452c44-5e76-40a5-807a-e228fbdef493-text-1"
+      ],
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "747774aa-5725-4537-a7dd-c5ff51d377ea": {
+      "type": "featured-collection-slider",
+      "settings": {
+        "background_color": "",
+        "slider_circle_color": "#000000",
+        "slider_arrow_color": "#FFFFFF",
+        "title": "Unsere Gartenmöbel Topseller",
+        "home_featured_products": "boxspringbetten",
+        "divider": false,
+        "per_row": 4,
+        "per_row_mobile": 2,
+        "mobile_scrollable": true
+      }
+    },
+    "8272190d-6213-4298-ae41-3e682f5d3971": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21068250153263__8272190d-6213-4298-ae41-3e682f5d3971-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p><strong>Geschützt vor Sonne & neugierigen Blicken</strong></p><p>Auch bei <a href=\"https://www.juskys.de/garten/sonnen-sichtschutz?etcc_cu=onsite&etcc_cmp_onsite=Sonnen-%20%26%20Sichtschutz&etcc_med_onsite=topnav\" target=\"_blank\">Sonnen- und Sichtschutz</a> kannst du aus einer Vielzahl wählen. Ob einfacher Sonnenschirm, Seitenmarkise oder ein romantischer Gartenpavillon - die Auswahl ist groß.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--21068250153263__8272190d-6213-4298-ae41-3e682f5d3971-text-1"
+      ],
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "d9f5b428-046b-46b1-92b9-d959b556c215": {
+      "type": "featured-collection-slider",
+      "settings": {
+        "background_color": "",
+        "slider_circle_color": "#000000",
+        "slider_arrow_color": "#FFFFFF",
+        "title": "Unsere Topseller Sonnen - & Sichtschutz",
+        "home_featured_products": "",
+        "divider": false,
+        "per_row": 4,
+        "per_row_mobile": 2,
+        "mobile_scrollable": true
+      }
+    },
+    "feab9e36-77b1-4fdf-82b1-016a15354ddf": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21068250153263__feab9e36-77b1-4fdf-82b1-016a15354ddf-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p><strong>Wellness, Sauna & Erfrischung</strong></p><p>Für mehr Entspannung im Garten sorgen Whirlpool, Fasssauna oder eine einfache Solardusche. Je nach Geldbeutel, ist für jeden etwas dabei.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--21068250153263__feab9e36-77b1-4fdf-82b1-016a15354ddf-text-1"
+      ],
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "1d08449c-31c3-4598-a2ce-81602428c75b": {
+      "type": "text-columns",
+      "blocks": {
+        "template--21068250153263__1d08449c-31c3-4598-a2ce-81602428c75b-text_block-1": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/solardusche-fur-garten.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Solardusche",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "template--21068250153263__1d08449c-31c3-4598-a2ce-81602428c75b-text_block-2": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/whirlpool-draussen.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Whirpool",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "template--21068250153263__1d08449c-31c3-4598-a2ce-81602428c75b-text_block-3": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/fasssauna-garten.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Outdoor Sauna",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--21068250153263__1d08449c-31c3-4598-a2ce-81602428c75b-text_block-1",
+        "template--21068250153263__1d08449c-31c3-4598-a2ce-81602428c75b-text_block-2",
+        "template--21068250153263__1d08449c-31c3-4598-a2ce-81602428c75b-text_block-3"
+      ],
+      "settings": {
+        "title": "",
+        "align_text": "center",
+        "divider": false
+      }
+    },
+    "e3825887-c0fb-4a84-872c-ef4580739d98": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21068250153263__e3825887-c0fb-4a84-872c-ef4580739d98-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "Welche Dekoration eignet sich für einen hyggeligen Garten?"
+          }
+        },
+        "template--21068250153263__e3825887-c0fb-4a84-872c-ef4580739d98-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Der Schlüssel zu einem gemütlichen und einladenden Außenbereich liegt in der Wahl der richtigen Dekoration. Durch das Dekorieren <strong>mit stimmungsvollen Elementen</strong> schaffst du eine schöne und ruhige Umgebung, in der du dich wohlfühlst. Von rustikalen Möbeln bis hin zu einfachen Accessoires und beruhigenden Farbkombinationen gibt es viele Möglichkeiten, dem Garten ein hyggeliges Aussehen und Gefühl zu verleihen. Mit der passenden Dekoration verwandelst du deinen Garten oder Balkon in eine Oase der Ruhe, an der sich auch deine Gäste erfreuen.</p><ul><li>Blumen und Pflanzen</li><li>Kerzen, Windlichter, Laternen, Lichterketten</li><li>Decken, Kissen</li><li>Outdoorteppich</li><li>Dekofiguren</li></ul><h2><strong>Gemütliche Atmosphäre im Garten schaffen</strong></h2>"
+          }
+        }
+      },
+      "block_order": [
+        "template--21068250153263__e3825887-c0fb-4a84-872c-ef4580739d98-heading-1",
+        "template--21068250153263__e3825887-c0fb-4a84-872c-ef4580739d98-text-1"
+      ],
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "deed1a61-248a-40df-88e1-bb8aae15e2b1": {
+      "type": "advanced-content",
+      "blocks": {
+        "template--21068250153263__deed1a61-248a-40df-88e1-bb8aae15e2b1-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Idyllische-stimmung-mit-LED-Schirm.jpg",
+            "link": "",
+            "width": "50%",
+            "alignment": "center"
+          }
+        },
+        "template--21068250153263__deed1a61-248a-40df-88e1-bb8aae15e2b1-liquid-1": {
+          "type": "liquid",
+          "settings": {
+            "code": "<h2>Wie kann ich Licht im Garten einsetzen?</h2><p> Mit der passenden Beleuchtung im Garten bringst du mehr Gemütlichkeit in deinen Außenbereich. Besonders Kerzen, aber auch Lichterketten sind wichtige Lichtquellen bei der Einrichtung nach dem Hygge Stil. Indirektes und warmes Licht steigert das Wohlbefinden und sorgt für eine vertraute und gemütliche Atmosphäre.\n\nEs gibt sogar Produkte, die schon eine indirekte Beleuchtung enthalten. Das ist zum Beispiel ein Ampelschirm mit LED, der abends für Idylle sorgt. So lässt sich der Abend romantisch mit den Liebsten ausklingen.</p>",
+            "width": "50%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--21068250153263__deed1a61-248a-40df-88e1-bb8aae15e2b1-image-1",
+        "template--21068250153263__deed1a61-248a-40df-88e1-bb8aae15e2b1-liquid-1"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true,
+        "lazyload_images": true
+      }
+    },
+    "eff2f770-a45d-469b-88ce-baa56229dd92": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21068250153263__eff2f770-a45d-469b-88ce-baa56229dd92-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "Wie sorge ich für Wärme in Sommernächten?"
+          }
+        },
+        "template--21068250153263__eff2f770-a45d-469b-88ce-baa56229dd92-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Besonders schön ist es, draußen die Sommernächte zu verbringen. Ganz gleich, ob du eine Party veranstaltest oder einfach nur einen ruhigen Abend mit Freunden und Familie genießen willst, mit der <strong>richtigen Ausstattung </strong>müssen du und deine Gäste nicht frieren.<br/><br/>Von der Verwendung einer <a href=\"https://www.juskys.de/fleecedecke-150x200-cm-hellgrau.html?c=1316\">Fleecedecke</a> über die Investition in eine <a href=\"https://www.juskys.de/gasheizung-gs42us.html?c=1303\">mobile Gasheizung</a> bis hin zum Aufstellen eines <strong>Pavillons</strong> - all das bringt Wärme und hilft, auch bei sinkenden Temperaturen warm zu bleiben. Mit diesen Lösungen kannst du dich einkuscheln und die Sommerabende im Garten genießen, ohne dich um die Kälte zu sorgen.</p><ul><li>Decken</li><li>Mobile Gasheizung</li><li>Pavillon</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "template--21068250153263__eff2f770-a45d-469b-88ce-baa56229dd92-heading-1",
+        "template--21068250153263__eff2f770-a45d-469b-88ce-baa56229dd92-text-1"
+      ],
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "58c06034-5126-4984-a990-e8df75cbea11": {
+      "type": "advanced-content",
+      "blocks": {
+        "template--21068250153263__58c06034-5126-4984-a990-e8df75cbea11-liquid-1": {
+          "type": "liquid",
+          "settings": {
+            "code": "<h2>Welche Pflanzen eignen sich für einen hyggeligen Garten?</h2><p>Pflanzen dürfen in keinem hyggeligen Garten fehlen. Entscheide dich für welche, die deinem persönlichen Geschmack entsprechen und beachte auch die benötigte Pflege. Eine gute Wahl sind folgende Hygge Pflanzen:</p>",
+            "width": "66%",
+            "alignment": "center"
+          }
+        },
+        "template--21068250153263__58c06034-5126-4984-a990-e8df75cbea11-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/lavendel-im-garten.jpg",
+            "link": "",
+            "width": "33%",
+            "alignment": "center"
+          }
+        },
+        "78f7199b-7d1c-4c4b-a1eb-9dae51771711": {
+          "type": "liquid",
+          "settings": {
+            "code": "<ul>\n<li>Bäume sind ein wichtiger Bestandteil im Garten, da sie Schatten spenden und beruhigend wirken. Obstbäume bringen sogar leckere Äpfel, Birnen und Pfirsiche hervor. Im Hyggebereich werden Birken und Ahorne oft genannt. Tipp: Vor- und Nachteile der Baumarten beachten.</li>\n<li>Rosen erzeugen eine romantische Wirkung. Es gibt sie in verschiedenen Farben und Größen. Hier ist für jeden Geschmack etwas dabei.</li>\n<li>Lavendel: Ob als beliebte Kombination mit Rosen oder allein – Lavendel sieht wunderschön aus. Zudem hat der angenehme Duft eine beruhigende Wirkung auf Körper und Geist.</li><li>Stauden wie Astilben, Funkien, gelber Sonnenhut erzeugen ein schönes Erscheinungsbild. Sie werden im Beet oder auch in einem Blumentopf gepflanzt. Auch filigrane Gewächse wie Katzenpfötchen, Eisenkraut und Schleierkraut sehen schön aus. Flieder duftet herrlich.</li><li>Kräuter wie Basilikum, Rosmarin, Salbei, Melisse und Thymian können im Kräuterbeet oder in Töpfen angebaut werden. Sie duften und werden zum Verfeinern des Essens verwendet.</li><li>Beeren: Auch Preiselbeeren und Blaubeeren finden in einem Hygge-Garten Platz. Die Früchte kannst du für selbstgemachte Marmelade nutzen.",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--21068250153263__58c06034-5126-4984-a990-e8df75cbea11-liquid-1",
+        "template--21068250153263__58c06034-5126-4984-a990-e8df75cbea11-image-1",
+        "78f7199b-7d1c-4c4b-a1eb-9dae51771711"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true,
+        "lazyload_images": true
+      }
+    },
+    "blog-posts": {
+      "type": "blog-posts",
+      "settings": {
+        "title": "You may also like",
+        "blog": "",
+        "post_limit": 3,
+        "blog_show_tags": false,
+        "blog_show_date": true,
+        "blog_show_comments": false,
+        "blog_show_author": false,
+        "view_all": true,
+        "blog_image_size": "wide",
+        "divider": false
+      }
+    },
+    "c0c2860f-eb61-402b-afb2-92ab16c8ed45": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21068250153263__c0c2860f-eb61-402b-afb2-92ab16c8ed45-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": ""
+          }
+        },
+        "template--21068250153263__c0c2860f-eb61-402b-afb2-92ab16c8ed45-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<h3>Den hyggeligen Garten genießen - Gartenfest & Co.</h3><p>Du möchtest wissen, wie du einen Hygge Garten genießen kannst? Dazu erfährst du in diesem Kapitel mehr. Du bekommst Tipps, wie du eine <strong>gemütliche Sitzecke</strong>, den sogenannten Hyggekrog, gestaltest. Außerdem verraten wir dir, wie du ein hyggeliges Gartenfest am besten organisierst und welche Rolle der Aspekt Gemeinschaft beim Hygge Lifestyle spielt. Zudem listen wir Produkte auf, die zur Entspannung im Garten infrage kommen.</p><h3>Wie sorge ich für Entspannung im Garten?</h3><p>Entspannen im Garten ist eine großartige Möglichkeit, um eine Pause vom Alltag einzulegen und die Schönheit der Natur zu genießen. Für Entspannung im Garten, brauchst du <strong>bequeme Sitzgelegenheiten </strong>und<strong> Schatten</strong> vor der Sonne. Eine Gartenliege, eine Hängeschaukel oder eine Gartenlounge bieten dir einen bequemen Sitzplatz. Zusätzlich spendet ein großer Ampelschirm Schatten vor Sonnenstrahlen. Mit diesen Möbeln schaffst du dir eine Oase der Entspannung im eigenen Garten:</p><ul><li><a href=\"https://www.juskys.de/garten/gartenmoebel/gartenmoebel-set?etcc_cu=onsite&etcc_cmp_onsite=Gartenm%C3%B6bel-Sets&etcc_med_onsite=sidebar\">Vielseitige Gartenmöbel-Sets</a></li><li><a href=\"https://www.juskys.de/garten/gartenmoebel/gartenliegen?etcc_cu=onsite&etcc_cmp_onsite=Gartenliegen&etcc_med_onsite=sidebar\">Komfortable Gartenliegen</a></li><li><a href=\"https://www.juskys.de/garten/gartenmoebel/korbhaengesessel?etcc_cu=onsite&etcc_cmp_onsite=Korbh%C3%A4ngesessel&etcc_med_onsite=sidebar\">Hängesessel & Hollywoodschaukeln</a></li></ul><p></p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--21068250153263__c0c2860f-eb61-402b-afb2-92ab16c8ed45-heading-1",
+        "template--21068250153263__c0c2860f-eb61-402b-afb2-92ab16c8ed45-text-1"
+      ],
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "032b6fe6-532a-460e-a7a6-36a7a7165946": {
+      "type": "advanced-content",
+      "blocks": {
+        "template--21068250153263__032b6fe6-532a-460e-a7a6-36a7a7165946-liquid-1": {
+          "type": "liquid",
+          "settings": {
+            "code": "<h2>Wie gestalte ich eine gemütliche Sitzecke?</h2><p>\nEin wichtiger Platz im Garten, auf der Terrasse oder dem Balkon ist der sogenannte Hyggekrog. Die Dänen verstehen darunter eine persönliche Ecke, die zur Entspannung und Entschleunigung dient. An diesem Rückzugsort fühlt man sich geborgen. Du fragst dich, wie du eine gemütliche Sitzecke im Garten errichtest? Mit diesen Schritten wird das gelingen. So erfährst du, was neben Kissen, Decken und Deko dazugehört.</p>",
+            "width": "50%",
+            "alignment": "center"
+          }
+        },
+        "template--21068250153263__032b6fe6-532a-460e-a7a6-36a7a7165946-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/gemuetliche-sitzecke-im-garten.jpg",
+            "link": "",
+            "width": "50%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--21068250153263__032b6fe6-532a-460e-a7a6-36a7a7165946-liquid-1",
+        "template--21068250153263__032b6fe6-532a-460e-a7a6-36a7a7165946-image-1"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true,
+        "lazyload_images": true
+      }
+    },
+    "47835d58-7c51-4ff3-a738-b035bb890b93": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21068250153263__47835d58-7c51-4ff3-a738-b035bb890b93-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<ul><li><strong>Standort: </strong>Suche zuerst nach einer Ecke in deinem Außenbereich, die dir besonders zusagt – sei es auf dem Balkon, der Terrasse oder im Garten. Ideale Voraussetzungen sind wind-, sonnengeschützte Plätze mit einer schönen Aussicht ins Grüne. Wer Wert auf Privatsphäre legt, sollte einen blickdichten Bereich wählen, z. B. hinter einem Zaun oder einer Hecke. Wer dahingegen gerne mit Menschen ins Gespräch kommt, kann sich auch vor dem Haus oder im Vorgarten einen Platz einrichten. Das ist besonders auf dem Land üblich.</li><li><strong>Beleuchtung</strong>: Mit Licht setzt du Highlights und machst das Ambiente perfekt. Dazu eignen sich Fackeln, Feuerkörbe, Lichterketten und Laternen.</li><li><strong>Pflanzen</strong>: Besonders beruhigend ist ein liebevoll angelegter Garten mit Bäumen, Pflanzen und Blumen. Auf dem Balkon oder der Terrasse hingegen zauberst du mit Blumentöpfen oder einem Hochbeet eine natürliche Umgebung.</li><li><strong>Weiche Textilien:</strong> Mit Kissen, kuscheligen Decken und Schaffell in natürlichen und warmen Farben machst du es dir gemütlich. Beliebt sind Produkte aus Baumwolle, Leinen oder in Makramee Optik.</li><li><strong>Sitzplatz:</strong> Je nachdem, ob du sitzen oder liegen möchtest, gibt es die passende Sitzgelegenheit. Manche verbinden auch beide Funktionen, wie eine Gartenlounge oder ein klappbarer Liegestuhl. Von Gartenbank bis Hängematten ist alles dabei. Ein Hyggekrog mit mehreren Möbeln ist natürlich auch möglich.</li><li><strong>Tisch: </strong>Damit du Speisen und Getränke griffbereit hast, empfehlen wir einen Tisch für die Sitzecke. Dort kannst du auch etwas zum Lesen ablegen.</li></ul><h3>Wie organisiere ich ein hyggeliges Gartenfest?</h3><p>Eine hyggelige Gartenparty ist die perfekte Art, den Sommer mit Familie und Freunden zu genießen. Bei der Organisation einer hyggelischen Gartenparty gibt es <strong>viel zu beachten</strong>. Der Schlüssel zu einer gelungenen Gartenparty besteht darin, alles Notwendige für ein angenehmes Erlebnis zu besorgen. Damit deine Gäste eine unvergessliche Zeit auf der Gartenparty erleben, darf folgendes nicht fehlen:</p><ul><li>Sitzmöglichkeiten wie Sitzgarnituren oder <a href=\"https://www.juskys.de/garten/gartenmoebel/bierzeltgarnituren?etcc_cu=onsite&etcc_cmp_onsite=Bierzeltgarnituren&etcc_med_onsite=sidebar\">Bierzeltgarnituren</a></li><li>Sonnenschutz wie <a href=\"https://www.juskys.de/garten/sonnen-sichtschutz/pavillons-und-gartenzelte/?o=1&p=1\">Partyzelt</a> oder Ampelschirm</li><li>Für das leibliche Wohl sorgen mit <a href=\"https://www.juskys.de/garten/gasgrills?etcc_cu=onsite&etcc_cmp_onsite=Gasgrills&etcc_med_onsite=sidebar\">BBQ-Grill</a></li><li>Erfrischende Getränke mit der <a href=\"https://www.juskys.de/wohnen/haushaltsartikel/eiswuerfelmaschinen/?o=1&p=1\">Eiswürfelmaschine</a></li><li>Dekoration und Beleuchtung mit Kerzen oder Lichterketten</li></ul><p> </p><p>Ein wichtiger Aspekt der Hygge-Philosophie ist die <strong>Gemeinschaft</strong>. Also Zeit mit Menschen zu verbringen, die man mag. Das Hygge-Gefühl entsteht, wenn du mit deinen Liebsten zusammen bist und ihr schöne Erinnerungen schafft. Miteinander essen, spielen oder was auch immer euch gefällt. Schön ist auch, <strong>Traditionen zu etablieren</strong>, wie zum Beispiel der monatliche Spieleabend mit Freunden oder das tägliche Essen mit der Familie. Diese schönen Momente bleiben in Erinnerung.</p><p><em><strong>➤ Tipp:</strong></em><em>Du planst eine hyggelige Feier in der kalten Jahreszeit? Dann solltest du dir unbedingt unsere</em><a href=\"https://www.juskys.de/r/die-perfekte-winter-grillparty\"><em>Tipps für die perfekte Grillparty im Winter</em></a><em>anschauen.</em></p><h2><strong>Zusammenfassung: So wird dein Garten hyggelig</strong></h2><p>Jetzt weißt du schon viel mehr über den skandinavischen Lifestyle Hygge im Garten. Was ist Hygge? Zusammengefasst ist Hygge ein jahrhundertealtes Lebenskonzept, mit dem du dir ein <strong>gemütliches Zuhause</strong> schaffst. Nämlich mit dem Ziel, glücklich zu sein. Für einen hyggeligen Garten sind diese Aspekte zu berücksichtigen:</p><p><em><strong>Hyggekrog als gemütliche Sitzecke</strong></em></p><ul><li>Möbel zur Entspannung</li><li>Dekoration</li><li>Beleuchtung</li><li>Warme Umgebung</li><li>Pflanzen</li></ul><p> </p><p><strong>➤ Das könnte dich auch interessieren:</strong></p><ul><li><a href=\"https://www.juskys.de/r/Gartenmoebel-rattan-vs-polyrattan\" target=\"_self\" title=\"Zum Artikel: Rattan und Polyrattan im Vergleich\"><em><strong>Gartenmöbel aus Rattan und Polyrattan - ein Vergleich</strong></em></a></li><li><a href=\"https://www.juskys.de/r/sonnen-sichtschutz-outdoor\" target=\"_self\" title=\"Zum Artikel: Sonnen- & Sichtschutz\"><em><strong>So findest du den richtigen Sonnen- & Sichtschutz</strong></em></a></li><li><a href=\"https://www.juskys.de/r/gestaltungstipps-fuer-deinen-balkon\" title=\"Zum Artikel: Gestaltungstipps für den Balkon\"><em><strong>Schöne Gestaltungstipps für deinen Balkon</strong></em></a></li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "template--21068250153263__47835d58-7c51-4ff3-a738-b035bb890b93-text-1"
+      ],
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ff03a477-10b4-47e2-9935-cce009cf91ad",
+    "f53c28af-5963-40c0-bb3a-7c5e586d8120",
+    "03df5c15-86c9-4ca7-abaa-c92e000ffb1d",
+    "a8f31ea2-a8ae-4ad2-bb6b-e61c3dc76406",
+    "42635bf3-7082-4089-82bd-bcac82629d12",
+    "15452c44-5e76-40a5-807a-e228fbdef493",
+    "747774aa-5725-4537-a7dd-c5ff51d377ea",
+    "8272190d-6213-4298-ae41-3e682f5d3971",
+    "d9f5b428-046b-46b1-92b9-d959b556c215",
+    "feab9e36-77b1-4fdf-82b1-016a15354ddf",
+    "1d08449c-31c3-4598-a2ce-81602428c75b",
+    "e3825887-c0fb-4a84-872c-ef4580739d98",
+    "deed1a61-248a-40df-88e1-bb8aae15e2b1",
+    "eff2f770-a45d-469b-88ce-baa56229dd92",
+    "58c06034-5126-4984-a990-e8df75cbea11",
+    "blog-posts",
+    "c0c2860f-eb61-402b-afb2-92ab16c8ed45",
+    "032b6fe6-532a-460e-a7a6-36a7a7165946",
+    "47835d58-7c51-4ff3-a738-b035bb890b93"
+  ]
+}

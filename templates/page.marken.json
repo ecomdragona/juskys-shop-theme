@@ -1,0 +1,322 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "spacing_bottom": 50,
+        "spacing_bottom_header": 30
+      }
+    },
+    "f96e4396-4686-4b9b-a9b3-6805eeef20a2": {
+      "type": "slideshow",
+      "blocks": {
+        "template--20758329065775__f96e4396-4686-4b9b-a9b3-6805eeef20a2-image-1": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "Marken",
+            "subheading_desktop_font_size": 18,
+            "top_subheading_m": "",
+            "subheading_mobile_font_size": 17,
+            "title": "Die perfekte Synergie aus drei Marken",
+            "title_size": 80,
+            "title_m": "",
+            "title_size_m": 20,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "text_align": "vertical-center horizontal-center",
+            "text_align_m": "m-vertical-center m-horizontal-center",
+            "image": "shopify://shop_images/2880x1621_Marken_e509f931-5a6d-4db9-9b36-d682354ad3a5.jpg",
+            "image_mobile": "shopify://shop_images/800x800-Marken_7fa4137e-fb08-4cee-8564-b0dec89b4c92.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 0,
+            "color_subheading": "#ffffff",
+            "color_heading": "#ffffff",
+            "color_text": "#ffffff",
+            "color_accent_1": "rgba(0,0,0,0)",
+            "color_accent_2": "rgba(0,0,0,0)",
+            "color_btn_text_check": true,
+            "color_accent_t_1": "#000000",
+            "color_accent_t_2": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "template--20758329065775__f96e4396-4686-4b9b-a9b3-6805eeef20a2-image-1"
+      ],
+      "settings": {
+        "section_height": "650px",
+        "mobile_height": "auto",
+        "parallax": true,
+        "style": "bars",
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "lazyload_images": true
+      }
+    },
+    "bc03eb5f-4f20-493b-be45-37b6f907667c": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20758329065775__bc03eb5f-4f20-493b-be45-37b6f907667c-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "JUSKYS GRUPPE GMBH"
+          }
+        },
+        "template--20758329065775__bc03eb5f-4f20-493b-be45-37b6f907667c-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<h3><strong>Große Produktpalette aus den Bereichen Wohnen, Garten und Freizeit</strong></h3><p>Die Juskys Gruppe vereinigt drei Marken unter einem Dach: Juskys, Artsauna und Artsport. Gemeinsam stehen sie für moderne Produkte zu fairen Preisen.</p><p>Die Hauptmarke Juskys bildet dabei mit Artikeln rund um die Themen Wohnen und Garten den Kern des Sortiments. Hochwertige Infrarot- und Saunakabinen von Artsauna und Freizeit- bzw. Fitnessartikel von Artsport ergänzen die Produktpalette. Zusammen decken alle drei Marken den kompletten Bedarf für ein gemütliches Zuhause ab und bilden somit eine perfekte Synergie.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--20758329065775__bc03eb5f-4f20-493b-be45-37b6f907667c-heading-1",
+        "template--20758329065775__bc03eb5f-4f20-493b-be45-37b6f907667c-text-1"
+      ],
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "tag": "h1",
+        "align_text": "center",
+        "narrow_column": false,
+        "divider": false
+      }
+    },
+    "d37e79f8-11df-4668-9deb-a58ab1f42879": {
+      "type": "advanced-content",
+      "blocks": {
+        "template--20758329065775__d37e79f8-11df-4668-9deb-a58ab1f42879-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Juskys_Logo_2021-2-min_1.png",
+            "link": "",
+            "width": "50%",
+            "alignment": "center"
+          }
+        },
+        "template--20758329065775__d37e79f8-11df-4668-9deb-a58ab1f42879-liquid-1": {
+          "type": "liquid",
+          "settings": {
+            "code": "<h2>Die Marke für ein gemütliches Zuhause und einen stilvollen Garten</h2><p>Seit 2008 haben wir unsere Artikel aus den Bereichen Wohnen, Garten, Heimwerken und Tierbedarf unter der Marke Juskys zusammengefasst. Zum Beispiel bieten wir schnell aufbaubare und stabil verarbeitete Möbel. Neben unseren Gartenmöbeln zählen Polsterbetten, Boxspringbetten und Schminktische zu unseren Verkaufsschlagern. In unserem Haustierbedarf gibt es praktische Produkte für Tierfreunde, während Handwerker bei Juskys hochwertige Hilfsmittel für das nächste Projekt finden. Wir verkaufen unsere Produkte auf www.juskys.de und zahlreichen Marktplätzen.<br><br>Wie wird Juskys ausgesprochen? Auch wenn viele meinen, dass der Name englisch klingen soll, ist jedoch die deutsche Aussprache die richtige. Wie spricht man Juskys richtig aus? In der gesprochenen Sprache klingt es wie „Juskies“.</p>",
+            "width": "50%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--20758329065775__d37e79f8-11df-4668-9deb-a58ab1f42879-image-1",
+        "template--20758329065775__d37e79f8-11df-4668-9deb-a58ab1f42879-liquid-1"
+      ],
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "full_width": false,
+        "space_around": true,
+        "lazyload_images": true
+      }
+    },
+    "79156eb7-94e8-4f2a-be78-59cc0f12a4c3": {
+      "type": "rich-text",
+      "blocks": {
+        "b0a141d9-3575-49e3-906f-12aa57e86916": {
+          "type": "button",
+          "settings": {
+            "link": "https://www.juskys.de/",
+            "link_text": "Zum Juskys Shop"
+          }
+        }
+      },
+      "block_order": [
+        "b0a141d9-3575-49e3-906f-12aa57e86916"
+      ],
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "tag": "h1",
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "5ac707e5-8e36-4add-8e71-4b9aac811329": {
+      "type": "advanced-content",
+      "blocks": {
+        "template--20758329065775__5ac707e5-8e36-4add-8e71-4b9aac811329-liquid-1": {
+          "type": "liquid",
+          "settings": {
+            "code": "<h2>Die Marke für hochwertige Sauna- und Infrarotkabinen</h2><p>Unter der Marke Artsauna vertreiben wir seit 2006 auf dem Onlineshop www.artsauna.de hochwertige Infrarot- und Saunakabinen. Wir verkaufen unsere Wärmekabinen an Privat- und Geschäftskunden (Hotels, Physiotherapiepraxen…). Die Kabinen fördern die Gesundheit und sorgen gleichzeitig für Entspannung. Das edle Hemlockholz garantiert dabei lange Haltbarkeit.  Die Infrarotstrahler bzw. Saunaöfen entsprechen dem neuesten technischen Standard. Artsauna Produkte sind in der täglichen Praxis bewährt und vielfach positiv getestet..</p>",
+            "width": "50%",
+            "alignment": "center"
+          }
+        },
+        "template--20758329065775__5ac707e5-8e36-4add-8e71-4b9aac811329-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Artsauna_Logo_800px_breit.png",
+            "link": "",
+            "width": "50%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--20758329065775__5ac707e5-8e36-4add-8e71-4b9aac811329-liquid-1",
+        "template--20758329065775__5ac707e5-8e36-4add-8e71-4b9aac811329-image-1"
+      ],
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "full_width": false,
+        "space_around": true,
+        "lazyload_images": true
+      }
+    },
+    "b9698a9a-d3c0-43a8-9dcf-1f21cad1f9f6": {
+      "type": "rich-text",
+      "blocks": {
+        "1352122a-c6d1-49bb-80a0-604a17b1c5a4": {
+          "type": "button",
+          "settings": {
+            "link": "https://www.artsauna.de/",
+            "link_text": "Zum Artsauna Shop"
+          }
+        }
+      },
+      "block_order": [
+        "1352122a-c6d1-49bb-80a0-604a17b1c5a4"
+      ],
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "tag": "h1",
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "12d6b54d-77e8-48d5-81b6-73f3b450f88b": {
+      "type": "advanced-content",
+      "blocks": {
+        "template--20758329065775__12d6b54d-77e8-48d5-81b6-73f3b450f88b-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Artsport_Logo_800px_breit.png",
+            "link": "",
+            "width": "50%",
+            "alignment": "center"
+          }
+        },
+        "template--20758329065775__12d6b54d-77e8-48d5-81b6-73f3b450f88b-liquid-1": {
+          "type": "liquid",
+          "settings": {
+            "code": "<h2>Die Marke rund um Freizeit & Fitness</h2><p>Laufbänder, Heimtrainer, Kraftsportartikel, SUP Boards, Schlauchboote und viele andere Sportartikel gehören seit 2009 zu unserer Marke Artsport. In den letzten Jahren stieg die Nachfrage nach Heimsportgeräten stark an, mit der Marke Artsport unterstützen wir diesen Trend. Für das Ausdauertraining eignen sich unsere Laufbänder, Hantelsets bzw. Hantelbänke erleichtern das Krafttraining. Die Produkte sind schon nach wenigen Handgriffen einsatzbereit, bestehen aus widerstandsfähigen Materialien und sind platzsparend verstaubar. Artsport Produkte verbessern Fitness, Gesundheit und Wohlbefinden.</p>",
+            "width": "50%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--20758329065775__12d6b54d-77e8-48d5-81b6-73f3b450f88b-image-1",
+        "template--20758329065775__12d6b54d-77e8-48d5-81b6-73f3b450f88b-liquid-1"
+      ],
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "full_width": false,
+        "space_around": true,
+        "lazyload_images": true
+      }
+    },
+    "15996afb-861b-4308-8a38-35a30a797eab": {
+      "type": "rich-text",
+      "blocks": {
+        "47c22a23-e56b-44e6-b580-c936061e04cf": {
+          "type": "button",
+          "settings": {
+            "link": "https://www.juskys.de/freizeit-fitness",
+            "link_text": "Zum Juskys Shop"
+          }
+        }
+      },
+      "block_order": [
+        "47c22a23-e56b-44e6-b580-c936061e04cf"
+      ],
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "tag": "h1",
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "advanced_content_dgqJrn": {
+      "type": "advanced-content",
+      "blocks": {
+        "liquid_RpzQHM": {
+          "type": "liquid",
+          "settings": {
+            "code": "<button id=\"gartenmoebel\" data-quiz-trigger=\"gartenmoebel\" style=\"color: #fff; padding: 10px 20px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold;\">\n    Starte den Bettenberater\n</button>",
+            "width": "50%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_RpzQHM"
+      ],
+      "custom_css": [
+        ".betten {background-color: #fff;}"
+      ],
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "full_width": false,
+        "space_around": true,
+        "lazyload_images": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "f96e4396-4686-4b9b-a9b3-6805eeef20a2",
+    "bc03eb5f-4f20-493b-be45-37b6f907667c",
+    "d37e79f8-11df-4668-9deb-a58ab1f42879",
+    "79156eb7-94e8-4f2a-be78-59cc0f12a4c3",
+    "5ac707e5-8e36-4add-8e71-4b9aac811329",
+    "b9698a9a-d3c0-43a8-9dcf-1f21cad1f9f6",
+    "12d6b54d-77e8-48d5-81b6-73f3b450f88b",
+    "15996afb-861b-4308-8a38-35a30a797eab",
+    "advanced_content_dgqJrn"
+  ]
+}

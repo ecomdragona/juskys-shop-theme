@@ -1,0 +1,297 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_wNbYWi": {
+      "type": "slideshow",
+      "blocks": {
+        "image_daik3z": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "Wohnen & Haushalt",
+            "title_size": 50,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/thema_wohnen.jpg",
+            "image_mobile": "shopify://shop_images/thema_wohnen.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 0,
+            "color_subheading": "#ffffff",
+            "color_heading": "#ffffff",
+            "color_text": "#ffffff",
+            "color_accent_1": "#000000",
+            "color_accent_2": "#000000",
+            "color_btn_text_check": true,
+            "color_accent_t_1": "#ffffff",
+            "color_accent_t_2": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "image_daik3z"
+      ],
+      "settings": {
+        "section_height": "natural",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "minimal",
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "lazyload_images": true
+      }
+    },
+    "ebceed87-5b2d-4af0-a7f5-8377b46ffaf5": {
+      "type": "advanced-content",
+      "blocks": {
+        "template--20174418477359__ebceed87-5b2d-4af0-a7f5-8377b46ffaf5-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/banner_wohnen_haushalt.png",
+            "link": "",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--20174418477359__ebceed87-5b2d-4af0-a7f5-8377b46ffaf5-image-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 50,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "full_width": false,
+        "space_around": true,
+        "lazyload_images": true
+      }
+    },
+    "5be5ea83-909b-4603-a37f-166c09b4aef6": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20174418477359__5be5ea83-909b-4603-a37f-166c09b4aef6-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>In der Rubrik <strong>Wohnen & Haushalt </strong>sind wir stets am Puls der Zeit und informieren dich über innovative Produkte, die deinen Lifestyle auf ein neues Level heben werden. Wir halten dich auf dem Laufenden zu spannenden Themen wie nachhaltigem Wohnen und geben dir wertvolle Tipps für einen ordentlichen und organisierten Alltag. Unser Ziel ist es, dich beim stilvollen Einrichten zu unterstützen und dein Zuhause zu einem absoluten Hingucker zu machen. Hier findest du inspirierende Artikel, die dir dabei helfen werden.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--20174418477359__5be5ea83-909b-4603-a37f-166c09b4aef6-text-1"
+      ],
+      "settings": {
+        "spacings_desktop_top": 50,
+        "spacings_desktop_bottom": 0,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "align_text": "left",
+        "narrow_column": false,
+        "divider": false
+      }
+    },
+    "main": {
+      "type": "blog-template",
+      "settings": {
+        "blog_show_tag_filter": true,
+        "blog_show_rss": false,
+        "blog_show_tags": false,
+        "blog_show_date": false,
+        "blog_show_comments": false,
+        "blog_show_author": false,
+        "blog_show_excerpt": false,
+        "blog_image_size": "wide"
+      }
+    },
+    "39864f71-17f0-40f3-a0a6-07f4de6cae9a": {
+      "type": "blog-posts",
+      "disabled": true,
+      "settings": {
+        "title": "Aktuell relevante Themen & neue Beiträge:",
+        "blog": "wohnen",
+        "post_limit": 12,
+        "blog_show_tags": false,
+        "blog_show_date": false,
+        "blog_show_comments": false,
+        "blog_show_author": false,
+        "view_all": false,
+        "blog_image_size": "square",
+        "divider": false
+      }
+    },
+    "f1999cd5-5ab3-4fa0-ab67-244e91dec8cd": {
+      "type": "text-columns",
+      "blocks": {
+        "template--20174418477359__f1999cd5-5ab3-4fa0-ab67-244e91dec8cd-text_block-1": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/icon_garten_6b599be6-7f3f-4b5c-82d7-70510e6f28d5.png",
+            "image_mask": "square",
+            "image_width": 100,
+            "title": "Garten",
+            "text": "",
+            "button_label": "",
+            "button_link": "shopify://blogs/garten"
+          }
+        },
+        "template--20174418477359__f1999cd5-5ab3-4fa0-ab67-244e91dec8cd-text_block-2": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/icon_wohnen_3375035d-01c0-4d8a-9688-0530b92720f4.png",
+            "image_mask": "square",
+            "image_width": 100,
+            "title": "Wohnen",
+            "text": "",
+            "button_label": "",
+            "button_link": "shopify://blogs/wohnen"
+          }
+        },
+        "bf1810ad-900b-45e3-8a58-29f6944c3813": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/icon_freizeit_954f4cd5-a7a0-438e-99dd-6f1313aa328e.png",
+            "image_mask": "square",
+            "image_width": 100,
+            "title": "Freizeit & Fitness",
+            "text": "",
+            "button_label": "",
+            "button_link": "shopify://blogs/freizeit"
+          }
+        },
+        "3deed4b9-8770-4a60-bd89-daafb1b4ccc3": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/icon_haustiere.png",
+            "image_mask": "square",
+            "image_width": 100,
+            "title": "Tierbedarf",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "88ca1f97-e2f5-420a-8d96-6aa22305d1c5": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/icon_wellness.png",
+            "image_mask": "square",
+            "image_width": 100,
+            "title": "Sauna",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--20174418477359__f1999cd5-5ab3-4fa0-ab67-244e91dec8cd-text_block-1",
+        "template--20174418477359__f1999cd5-5ab3-4fa0-ab67-244e91dec8cd-text_block-2",
+        "bf1810ad-900b-45e3-8a58-29f6944c3813",
+        "3deed4b9-8770-4a60-bd89-daafb1b4ccc3",
+        "88ca1f97-e2f5-420a-8d96-6aa22305d1c5"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Finde hier unsere Themengebiete:",
+        "align_text": "center",
+        "divider": false
+      }
+    },
+    "337f1877-308f-4abf-9066-bf0420ceb21f": {
+      "type": "logo-list",
+      "blocks": {
+        "template--21633233158447__337f1877-308f-4abf-9066-bf0420ceb21f-logo_image-1": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/icon_garten.jpg",
+            "link": "shopify://blogs/garten"
+          }
+        },
+        "template--21633233158447__337f1877-308f-4abf-9066-bf0420ceb21f-logo_image-2": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/icon_fitness.jpg",
+            "link": "shopify://blogs/freizeit"
+          }
+        },
+        "template--21633233158447__337f1877-308f-4abf-9066-bf0420ceb21f-logo_image-3": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/icon_tierbedarf.jpg",
+            "link": "shopify://blogs/tiere"
+          }
+        },
+        "template--21633233158447__337f1877-308f-4abf-9066-bf0420ceb21f-logo_image-4": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/icon_wellness.jpg",
+            "link": "shopify://blogs/sauna"
+          }
+        }
+      },
+      "block_order": [
+        "template--21633233158447__337f1877-308f-4abf-9066-bf0420ceb21f-logo_image-1",
+        "template--21633233158447__337f1877-308f-4abf-9066-bf0420ceb21f-logo_image-2",
+        "template--21633233158447__337f1877-308f-4abf-9066-bf0420ceb21f-logo_image-3",
+        "template--21633233158447__337f1877-308f-4abf-9066-bf0420ceb21f-logo_image-4"
+      ],
+      "settings": {
+        "title": "",
+        "logo_opacity": 100,
+        "divider": false
+      }
+    },
+    "rich_text_7YFj67": {
+      "type": "rich-text",
+      "blocks": {
+        "button_8cTRzy": {
+          "type": "button",
+          "settings": {
+            "link": "shopify://blogs/heim-garten-ratgeber",
+            "link_text": "Heim & Garten Ratgeber"
+          }
+        }
+      },
+      "block_order": [
+        "button_8cTRzy"
+      ],
+      "settings": {
+        "spacings_desktop_top": 0,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 0,
+        "spacings_mobile_bottom": 40,
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "slideshow_wNbYWi",
+    "ebceed87-5b2d-4af0-a7f5-8377b46ffaf5",
+    "5be5ea83-909b-4603-a37f-166c09b4aef6",
+    "main",
+    "39864f71-17f0-40f3-a0a6-07f4de6cae9a",
+    "f1999cd5-5ab3-4fa0-ab67-244e91dec8cd",
+    "337f1877-308f-4abf-9066-bf0420ceb21f",
+    "rich_text_7YFj67"
+  ]
+}

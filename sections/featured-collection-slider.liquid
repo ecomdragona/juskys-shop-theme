@@ -1,0 +1,433 @@
+{%- assign per_row = section.settings.per_row -%}
+{%- assign per_row_mobile = section.settings.per_row_mobile -%}
+{%- assign collection = collections[section.settings.home_featured_products] -%}
+
+<style>
+  #shopify-section-{{section.id}} {
+    background-color: {{section.settings.background_color}};
+  }
+
+  #shopify-section-{{section.id}} .section--divider {
+    padding: 40px 0;
+  }
+  
+  #shopify-section-{{section.id}} .slideshow-wrapper.mobile-fli .collection-slide {
+    width: calc(100%/{{section.settings.per_row_mobile}});
+  }
+
+  @media only screen and (min-width:769px){
+    #shopify-section-{{section.id}} .slideshow-wrapper.desktop-fli .collection-slide {
+      width: calc((100%/{{per_row}}) - 2px);
+    }
+    #shopify-section-{{section.id}} .section--divider{
+        padding: 75px 0;
+    }
+  }
+  
+  #shopify-section-{{section.id}} .grid__item.grid-product  {
+    padding: 0px 11px;
+  }
+  
+  #shopify-section-{{section.id}} .flickity-button {
+    background: {{section.settings.slider_circle_color}};
+  }
+  #shopify-section-{{section.id}} .flickity-button-icon {
+    fill: {{section.settings.slider_arrow_color}};
+  }
+  
+  @media only screen and (min-width:1570px){
+    #shopify-section-{{section.id}} .flickity-previous {
+      left: -50px;
+    }
+    #shopify-section-{{section.id}} .flickity-next {
+      right: -50px;
+    }
+  }
+
+  #shopify-section-{{section.id}} .custom-pagination {
+    display: flex;
+    justify-content: center;
+  }
+
+  #shopify-section-{{section.id}} .custom-pagination-dot-mobile,
+  #shopify-section-{{section.id}} .custom-pagination-dot-desk {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 5px;
+    cursor: pointer;
+  }
+
+  #shopify-section-{{section.id}} .custom-pagination-dot-mobile.is-selected,
+  #shopify-section-{{section.id}} .custom-pagination-dot-desk.is-selected {
+    background-color: #333;
+  }
+  #shopify-section-{{section.id}} .custom-pagination,
+  #shopify-section-{{section.id}} .flickity-page-dots {
+    display: none; 
+  }
+</style>
+
+{%- if section.settings.divider -%}<div class="section--divider">{%- endif -%}
+
+<div
+  id="FeatCollection-{{ section.id }}"
+  data-section-id="{{ section.id }}"
+  data-section-type="collection-template" class="index-section"
+  data-aos>
+  {%- if section.settings.title != blank -%}
+    <div class="page-width">
+      <div class="section-header">
+        <p class="h2 section-header__title">
+          {{ section.settings.title }}
+        </p>
+      </div>
+    </div>
+  {%- endif -%}
+
+  <div class="page-width{% if section.settings.mobile_scrollable %} page-width--flush-small{% endif %}">
+    <div class="slideshow-wrapper desktop-fli small--hide">
+      <div
+        class="collection-slider slider-fli " 
+        id="FeatCollection-{{ section.id }}-desktop"
+        data-dots="true"
+        data-count="{{ collections[section.settings.home_featured_products].products.size }}">
+        {%- for product in collections[section.settings.home_featured_products].products-%}
+          <div class="collection-slide collection-slide--{{ section.id }}-{{ forloop.index }}"
+            data-index="{{ forloop.index0 }}"
+            data-aos="row-of-{{ collections[section.settings.home_featured_products].products.size }}">
+              {%- render 'product-grid-item',
+              product: product,
+              collection: collections[section.settings.home_featured_products],
+              grid_item_width: "medium-up--one-whole",
+              per_row: "1" -%}
+                {%- if settings.quick_shop_enable -%}
+                  {%- render 'quick-shop-modal', product: product -%}
+                {%- endif -%}
+           
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+    <div class="slideshow-wrapper mobile-fli medium-up--hide">
+      <div
+        class="collection-slider slider-fli " 
+        id="FeatCollection-{{ section.id }}-mobile"
+        data-dots="true"
+        data-count="{{ collections[section.settings.home_featured_products].products.size }}">
+        {%- for product in collections[section.settings.home_featured_products].products-%}
+          <div
+            class="collection-slide collection-slide--{{ section.id }}-{{ forloop.index }}_m"
+            data-index="{{ forloop.index0 }}"
+            data-aos="row-of-{{ collections[section.settings.home_featured_products].products.size }}">
+              {%- render 'product-grid-item',
+              product: product,
+              collection: collections[section.settings.home_featured_products],
+              grid_item_width: "medium-up--one-whole",
+              per_row: "1" -%}
+                {%- if settings.quick_shop_enable -%}
+                  {%- render 'quick-shop-modal', product: product -%}
+                {%- endif -%}
+           
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+
+    <div class="custom-pagination desktop-fli small--hide" style="margin-top: 0px;"></div>
+    <div class="custom-pagination mobile-fli medium-up--hide" style="margin-top: 0px;"></div>
+    
+    {% if true %} 
+      <script type="module">
+        let customPagination_desk = document.querySelector('#shopify-section-{{section.id}} .custom-pagination.desktop-fli');
+        let string_groupSize_desk = "{{ per_row }}";
+        let groupSize_desk = Number(string_groupSize_desk); // Number of slides per group
+        let totalSlides_desk = null;
+        let totalGroups_desk = null;
+        let currentGroup_desk = null;
+        let dots_desk = null;
+        let flkty_desk = null;
+        let elem_desk = null;
+        let nextArrow_desk = null;
+        let nextArrow_mobile = null;
+
+        document.addEventListener("DOMContentLoaded", function(){
+          slider_init_desk(); 
+          // Add a window resize event listener
+          window.addEventListener('resize', refreshFlickity_desk);
+        });
+
+        function slider_init_desk() {
+          elem_desk = document.querySelector('#shopify-section-{{section.id}} .slideshow-wrapper.desktop-fli .slider-fli');
+          flkty_desk = new Flickity( elem_desk, {
+            cellAlign: 'left',
+            contain: true,
+            draggable: true,
+            wrapAround: {{section.settings.loop | default: false}},
+            prevNextButtons: {{section.settings.show_buttons | default: true}},
+            pageDots: {{section.settings.show_dots | default: false}},
+            pauseAutoPlayOnHover: true, 
+            autoPlay: {{section.settings.autoplay | default: false}}
+          });
+
+          updateCustomPagination_desk();
+          flkty_desk.on('select', updateCustomPagination_desk);
+          
+          // Event listener for clicking the next arrow
+          nextArrow_desk = document.querySelector('#shopify-section-{{section.id}} .slideshow-wrapper.desktop-fli .flickity-next');
+          nextArrow_desk.addEventListener('click', function () {
+            currentGroup_desk = Math.floor(flkty_desk.selectedIndex / groupSize_desk);
+            let nextGroup_desk = Math.min(currentGroup_desk + 1, totalGroups_desk - 1);
+            let targetIndex_desk = nextGroup_desk * groupSize_desk;
+            flkty_desk.select(targetIndex_desk);
+            updateCustomPagination_desk();
+          });
+        
+          // Event listener for clicking the previous arrow
+          let prevArrow_desk = document.querySelector('#shopify-section-{{section.id}} .slideshow-wrapper.desktop-fli .flickity-previous');
+          prevArrow_desk.addEventListener('click', function () {
+            currentGroup_desk = Math.floor(flkty_desk.selectedIndex / groupSize_desk); 
+            let prevGroup_desk = Math.max(currentGroup_desk, 0);
+            let targetIndex_desk = prevGroup_desk * groupSize_desk;
+            flkty_desk.select(targetIndex_desk);
+            updateCustomPagination_desk();
+          });
+        }
+
+        document.addEventListener("shopify:section:load", function(event) {
+            if(event.detail.sectionId === '{{section.id}}') {
+              slider_init_desk();
+            }
+        });
+        
+        // Function to refresh Flickity on window resize
+        function refreshFlickity_desk() {
+          flkty_desk.resize(); // Call the Flickity resize() method
+        }
+
+        function updateCustomPagination_desk() {
+          totalSlides_desk = flkty_desk.slides.length;
+          totalGroups_desk = Math.ceil(totalSlides_desk / groupSize_desk);
+
+          // Remove any existing pagination dots
+          customPagination_desk.innerHTML = '';
+
+          // Add pagination dots based on the group size
+          for (let i = 0; i < totalGroups_desk; i++) {
+            let dot_desk = document.createElement('div');
+            dot_desk.classList.add('custom-pagination-dot-desk');
+            dot_desk.dataset.groupIndex = i; // Store the group index as a custom data attribute
+            customPagination_desk.appendChild(dot_desk);
+          }
+
+          // Update the active dot based on the current group
+          currentGroup_desk = Math.floor(flkty_desk.selectedIndex / groupSize_desk);
+          dots_desk = customPagination_desk.querySelectorAll('#shopify-section-{{section.id}} .custom-pagination-dot-desk');
+
+          // Add the 'is-selected' class to the current dot
+          dots_desk[currentGroup_desk].classList.add('is-selected');
+
+          // Event listeners for clicking on the pagination dots
+          dots_desk.forEach(function (dot_desk) {
+            dot_desk.addEventListener('click', function () {
+              let groupIndex_desk = parseInt(this.dataset.groupIndex, 10);
+              let targetIndex_desk = groupIndex_desk * groupSize_desk;
+              flkty_desk.select(targetIndex_desk); // Move to the first slide of the clicked group
+              console.log('--groupIndex_desk--',groupIndex_desk);
+              console.log('--targetIndex_desk--',targetIndex_desk);
+              updateCustomPagination_desk();
+            });
+          });
+          
+          //Disable next arrow if we are in the last group
+          nextArrow_desk = document.querySelector('#shopify-section-{{section.id}} .slideshow-wrapper.desktop-fli .flickity-next');
+          if(currentGroup_desk == (totalGroups_desk-1)) nextArrow_desk.setAttribute('disabled', true);
+          else nextArrow_desk.removeAttribute('disabled');
+        }
+
+        // Variables for mobile
+        let customPagination_mobile = document.querySelector('#shopify-section-{{section.id}} .custom-pagination.mobile-fli');
+        let string_groupSize_mobile = "{{ per_row_mobile }}"; 
+        let groupSize_mobile = Number(string_groupSize_mobile); // Number of slides per group for mobile
+        let totalSlides_mobile = null;
+        let totalGroups_mobile = null;
+        let currentGroup_mobile = null;
+        let dots_mobile = null;
+        let flkty_mobile = null;
+        let elem_mobile = null;
+      
+        document.addEventListener("DOMContentLoaded", function () {
+          slider_init_mobile();
+          // Add a window resize event listener
+          window.addEventListener('resize', refreshFlickity_mobile);
+        });
+
+        function slider_init_mobile() {
+          elem_mobile = document.querySelector('#shopify-section-{{section.id}} .slideshow-wrapper.mobile-fli .slider-fli'); 
+          flkty_mobile = new Flickity(elem_mobile, {
+            cellAlign: 'left',
+            contain: true,
+            draggable: true,
+            wrapAround: {{section.settings.loop | default: false}}, 
+            prevNextButtons: {{section.settings.show_buttons | default: true}}, 
+            pageDots: {{section.settings.show_dots | default: false}}, 
+            pauseAutoPlayOnHover: true,
+            autoPlay: {% if section.settings.loop == false %} false {% else %}{{section.settings.autoplay | default: false }}{% endif %} 
+          });
+          updateCustomPagination_mobile();
+          flkty_mobile.on('select', updateCustomPagination_mobile);
+
+          // Event listener for clicking the next arrow
+          nextArrow_mobile = document.querySelector('#shopify-section-{{section.id}} .slideshow-wrapper.mobile-fli .flickity-next'); 
+          nextArrow_mobile.addEventListener('click', function () {
+            currentGroup_mobile = Math.floor(flkty_mobile.selectedIndex / groupSize_mobile);
+            let nextGroup_mobile = Math.min(currentGroup_mobile + 1, totalGroups_mobile - 1);
+            let targetIndex_mobile = nextGroup_mobile * groupSize_mobile;
+            flkty_mobile.select(targetIndex_mobile);
+            updateCustomPagination_mobile();
+          });
+
+          // Event listener for clicking the previous arrow
+          let prevArrow_mobile = document.querySelector('#shopify-section-{{section.id}} .slideshow-wrapper.mobile-fli .flickity-previous'); 
+          prevArrow_mobile.addEventListener('click', function () {
+            currentGroup_mobile = Math.floor(flkty_mobile.selectedIndex / groupSize_mobile);
+            let prevGroup_mobile = Math.max(currentGroup_mobile, 0);
+            let targetIndex_mobile = prevGroup_mobile * groupSize_mobile;
+            flkty_mobile.select(targetIndex_mobile);
+            updateCustomPagination_mobile();
+          });
+        }
+
+        document.addEventListener("shopify:section:load", function (event) {
+          if (event.detail.sectionId === '{{section.id}}') {
+            slider_init_mobile();
+          }
+        });
+        
+        // Function to refresh Flickity on window resize
+        function refreshFlickity_mobile() {
+          flkty_mobile.resize(); // Call the Flickity resize() method
+        }
+
+        function updateCustomPagination_mobile() {
+          totalSlides_mobile = flkty_mobile.slides.length;
+          totalGroups_mobile = Math.ceil(totalSlides_mobile / groupSize_mobile);
+
+          // Remove any existing pagination dots
+          customPagination_mobile.innerHTML = '';
+
+          // Add pagination dots based on the group size
+          for (let i = 0; i < totalGroups_mobile; i++) {
+            let dot_mobile = document.createElement('div');
+            dot_mobile.classList.add('custom-pagination-dot-mobile');
+            dot_mobile.dataset.groupIndex = i; // Store the group index as a custom data attribute
+            customPagination_mobile.appendChild(dot_mobile);
+          }
+
+          // Update the active dot based on the current group
+          currentGroup_mobile = Math.floor(flkty_mobile.selectedIndex / groupSize_mobile);
+          dots_mobile = customPagination_mobile.querySelectorAll('#shopify-section-{{section.id}} .custom-pagination-dot-mobile');
+
+          // Add the 'is-selected' class to the current dot
+          dots_mobile[currentGroup_mobile].classList.add('is-selected');
+
+          // Event listeners for clicking on the pagination dots
+          dots_mobile.forEach(function (dot_mobile) {
+            dot_mobile.addEventListener('click', function () {
+              let groupIndex_mobile = parseInt(this.dataset.groupIndex, 10);
+              let targetIndex_mobile = groupIndex_mobile * groupSize_mobile;
+              flkty_mobile.select(targetIndex_mobile); // Move to the first slide of the clicked group
+              updateCustomPagination_mobile();
+            });
+          });
+          // Disable next arrow if we are in the last group
+          nextArrow_mobile = document.querySelector('#shopify-section-{{section.id}} .slideshow-wrapper.mobile-fli .flickity-next'); 
+          if (currentGroup_mobile == (totalGroups_mobile - 1)) nextArrow_mobile.setAttribute('disabled', true);
+          else nextArrow_mobile.removeAttribute('disabled');
+        }
+      </script>
+    {% endif %}
+  </div>
+</div>
+
+{%- if section.settings.divider -%}</div>{%- endif -%}
+
+{% schema %}
+  {
+    "name": "Feat. Collections (Old)",
+    "class": "index-section",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background color"
+      },
+      {
+        "type": "color",
+        "id": "slider_circle_color",
+        "default": "#000000",
+        "label": "Slider circle color"
+      },
+      {
+        "type": "color",
+        "id": "slider_arrow_color",
+        "default": "#FFFFFF",
+        "label": "Slider arrow color"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Featured collection"
+      },
+      {
+        "type": "collection",
+        "id": "home_featured_products",
+        "label": "Collection"
+      },
+      {
+        "type": "checkbox",
+        "id": "divider",
+        "label": "Show section divider",
+        "default": false
+      },
+     {
+       "type": "header",
+       "content": "Slider"
+     },
+      {
+        "type": "range",
+        "id": "per_row",
+        "label": "Products per row",
+        "default": 4,
+        "min": 1,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "type": "range",
+        "id": "per_row_mobile",
+        "label": "Products per row mobile",
+        "default": 2,
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "type": "checkbox",
+        "id": "mobile_scrollable",
+        "label": "Enable swipe on mobile",
+        "default": true
+      }
+    ],
+    "presets": [
+      {
+        "name": "Feat. Collections (Old)"
+      }
+    ],
+    "blocks" : [
+
+    ]
+  }
+{% endschema %}

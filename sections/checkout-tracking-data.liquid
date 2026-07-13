@@ -1,0 +1,27 @@
+
+<script>
+  window.setSessionStorageTrackingData({
+      'items': [
+        {% for item in cart.items %}
+        {
+          'item_id': '{{ item.sku | remove: "'" | remove: '"' }}',
+          'item_name': '{{ item.product.title | remove: "'" | remove: '"' }}',
+          'index': {{ forloop.index0 }},
+          'item_brand': '{{ item.product.vendor | remove: "'" | remove: '"' }}',
+          'item_category': '{{ item.product.collections[0].title | remove: "'" | remove: '"' }}',
+          'item_category2': '{{ item.product.collections[1].title | remove: "'" | remove: '"' }}',
+          'item_category3': '{{ item.product.collections[2].title | remove: "'" | remove: '"' }}',
+          'item_variant': '{{ item.options_with_values[0].name }} : {{ item.options_with_values[0].value }} ',                
+          'price': {{ item.price | times: 0.01}},
+          'quantity': {{ item.quantity }}
+        },	
+        {% endfor %}             
+      ]
+    });
+</script>
+
+{% schema %}
+{
+  "name": "Checkout tracking data"
+}
+{% endschema %}

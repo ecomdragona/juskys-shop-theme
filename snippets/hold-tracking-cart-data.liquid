@@ -1,0 +1,54 @@
+<script>
+    (()=>{
+
+      window.setSessionStorageTrackingData = function( data ){
+        try{
+          if( Object.keys(window).indexOf('sessionStorage') > -1 ){
+            sessionStorage.setItem('checkout-cart-data', JSON.stringify(data))
+          }
+        }catch(e){
+          console.log(e)
+        }
+      };
+
+      const appendScript = ( data ) => {
+        const div = document.createElement('div');
+        const script = document.createElement('script');
+        div.innerHTML = data['checkout-tracking-data'];
+        script.innerHTML = div.querySelector('script').innerHTML;
+        document.body.appendChild(script);
+      };
+      
+      const loadTrackingData = async () => {
+        const trackingData = await fetch('?sections=checkout-tracking-data');
+        const data = await trackingData.json();
+        appendScript( data )
+      };
+      
+      const interval = setInterval(async ()=>{
+        
+          const AjaxProduct = window?.theme?.AjaxProduct
+          const _updateCart = window?.theme?.cart?._updateCart;
+
+          if(!!_updateCart && !!AjaxProduct){
+            clearInterval( interval );
+
+            const success = AjaxProduct.prototype.success;
+            
+            window.theme.AjaxProduct.prototype.success = async function ( ...args ){
+              const productForm = success.apply( this, ...args );
+              await loadTrackingData();
+              return productForm;
+            }
+            
+            window.theme.cart._updateCart = async ( params ) => {
+              const cartData = await _updateCart( params );
+              await loadTrackingData();
+              return cartData;
+            }
+
+            await loadTrackingData()
+          }
+        }, 100);
+    })();
+  </script>

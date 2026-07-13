@@ -1,0 +1,177 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "spacing_bottom": 0,
+        "spacing_bottom_header": 0
+      }
+    },
+    "2ce22699-59ce-460b-93f8-76796017d318": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21034259644719__2ce22699-59ce-460b-93f8-76796017d318-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "Newsletter"
+          }
+        }
+      },
+      "block_order": [
+        "template--21034259644719__2ce22699-59ce-460b-93f8-76796017d318-heading-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "f83a1a13-1f80-4e3a-b48d-ed9c9c50c6a6": {
+      "type": "advanced-content",
+      "blocks": {
+        "template--21034259644719__f83a1a13-1f80-4e3a-b48d-ed9c9c50c6a6-liquid-1": {
+          "type": "liquid",
+          "settings": {
+            "code": "<iframe width=\"540\" height=\"1100\" src=\"https://0e240665.sibforms.com/serve/MUIFAOuB1_tHpKegNrOjDFyl91xLSya9szouSvJohF3owJECzA2aqQcP7G6AUxmKOayo8AdTfRXBYopjf-vczoHYXnVFKKINBE5zCSdq0MlQ_wElCBWqlDu5gmrBUDX-q1xr7Lhowd-rqTHhtDzgSEmng4_8YfJsfIsZUleD8_99LyOiLpWAXgfLykioKuKP7xn7vBZgluB9_dNS\" frameborder=\"0\" scrolling=\"auto\" allowfullscreen style=\"display: block;margin-left: auto;margin-right: auto;max-width: 100%;\"></iframe>",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--21034259644719__f83a1a13-1f80-4e3a-b48d-ed9c9c50c6a6-liquid-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "full_width": true,
+        "space_around": false,
+        "lazyload_images": true
+      }
+    },
+    "rich_text_ALkhMm": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_DBFk8b": {
+          "type": "heading",
+          "settings": {
+            "title": "Newsletter - gleich anmelden & Gutschein sichern"
+          }
+        },
+        "text_jUjxGG": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Herzlich willkommen bei Juskys! Kennst du schon unseren Newsletter? Wenn nicht, solltest du ihn unbedingt ausprobieren. Denn nur so bleibst du über unsere Produkte und Rabatte auf dem Laufenden. Außerdem erfährst du darin mehr über die neuesten Trends im Bereich Home & Living.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_DBFk8b",
+        "text_jUjxGG"
+      ],
+      "settings": {
+        "spacings_desktop_top": 30,
+        "spacings_desktop_bottom": 10,
+        "spacings_mobile_top": 30,
+        "spacings_mobile_bottom": 10,
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "17108331049a77f6d8": {
+      "type": "apps",
+      "blocks": {
+        "klaviyo_email_marketing_sms_form_embed_block_PRPCRK": {
+          "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/form-embed-block/2632fe16-c075-4321-a88b-50b567f42507",
+          "settings": {
+            "formId": "V2y6xe"
+          }
+        }
+      },
+      "block_order": [
+        "klaviyo_email_marketing_sms_form_embed_block_PRPCRK"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": false
+      }
+    },
+    "background_image_text_k48eVN": {
+      "type": "background-image-text",
+      "settings": {
+        "subtitle": "Anmeldung - Newsletter",
+        "title": "Gutschein sichern",
+        "text": "<p>Werde jetzt zum Juskys-Fan und abonniere den E-Mail-Newsletter. Lass dich regelmäßig über Neuigkeiten informieren und entdecke spannende <a href=\"https://juskys.de/collections/sale\">Angebote</a>. Wir freuen uns auf dich!</p>",
+        "button_label": "",
+        "button_link": "",
+        "image": "shopify://shop_images/laechelnde-frau-wohnzimmer-entspannt-handy.jpg",
+        "layout": "left",
+        "height": 550,
+        "framed": false,
+        "parallax": true,
+        "parallax_direction": "left",
+        "lazyload_images": true
+      }
+    },
+    "rich_text_AxYWkb": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_cm4qYm": {
+          "type": "heading",
+          "settings": {
+            "title": "Vorteile genießen bei Anmeldung zum Newsletter"
+          }
+        },
+        "text_ytMyp7": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Als Juskys Abonnent oder Abonnentin profitierst du von exklusiven Vorteilen beim Online-Shopping, wie z. B. einem Willkommens-Gutschein auf deine 1. Bestellung. Zudem erwarten dich regelmäßig tolle Überraschungen.</p><p>Bleibe informiert über alles, was bei <a href=\"https://juskys.de/pages/uber-uns\">Juskys</a> gerade los ist! Unser Online-Shop bietet dir eine große Auswahl an Produkten rund um Wohnen, Garten und Freizeit.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_cm4qYm",
+        "text_ytMyp7"
+      ],
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "2ce22699-59ce-460b-93f8-76796017d318",
+    "f83a1a13-1f80-4e3a-b48d-ed9c9c50c6a6",
+    "rich_text_ALkhMm",
+    "17108331049a77f6d8",
+    "background_image_text_k48eVN",
+    "rich_text_AxYWkb"
+  ]
+}

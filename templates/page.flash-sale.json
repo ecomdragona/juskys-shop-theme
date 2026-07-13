@@ -1,0 +1,35 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "spacing_bottom": 50,
+        "spacing_bottom_header": 30
+      }
+    },
+    "featured_collection_slider_new_E6tDXj": {
+      "type": "featured-collection-slider_new",
+      "settings": {
+        "title": "Unsere Topseller",
+        "collection": "frontpage",
+        "button_label": "Mehr entdecken",
+        "button_url": "https://juskys.de/collections/all",
+        "per_row": 4,
+        "per_row_mobile": 2
+      }
+    }
+  },
+  "order": [
+    "main",
+    "featured_collection_slider_new_E6tDXj"
+  ]
+}

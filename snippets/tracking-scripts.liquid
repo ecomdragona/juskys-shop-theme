@@ -1,0 +1,85 @@
+<script>
+    (function () {
+        // Set this to the correct merchant ID (as number, no quotes).
+        // Hier die korrekte Händler ID eintragen (als Zahl, ohne Anführungszeichen).
+        var merchantId = 34898;
+
+        // Please do not change anything below here!
+        // Ab hier bitte nicht verändern!
+        landingPage(merchantId);
+
+        function landingPage(merchantId) {
+            var emidCookieExpirationDays = 30;
+            var getKey = 'emid';
+            var getGCLIDKey = 'gemid';
+            var gEmId = getParameterByName(getGCLIDKey);
+            var emId = getParameterByName(getKey);
+            var emidCookieKey = 'emid';
+            var emidCookieDomain = window.location.hostname;
+
+            if (gEmId) {
+                var url = 'https://em.guenstiger.de/trck/eclick/?campaign_alias=' + merchantId + '&project_id=50001&subid=' + encodeURIComponent(gEmId) + '&url=' + encodeURIComponent(emidCookieDomain) + '.us&t=json&etp[type]=consent'
+                getJson(url)
+                    .then(function (json) {
+                        var emId = json.emid;
+                        setEmidCookie(emidCookieKey, emId, emidCookieExpirationDays, emidCookieDomain);
+                    });
+            }
+            else if (emId) {
+                var existingEmId = getCookieValue(emidCookieKey);
+                setEmidCookie(emidCookieKey, emId, emidCookieExpirationDays, emidCookieDomain);
+                if (existingEmId != emId)
+                    getJson('https://em.guenstiger.de/trck/etp/?campaign_alias=' + merchantId + '&type=consent&admedia_alias=consent&t=img&project_id=50001');
+            }
+        }
+
+        function setEmidCookie(cname, cvalue, exdays, cdomain) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            var expires = "Expires=" + d.toUTCString();
+            document.cookie = cname + '=' + cvalue + ';expires=' + expires + ';path=/;domain=' + cdomain;
+        }
+
+        function getCookieValue(cname) {
+            var cookie = document.cookie;
+            if (!cookie)
+                return null;
+            try {
+                var cookieObj = Object.fromEntries(cookie.split(";").map(function (v) { return v.trim().split("="); }));
+                return cookieObj[cname];
+            }
+            catch (e) {
+                console.error('Unable to parse cookie: \'' + cookie + '\' - Error was ' + e);
+            }
+        }
+
+        function getParameterByName(parameterName) {
+            var url = new URL(window.location);
+            var params = url.searchParams;
+            var param = params.get(parameterName);
+            return param;
+        }
+
+        function getJson(url) {
+            return fetch(url)
+                .catch(function (e) {
+                    console.error('Unable to call GT landing point ' + e);
+                })
+                .then(function (response) {
+                    if (!response.ok) {
+                        response.text()
+                            .catch(function (e) {
+                                console.error('Unable to call GT landing point and parse response ' + e);
+                            })
+                            .then(function (body) {
+                                console.error('GT landing point returned: ' + body);
+                            });
+                    } else {
+                        return response.json()
+                            .catch(function () { return {}; });
+                    }
+                });
+        }
+
+    })();
+</script>

@@ -1,0 +1,224 @@
+<script src="https://widget.reviews.io/carousel-inline-iframeless/dist.js?_t=2024082113"></script>
+<link rel="stylesheet" href="https://assets.reviews.io/css/widgets/carousel-widget.css?_t=2024082113">
+<link rel="stylesheet" href="https://assets.reviews.io/iconfont/reviewsio-icons/style.css?_t=2024082113">
+{% comment %}
+Snippet Arguments
+- collection: Liquid 'collection' or 'search' object
+- items: Paginated 'collection.products' or 'search.results' list. Cannot be pulled from the the 'collection' object passed in above
+- enable_sidebar: boolean
+- filter_style: 'sidebar' or 'drawer'
+- enable_sort: boolean
+- enable_collection_count
+- per_row
+- mobile_flush_grid
+- quick_shop_enable
+{% endcomment %}
+
+{% liquid
+  if collection.products
+    assign count = collection.products_count
+    assign count_label = 'collections.general.items_with_count'
+  endif
+
+  if collection.results
+    assign count = collection.results_count
+    assign count_label = 'general.search.result_count'
+  endif
+
+  assign filters = collection.filters
+  assign sort_by = collection.sort_by
+  assign default_sort_by = collection.default_sort_by
+  assign sort_options = collection.sort_options
+  assign current_filter_size = 0
+
+  for filter in filters
+    assign current_filter_size = current_filter_size | plus: filter.active_values.size
+  endfor
+%}
+
+<div class="collection-grid__wrapper">
+ <div class="page-width">
+  <div class="collection-color-swatch-filter">
+    {% render 'color-swatch-filter' %}
+  </div>
+ </div>
+  <div class="filter_coll_wrap">
+   <div class="page-width">
+  <div class="collection-filter">
+    <div class="collection-filter__item collection-filter__item--drawer">
+      <button
+        type="button"
+        class="js-drawer-open-collection-filters btn btn--tertiary{% unless current_filter_size == 0 %} btn--tertiary-active{% endunless %}"
+        aria-controls="FilterDrawer">
+          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-filter cp_filter_drawer_icon" viewBox="0 0 64 64"><title>icon-filter</title><path d="M48 42h10m-10 0a5 5 0 1 1-5-5 5 5 0 0 1 5 5ZM7 42h31M16 22H6m10 0a5 5 0 1 1 5 5 5 5 0 0 1-5-5Zm41 0H26"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" class="new_cp_filter_drawer_icon" width="20" height="21" viewBox="0 0 20 21" fill="none"> <path d="M3.12 7.54506H5.69812C5.83581 8.08282 6.14856 8.55946 6.58706 8.89984C7.02557 9.24021 7.56489 9.42496 8.12 9.42496C8.6751 9.42496 9.21442 9.24021 9.65293 8.89984C10.0914 8.55946 10.4042 8.08282 10.5419 7.54506H16.87C17.0358 7.54506 17.1947 7.47922 17.3119 7.362C17.4291 7.24479 17.495 7.08582 17.495 6.92006C17.495 6.7543 17.4291 6.59533 17.3119 6.47812C17.1947 6.36091 17.0358 6.29506 16.87 6.29506H10.5419C10.4042 5.7573 10.0914 5.28066 9.65293 4.94029C9.21442 4.59991 8.6751 4.41516 8.12 4.41516C7.56489 4.41516 7.02557 4.59991 6.58706 4.94029C6.14856 5.28066 5.83581 5.7573 5.69812 6.29506H3.12C2.95423 6.29506 2.79526 6.36091 2.67805 6.47812C2.56084 6.59533 2.495 6.7543 2.495 6.92006C2.495 7.08582 2.56084 7.24479 2.67805 7.362C2.79526 7.47922 2.95423 7.54506 3.12 7.54506ZM8.12 5.67006C8.36722 5.67006 8.6089 5.74337 8.81446 5.88073C9.02002 6.01808 9.18024 6.2133 9.27484 6.44171C9.36945 6.67012 9.39421 6.92145 9.34598 7.16393C9.29775 7.4064 9.17869 7.62913 9.00388 7.80395C8.82906 7.97876 8.60633 8.09781 8.36386 8.14605C8.12138 8.19428 7.87005 8.16952 7.64164 8.07491C7.41323 7.9803 7.21801 7.82009 7.08066 7.61453C6.94331 7.40896 6.87 7.16729 6.87 6.92006C6.87 6.58854 7.00169 6.2706 7.23611 6.03618C7.47053 5.80176 7.78847 5.67006 8.12 5.67006ZM16.87 13.7951H15.5419C15.4042 13.2573 15.0914 12.7807 14.6529 12.4403C14.2144 12.0999 13.6751 11.9152 13.12 11.9152C12.5649 11.9152 12.0256 12.0999 11.5871 12.4403C11.1486 12.7807 10.8358 13.2573 10.6981 13.7951H3.12C2.95423 13.7951 2.79526 13.8609 2.67805 13.9781C2.56084 14.0953 2.495 14.2543 2.495 14.4201C2.495 14.5858 2.56084 14.7448 2.67805 14.862C2.79526 14.9792 2.95423 15.0451 3.12 15.0451H10.6981C10.8358 15.5828 11.1486 16.0595 11.5871 16.3998C12.0256 16.7402 12.5649 16.925 13.12 16.925C13.6751 16.925 14.2144 16.7402 14.6529 16.3998C15.0914 16.0595 15.4042 15.5828 15.5419 15.0451H16.87C17.0358 15.0451 17.1947 14.9792 17.3119 14.862C17.4291 14.7448 17.495 14.5858 17.495 14.4201C17.495 14.2543 17.4291 14.0953 17.3119 13.9781C17.1947 13.8609 17.0358 13.7951 16.87 13.7951ZM13.12 15.6701C12.8728 15.6701 12.6311 15.5968 12.4255 15.4594C12.22 15.322 12.0598 15.1268 11.9651 14.8984C11.8705 14.67 11.8458 14.4187 11.894 14.1762C11.9422 13.9337 12.0613 13.711 12.2361 13.5362C12.4109 13.3614 12.6337 13.2423 12.8761 13.1941C13.1186 13.1458 13.3699 13.1706 13.5983 13.2652C13.8268 13.3598 14.022 13.52 14.1593 13.7256C14.2967 13.9312 14.37 14.1728 14.37 14.4201C14.37 14.7516 14.2383 15.0695 14.0039 15.3039C13.7695 15.5384 13.4515 15.6701 13.12 15.6701Z" fill="black"/> </svg>
+          {{ 'collections.filters.title_tags' | t }}
+          {%- if current_filter_size > 0 -%}
+              ({{ current_filter_size }})
+          {%- endif -%}
+      </button>
+    </div>
+
+    <div class="collection-filter__item collection-filter__item--count small--hide">
+      {%- if enable_collection_count -%}
+        {{ count_label | t: count: count }}
+      {%- endif -%}
+    </div>
+
+    <div class="collection-filter__item collection-filter__item--sort">
+        <div class="collection-filter__sort-container">
+        {%- assign sort_by = sort_by | default: default_sort_by -%}
+        <label for="SortBy" class="hidden-label">{{ 'collections.sorting.title' | t }}</label>
+        <svg xmlns="http://www.w3.org/2000/svg" class="new_sort_filter_icon" width="20" height="21" viewBox="0 0 20 21" fill="none"> <path d="M9.18716 13.9779C9.24527 14.0359 9.29137 14.1048 9.32283 14.1807C9.35428 14.2566 9.37047 14.3379 9.37047 14.42C9.37047 14.5022 9.35428 14.5835 9.32283 14.6594C9.29137 14.7353 9.24527 14.8042 9.18716 14.8622L6.68716 17.3622C6.62912 17.4203 6.56019 17.4664 6.48431 17.4979C6.40844 17.5293 6.32711 17.5455 6.24498 17.5455C6.16284 17.5455 6.08151 17.5293 6.00564 17.4979C5.92976 17.4664 5.86083 17.4203 5.80279 17.3622L3.30279 14.8622C3.24472 14.8042 3.19866 14.7352 3.16723 14.6594C3.1358 14.5835 3.11963 14.5022 3.11963 14.42C3.11963 14.3379 3.1358 14.2566 3.16723 14.1807C3.19866 14.1049 3.24472 14.0359 3.30279 13.9779C3.42006 13.8606 3.57912 13.7947 3.74498 13.7947C3.8271 13.7947 3.90842 13.8109 3.98429 13.8423C4.06016 13.8737 4.1291 13.9198 4.18716 13.9779L5.61998 15.4115V4.42005C5.61998 4.25429 5.68582 4.09532 5.80303 3.97811C5.92025 3.8609 6.07922 3.79505 6.24498 3.79505C6.41074 3.79505 6.56971 3.8609 6.68692 3.97811C6.80413 4.09532 6.86998 4.25429 6.86998 4.42005V15.4115L8.30279 13.9779C8.36083 13.9197 8.42976 13.8736 8.50564 13.8422C8.58151 13.8107 8.66284 13.7946 8.74498 13.7946C8.82711 13.7946 8.90844 13.8107 8.98431 13.8422C9.06019 13.8736 9.12912 13.9197 9.18716 13.9779ZM16.6872 6.47786L14.1872 3.97786C14.1291 3.91975 14.0602 3.87365 13.9843 3.8422C13.9084 3.81074 13.8271 3.79456 13.745 3.79456C13.6628 3.79456 13.5815 3.81074 13.5056 3.8422C13.4298 3.87365 13.3608 3.91975 13.3028 3.97786L10.8028 6.47786C10.6855 6.59514 10.6196 6.75419 10.6196 6.92005C10.6196 7.0859 10.6855 7.24496 10.8028 7.36224C10.9201 7.47951 11.0791 7.54539 11.245 7.54539C11.4108 7.54539 11.5699 7.47951 11.6872 7.36224L13.12 5.92864V16.92C13.12 17.0858 13.1858 17.2448 13.303 17.362C13.4202 17.4792 13.5792 17.545 13.745 17.545C13.9107 17.545 14.0697 17.4792 14.1869 17.362C14.3041 17.2448 14.37 17.0858 14.37 16.92V5.92864L15.8028 7.36224C15.9201 7.47951 16.0791 7.54539 16.245 7.54539C16.4108 7.54539 16.5699 7.47951 16.6872 7.36224C16.8044 7.24496 16.8703 7.0859 16.8703 6.92005C16.8703 6.75419 16.8044 6.59514 16.6872 6.47786Z" fill="black"/> </svg>
+        <select name="SortBy" id="SortBy" data-default-sortby="{{ default_sort_by }}">
+          {%- for option in sort_options -%}
+            {% case option.value %}
+              {% when "title-ascending" %}
+                {% continue %}
+                {% when "title-descending" %}
+                  {% continue %}
+                  {% when "created-ascending" %}
+                    {% continue %}å                
+            {% endcase %}
+          <option value="{{ option.value }}"{% if option.value == sort_by %} selected="selected"{% endif %}>{{ option.name }}</option>
+          {%- endfor -%}
+        </select>
+        </div>
+    </div>
+  </div>
+        </div>
+        </div>
+          <div class="pro_grid_collection">
+ <div class="page-width">
+  <div class="grid grid--uniform{% if mobile_flush_grid %} small--grid--flush{% endif %}"{% unless enable_collection_count %} data-scroll-to{% endunless %}>
+    {%- for item in items -%}
+      {%- if item.object_type == 'product' -%}
+
+        {% assign product_index = forloop.index %}
+        {% for block in section.blocks %}
+          {% if block.type == 'review_io_spotlight' %}
+            {% if product_index == collection.metafields.custom.spotlight_review_position %}
+              <div class="spotlight-review-io-mobile">{% render 'review_io_spotlight_mobile' %}</div>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+
+        {%- liquid
+          if forloop.index <= 2
+            assign loading = 'eager'
+            assign fetchpriority = 'high'
+          else
+            assign loading = true
+            assign fetchpriority = 'auto'
+          endif
+        -%}
+        {%- assign widths = '360, 540, 720, 900' -%}
+
+        {% assign variant_group = item.metafields.custom.variant_group_name %}
+        {% assign varinat_enabled = item.metafields.custom.display_variant_as_products_on_cp %}
+        {% assign has_option = false %}
+          {% for option in item.options_with_values %}
+            {% if option.name == variant_group %}
+              {% assign has_option = true %}
+            {% endif %}
+          {% endfor %}
+        {% assign variant_added = '' %}
+
+        {% if varinat_enabled and has_option %}
+            
+            {% for option in item.options_with_values %}
+              {% if option.name == variant_group %}
+                {% for value in option.values %}
+                  {% for var in item.variants %}
+                      {% unless variant_added contains var.id %}
+                          {% if var.title contains value %}
+                              {%- render 'product-variant-item',
+                                product: item,
+                                variant_item:var
+                                per_row: per_row,
+                                quick_shop_enable: quick_shop_enable,
+                                collection: collection,
+                                widths: widths,
+                                loading: loading,
+                                variant_option_value:value
+                              -%}
+                              {% assign variant_added = variant_added | append:var.id | append:'__' %}
+                              {% break %}
+                          {% endif %}
+                      {% endunless %}
+                  {% endfor %}
+                {% endfor %}
+              {% endif %}
+            {% endfor %}
+            
+          {% else %}
+            {%- render 'product-grid-item',
+              product: item,
+              per_row: per_row,
+              quick_shop_enable: quick_shop_enable,
+              collection: collection,
+              widths: widths,
+              loading: loading
+            -%}
+          {% endif %}
+      {%- else -%}
+        {%- render 'search-grid-item',
+          item: item,
+          per_row: per_row
+        %}
+      {%- endif -%}
+    {%- endfor -%}
+
+    {% for block in section.blocks %}
+      {% if block.type == 'spotlight_review_desktop' %}
+          <div class="spotlight-review-io-desktop">{% render 'review_io_spotlight_desktop' %}</div>
+      {% endif %}
+    {% endfor %}
+  </div>
+  </div>
+ </div>
+</div>
+
+{%- if enable_sidebar and filter_style != 'drawer' and collection.filters.size > 0 -%}
+{% comment %}
+  Sidebar enabled but not in drawer mode, only show filter button on mobile
+{% endcomment %}
+{% style %}
+@media screen and (min-width: 769px) {
+  .collection-filter__item--drawer {
+    display: none;
+  }
+  .collection-filter__item--count {
+    text-align: left;
+  }
+  html[dir="rtl"] .collection-filter__item--count {
+    text-align: right;
+  }
+}
+{% endstyle %}
+{%- endif -%}
+
+{%- if enable_sidebar == false or collection.filters.size == 0 -%}
+{% comment %}
+    Disable sidebar & filter features
+{% endcomment %}
+{% style %}
+.collection-filter__item--drawer {
+  display: none;
+}
+.collection-filter__item--count {
+  text-align: left;
+}
+html[dir="rtl"] .collection-filter__item--count {
+  text-align: right;
+}
+{% endstyle %}
+{%- endif -%}
+
+{%- unless enable_sort -%}
+{% style %}
+.collection-filter__sort-container {
+  display: none;
+}
+{% endstyle %}
+{%- endunless -%}

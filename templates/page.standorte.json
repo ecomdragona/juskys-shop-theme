@@ -1,0 +1,182 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "5986ca2d-c768-448d-b0cb-00bc21a599ee": {
+      "type": "slideshow",
+      "blocks": {
+        "template--20758329164079__5986ca2d-c768-448d-b0cb-00bc21a599ee-image-1": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "Standorte",
+            "title": "Vier Standorte in Norddeutschland",
+            "title_size": 80,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/2880x1621_Standorte_a654ca7f-5346-4565-9002-42a1ce8f3130.jpg",
+            "image_mobile": "shopify://shop_images/800x800-Standorte_7dbf3d74-b4f7-4005-a5dc-4906ac785b94.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 20,
+            "color_subheading": "#ffffff",
+            "color_heading": "#ffffff",
+            "color_text": "#ffffff",
+            "color_accent_1": "rgba(0,0,0,0)",
+            "color_accent_2": "rgba(0,0,0,0)",
+            "color_btn_text_check": true,
+            "color_accent_t_1": "#000000",
+            "color_accent_t_2": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "template--20758329164079__5986ca2d-c768-448d-b0cb-00bc21a599ee-image-1"
+      ],
+      "settings": {
+        "section_height": "650px",
+        "mobile_height": "auto",
+        "parallax": true,
+        "style": "bars",
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "lazyload_images": true
+      }
+    },
+    "06a4d96b-c9ab-4dda-b2bf-fcaab0e8ca03": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20758329164079__06a4d96b-c9ab-4dda-b2bf-fcaab0e8ca03-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "JUSKYS GRUPPE GMBH"
+          }
+        },
+        "template--20758329164079__06a4d96b-c9ab-4dda-b2bf-fcaab0e8ca03-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<h3><strong>Steuerung des zentralen Geschehens von unserem Hauptsitz in Holle</strong></h3><p>Die Juskys Gruppe besitzt neben dem neuen Hauptsitz in Holle (nahe Hildesheim) vier weitere Standorte in Salzgitter, Peine und Hohenwestedt (nahe Hamburg) und Hildesheim. Insgesamt stehen uns mehr als 60.000 m² Lagerkapazitäten zur Verfügung. Somit ist auch in Spitzenzeiten eine ständige Verfügbarkeit unseres stetig wachsenden Sortiments garantiert. Eine moderne Ausstattung sowie effiziente Prozesse ermöglichen eine schnelle Abwicklung von Bestellungen und Warenanlieferungen. Die Abwicklung von 1.000.000 Paketzustellungen und mehr als 2.000 Seecontainern im Jahr 2020 sind dafür der beste Beleg.</p><p> <strong>- Mehr als 60.000 m² Lagerfläche</strong></p><p><strong>- Mehr als 2.000 importierte Seecontainer im Jahr 2020</strong></p><p><strong>- Mehr als 1.000.000 Paketzustellungen im Jahr 2020</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--20758329164079__06a4d96b-c9ab-4dda-b2bf-fcaab0e8ca03-heading-1",
+        "template--20758329164079__06a4d96b-c9ab-4dda-b2bf-fcaab0e8ca03-text-1"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": false,
+        "divider": false
+      }
+    },
+    "bac5a9b0-7d97-4bb8-b806-0f7945231500": {
+      "type": "text-and-image",
+      "custom_css": [],
+      "settings": {
+        "image": "shopify://shop_images/1_Standorte_Content_Holle_800x620px.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "Hauptsitz",
+        "title": "Holle",
+        "text": "<p>Seit Juli 2021 ist der Standort in Holle der neue Hauptsitz der Juskys Gruppe. In den geräumigen Bürogebäuden finden unsere Mitarbeiter optimale Arbeitsbedingungen. Die Büros der Extraklasse bestechen durch eine moderne Ausstattung und eine angenehme Raumatmosphäre. Außerdem befindet sich auf dem Gelände ein Fotostudio für unsere Produktfotos. In dem großen Work-Café können unsere MitarbeiterInnen ihre Pausen verbringen oder sich mit ihren KollegInnen zum Meeting verabreden. Durch die Nähe zur A7 und A39 ist der Firmensitz gut für unsere MitarbeiterInnen zu erreichen.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "divider": true,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "4ad6af85-3e5e-41fc-ad37-771573f1576f": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/4_Standorte_Content_Hildesheim_800x669px.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "Logistiklager",
+        "title": "Hildesheim",
+        "text": "<p>Seit 2021 stehen uns außerdem neue Logistikflächen in Hildesheim zur Verfügung. Mit insgesamt 20.500 m² ersetzt der neue Standort externe kleinere Lagerstandorte und schafft so eine Bündelung und einen Ausbau unserer Lagerkapazitäten. Für das kommende Jahr planen wir die Anbindung neuer Marktplatz Partner und den Ausbau unseres Produktsortiments. Hier wird der Standort, vor allem auch durch die zentrale Anbindung  an die A7, ein großer Vorteil sein und ständige Warenverfügbarkeit garantieren.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "left",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "92b10adc-207b-41f1-9518-5b4a76954286": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/3_Standorte_Content_Hohenwestedt_800x669px.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "Büro & Logistiklager",
+        "title": "Hohenwestedt",
+        "text": "<p>Um unserem stetig steigenden Warenumsatz Rechnung zu tragen, betreiben wir seit Sommer 2020 ein großes Logistikzentrum auf über 30.000 m² in der Nähe von Hamburg. Das Logistiklager ist mit über 30 Rampen für den Warenein- und -ausgang ausgestattet. Hochmoderne Teleskopförderanlagen und Flurfördergeräte sorgen für eine schnelle Be- und Entladung. Zudem befinden sich noch mehrere Büroräume auf dem Gelände, die von unserem Logistikbüro genutzt werden.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "07bf0cc3-4a5a-4adb-aa19-cb0e1c956ed3": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/5_Standorte_Content_Peine_800x669px-1.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "Logistiklager",
+        "title": "Peine",
+        "text": "<p>Das Lager in Peine ist seit 2014 in unserem Besitz. Bis zu 20 MitarbeiterInnen kümmern sich auf der ca. 6.000 m² großen Lagerfläche um den reibungslosen Ablauf von Warenein- und -ausgängen. Durch insgesamt sechs Laderampen wickeln unsere MitarbeiterInnen mühelos mehrere Container gleichzeitig ab. Flurfördergeräte beschleunigen die effiziente Abwicklung zusätzlich. Hochregale gewährleisten eine optimale Raumausnutzung sowie eine saubere und ordentliche Aufbewahrung der Waren.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "left",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "5986ca2d-c768-448d-b0cb-00bc21a599ee",
+    "06a4d96b-c9ab-4dda-b2bf-fcaab0e8ca03",
+    "bac5a9b0-7d97-4bb8-b806-0f7945231500",
+    "4ad6af85-3e5e-41fc-ad37-771573f1576f",
+    "92b10adc-207b-41f1-9518-5b4a76954286",
+    "07bf0cc3-4a5a-4adb-aa19-cb0e1c956ed3"
+  ]
+}
