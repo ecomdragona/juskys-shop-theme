@@ -1,0 +1,232 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "spacing_bottom": 50,
+        "spacing_bottom_header": 30
+      }
+    },
+    "b9a9b73d-205e-4969-9761-7920324bf9ab": {
+      "type": "slideshow",
+      "blocks": {
+        "template--20758329327919__b9a9b73d-205e-4969-9761-7920324bf9ab-image-1": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "Karriere",
+            "title": "Wir suchen dich",
+            "title_size": 80,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/2880x1621_Karriere_ab4cce8b-7c86-45ef-a39b-7609c5b21253.jpg",
+            "image_mobile": "shopify://shop_images/800x800-Karriere_eb5a1543-9a36-4fc0-9d27-f70b3f7fe066.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 0,
+            "color_subheading": "#ffffff",
+            "color_heading": "#ffffff",
+            "color_text": "#ffffff",
+            "color_accent_1": "rgba(0,0,0,0)",
+            "color_accent_2": "rgba(0,0,0,0)",
+            "color_btn_text_check": true,
+            "color_accent_t_1": "#000000",
+            "color_accent_t_2": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "template--20758329327919__b9a9b73d-205e-4969-9761-7920324bf9ab-image-1"
+      ],
+      "settings": {
+        "section_height": "650px",
+        "mobile_height": "auto",
+        "parallax": true,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5,
+        "lazyload_images": true
+      }
+    },
+    "658b0e7e-03b6-4d72-82df-90eb847cbebe": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20758329327919__658b0e7e-03b6-4d72-82df-90eb847cbebe-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "JUSKYS GRUPPE GMBH"
+          }
+        },
+        "template--20758329327919__658b0e7e-03b6-4d72-82df-90eb847cbebe-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<h3><strong>Verstärke unser Team</strong></h3><p>Wir expandieren stark und suchen neue motivierte MitarbeiterInnen. Die positive Entwicklung der letzten Jahre verdanken wir nicht zuletzt unserem Team. Lernfähigkeit und Eigenmotivation sind dabei wichtige Voraussetzungen, um bei uns erfolgreich zu sein.</p><p>Die Juskys Gruppe GmbH ist ein dynamisches und erfolgreiches E-Commerce-Unternehmen aus Holle. Seit 2005 vertreiben wir ein stetig wachsendes Produktsortiment rund um die Themen Haus, Garten, Freizeit, Sport und Heimtierbedarf über ausgewählte Online Marktplätze sowie zwei eigene Onlineshops.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--20758329327919__658b0e7e-03b6-4d72-82df-90eb847cbebe-heading-1",
+        "template--20758329327919__658b0e7e-03b6-4d72-82df-90eb847cbebe-text-1"
+      ],
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "align_text": "center",
+        "narrow_column": false,
+        "divider": false
+      }
+    },
+    "0b8212d2-16b8-4bd1-b5cc-ba739b8a7fce": {
+      "type": "text-columns",
+      "blocks": {
+        "template--20758329327919__0b8212d2-16b8-4bd1-b5cc-ba739b8a7fce-text_block-1": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Wer sind wir?",
+            "text": "<p>Wir sind ein inhabergeführter Onlinehändler für Produkte rund um ein schönes Zuhause und haben in den letzten Jahren ein einzigartiges Wachstum hingelegt. Als dynamisches und erfolgreiches E-Commerce-Unternehmen vertreiben wir seit 2005 ein stetig wachsendes Produktsortiment rund um die Themen Haus, Garten, Freizeit, Sport, Wellness und Heimtierbedarf über ausgewählte Online Marktplätze sowie zwei eigene Onlineshops.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "template--20758329327919__0b8212d2-16b8-4bd1-b5cc-ba739b8a7fce-text_block-2": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Was bieten wir?",
+            "text": "<p>Wir bieten eine lockere und angenehme Arbeitsatmosphäre mit flachen Hierarchien. Kurze Entscheidungswege und umfassende Weiterbildungsmöglichkeiten sind uns wichtig, um das Potential jedes einzelnen auszuschöpfen und die individuellen Fähigkeiten zu fördern. Wir garantieren geregelte Arbeitszeiten und gewähren Mitarbeiterrabatte. Teamevents und moderne Arbeitsplätze mit hervorragender technischer Ausstattung sorgen dabei für ein gutes Betriebsklima.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "template--20758329327919__0b8212d2-16b8-4bd1-b5cc-ba739b8a7fce-text_block-3": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Wen suchen wir?",
+            "text": "<p>Wir suchen gut ausgebildete und engagierte MitarbeiterInnen, die selbstständig arbeiten und eine hohe Lernbereitschaft zeigen. Hohes Verantwortungsbewusstsein, gute Selbstorganisation, eine flexible Arbeitsweise und Teamfähigkeit runden das Profil ab. Teammitglieder bekommen bei uns stets die Möglichkeit, neue Kenntnisse zu erwerben und erhalten die Chance in einem expandierenden Unternehmen zu arbeiten.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--20758329327919__0b8212d2-16b8-4bd1-b5cc-ba739b8a7fce-text_block-1",
+        "template--20758329327919__0b8212d2-16b8-4bd1-b5cc-ba739b8a7fce-text_block-2",
+        "template--20758329327919__0b8212d2-16b8-4bd1-b5cc-ba739b8a7fce-text_block-3"
+      ],
+      "settings": {
+        "title": "",
+        "align_text": "left",
+        "divider": false
+      }
+    },
+    "eb53118c-4fc0-44da-93ba-28769c8c90b8": {
+      "type": "advanced-content",
+      "blocks": {
+        "template--20758329327919__eb53118c-4fc0-44da-93ba-28769c8c90b8-liquid-1": {
+          "type": "liquid",
+          "settings": {
+            "code": "<h1>Ausbildung</h1>\n\n<a href=\"https://juskysshop.myshopify.com/pages/ausbildung-zum-kaufmann-fur-buromanagement-m-d-w-2024\" target=\"_blank\">Ausbildung zum Kaufmann für Büromanagement (m/w/d) 2024</a><br><br>\n\n<a href=\"https://juskysshop.myshopify.com/pages/ausbildung-zum-kaufmann-im-e-commerce-m-d-w-2024\" target=\"_blank\">Ausbildung zum Kaufmann im E-Commerce (m/w/d) 2024</a><br><br>\n\n<a href=\"https://juskys.de/pages/ausbildung-zum-fachinformatiker-fur-systemintegration-m-w-d-2024\" target=\"_blank\">Ausbildung zum Fachinformatiker für Systemintegration (m/w/d) 2024</a><br><br>\n\n\n<h1 style=\"margin-bottom: -30px;\">Direkteinstieg</h1> \n\n<h3>Standort Holle</h3>\n<a href=\"https://juskys.de/pages/finanzbuchhalter-m-d-w-hybrides-arbeiten\" target=\"_blank\">Finanzbuchhalter (m/w/d)</a><br><br>\n\n<a href=\"https://juskysshop.myshopify.com/pages/technical-editor-technischer-redakteur-m-w-d-1\" target=\"_blank\">Technical Editor / Technischer Redakteur (m/w/d)</a><br><br>\n\n<a href=\"https://juskys.de/pages/e-commerce-webshop-manager-m-w-d\" target=\"_blank\">E-Commerce Webshop Manager (m/w/d)</a><br><br>\n\n<a href=\"https://juskys.de/pages/online-sales-analyst-m-d-w-pricing-dealplanung\" target=\"_blank\">Online-Sales-Analyst Pricing & Dealplanung (m/w/d)</a><br><br>\n\n<a href=\"https://juskysshop.myshopify.com/pages/customer-service-manager-m-d-w\" target=\"_blank\">Customer Service Manager (m/w/d)</a><br><br>\n\n<a href=\"https://juskys.de/pages/lohnbuchhalter-m-d-w-in-voll-und-teilzeit\" target=\"_blank\">Lohnbuchhalter (m/w/d)</a><br><br>\n\n<a href=\"https://juskys.de/pages/junior-technical-editor-m-w-d\" target=\"_blank\">(Junior) Technical Editor (m/w/d)</a><br><br>\n<a href=\"https://juskys.de/pages/product-manager-m-w-d\" target=\"_blank\">Product Manager (m/w/d)</a><br><br>\n\n<a href=\"https://juskys.de/pages/marketing-data-analyst-m-w-d\" target=\"_blank\">Marketing Data Analyst (m/w/d)</a><br><br>\n\n<a href=\"https://juskys.de/pages/data-scientist-ai-engineer-m-w-d\" target=\"_blank\">Data Scientist & AI Engineer (m/w/d)</a><br><br>\n\n<a href=\"https://juskys.de/pages/supply-chain-manager-m-w-d\" target=\"_blank\">Supply Chain Manager (m/w/d)</a><br><br>\n\n<a href=\"https://juskys.de/pages/data-analyst-m-w-d\" target=\"_blank\">Data Analyst (m/w/d)</a><br><br>\n\n<h3>Standort Hildesheim, Hohenhameln oder Hohenwestedt</h3>\n\n<a href=\"https://juskysshop.myshopify.com/pages/lagermitarbeiter-helfer-lager-versand-in-vollzeit-m-w-d-1\" target=\"_blank\">Lagermitarbeiter / Helfer Lager & Versand in Vollzeit (m/w/d)</a><br><br>\n\n\n<h3>Standort Hohenhameln</h3>\n\n<a href=\"https://juskysshop.myshopify.com/pages/lagermitarbeiter-retouren-ersatzteilverwaltung-m-d-w\"target=\"_blank\">Lagermitarbeiter Retouren- & Ersatzteilverwaltung (m/w/d)</a><br><br>\n\n\n<h1>Praktikum und Trainee</h1>\n\n<a href=\"https://juskysshop.myshopify.com/pages/praktikum-e-commerce-online-marketing-m-w-d-1\" target=\"_blank\">Praktikum E-Commerce & Online Marketing (m/w/d)</a><br><br>\n\n<a href=\"https://juskysshop.myshopify.com/pages/praktikum-im-social-media-marketing-m-w-d\" target=\"_blank\">Praktikum im Social Media Marketing (m/w/d)</a><br><br>\n\n<a href=\"https://juskys.de/pages/trainee-performance-online-marketing-m-w-d\" target=\"_blank\">Trainee Performance- & Online-Marketing (m/w/d)</a><br><br>",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--20758329327919__eb53118c-4fc0-44da-93ba-28769c8c90b8-liquid-1"
+      ],
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "full_width": false,
+        "space_around": true,
+        "lazyload_images": true
+      }
+    },
+    "5c5e1822-bcf0-48a9-95af-a0dd4e418817": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20758329327919__5c5e1822-bcf0-48a9-95af-a0dd4e418817-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "Haben wir dein Interesse geweckt?"
+          }
+        },
+        "template--20758329327919__5c5e1822-bcf0-48a9-95af-a0dd4e418817-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Dann sende uns bitte deine vollständigen Bewerbungsunterlagen mit der Stellenkennziffer per E-Mail im PDF-Format an jobs@juskys.de oder per Post an:</p><p><strong>Juskys Gruppe GmbH</strong><br/>Lindener Bergsfeld 9<br/>31188 Holle</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--20758329327919__5c5e1822-bcf0-48a9-95af-a0dd4e418817-heading-1",
+        "template--20758329327919__5c5e1822-bcf0-48a9-95af-a0dd4e418817-text-1"
+      ],
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "align_text": "center",
+        "narrow_column": false,
+        "divider": false
+      }
+    },
+    "274806d9-773c-4358-b318-d5516768c102": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/Juskys_Logo_2021-2_ico-min.png",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Kontaktinformationen",
+        "text": "<h3>Juskys Gruppe GmbH</h3><h5><strong>Recruiting Team</strong></h5><p>Tel.: +49 (0)5062 965660<br/>E-Mail: jobs@juskys.de</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "33",
+        "layout": "right",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "b9a9b73d-205e-4969-9761-7920324bf9ab",
+    "658b0e7e-03b6-4d72-82df-90eb847cbebe",
+    "0b8212d2-16b8-4bd1-b5cc-ba739b8a7fce",
+    "eb53118c-4fc0-44da-93ba-28769c8c90b8",
+    "5c5e1822-bcf0-48a9-95af-a0dd4e418817",
+    "274806d9-773c-4358-b318-d5516768c102"
+  ]
+}

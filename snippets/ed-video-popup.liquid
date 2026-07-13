@@ -1,0 +1,104 @@
+{% if product.metafields.custom.product_video_thumbnail != blank %}
+  <style>
+          .ed-video-thumbnail {
+             display: flex;
+             position: absolute;
+             top: 22px;
+             right: 2px;
+             width: 54px;
+             height: auto;
+            border-radius: 50%;
+             z-index: 5;
+            padding: 0;
+         }
+         .ed-video-thumbnail .thumbnail-container {
+           display: flex;
+           width: 100%;
+           height: 100%;
+           border-radius: 50%;
+           cursor: pointer;
+           position: relative;
+         }
+        .ed-video-thumbnail .thumbnail-container img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          object-fit: cover;
+      }
+      .ed-video-thumbnail .thumbnail-container:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          clear: float;
+          width: 100%;
+          height: 100%;
+          background-color: #0003;
+          color: #fff;
+          border: 4px solid white;
+          border-radius: 50%;
+      }
+      .ed-video-thumbnail .play-btn {
+          display: flex;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          width: 20px;
+          height: 20px;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          z-index: 5;
+      }
+      .ed-video-thumbnail .play-btn .arrow-right {
+        width: 0;
+        height: 0;
+        margin-left: 2px;
+        border-top: 7px solid transparent;
+        border-bottom: 7px solid transparent;
+        border-right: 12px solid white;
+        transform: rotate(180deg);
+        cursor: pointer;
+    }
+           @media (min-width: 1024px) {
+            .ed-video-thumbnail {
+                 top: 10px;
+                 right: 10px;
+                 width: 100px;
+                 height: auto;
+             }
+           }
+  </style>
+
+  <button type="button" class="ed-video-thumbnail product-video-trigger--mp4">
+    <div class="thumbnail-container">
+      <img
+        src="{{ product.metafields.custom.product_video_thumbnail | img_url: 'masters' }}"
+        width=""
+        height=""
+      >
+      <div class="play-btn">
+        <span class="arrow-right"></span>
+      </div>
+    </div>
+  </button>
+
+  {% comment %}
+    Hidden video element that gets placed in the video modal
+  {% endcomment %}
+  <video
+    playsinline
+    loop
+    controls
+    controlsList="nodownload"
+    class="hide product-video-mp4-sound"
+    aria-label="{{ video_alt_text }}"
+  >
+    {% assign product_video_url = product.metafields.custom.product_video %}
+    <source src="{{ product_video_url | file_url }}" type="video/mp4">
+    <source src="{{ product_video_url | file_url }}" type="video/ogg">
+
+    Your browser does not support the video tag.
+  </video>
+{% endif %}

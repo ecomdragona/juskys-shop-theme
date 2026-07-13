@@ -1,0 +1,15 @@
+#CartDrawer.is-empty .cart_announcement {
+    display: none;
+}
+#CartDrawer:not(.is-empty) .drawer__header{
+  border-bottom-color: transparent;
+}
+.cart_announcement .announcement_inner p {
+    margin: 0;
+}
+.cart_announcement {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+}

@@ -1,0 +1,118 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "header-group.json",
+  "context": {
+    "market": "frankreich"
+  },
+  "sections": {
+    "bso_announcement_bar_8DdFdH": {
+      "settings": {},
+      "blocks": {
+        "content_6BqxTt": {
+          "settings": {
+            "heading_desktop": "Promotion prolongée: Jardin 2026",
+            "heading_mobile": "Promotion prolongée: Jardin 2026",
+            "text_desktop": "<p>economisez jusqu'à -70%</p>",
+            "text_mobile": "<p>economisez jusqu'à -70%</p>"
+          }
+        },
+        "timer_pyc7Jt": {
+          "disabled": true,
+          "settings": {
+            "month": "03",
+            "day": "1"
+          }
+        },
+        "button_RgcG7D": {
+          "settings": {
+            "button_link": "shopify://collections/sale",
+            "button": "À l'action"
+          }
+        }
+      }
+    },
+    "bso_announcement_bar_6acwBV": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {
+        "content_ApcwNh": {
+          "settings": {
+            "heading_desktop": "Tendances Jardin 2026",
+            "heading_mobile": "Tendances Jardin 2026",
+            "text_desktop": "<p>economisez jusqu'à -70%</p>",
+            "text_mobile": "<p>economisez jusqu'à -70%</p>"
+          }
+        },
+        "timer_Gi6KrV": {
+          "disabled": true,
+          "settings": {}
+        },
+        "button_33rFhC": {
+          "settings": {
+            "button_link": "shopify://collections/sale",
+            "button": "À l'action"
+          }
+        }
+      }
+    },
+    "announcement": {
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "announcement_compact": false
+      },
+      "blocks": {
+        "46da5b71-ce9b-487d-b966-69957add2a77": {
+          "disabled": false,
+          "settings": {
+            "text": "👋 Bienvenue, France",
+            "link_text": ""
+          }
+        },
+        "announcement_bRWFc": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "✔ LIVRAISON GRATUITE",
+            "link_text": "",
+            "link": ""
+          }
+        },
+        "announcement_ianRi": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "✔ Frais de retour gratuits",
+            "link_text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "46da5b71-ce9b-487d-b966-69957add2a77",
+        "announcement_bRWFc",
+        "announcement_ianRi"
+      ]
+    },
+    "header": {
+      "settings": {
+        "main_menu_link_list": "main-menu-fr"
+      },
+      "blocks": {}
+    }
+  },
+  "order": [
+    "bso_announcement_bar_8DdFdH",
+    "bso_announcement_bar_6acwBV",
+    "announcement",
+    "header"
+  ]
+}

@@ -1,0 +1,232 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "spacing_bottom": 50,
+        "spacing_bottom_header": 30
+      }
+    },
+    "4608ac4f-9123-4c6b-8721-8a26e17dcd47": {
+      "type": "slideshow",
+      "blocks": {
+        "template--21809650860335__4608ac4f-9123-4c6b-8721-8a26e17dcd47-image-1": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "Social Engagement",
+            "title": "So engagiert sich Juskys",
+            "title_size": 60,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/Blogartikel_Social-Engagement_2500x820px-shop1.jpg",
+            "image_mobile": "shopify://shop_images/Blogartikel_Social-Engagement_2500x820px-shop1.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 0,
+            "color_subheading": "#ffffff",
+            "color_heading": "#ffffff",
+            "color_text": "#ffffff",
+            "color_accent_1": "rgba(0,0,0,0)",
+            "color_accent_2": "rgba(0,0,0,0)",
+            "color_btn_text_check": true,
+            "color_accent_t_1": "#000000",
+            "color_accent_t_2": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "template--21809650860335__4608ac4f-9123-4c6b-8721-8a26e17dcd47-image-1"
+      ],
+      "settings": {
+        "section_height": "650px",
+        "mobile_height": "auto",
+        "parallax": true,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5,
+        "lazyload_images": true
+      }
+    },
+    "f8844334-9e2c-4c20-9b6c-bbf0ac33be15": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21809650860335__f8844334-9e2c-4c20-9b6c-bbf0ac33be15-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "Wir unterstützen soziale Einrichtungen"
+          }
+        },
+        "template--21809650860335__f8844334-9e2c-4c20-9b6c-bbf0ac33be15-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Das Wohl der Menschen und Tiere liegt der Juskys Gruppe GmbH sehr am Herzen. Aus diesem Grund unterstützen wir soziale Einrichtungen schon seit vielen Jahren in der Region und darüberhinaus. Spenden ist für uns eine echte Herzensangelegenheit.<br/>Als regional verbundenes Online-Unternehmen möchten wir besonders den Menschen vor Ort in Salzgitter, in der Nähe unseres Firmenstandortes, helfen.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--21809650860335__f8844334-9e2c-4c20-9b6c-bbf0ac33be15-heading-1",
+        "template--21809650860335__f8844334-9e2c-4c20-9b6c-bbf0ac33be15-text-1"
+      ],
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "88fd7890-9a8c-4427-a369-05e8152e3859": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/Hospiz_Salzgitter_Logo.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "Hospiz-Salzgitter",
+        "title": "Begleitung schwerstkranker und sterbender Menschen",
+        "text": "<p>In dem stationären <a href=\"https://www.hospiz-salzgitter.de\" target=\"_blank\" title=\"Hospiz in Salzgitter\">Hospiz in Salzgitter</a> werden Schwerstkranke in ihrer letzten Lebensphase liebevoll von Pflegefachkräften und ehrenamtlichen Hospizhelfer*innen begleitet. Mit einer Geldspende unterstützten wir das Hospiz und seine Mitarbeitenden bei ihrer wertvollen Arbeit. Denn Hospize müssen einen erheblichen Teil der Kosten selbst aufbringen. </p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "secondary",
+        "align_text": "center",
+        "image_width": "33",
+        "layout": "left",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "8b621ea3-7db7-4d9a-8f50-4c7586213b37": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/WVD_Erstellung_Logo_Grafik_wir_unterstuetzen_WV_KV1_0_V2.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "World Vision",
+        "title": "Kinder in armen Regionen unterstützen",
+        "text": "<p>Damit Kinder auch in ärmeren Regionen (z. B. Afrika, Asien, Mittelamerika) eine Chance auf Bildung haben, unterstützen wir sie in Form einer Patenschaft über <a href=\"https://www.worldvision.de/\" target=\"_blank\" title=\"World Vision\">World Vision</a>. Über viele Jahre begleiten wir die Kinder während ihrer Schulzeit mit Geld- und Sachspenden. Wie bei einer Patenschaft üblich, bauen wir eine persönliche Beziehung zu den<br/>Mädchen und Jungen auf.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "secondary",
+        "align_text": "center",
+        "image_width": "50",
+        "layout": "right",
+        "divider": true,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "59bcf026-bd68-4f0d-a319-03353f15c3dd": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/Logo-gross_Frauenhaus_Salzgitter.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "AWO – Kreisverband Salzgitter-Wolfenbüttel e.V.",
+        "title": "Frauenhaus in Salzgitter",
+        "text": "<p>Für Frauen, die in Not Schutz und Hilfe suchen, ist das <a href=\"https://awo-sz-wf.de/einrichtungen/frauenschutzhaeuser/\" target=\"_blank\" title=\"Frauenhaus\">Frauenhaus</a> eine wichtige Anlaufstelle zur Beratung, Begleitung und Bewältigung ihrer Lebenssituation. Auch für die Kinder gibt es Unterstützung. Juskys hilft mit einer Geldspende besonders den jüngsten Bewohnern und Bewohnerinnen. Im Jahr sind es oft zwischen 50 und 60 Kinder, die mit ihren Müttern im Frauenhaus leben. Da wird vieles benötigt – vom Schulranzen über einen Zwillingswagen bis hin zu Spielzeugen für den Spielbereich.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "secondary",
+        "align_text": "center",
+        "image_width": "33",
+        "layout": "left",
+        "divider": true,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "98a629f3-8c9d-43d6-9f67-4f6bb900cb4f": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/spende-menschen-helfen.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "Hospiz-Initiative Salzgitter e.V.",
+        "title": "Trauerarbeit für Hinterbliebene",
+        "text": "<p>Für Menschen, die ein Familienmitglied wie Eltern oder Geschwisterkind auf tragische Weise verloren haben, ist die <a href=\"https://www.hospiz-initiative-salzgitter.de\" target=\"_blank\" title=\"Hospiz-Initiative Salzgitter\">Hospiz-Initiative Salzgitter</a> eine große Stütze. In Gesprächen schöpfen die Betroffenen gemeinsam neue Kraft. Auch Kinder- und Jugendtrauerarbeit ist ein wichtiger Bestandteil der Initiative. Neben finanziellen Spenden unterstützt Juskys diese Arbeit mit einer Geschenkaktion zu Weihnachten. So können die Wünsche der Kinder und Jugendlichen zu Weihnachten bestmöglich erfüllt werden.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "secondary",
+        "align_text": "center",
+        "image_width": "33",
+        "layout": "right",
+        "divider": true,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "cf4704fd-ae72-4c07-aa91-519358150469": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/GTK_Scotti_Kinderglueck_e.V._-_Logo.png",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "GTK Scotti Kinderglück e.V.",
+        "title": "Einsatz für Kinder & Jugendliche",
+        "text": "<p>Schon seit einigen Jahren setzt sich <a href=\"https://www.gtk-scottikinderglueck.de/\" target=\"_blank\">GTK Scotti Kinderglück e.V.</a> für benachteiligte Kinder, Jugendliche und ihre Familien ein. Ganz nach dem Motto: „Einfach mal etwas zurückgeben“. Dabei unterstützt Juskys gerne mit finanziellen Mitteln. Der Verein hilft jungen Menschen, die dringend Unterstützung in Notsituationen oder schwierigen Lebenslagen brauchen (z. B. bei Gewalt, Behinderung oder Lernschwierigkeiten). Die Förderung von Chancengleichheit unter Kindern und die Unterstützung gemeinnütziger Projekte im Bereich Bildung und sozialer Integration sind wichtige Ziele des Vereins GTK Scotti Kinderglück.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "secondary",
+        "align_text": "center",
+        "image_width": "33",
+        "layout": "left",
+        "divider": true,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "e8d07534-a636-417a-aec1-b74b7eb66f76": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/Logo_hoch.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "Tierschutzverein Salzgitter und Umgebung e.V.",
+        "title": "Sorgt sich um das Wohl der Tiere",
+        "text": "<p>Weil uns der Tierschutz in der Region wichtig ist und wir selbst Tierfreunde sind, unterstützen wir das lokale <a href=\"https://www.tierheim-sz.de/\" target=\"_blank\" title=\"Tierheim Salzgitter\">Tierheim Salzgitter</a>. Der seit 60 Jahren bestehende Verein bietet Hunden, Katzen und Kleintieren ein freundliches Zuhause für den Übergang. Mit viel Engagement kümmern sich haupt- und ehrenamtliche Mitarbeiterinnen und Mitarbeiter um das Wohl der Tiere.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "secondary",
+        "align_text": "center",
+        "image_width": "33",
+        "layout": "right",
+        "divider": true,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "4608ac4f-9123-4c6b-8721-8a26e17dcd47",
+    "f8844334-9e2c-4c20-9b6c-bbf0ac33be15",
+    "88fd7890-9a8c-4427-a369-05e8152e3859",
+    "8b621ea3-7db7-4d9a-8f50-4c7586213b37",
+    "59bcf026-bd68-4f0d-a319-03353f15c3dd",
+    "98a629f3-8c9d-43d6-9f67-4f6bb900cb4f",
+    "cf4704fd-ae72-4c07-aa91-519358150469",
+    "e8d07534-a636-417a-aec1-b74b7eb66f76"
+  ]
+}

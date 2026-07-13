@@ -1,0 +1,51 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "17108331049a77f6d8": {
+      "disabled": false,
+      "settings": {},
+      "blocks": {
+        "klaviyo_email_marketing_sms_form_embed_block_PRPCRK": {
+          "disabled": false,
+          "settings": {
+            "formId": "TLe72P"
+          }
+        }
+      },
+      "block_order": [
+        "klaviyo_email_marketing_sms_form_embed_block_PRPCRK"
+      ]
+    },
+    "rich_text_ALkhMm": {
+      "settings": {},
+      "blocks": {
+        "text_jUjxGG": {
+          "settings": {
+            "text": "<p>Herzlich willkommen bei Juskys! Kennst du schon unseren Newsletter? Wenn nicht, solltest du ihn unbedingt ausprobieren. Denn nur so bleibst du über unsere Produkte und Rabatte auf dem Laufenden. Außerdem erfährst du darin mehr über die neuesten Trends im Bereich Home & Living.</p>"
+          }
+        }
+      }
+    }
+  },
+  "context": {
+    "market": "frankreich"
+  },
+  "parent": "page.newsletter.json",
+  "order": [
+    "main",
+    "2ce22699-59ce-460b-93f8-76796017d318",
+    "f83a1a13-1f80-4e3a-b48d-ed9c9c50c6a6",
+    "rich_text_ALkhMm",
+    "17108331049a77f6d8",
+    "background_image_text_k48eVN",
+    "rich_text_AxYWkb"
+  ]
+}

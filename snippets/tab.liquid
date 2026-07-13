@@ -1,0 +1,26 @@
+{%- liquid
+  assign output_tab = true
+  if title == blank and content == blank
+    assign output_tab = false
+  endif
+-%}
+{%- if output_tab -%}
+  <div class="collapsibles-wrapper collapsibles-wrapper--border-bottom">
+    <button type="button" onclick="changeIcon(this)"
+      class="tab label collapsible-trigger collapsible-trigger-btn collapsible-trigger-btn--borders collapsible--auto-height{% if force_open %} is-open{% endif %}" aria-controls="Product-content-{{ id }}"
+      {% if force_open %}aria-expanded="true"{% endif %}>
+      <span class="spacing">{{ title }}  {% if content contains 'trustami' %}{{ additional_content }}{% endif %}</span>
+      {%- render 'collapsible-icons', icon: icon -%}
+    </button>
+    <div id="Product-content-{{ id }}"
+      class="collapsible-content collapsible-content--all{% if force_open %} is-open {% endif %}"
+      {% if force_open %}style="height: auto;"{% endif %}>
+      {% if content contains 'trustami' %}
+      <div class="trustami_product"></div>
+      {% endif %}
+      <div class="collapsible-content__inner rte">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+{%- endif -%}

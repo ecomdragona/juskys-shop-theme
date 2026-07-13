@@ -1,0 +1,140 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "spacing_bottom": 50,
+        "spacing_bottom_header": 30
+      }
+    },
+    "image_banner_iWzq8T": {
+      "type": "image-banner",
+      "name": "New Faq Banner",
+      "settings": {
+        "desktop_banner_image": "shopify://shop_images/100741238_l_shopid-316109_c5cc5524-5939-44e2-8f17-71a635264131.jpg",
+        "mobile_banner_image": "shopify://shop_images/100741238_l_shopid-316109.jpg",
+        "heading": "Wie können wir dir helfen?",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "news_faq_content_Ey33bW": {
+      "type": "news-faq-content",
+      "blocks": {
+        "faq_metaobject_daGdaq": {
+          "type": "faq_metaobject",
+          "settings": {
+            "title": "Bestellungen",
+            "my_material_setting": [
+              "bestellungen",
+              "status-deiner-bestellung"
+            ]
+          }
+        },
+        "faq_metaobject_D8ggfQ": {
+          "type": "faq_metaobject",
+          "settings": {
+            "title": "Zahlung",
+            "my_material_setting": [
+              "zahlungsmoglichkeiten"
+            ]
+          }
+        },
+        "faq_metaobject_ifjhQd": {
+          "type": "faq_metaobject",
+          "settings": {
+            "title": "Reklamation",
+            "my_material_setting": [
+              "beschwerde-melden"
+            ]
+          }
+        },
+        "faq_metaobject_XnPiLM": {
+          "type": "faq_metaobject",
+          "settings": {
+            "title": "Versand & Lieferung",
+            "my_material_setting": [
+              "versanddetails-lieferbedingungen"
+            ]
+          }
+        },
+        "faq_metaobject_6eNQFg": {
+          "type": "faq_metaobject",
+          "settings": {
+            "title": "Widerruf & Retouren",
+            "my_material_setting": [
+              "anderung-stornierung",
+              "ruckgabebedingungen-ruckerstattungen"
+            ]
+          }
+        },
+        "faq_metaobject_Eqtwqw": {
+          "type": "faq_metaobject",
+          "settings": {
+            "title": "Gewährleistung & Ersatzteile",
+            "my_material_setting": [
+              "garantiebedingungen-ersatzteilservice"
+            ]
+          }
+        },
+        "faq_metaobject_4QDkFQ": {
+          "type": "faq_metaobject",
+          "settings": {
+            "title": "Produkte",
+            "my_material_setting": [
+              "haufige-produktfragen"
+            ]
+          }
+        },
+        "faq_metaobject_7Cqq4i": {
+          "type": "faq_metaobject",
+          "settings": {
+            "title": "Website & Datenschutz",
+            "my_material_setting": [
+              "website-nutzung-datenschutzrichtlinien"
+            ]
+          }
+        },
+        "faq_metaobject_tLhe6U": {
+          "type": "faq_metaobject",
+          "settings": {
+            "title": "Antwort nicht gefunden?",
+            "my_material_setting": [
+              "weitere-kontaktwege"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "faq_metaobject_daGdaq",
+        "faq_metaobject_D8ggfQ",
+        "faq_metaobject_ifjhQd",
+        "faq_metaobject_XnPiLM",
+        "faq_metaobject_6eNQFg",
+        "faq_metaobject_Eqtwqw",
+        "faq_metaobject_4QDkFQ",
+        "faq_metaobject_7Cqq4i",
+        "faq_metaobject_tLhe6U"
+      ],
+      "name": "Advanced FAQ",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_iWzq8T",
+    "news_faq_content_Ey33bW"
+  ]
+}

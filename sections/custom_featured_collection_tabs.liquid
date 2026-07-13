@@ -1,0 +1,298 @@
+<style>
+  #shopify-section-{{ section.id }} .collection_slider_title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  #shopify-section-{{ section.id }} .tabs {
+    width: 100%;
+  }
+  #shopify-section-{{ section.id }} .tab-nav {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  #shopify-section-{{ section.id }} .tab-nav-item {
+    cursor: pointer;
+    opacity: 0.3;
+    border: 2px solid #4F5969;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    color: #4F5969;
+  }
+  #shopify-section-{{ section.id }} .tab-nav-item.active {
+    opacity: 1;
+  }
+  #shopify-section-{{ section.id }} .tab-pane {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+  }
+  #shopify-section-{{ section.id }} .tab-pane.show_tab{
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+    overflow: unset;
+  }
+
+  #shopify-section-{{ section.id }} .slider_wrapper {
+    position: relative;
+  }
+  #shopify-section-{{ section.id }} cs-next,
+  #shopify-section-{{ section.id }} cs-prev {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    transform: translate(-100%, -50%);
+  }
+  #shopify-section-{{ section.id }} cs-next {
+    left: unset;
+    right: -10px;
+    transform: translate(100%, -50%);
+  }
+  #shopify-section-{{ section.id }} cs-next svg,
+  #shopify-section-{{ section.id }} cs-prev svg {
+    color: white;
+    width: 12px;
+    height: 12px;
+    position: static;
+  }
+  #shopify-section-{{ section.id }} cs-next[disabled],
+  #shopify-section-{{ section.id }} cs-prev[disabled] {
+    display: none;
+  }
+  @media only screen and (max-width: 1520px) {
+    #shopify-section-{{ section.id }} cs-next,
+    #shopify-section-{{ section.id }} cs-prev {
+      transform: translate(0%, -50%);
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    #shopify-section-{{ section.id }} cs-next,
+    #shopify-section-{{ section.id }} cs-prev {
+      width: 33px;
+      height: 33px;
+    }
+    #shopify-section-{{ section.id }} .tab-nav{
+      gap: 10px;
+    }
+    #shopify-section-{{ section.id }} .tab-nav-item {
+      font-size: 14px;
+      padding: 7px 15px;
+      letter-spacing: normal;
+      text-transform: capitalize;
+    }
+  }
+</style>
+
+<div class="page-width featured-collections-slider {{ section.settings.section_class }}" id="shopify-section-{{ section.id }}">
+  {% if section.settings.title != blank %}
+    <div class="collection_slider_title">
+      <p class="h2 section-header__title">{{ section.settings.title }}</p>
+    </div>
+  {% endif %}
+
+  <div class="tabs">
+    <ul class="tab-nav">
+      {% for block in section.blocks %}
+        <li
+          class="tab-nav-item{% if forloop.index == 1 %} active{% endif %}"
+          data-tab="tab-{{ forloop.index }}"
+          {{ block.shopify_attributes }}
+        >
+          {{ block.settings.title }}
+        </li>
+      {% endfor %}
+    </ul>
+
+    <div class="tab-content">
+      {% for block in section.blocks %}
+        <div
+          class="tab-pane{% if forloop.index == 1 %} show_tab{% endif %}"
+          id="tab-{{ forloop.index }}"
+          {{ block.shopify_attributes }}
+        >
+          <div class="slider_wrapper">
+            <clever-slider
+              id="FeatCollectionSlider-{{ forloop.index }}-{{ section.id }}"
+              options-large="align:start,containScroll:trimSnaps"
+              options-medium="align:start,containScroll:trimSnaps"
+              options-small="align:start,containScroll:trimSnaps"
+            >
+              <div class="slider_viewport">
+                <cs-track>
+                  <cs-slides class="items-{{ section.settings.per_row }} medium_items-{{ section.settings.per_row_mobile }} small_items-{{ section.settings.per_row_mobile }} gap">
+                    {%- for product in block.settings.collection.products limit:12 -%}
+                      <cs-slide>
+                        <div class="collection_slide">
+                          {%- assign widths = '360, 540, 650' -%}
+                          {%- render 'product-grid-item',
+                            product: product,
+                            collection: block.settings.collection,
+                            widths: widths,
+                            grid_item_width: 'medium-up--one-whole',
+                            per_row: '1'
+                          -%}
+                          {%- if settings.quick_shop_enable -%}
+                            {%- render 'quick-shop-modal', product: product -%}
+                          {%- endif -%}
+                        </div>
+                      </cs-slide>
+                    {%- endfor -%}
+                  </cs-slides>
+                </cs-track>
+              </div>
+            </clever-slider>
+            <cs-prev disabled for="FeatCollectionSlider-{{ forloop.index }}-{{ section.id }}">
+              <svg class="flickity-button-icon" viewBox="0 0 100 100">
+                <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"></path>
+              </svg>
+            </cs-prev>
+            <cs-next disabled for="FeatCollectionSlider-{{ forloop.index }}-{{ section.id }}">
+              <svg class="flickity-button-icon" viewBox="0 0 100 100">
+                <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow" transform="translate(100, 100) rotate(180)"></path>
+              </svg>
+            </cs-next>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  {% if section.settings.button_url != blank or section.settings.button_label != blank %}
+    <div class="collection_btn_main">
+      <a
+        class="btn btn--primary"
+        {% if section.settings.button_url != blank %}
+          href="{{ section.settings.button_url }}"
+        {% endif %}
+      >
+        {{ section.settings.button_label }}
+      </a>
+    </div>
+  {% endif %}
+</div>
+
+{%- comment -%} Start Customization by Better Sell Online GmbH (BSO) - Convert Tabnavigation jquery script to javascript {%- endcomment -%}
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+  const section = document.querySelector("#shopify-section-{{ section.id }}");
+  if (!section) return;
+
+  const tabNavItems = section.querySelectorAll(".tab-nav-item");
+
+  tabNavItems.forEach(function(tabNavItem) {
+    tabNavItem.addEventListener("click", function() {
+      const tabId = this.dataset.tab;
+
+      tabNavItems.forEach(function(item) {
+        item.classList.remove("active");
+      });
+      this.classList.add("active");
+
+      const tabPanes = section.querySelectorAll(".tab-pane");
+      tabPanes.forEach(function(pane) {
+        pane.classList.remove("show_tab");
+      });
+
+      const targetPane = section.querySelector(`#${tabId}`);
+      if (targetPane) {
+        targetPane.classList.add("show_tab");
+      }
+    });
+  });
+});
+</script>
+{%- comment -%} End Customization by Better Sell Online GmbH (BSO) {%- endcomment -%}
+
+{% schema %}
+{
+  "name": "Featured Collection Tab",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Featured Collection"
+    },
+    {
+      "type": "header",
+      "content": "Slider"
+    },
+    {
+      "type": "range",
+      "id": "per_row",
+      "label": "Products per row",
+      "default": 4,
+      "min": 1,
+      "max": 8,
+      "step": 1
+    },
+    {
+      "type": "range",
+      "id": "per_row_mobile",
+      "label": "Products per row mobile",
+      "default": 2,
+      "min": 1,
+      "max": 5,
+      "step": 1
+    },
+    {
+      "type":"text",
+      "id":"section_class",
+      "label": "Section Class ?",
+      "info":"Do not change it."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "Tab",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Tab Title",
+          "default": "Tab 1"
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Collection Tab"
+    }
+  ]
+}
+{% endschema %}

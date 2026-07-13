@@ -1,0 +1,229 @@
+{% assign imagesfound = false %}
+{% assign product_meta_images = product.metafields.custom.neue_produktbilder_a_b_test.value %}
+
+{% if product_meta_images != blank %}
+  {% assign imagesfound = true %}
+{% endif %}
+
+{% for variant in product.variants %}
+  {% assign variant_product_images = variant.metafields.custom.produktbilder_a_b_test.value %}
+  {% if variant_product_images != blank %}
+    {% assign imagesfound = true %}
+      {% capture variant_images %}{{ variant_images }}
+        <div
+          class="product-test-item {% if product.selected_or_first_available_variant == variant %}product-test-active{% endif %} product__photos product__photos-{{ product.id }} product__photos--{{ thumbnail_position }}"
+          data-product-images variant_id="{{ variant.id }}"
+        >
+          <div class="thumbnail_slider thumbnail_slider--desktop">
+            <clever-slider
+              id="ThumbnailSlider-{{ product.id }}-{{variant.id}}"
+              for="ProductPhotosS-{{ product.id }}-{{variant.id}}"
+              class="vertical only_large"
+              options-large="loop: true, align:start, containScroll: keepSnaps, dragFree: true, axis: y"
+              options-small="loop: true, align:start, containScroll: keepSnaps, dragFree: true"
+            >
+              <cs-track>
+                <cs-slides class="items-5 gap">
+                  {% for image in variant_product_images %}
+                        <cs-slide class="image-{{ image.id }}">
+                          {%- render 'image-element',
+                            img: image,
+                            alt: image.alt,
+                            widths: '120, 360, 540, 720',
+                            loading: loading
+                          -%}
+                        </cs-slide>
+                  {% endfor %}
+                </cs-slides>
+              </cs-track>
+            </clever-slider>
+          </div>
+          <div class="product__main-photos" data-aos data-product-single-media-group>
+            {% if settings.tags_enable %}
+              <style>
+                .product__main-photos .grid-product__tags {
+                  left: 0;
+                  right: auto;
+                }
+              </style>
+              {% render 'product_tags', product: product %}
+            {% endif %}
+            <div data-product-photos data-zoom="{{ product_zoom_enable }}" class="product-slideshow" id="ProductPhotos-{{ product.id }}">
+              <clever-slider id="ProductPhotosS-{{ product.id }}-{{variant.id}}" options-large="loop:true,align:start" options-medium="loop:true,align:start" options-small="loop:true,align:start" pause-on-hover>
+                <div class="slider_viewport">
+                  <cs-prev>
+                    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-chevron-down" viewBox="0 0 28 16">
+                      <path d="m1.57 1.59 12.76 12.77L27.1 1.59" stroke-width="2" stroke="#000" fill="none"/>
+                    </svg>
+                  </cs-prev>
+                  <cs-track>
+                    <cs-slides class="items-1 sss">
+                      {% for image in variant_product_images %}
+                            <cs-slide class="image-{{image.id}}">
+                              {% if forloop.index == 1 %}
+                                {%- assign loading = 'eager' -%}
+                                {%- assign fetchpriority = 'high' -%}
+                                {%- assign animation = 'none' -%}
+                              {%- else -%}
+                                {%- assign loading = 'lazy' -%}
+                                {%- assign fetchpriority = 'auto' -%}
+                                {%- assign animation = 'image-fade-in' -%}
+                              {% endif %}
+
+                              {%- render 'image-element', img: image, alt: image.alt, widths: '120, 360, 540, 720', loading: loading, animation: animation, fetchpriority: fetchpriority -%}
+                            </cs-slide>
+                
+                      {%- endfor -%}
+                    </cs-slides>
+                  </cs-track>
+                  <cs-next>
+                    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-chevron-down" viewBox="0 0 28 16" >
+                      <path d="m1.57 1.59 12.76 12.77L27.1 1.59" stroke-width="2" stroke="#000" fill="none"/>
+                    </svg>
+                  </cs-next>
+                </div>
+              </clever-slider>
+
+              <div class="product__photos product__photos-{{ product.id }} product__photos--{{ thumbnail_position }}" data-product-images>
+                <div class="thumbnail_slider">
+                  <clever-slider id="ThumbnailS-mobile-{{ product.id }}-test" for="ProductPhotosS-{{ product.id }}-{{variant.id}}" class="vertical only_small small_horizontal" options-large="loop: true, align:start,containScroll: keepSnaps, dragFree: true" options-small="loop: true, align:start,containScroll: keepSnaps, dragFree: true" >
+                    <cs-track>
+                      <cs-slides class="items-5 small_gap">
+                  
+                        {% for image in variant_product_images %}
+                              <cs-slide
+                                class="image-{{image.id}}"
+                              >
+                                {% if forloop.index == 1 %}
+                                  {%- assign loading = 'eager' -%}
+                                  {%- assign fetchpriority = 'high' -%}
+                                  {%- assign animation = 'none' -%}
+                                {%- else -%}
+                                  {%- assign loading = 'lazy' -%}
+                                  {%- assign fetchpriority = 'auto' -%}
+                                  {%- assign animation = 'image-fade-in' -%}
+                                {% endif %}
+                                {%- render 'image-element', img: image, alt: image.alt, widths: '120, 360, 540, 720', loading: loading, animation: animation, fetchpriority: fetchpriority -%}
+                              </cs-slide>
+                        {%- endfor -%}
+                      </cs-slides>
+                    </cs-track>
+                  </clever-slider>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endcapture %}
+  {% endif %}
+{% endfor %}
+
+
+{%- if imagesfound == true -%}
+  <div class="product_media__abtest">
+    {{  variant_images }}
+    {% if product_meta_images != blank %}
+      <div class="product-test-default {% if variant_images == blank %}product-test-active{% endif %}  product__photos product__photos-{{ product.id }} product__photos--{{ thumbnail_position }}" data-product-images>
+        <div class="thumbnail_slider thumbnail_slider--desktop">
+          <clever-slider
+            id="ThumbnailSlider-{{ product.id }}-test"
+            for="ProductPhotosS-{{ product.id }}-test"
+            class="vertical only_large"
+            options-large="loop: true, align:start, containScroll: keepSnaps, dragFree: true, axis: y"
+            options-small="loop: true, align:start, containScroll: keepSnaps, dragFree: true"
+          >
+            <cs-track>
+              <cs-slides class="items-5 gap">
+                {% for image in product_meta_images %}
+                      <cs-slide class="image-{{ image.id }}">
+                        {%- render 'image-element',
+                          img: image,
+                          alt: image.alt,
+                          widths: '120, 360, 540, 720',
+                          loading: loading
+                        -%}
+                      </cs-slide>
+                {% endfor %}
+              </cs-slides>
+            </cs-track>
+          </clever-slider>
+        </div>
+        <div class="product__main-photos" data-aos data-product-single-media-group>
+          {% if settings.tags_enable %}
+            <style>
+              .product__main-photos .grid-product__tags {
+                left: 0;
+                right: auto;
+              }
+            </style>
+            {% render 'product_tags', product: product %}
+          {% endif %}
+          <div data-product-photos data-zoom="{{ product_zoom_enable }}" class="product-slideshow" id="ProductPhotos-{{ product.id }}">
+            <clever-slider id="ProductPhotosS-{{ product.id }}-test" options-large="loop:true,align:start" options-medium="loop:true,align:start" options-small="loop:true,align:start" pause-on-hover>
+              <div class="slider_viewport">
+                <cs-prev>
+                  <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-chevron-down" viewBox="0 0 28 16">
+                    <path d="m1.57 1.59 12.76 12.77L27.1 1.59" stroke-width="2" stroke="#000" fill="none"/>
+                  </svg>
+                </cs-prev>
+                <cs-track>
+                  <cs-slides class="items-1 sss">
+                    {% for image in product_meta_images %}
+                          <cs-slide class="image-{{image.id}}">
+                            {% if forloop.index == 1 %}
+                              {%- assign loading = 'eager' -%}
+                              {%- assign fetchpriority = 'high' -%}
+                              {%- assign animation = 'none' -%}
+                            {%- else -%}
+                              {%- assign loading = 'lazy' -%}
+                              {%- assign fetchpriority = 'auto' -%}
+                              {%- assign animation = 'image-fade-in' -%}
+                            {% endif %}
+
+                            {%- render 'image-element', img: image, alt: image.alt, widths: '120, 360, 540, 720', loading: loading, animation: animation, fetchpriority: fetchpriority -%}
+                          </cs-slide>
+              
+                    {%- endfor -%}
+                  </cs-slides>
+                </cs-track>
+                <cs-next>
+                  <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-chevron-down" viewBox="0 0 28 16" >
+                    <path d="m1.57 1.59 12.76 12.77L27.1 1.59" stroke-width="2" stroke="#000" fill="none"/>
+                  </svg>
+                </cs-next>
+              </div>
+            </clever-slider>
+
+            <div class="product__photos product__photos-{{ product.id }} product__photos--{{ thumbnail_position }}" data-product-images>
+              <div class="thumbnail_slider">
+                <clever-slider id="ThumbnailS-mobile-{{ product.id }}-test" for="ProductPhotosS-{{ product.id }}-test" class="vertical only_small small_horizontal" options-large="loop: true, align:start,containScroll: keepSnaps, dragFree: true" options-small="loop: true, align:start,containScroll: keepSnaps, dragFree: true" >
+                  <cs-track>
+                    <cs-slides class="items-5 small_gap">
+                
+                      {% for image in product_meta_images %}
+                            <cs-slide
+                              class="image-{{image.id}}"
+                            >
+                              {% if forloop.index == 1 %}
+                                {%- assign loading = 'eager' -%}
+                                {%- assign fetchpriority = 'high' -%}
+                                {%- assign animation = 'none' -%}
+                              {%- else -%}
+                                {%- assign loading = 'lazy' -%}
+                                {%- assign fetchpriority = 'auto' -%}
+                                {%- assign animation = 'image-fade-in' -%}
+                              {% endif %}
+                              {%- render 'image-element', img: image, alt: image.alt, widths: '120, 360, 540, 720', loading: loading, animation: animation, fetchpriority: fetchpriority -%}
+                            </cs-slide>
+                      {%- endfor -%}
+                    </cs-slides>
+                  </cs-track>
+                </clever-slider>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+{%- endif -%}

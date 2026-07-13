@@ -1,0 +1,73 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "4ae48e13-ebf1-4c01-b1df-80db515cad48": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21475311681839__4ae48e13-ebf1-4c01-b1df-80db515cad48-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "Bestellvorgang"
+          }
+        },
+        "template--21475311681839__4ae48e13-ebf1-4c01-b1df-80db515cad48-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<h3>1. Bestellvorgang & Produkte</h3><p><strong>Wie bestellen Sie im Juskys-Onlineshop?</strong><br/>Ganz einfach. Sobald Sie Ihren Wunschartikel gefunden haben, klicken Sie auf der Produktseite auf den Button „In den Warenkorb“. Möchten Sie die Bestellung abschließen, gelangen Sie über die Schaltfläche „Zur Kasse“ direkt zur Bestellabwicklung. Sofern Sie sich noch nicht eingeloggt haben, werden Sie nun aufgefordert, sich einzuloggen. Bereits registrierte Kunden machen dies bequem mit Ihrer E-Mail-Adresse und Ihrem Passwort. Neukunden müssen sich zunächst registrieren. Füllen Sie hierfür einfach das Formular aus. Wenn Sie fertig sind, klicken Sie auf den Button „Weiter“. Nun brauchen Sie nur noch Liefer- und Rechnungsadresse sowie die gewünschte Bezahlart eingeben. Anschließend haben Sie die Möglichkeit, Ihre Daten erneut zu prüfen und die Bestellung abzuschließen, in dem auf „Zahlungspflichtig bestellen“ klicken.<br/><br/>Möchten Sie noch weitere Artikel Ihrer Bestellung hinzufügen, können Sie das gerne tun. Stöbern Sie einfach durch den Shop und fügen weitere Artikel zu Ihrer Bestellung hinzu. Über das Warenkorbsymbol am oberen Bildrand gelangen Sie zu jeder Zeit zurück zum Warenkorb und schließen von dort den Bestellprozess ab.</p><p><strong>Wie erfahren Sie, ob Ihre Bestellung eingegangen ist?</strong><br/>Haben Sie den Bestellprozess erfolgreich abgeschlossen, erhalten Sie von uns eine Nachricht an die von Ihnen angegebene E-Mail-Adresse mit allen relevanten Informationen zu Ihrer Bestellung. So können Sie auch sämtliche Angaben erneut kontrollieren.</p><p><strong>Können Sie eine Bestellung stornieren?</strong><br/>Solange die Ware noch nicht versendet wurde, ist es ohne Angabe von Gründen möglich, die Bestellung zu stornieren. In diesem Fall wenden Sie sich bitte umgehend an unseren Kundenservice und teilen uns Ihren Stornierungswunsch mit.<br/><br/>Wurde die Ware hingegen schon verschickt, bleibt Ihnen nur noch die Möglichkeit, den Kauf innerhalb von 14 Tagen nach Erhalt der Ware zu widerrufen. Genaue Informationen zum Widerruf erhalten Sie <a href=\"https://www.juskys.de/widerrufsrecht\" target=\"_self\" title=\"Zur Widerrufsbelehrung von Juskys-Onlineshop\">hier</a>.</p><p><strong>Wo finden Sie die Montageanleitungen für Ihre Ware?</strong><br/>Bei jedem Artikel gehört eine Montageanleitung mit zum Lieferumfang und liegt diesem bei.<br/><br/>Sollte die Anleitung bei der Lieferung widererwartend nicht dabei sein, wenden Sie sich an unseren Kundenservice. Dann schicken wir Ihnen die Montageanleitung bequem per E-Mail zu.</p><p><strong>Wie überprüfen Sie die Verfügbarkeit der Produkte?</strong><br/>Um die Verfügbarkeit Ihres Wunschartikels zu prüfen, stehen Ihnen im Juskys-Onlineshop zwei Möglichkeiten zur Verfügung. Zum einen finden Sie in jeder Artikelbeschreibung rechts neben der Bildergalerie unterhalb der Preisangabe und der Bestellmenge die Angabe „Lieferzeit“. Steht diese auf „sofort lieferbar“ ist der Artikel verfügbar und kann umgehend nach Zahlungseingang versendet werden. Andernfalls ist der Artikel im Shop gerade nicht verfügbar. Zum anderen finden Sie diese Angabe auch in jeder Produktübersicht oberhalb der Preisangabe.</p>"
+          }
+        },
+        "acfca7ca-4b9b-419a-b3da-77194ef86610": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<h3>2. Zahlungsmodalitäten & Versand</h3><p><strong>Welche Zahlarten stehen Ihnen in unserem Shop zur Verfügung</strong><br/>Damit Sie Ihre Bestellung so einfach wie möglich bezahlen können, stehen Ihnen im Juskys Onlineshop folgende Zahlungsmittel zur Auswahl wählen:</p><ul><li>Vorkasse per Banküberweisung</li><li>PayPal Treuhandservice</li><li>Kreditkarte</li><li>Lastschrift</li><li>Kauf auf Rechnung</li></ul><p> Entscheiden Sie sich einfach für die Zahlmethode, die für Sie die komfortabelste und sicherste Lösung ist.<br/><br/>Detaillierte Informationen zu den zur Verfügung stehenden Zahlungsmitteln erhalten Sie unter <a href=\"https://www.juskys.de/versand-zahlung\" target=\"_self\" title=\"Versand & Zahlungsbedingungen im Juskys-Onlineshop\">„Versand und Zahlung“</a>.</p><p><strong>Gibt es im Juskys-Shop einen Mindestbestellwert im Juskys Shop?</strong><br/>Nein, im Juskys Onlineshop gibt keinen Mindestbestellwert. Selbst, wenn Sie nur ein 2er Verbinder-Set für Ihre Polyrattan Garnitur bestellen möchten, können Sie dieses gerne tun.</p><p><strong>Wie erhalten Sie die Rechnung zu Ihrer Bestellung?</strong><br/>Die Rechnung zu Ihrer Bestellung schicken wir Ihnen am Versandtag als PDF-Dokument an die von Ihnen hinterlegte E-Mail-Adresse. Dies gibt Ihnen die Möglichkeit, die Rechnung auf Ihrem PC digital zu archivieren oder auf Papier auszudrucken.<br/><br/>Sollten Sie keine Rechnung per E-Mail erhalten, wenden Sie sich bitte vertrauensvoll an unseren Kundenservice. Unsere Mitarbeiter werden Ihnen dann umgehend eine Rechnung per E-Mail zusenden.</p><p><strong>Kann es nach der Bestellung zu Preisänderungen kommen?</strong><br/>Wie auch die Artikel in anderen Onlineshops unterliegen auch unsere Produkte zeitlichen Preisschwankungen. Nachträgliche Preisänderungen haben keinen Einfluss auf Ihre Bestellung. Für Sie gilt immer der Preis zum Zeitpunkt Ihrer Bestellung.</p><p><strong>Wie erfolgt die Lieferung Ihrer Ware?</strong><br/>Die meisten unserer Artikel sind Paketwaren und werden per Paketdienst geliefert. Die Lieferung erfolgt gut verpackt bis zur Wohnungstür. Größere Artikel wie unsere Boxspringbetten sowie unsere großen Laufbänder versenden wir per Spedition bis Bordsteinkante.<br/><br/>Bei Mehrpaketsendungen berücksichtigen Sie bitte folgendes: Obwohl wir alle Pakete gleichzeitig versenden, kann es in Einzelfällen dazu kommen, dass die einzelnen Pakete an unterschiedlichen Tagen zugestellt werden. Falls ein Paket bei Ihrer Bestellung fehlt, kann es passieren, dass Sie es erst am darauf folgenden Werktag erhalten.<br/><br/>Bei Speditionssendungen kontaktiert Sie der Spediteur im Vorfeld telefonisch oder per E-Mail über den Liefertermin. Aus diesem Grund ist es erforderlich, dass Sie bei Bestellung unbedingt Ihre Telefonnummer und Ihre E-Mailadresse angeben.<br/><br/>Ob es sich bei Ihrem Wunschartikel um eine Paket- oder eine Speditionsware handelt, erfahren Sie in der Produktbeschreibung. Die Angabe der Versandart finden Sie in jeder Beschreibung im Abschnitt „Versand“ (meistens unter dem Abmessungsbild).</p><p><strong>Können Wunschtermine für die Lieferung Ihrer Ware realisiert werden?</strong><br/>Bei Paketsendungen ist es nicht möglich, Wunschtermine zu berücksichtigen. Für Sendungen per Spedition hingegen ist es möglich, Wunschtermine zu realisieren. Kontaktieren Sie hierfür nach der Bestellung unseren Kundenservice per E-Mail oder Telefon.</p><p><strong>Fallen für Ihre Bestellung im Juskys-Onlineshop Versandkosten an?</strong><br/>Alle Bestellungen an eine deutsche Lieferadresse sind für Sie komplett versandkostenfrei. Bei Lieferungen an eine ausländische Lieferadresse hingegen fallen Versandkosten an. Nähere Informationen hierzu, erhalten Sie auf der Seite <a href=\"https://www.juskys.de/versand-zahlung\" target=\"_self\" title=\"Versand & Zahlungsbedingungen im Juskys-Onlineshop\">„Versand- und Zahlung“</a>.</p><p><strong>Können Sie den Status Ihrer Bestellung verfolgen?</strong><br/>Bei Paketwaren verfolgen Sie den Status Ihrer Bestellung mit Hilfe der Sendungsnummern. Die Sendungsnummer erhalten Sie nach dem Versand der Ware per E-Mail.<br/><br/>Bei Speditionssendungen ist eine Sendungsverfolgung nicht möglich. Falls Sie Auskunft über den Status Ihrer Bestellung wünschen, setzen Sie sich mit unserem Kundenservice in Verbindung. Überdies informiert Sie der Spediteur vor der Auflieferung telefonisch oder per E-Mail über den genauen Liefertermin.</p>"
+          }
+        },
+        "29247707-d4de-4f02-a6f0-013b5cb632b7": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<h3>3. Widerruf & Retouren</h3><p><strong>Wie widerrufen Sie den Kauf Ihrer Ware?</strong><br/>Privatpersonen haben grundsätzlich das Recht, Ihre Bestellung ohne Angabe von Gründen innerhalb von 14 Tagen zu widerrufen. Die Widerrufsfrist beginnt ab dem Tag, an dem Sie oder ein von Ihnen benannter Dritter die Ware in Besitz genommen haben. Hierzu müssen Sie uns mittels einer eindeutigen Erklärung (z. B. ein mit der Post versandter Brief, Telefax oder E-Mail) über Ihren Widerruf unterrichten. Darüber hinaus haben Sie den bestellten Artikel innerhalb von 14 Tagen ab dem Tag der Widerrufs-Unterrichtung an uns zurückzuschicken oder uns zu übergeben.<br/><br/>Geschäftskunden und Kunden mit individuellen Sonderanfertigungen sind grundsätzlich vom Widerrufsrecht ausgeschlossen!<br/><br/>Detaillierte Informationen zur Ausübung Ihres Widerrufsrechts erhalten Sie im Artikel <a href=\"https://www.juskys.de/widerrufsrecht\" target=\"_self\" title=\"Zur Widerrufsbelehrung von Juskys-Onlineshop\">„Widerrufsrecht“</a>.</p>"
+          }
+        },
+        "f9569a08-24fa-47c5-b9ee-139314cb267b": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<h3>4. Gewährleistung & Ersatzteile</h3><p><strong>Wie lange haben Sie Anspruch auf Gewährleistung?</strong><br/>Für Privatpersonen gilt im Juskys-Onlineshop die gesetzliche Gewährleistung von 2 Jahren. Bei Unternehmen ist das Gewährleistungsrecht auf 1 Jahr beschränkt. Weitere Informationen hierzu erhalten Sie in unseren <a href=\"https://www.juskys.de/custom/index/sCustom/4\" target=\"_self\" title=\"Zu den Allgemeinen Geschäftsbedingungen\">AGB’s</a>.</p><p><strong>Bei Ihrer Bestellung fehlen Teile – Was Sie jetzt am besten machen?</strong><br/>Obwohl wir alle Pakete einer Bestellung am gleichen Tag versenden, kann es hin und wieder vorkommen, dass der Paketdienst nicht alle Pakete am selben Tag zustellt. Prüfen Sie daher immer zunächst, ob Sie wirklich alle Pakete erhalten haben. Gucken Sie hierzu in Ihre Sendungsverfolgung. Sofern Sie feststellen, dass Ihnen nicht alle Pakete zugestellt wurden, sollten diese 1 bis 2 Werktage später bei Ihnen angekommen.<br/><br/>Sind die ausstehenden Pakete auch 2 Werktage später nicht bei Ihnen eingetroffen, wenden Sie sich an unseren Kundenservice. Halten Sie dazu die entsprechenden Sendungsnummern parat.<br/><br/>Haben Sie jedoch schon alle Pakete erhalten, setzen Sie sich bitte umgehend mit uns in Verbindung. Teilen Sie uns mit, welche Teile fehlen. Notieren Sie sich hierfür die entsprechenden Teilenummern aus der Montageanleitung. Dann senden wir Ihnen die fehlenden Teile umgehend zu.</p><p><strong>Was ist zu tun, wenn Ihr Artikel beschädigt oder defekt ankommt?</strong><br/>Beschädigte Teile sollten ebenso wenig vorkommen wie defekte Artikel. Falls es doch einmal vorkommt, bitten wir das zu entschuldigen. Kontaktieren Sie direkt unseren Kundenservice. Schicken Sie uns nach Möglichkeit eine E-Mail mit einer detaillierten Mängelbeschreibung und Fotos, auf denen die beschriebenen Mängel deutlich zu erkennen sind. So können wir Ihren Vorgang schnell bearbeiten und die Mängel beseitigen.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--21475311681839__4ae48e13-ebf1-4c01-b1df-80db515cad48-heading-1",
+        "template--21475311681839__4ae48e13-ebf1-4c01-b1df-80db515cad48-text-1",
+        "acfca7ca-4b9b-419a-b3da-77194ef86610",
+        "29247707-d4de-4f02-a6f0-013b5cb632b7",
+        "f9569a08-24fa-47c5-b9ee-139314cb267b"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "4ae48e13-ebf1-4c01-b1df-80db515cad48"
+  ]
+}

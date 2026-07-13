@@ -1,0 +1,174 @@
+{%- assign per_row = section.settings.per_row -%}
+{%- assign per_row_mobile = section.settings.per_row_mobile -%}
+
+<style>
+  #shopify-section-{{ section.id }} .collection_slider_title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 50px;
+  }
+  #shopify-section-{{ section.id }} .slider_wrapper {
+    position: relative;
+  }
+  #shopify-section-{{ section.id }} cs-next,
+  #shopify-section-{{ section.id }} cs-prev {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    transform: translate(-100%, -50%);
+  }
+  #shopify-section-{{ section.id }} cs-next {
+    left: unset;
+    right: -10px;
+    transform: translate(100%, -50%);
+  }
+  #shopify-section-{{ section.id }} cs-next svg,
+  #shopify-section-{{ section.id }} cs-prev svg {
+    color: white;
+    width: 12px;
+    height: 12px;
+    position: static;
+  }
+  #shopify-section-{{ section.id }} cs-next[disabled],
+  #shopify-section-{{ section.id }} cs-prev[disabled] {
+    display: none;
+  }
+  #shopify-section-{{ section.id }} .image-element {
+      opacity: 1 !important;
+  }
+  @media only screen and (max-width: 1520px) {
+    #shopify-section-{{ section.id }} cs-next,
+    #shopify-section-{{ section.id }} cs-prev {
+      transform: translate(0%, -50%);
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    #shopify-section-{{ section.id }} cs-next,
+    #shopify-section-{{ section.id }} cs-prev {
+      width: 33px;
+      height: 33px;
+    }
+  }
+</style>
+
+<div class="page-width featured-collections-slider">
+  {% if section.settings.title != blank %}
+    <div class="collection_slider_title">
+      <p class="h2 section-header__title">{{ section.settings.title }}</p>
+    </div>
+  {% endif %}
+  <div class="slider_wrapper">
+    <clever-slider 
+      id="FeatCollectionSlider-{{ section.id }}" 
+      options-large="align:start,containScroll:trimSnaps" 
+      options-medium="align:start,containScroll:trimSnaps" 
+      options-small="align:start,containScroll:trimSnaps"
+    >
+      <div class="slider_viewport">
+        <cs-track>
+          <cs-slides class="items-{{ per_row }} medium_items-{{ per_row_mobile }} small_items-{{ per_row_mobile }} gap">
+            {%- for product in section.settings.collection.products limit:12 -%}
+              <cs-slide>
+                <div class="collection_slide">
+                    {%- render 'product-grid-item',
+                    product: product,
+                    collection: section.settings.collection,
+                    grid_item_width: "medium-up--one-whole",
+                    per_row: "1" -%}
+                    {%- if settings.quick_shop_enable -%}
+                      {%- render 'quick-shop-modal', product: product -%}
+                    {%- endif -%}
+                </div>
+              </cs-slide>
+            {%- endfor -%}
+          </cs-slides>
+        </cs-track>
+      </div>
+    </clever-slider>
+    <cs-prev disabled for="FeatCollectionSlider-{{ section.id }}">
+      <svg class="flickity-button-icon" viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"></path></svg>
+    </cs-prev>
+    <cs-next disabled for="FeatCollectionSlider-{{ section.id }}">
+      <svg class="flickity-button-icon" viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow" transform="translate(100, 100) rotate(180)"></path></svg>
+    </cs-next>
+  </div>
+  {% if section.settings.button_url != blank or section.settings.button_label != blank %}
+    <div class="collection_btn_main">
+      <a class="btn btn--primary"{% if section.settings.button_url != blank %} href="{{ section.settings.button_url }}"{% endif %}>
+        {{ section.settings.button_label }}
+      </a>
+    </div>
+  {% endif %}
+</div>
+
+{% schema %}
+  {
+    "name": "Feat. Collection Slider",
+    "class": "index-section featured-section-slider",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Content"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Featured Collection"
+      },
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "Collection"
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "label": "Button label"
+      },
+      {
+        "type": "url",
+        "id": "button_url",
+        "label": "Button link"
+      },
+      {
+        "type": "header",
+        "content": "Slider"
+      },
+      {
+        "type": "range",
+        "id": "per_row",
+        "label": "Products per row",
+        "default": 4,
+        "min": 1,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "type": "range",
+        "id": "per_row_mobile",
+        "label": "Products per row mobile",
+        "default": 2,
+        "min": 1,
+        "max": 5,
+        "step": 1
+      }
+    ],
+    "presets": [
+      {
+        "name": "Feat. Collection Slider"
+      }
+    ]
+  }
+{% endschema %}

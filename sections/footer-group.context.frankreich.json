@@ -1,0 +1,55 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "footer-group.json",
+  "context": {
+    "market": "frankreich"
+  },
+  "sections": {
+    "1710326457ccf4555b": {
+      "disabled": false,
+      "settings": {},
+      "blocks": {
+        "klaviyo_email_marketing_sms_form_embed_block_8weCmL": {
+          "disabled": false,
+          "settings": {
+            "formId": ""
+          }
+        },
+        "klaviyo_email_marketing_sms_form_embed_block_dYeJn9": {
+          "disabled": false,
+          "settings": {
+            "formId": ""
+          }
+        }
+      }
+    },
+    "footer": {
+      "settings": {},
+      "blocks": {
+        "b9314d4d-95e6-4b8b-8ccf-9296cbedd6bc": {
+          "settings": {
+            "text": "<p>Lindener Bergsfeld 9<br/>31188 Holle<br/>(Bürokomplex - Keine Produktausstellungen)</p><p><strong>SERVICE & BERATUNG<br/></strong><br/>E-Mail: <a href=\"mailto:service@shop.juskys.fr\" title=\"mailto:service@shop.juskys.fr\">service@shop.juskys.fr</a><br/><br/><a href=\"https://juskys.zendesk.com/hc/de/requests/new\" target=\"_blank\" title=\"https://juskys.zendesk.com/hc/de/requests/new\">Kontaktformular</a><br/><br/><a href=\"https://wa.me/4915906417635?text=WhatsApp+Service\" title=\"https://wa.me/4915906417635?text=WhatsApp+Service\">WhatsApp</a></p>"
+          }
+        },
+        "footer-1": {
+          "settings": {
+            "menu": "shop-service-fr"
+          }
+        },
+        "2ef60e8c-6dd0-4614-9d7c-cdc292ad9bae": {
+          "settings": {
+            "menu": "juskys-fr"
+          }
+        }
+      }
+    }
+  }
+}

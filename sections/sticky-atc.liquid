@@ -1,0 +1,353 @@
+{% if template contains 'product' %}
+  {%- assign swatch_file_extension = 'png' -%}
+  <div class="page-content {% if product.has_only_default_variant %}has_only_default_variant{% endif %}">
+    <div class="sticky_addtocart page-width">
+      <div class="sticky_items">
+        <div class="product_title">{{ product.title }}</div>
+        <div class="product_options">
+          {% for option in product.options_with_values %}
+            {% liquid
+              assign is_color = false
+              assign swatch_trigger = 'products.general.color_swatch_trigger' | t | downcase
+              assign downcased_option = option.name | downcase
+              if downcased_option contains swatch_trigger
+                assign is_color = true
+              elsif swatch_trigger == 'color' and downcased_option contains 'colour'
+                assign is_color = true
+              endif
+            %}
+            <div class="product_option_item">
+              <label class="product_option_selected text-label" data-selected="{{ option.selected_value }}">
+                <span data-slected-value>
+                  <span class="opt_wrp is_color__{{ is_color }}">
+                    {%- if is_color -%}
+                      {% liquid
+                        assign color_file_name = option.selected_value | handle | append: '.' | append: swatch_file_extension
+                        assign color_image = color_file_name | file_img_url: '50x50' | prepend: 'https:' | split: '?' | first
+                        assign color_swatch_fallback = option.selected_value | split: ' ' | last | handle
+                      %}
+                      <span
+                        class="color-swatch color-swatch--{{ option.selected_value | handle }}"
+                        style="background-color: {{ color_swatch_fallback }};{% if images[color_file_name] != blank %} background-image: url({{ color_image }});{% endif %}"
+                      ></span>
+                    {% endif %}
+                    <span class="opt_value">{{ option.selected_value }}</span>
+                  </span>
+                </span>
+                <span class="acc_icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                    <path d="M14.0205 6.85378L9.02053 11.8538C8.9741 11.9003 8.91895 11.9372 8.85825 11.9623C8.79755 11.9875 8.73249 12.0004 8.66678 12.0004C8.60107 12.0004 8.53601 11.9875 8.47531 11.9623C8.41461 11.9372 8.35947 11.9003 8.31303 11.8538L3.31303 6.85378C3.21921 6.75996 3.1665 6.63272 3.1665 6.50003C3.1665 6.36735 3.21921 6.2401 3.31303 6.14628C3.40685 6.05246 3.5341 5.99976 3.66678 5.99976C3.79946 5.99976 3.92671 6.05246 4.02053 6.14628L8.66678 10.7932L13.313 6.14628C13.3595 6.09983 13.4146 6.06298 13.4753 6.03784C13.536 6.0127 13.6011 5.99976 13.6668 5.99976C13.7325 5.99976 13.7975 6.0127 13.8582 6.03784C13.9189 6.06298 13.9741 6.09983 14.0205 6.14628C14.067 6.19274 14.1038 6.24789 14.129 6.30859C14.1541 6.36928 14.1671 6.43434 14.1671 6.50003C14.1671 6.56573 14.1541 6.63079 14.129 6.69148C14.1038 6.75218 14.067 6.80733 14.0205 6.85378Z" fill="#343330"></path>
+                  </svg>
+                </span>
+              </label>
+              <ul class="product_option_items" option="{{ option.position }}">
+                {% for value in option.values %}
+                  <li
+                    class="product_option_value {% if option.selected_value == value %}selected{% endif %}"
+                    value="{{ value }}"
+                  >
+                    <span class="opt_wrp is_color__{{ is_color }}">
+                      {% if is_color %}
+                        {% liquid
+                          assign color_file_name = value | handle | append: '.' | append: swatch_file_extension
+                          assign color_image = color_file_name | file_img_url: '50x50' | prepend: 'https:' | split: '?' | first
+                          assign color_swatch_fallback = value | split: ' ' | last | handle
+                        %}
+                        <span
+                          class="color-swatch color-swatch--{{ value | handle }}"
+                          style="background-color: {{ color_swatch_fallback }};{% if images[color_file_name] != blank %} background-image: url({{ color_image }});{% endif %}"
+                        ></span>
+                      {% endif %}
+                      <span class="opt_value">{{ value }}</span>
+                    </span>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="product_price"><div data-price-block-duplicate></div></div>
+        <div class="product_atc">
+          <button type="button" name="add" data-add-to-cart-sticky class="btn btn--full add-to-cart-dup">
+            <span data-add-to-cart-text-dup>Add to cart</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% style %}
+    .sticky-atc-main{
+      z-index:10;
+    }
+    .sticky-atc-main .page-content{
+      display:none;
+    }
+    .shopify-section:has(.sticky_addtocart) {
+      /* position: sticky; */
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      background: #FFF;
+      box-shadow: 0px 11px 81.6px 0px rgba(139, 148, 155, 0.48);
+      z-index: 10;
+      display: none;
+    }
+
+    .sticky-show .shopify-section:has(.sticky_addtocart){
+      display: block;
+    }
+    .shopify-section:has(.sticky_addtocart) .page-content {
+      padding: 10px 0;
+    }
+    .sticky_items {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .product_option_items {
+      overflow: auto;
+      border: 1px solid #7897B2;
+      margin: 0;
+      position: absolute;
+      bottom: 59px;
+      background: #fff;
+      list-style: none;
+      display: none;
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 100%;
+    }
+    .product_option_items.open {
+      display: block;
+    }
+    .product_option_item {
+      position: relative;
+    }
+    .product_option_item:after {
+      content: "";
+      border: 11px solid #7897B2;
+      width: 0;
+      height: 0;
+      position: absolute;
+      bottom: 38px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-right-color: transparent;
+      border-left-color: transparent;
+      border-bottom-color: transparent;
+      display: none;
+    }
+    .product_option_item:has(.open):after {
+      display: block;
+    }
+    .product_option_selected {
+      padding: 12px 16px;
+      border: 1px solid #7897B2;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin: 0;
+    }
+    .product_option_value {
+      padding: 8px 16px;
+      border-bottom: 1px solid #7897B2;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .product_option_value:last-child {
+      border-color: transparent;
+    }
+    .product_option_value.selected {
+      background: #7897b26e;
+    }
+    [data-price-block-duplicate] .product__policies {
+      display: none;
+    }
+    [data-price-block-duplicate] span.product__price.on-sale {
+      font-size: 14px;
+    }
+    [data-price-block-duplicate] .product__price--compare {
+      font-size: 19px;
+    }
+    [data-price-block-duplicate] .saving_value_text_pdp {
+      font-size: 14px;
+      width: fit-content;
+    }
+    [data-price-block-duplicate] .flex {
+      display: flex;
+      align-items: center;
+    }
+    .product_title {
+      font-size: 28px;
+      font-weight: 700;
+    }
+    .sticky_items .color-swatch {
+      width: 21px;
+      height: 21px;
+      margin: 0;
+    }
+    .opt_wrp {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    span.acc_icon {
+      line-height: 1;
+    }
+    .product_options {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .has_only_default_variant .product_options {display: none;}
+
+    .has_only_default_variant .sticky_items {justify-content: flex-start;gap:16px;}
+    .has_only_default_variant .product_price {margin-left: auto;}
+    {% if section.settings.main_add_to_cart_hide %}
+      .main-product-old--section .product-block:has(.add-to-cart) {
+        display: none !important;
+      }
+    {% endif %}
+
+    @media (max-width: 767px) {
+      .sticky_items {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .sticky_items > * {
+        width: 100%;
+      }
+      .product_options {order: 2;font-size: 14px;}
+      .product_title {
+        order: 0;
+        font-size: 16px;
+      }
+      .product_price {
+        order: 1;
+      }
+      .product_atc {
+        order: 4;
+      }
+    }
+  {% endstyle %}
+
+  <script>
+    const main_price = document.querySelector('.main-product-old--section .product-block--price');
+    const atcmain_btn = document.querySelector('.main-product-old--section .product-single__form [data-add-to-cart]');
+    const dpdb__price = document.querySelector('[data-price-block-duplicate]');
+    const dpbd_atc = document.querySelector('[data-add-to-cart-sticky]');
+
+    window.addEventListener('scroll', () => {
+      if (!atcmain_btn) return;
+      document.body.classList.toggle('sticky-show', atcmain_btn.getBoundingClientRect().top <= 0);
+    });
+
+    function renderHTML(type) {
+      setTimeout(() => {
+        if (type === 'price' && main_price) dpdb__price.innerHTML = document.querySelector('.main-product-old--section .product-block--price').innerHTML;
+        if (type === 'btn' && atcmain_btn) {
+          dpbd_atc.innerHTML = atcmain_btn.innerHTML;
+          if (!atcmain_btn.classList.contains('btn--loading')) {
+            dpbd_atc.classList.remove('btn--loading');
+          }
+          if(atcmain_btn.disabled) {
+            dpbd_atc.disabled = true;
+          } else {
+            dpbd_atc.disabled = false;
+          }
+        }
+      }, 100);
+    }
+
+
+      // new MutationObserver(() => renderHTML('price')).observe(main_price, {
+      //   childList: true,
+      //   subtree: true,
+      //   characterData: true
+      // });
+      setInterval(()=>{
+        let main_price_in = document.querySelector('.main-product-old--section .product-block--price');
+        if(main_price_in) {
+          renderHTML('price');
+        }
+      },100);
+
+    if (atcmain_btn) {
+      new MutationObserver((mutationsList) => {
+        for (let mutation of mutationsList) {
+          if (['characterData', 'childList'].includes(mutation.type) || 
+              (mutation.type === 'attributes' && mutation.attributeName === 'class')) {
+            renderHTML('btn');
+          }
+        }
+      }).observe(atcmain_btn, {
+        childList: true,
+        subtree: true,
+        characterData: true,
+        attributes: true,
+        attributeFilter: ['class']
+      });
+    }
+
+    document.addEventListener('click', (e) => {
+      const item = e.target.closest('.product_option_item');
+      if (item) {
+        item.querySelector('.product_option_items')?.classList.toggle('open');
+      }
+
+      const atc = e.target.closest('.product_atc');
+      if (atc) {
+        dpbd_atc.classList.add('btn--loading');
+        atcmain_btn?.click();
+      }
+
+      const optVal = e.target.closest('.product_option_value');
+      if (optVal) {
+        const val = optVal.getAttribute('value');
+        const wrapper = optVal.closest('.product_option_item');
+        const label = wrapper.querySelector('.product_option_selected');
+        const labelText = label.querySelector('[data-slected-value]');
+        if (label) {
+          labelText.innerHTML = optVal.innerHTML;
+          label.setAttribute('data-selected', val);
+          wrapper.querySelectorAll('.product_option_value.selected').forEach(el => el.classList.remove('selected'));
+          optVal.classList.add('selected');
+          wrapper.querySelector('.product_option_items').classList.remove('open');
+
+          const variantInput = document.querySelector(`[data-dynamic-variants-enabled] [data-variant-input][value="${val}"]`);
+          if (variantInput) variantInput.click();
+        }
+      }
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderHTML('price');
+      renderHTML('btn');
+    });
+  </script>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Sticky Add to cart",
+  "class": "sticky-atc-main",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Note:- This works only on the PDP. to hide main 'Add to Cart' use this section instead of removing it from the block, or the sticky functionality won't work."
+    },
+    {
+      "type": "checkbox",
+      "id": "main_add_to_cart_hide",
+      "label": "Hide Main ATC button"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sticky Add to cart"
+    }
+  ]
+}
+{% endschema %}

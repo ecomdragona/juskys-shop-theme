@@ -1,0 +1,734 @@
+{%- assign animation_row = 1 -%}
+{%- assign drawer_position = 'right' -%}
+{% if logo_alignment == 'center' %}
+  {%- assign drawer_position = 'left' -%}
+{% endif %}
+
+{% if section.settings.choose_drawer_side %}
+  {% assign drawer_position = section.settings.drawer_side %}
+{% endif %}
+
+<style>
+    .mobile-nav__sublist.bc-custom {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      transform: translateX(-100%);
+      z-index: 10;
+      top: 0;
+      background-color: var(--colorBody);
+      transition: transform .3s ease-in;
+    }
+    .mobile-nav__sublist.bc-custom.is-open {
+      transform: translateX(0%);
+    }
+
+    .mobile-nav .drawer__back {
+      width: fit-content;
+    }
+
+    .drawer__back-button {
+      color: inherit;
+      height: 100%;
+      padding-right:var(--drawer-gutter);
+      position: relative;
+      display: flex;
+      align-items: center;
+  }
+
+
+    .bc-custom .drawer__header {
+      height: 100%;
+    }
+    .bc-custom .mobile-nav__grandchildlist:before {
+      background: unset;
+    }
+
+    .mobile-nav .Icon--next {
+      overflow: visible;
+      fill: var(--colorDrawerText);
+    }
+
+    .mobile-nav .Icon--next path {
+      fill: var(--colorDrawerText);
+    }
+
+
+    /* .mobile-nav .bc-custom .Icon--next {
+      padding: 15px var(--drawer-gutter);
+    } */
+
+    .mobile-nav .mobile-nav__link--button {
+      display: flex;
+    }
+    .mobile-nav .mobile-nav__link.mobile-nav__link--highlight{
+      color: var(--compare-price-font-color);
+    }
+    .mobile-nav .mobile-nav__link.mobile-nav__link--highlight:hover{
+      color: var(--compare-price-font-color);
+    }
+    .mobile-nav__toggle .faux-button, .mobile-nav__toggle button {
+        height: 60%;
+        margin: 20% 0;
+        padding: 0 30px;
+    }
+
+    .mobile-nav__toggle button {
+      border-left: unset;
+    }
+
+    .mobile-nav .flex.row {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 15px;
+    }
+
+    .mobile-language__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+</style>
+
+{% assign meta_navigation = shop.metaobjects.mobile_navigation_images %}
+
+<div id="NavDrawer" class="drawer drawer--{{ drawer_position }}">
+  <div class="drawer__contents">
+    <div class="drawer__fixed-header">
+      <div class="drawer__header appear-animation appear-delay-{{ animation_row }}">
+        <div class="h2 drawer__title">
+          {% for block in section.blocks %}
+            {% if block.type == 'logo' %}
+              <img src="{{ block.settings.logo | image_url }}" class="drawer-menu-logo" alt="drawer-logo">
+            {% endif %}
+          {% endfor %}
+        </div>
+        <div class="drawer__close">
+          <button type="button" class="drawer__close-button js-drawer-close">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="25"
+              viewBox="0 0 24 25"
+              fill="none"
+              aria-hidden="true"
+              focusable="false"
+              role="presentation"
+              class="icon icon-close"
+            >
+              <g opacity="0.6">
+              <path d="M18.75 5.75L5.25 19.25" stroke="#505A6A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M18.75 19.25L5.25 5.75" stroke="#505A6A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+            </svg>
+            {% comment %}<svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 64 64"><title>icon-X</title><path d="m19 17.61 27.12 27.13m0-27.12L19 44.74"/></svg>{% endcomment %}
+            <span class="icon__fallback-text">{{ 'general.drawers.close_menu' | t }}</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="drawer__scrollable">
+      <ul
+        class="mobile-nav{% if settings.type_navigation_style == 'heading' %} mobile-nav--heading-style{% endif %}"
+        role="navigation"
+        aria-label="Primary"
+      >
+        {%- for link in main_menu.links -%}
+          {%- assign animation_row = animation_row | plus: 1 -%}
+          {%- assign child_list_handle = link.url | handleize | append: forloop.index -%}
+          {%- assign has_dropdown = false -%}
+          {%- if link.links != blank -%}
+            {%- assign has_dropdown = true -%}
+          {%- endif -%}
+          {%- liquid
+            assign is_highlight = false
+            if link.type == 'collection_link'
+              assign nav_highlight = shop.metafields.global.highlight_collection.value | downcase
+              assign link_title_downcase = link.title | downcase
+              if link_title_downcase == nav_highlight
+                assign is_highlight = true
+              endif
+            endif
+          -%}
+          <li class="mobile-nav__item appear-animation appear-delay-{{ animation_row }}">
+            {%- if has_dropdown -%}
+              <div class="mobile-nav__has-sublist">
+                {%- if link.url == '#' -%}
+                  <button
+                    type="button"
+                    bc-controls="Linklist-{{ child_list_handle }}"
+                    {% if link.active or link.child_active %}
+                      bc-open="true"
+                    {% endif %}
+                    class="mobile-nav__link--button mobile-nav__link--top-level collapsible-trigger collapsible--auto-height{% if link.active or link.child_active %} is-open{% endif %}"
+                  >
+                    <span
+                      class="mobile-nav__faux-link"
+                      {% if link.active %}
+                        data-active="true"
+                      {% endif %}
+                    >
+                      {%- assign handle_menu_name = link.title | handleize -%}
+                      {%- paginate meta_navigation.values by 150 -%}
+                        {%- for meta_menu in meta_navigation.values -%}
+                          {%- assign menu_name_handle = meta_menu.menu_name | handleize -%}
+                          {%- if handle_menu_name == menu_name_handle -%}
+                            {% comment %} <img src="{{ meta_menu.menu_icon | image_url }}" alt="icon-{{ link.title }}"/>  {% endcomment %}
+                            {%- comment -%} Start Customization by Better Sell Online GmbH (BSO) - render small icon image out of the original uploaded image {%- endcomment -%}
+                            {%- assign menu_icon = meta_menu.menu_icon -%}
+                            {%- assign alt_text = 'icon-' | append: link.title -%}
+                            {%- render 'image-element',
+                              img: menu_icon,
+                              loading: 'lazy',
+                              sizes: '100vw',
+                              widths: '100',
+                              alt: alt_text
+                            -%}
+                            {%- comment -%} End Customization by Better Sell Online GmbH (BSO) {%- endcomment -%}
+                            {%- break -%}
+                          {%- endif -%}
+                        {%- endfor -%}
+                      {%- endpaginate -%}
+                      {{ link.title }}
+                    </span>
+                    <div class="mobile-nav__toggle">
+                      <div class="faux-button">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="Icon Icon--next"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                        >
+                          <path d="M11.3538 8.35375L6.35378 13.3538C6.30733 13.4002 6.25218 13.4371 6.19148 13.4622C6.13079 13.4873 6.06573 13.5003 6.00003 13.5003C5.93434 13.5003 5.86928 13.4873 5.80859 13.4622C5.74789 13.4371 5.69274 13.4002 5.64628 13.3538C5.59983 13.3073 5.56298 13.2521 5.53784 13.1915C5.5127 13.1308 5.49976 13.0657 5.49976 13C5.49976 12.9343 5.5127 12.8693 5.53784 12.8086C5.56298 12.7479 5.59983 12.6927 5.64628 12.6463L10.2932 8L5.64628 3.35375C5.55246 3.25993 5.49976 3.13269 5.49976 3C5.49976 2.86732 5.55246 2.74007 5.64628 2.64625C5.7401 2.55243 5.86735 2.49973 6.00003 2.49973C6.13272 2.49973 6.25996 2.55243 6.35378 2.64625L11.3538 7.64625C11.4003 7.69269 11.4372 7.74783 11.4623 7.80853C11.4875 7.86923 11.5004 7.9343 11.5004 8C11.5004 8.06571 11.4875 8.13077 11.4623 8.19147C11.4372 8.25217 11.4003 8.30732 11.3538 8.35375Z" fill="#505A6A"/>
+                        </svg>
+                        {% comment %}
+                          <svg class="Icon Icon--next" width="9" height="16" viewBox="0 0 9 16" fill="none">
+                            <path d="M7.4 5.87904L2.811 1.29304C2.62059 1.12088 2.37127 1.02853 2.11466 1.03512C1.85805 1.04171 1.61379 1.14673 1.43247 1.32844C1.25115 1.51014 1.14665 1.75462 1.14061 2.01124C1.13456 2.26787 1.22744 2.517 1.4 2.70704L5.986 7.29304C6.17347 7.48057 6.27879 7.73487 6.27879 8.00004C6.27879 8.2652 6.17347 8.51951 5.986 8.70704L1.4 13.293C1.21249 13.4807 1.10721 13.7351 1.1073 14.0004C1.10739 14.2657 1.21286 14.52 1.4005 14.7075C1.58814 14.895 1.84259 15.0003 2.10786 15.0002C2.37313 15.0001 2.62749 14.8947 2.815 14.707L7.4 10.121C7.96241 9.55845 8.27836 8.79553 8.27836 8.00004C8.27836 7.20454 7.96241 6.44162 7.4 5.87904V5.87904Z" ></path>
+                          </svg>
+                        {% endcomment %}
+                      </div>
+                    </div>
+                  </button>
+                {%- else -%}
+                  <button
+                    type="button"
+                    bc-controls="Linklist-{{ child_list_handle }}"
+                    {% if link.active or link.child_active %}
+                      bc-open="true"
+                    {% endif %}
+                    class="mobile-nav__link--button mobile-nav__link--top-level collapsible-trigger collapsible--auto-height{% if link.active or link.child_active %} is-open{% endif %}"
+                  >
+                    <span
+                      class="mobile-nav__faux-link"
+                      {% if link.active %}
+                        data-active="true"
+                      {% endif %}
+                    >
+                      {%- assign handle_menu_name = link.title | handleize -%}
+                      {%- paginate meta_navigation.values by 150 -%}
+                        {%- for meta_menu in meta_navigation.values -%}
+                          {%- assign menu_name_handle = meta_menu.menu_name | handleize -%}
+                          {%- if handle_menu_name == menu_name_handle -%}
+                            {% comment %} <img src="{{ meta_menu.menu_icon | image_url }}" alt="icon-{{ link.title }}"/>  {% endcomment %}
+                            {%- comment -%} Start Customization by Better Sell Online GmbH (BSO) - render small icon image out of the original uploaded image {%- endcomment -%}
+                            {%- assign menu_icon = meta_menu.menu_icon -%}
+                            {%- assign alt_text = 'icon-' | append: link.title -%}
+                            {%- render 'image-element',
+                              img: menu_icon,
+                              loading: 'lazy',
+                              sizes: '100vw',
+                              widths: '100',
+                              alt: alt_text
+                            -%}
+                            {%- comment -%} End Customization by Better Sell Online GmbH (BSO) {%- endcomment -%}
+                            {%- break -%}
+                          {%- endif -%}
+                        {%- endfor -%}
+                      {%- endpaginate -%}
+                      {{ link.title }}
+                    </span>
+                    <div class="mobile-nav__toggle">
+                      <div class="faux-button">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="Icon Icon--next"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                        >
+                          <path d="M11.3538 8.35375L6.35378 13.3538C6.30733 13.4002 6.25218 13.4371 6.19148 13.4622C6.13079 13.4873 6.06573 13.5003 6.00003 13.5003C5.93434 13.5003 5.86928 13.4873 5.80859 13.4622C5.74789 13.4371 5.69274 13.4002 5.64628 13.3538C5.59983 13.3073 5.56298 13.2521 5.53784 13.1915C5.5127 13.1308 5.49976 13.0657 5.49976 13C5.49976 12.9343 5.5127 12.8693 5.53784 12.8086C5.56298 12.7479 5.59983 12.6927 5.64628 12.6463L10.2932 8L5.64628 3.35375C5.55246 3.25993 5.49976 3.13269 5.49976 3C5.49976 2.86732 5.55246 2.74007 5.64628 2.64625C5.7401 2.55243 5.86735 2.49973 6.00003 2.49973C6.13272 2.49973 6.25996 2.55243 6.35378 2.64625L11.3538 7.64625C11.4003 7.69269 11.4372 7.74783 11.4623 7.80853C11.4875 7.86923 11.5004 7.9343 11.5004 8C11.5004 8.06571 11.4875 8.13077 11.4623 8.19147C11.4372 8.25217 11.4003 8.30732 11.3538 8.35375Z" fill="#505A6A"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </button>
+                  {% comment %}
+                    <a href="{{ link.url }}"
+                      class="mobile-nav__link mobile-nav__link--top-level{% if is_highlight %} mobile-nav__link--highlight{% endif %}"
+                      id="Label-{{ child_list_handle }}"
+                      {% if link.active %}data-active="true"{% endif %}>
+                      {{ link.title }}
+                    </a>
+                    <div class="mobile-nav__toggle">
+                      <button type="button"
+                        bc-controls="Linklist-{{ child_list_handle }}"{% if link.active or link.child_active %} bc-open="true"{% endif %}
+                        bc-labelledby="Label-{{ child_list_handle }}"
+                        class="collapsible-trigger collapsible--auto-height{% if link.active or link.child_active %} is-open{% endif %}">
+                        <svg class="Icon Icon--next" width="9" height="16" viewBox="0 0 9 16" fill="none">
+                          <path d="M7.4 5.87904L2.811 1.29304C2.62059 1.12088 2.37127 1.02853 2.11466 1.03512C1.85805 1.04171 1.61379 1.14673 1.43247 1.32844C1.25115 1.51014 1.14665 1.75462 1.14061 2.01124C1.13456 2.26787 1.22744 2.517 1.4 2.70704L5.986 7.29304C6.17347 7.48057 6.27879 7.73487 6.27879 8.00004C6.27879 8.2652 6.17347 8.51951 5.986 8.70704L1.4 13.293C1.21249 13.4807 1.10721 13.7351 1.1073 14.0004C1.10739 14.2657 1.21286 14.52 1.4005 14.7075C1.58814 14.895 1.84259 15.0003 2.10786 15.0002C2.37313 15.0001 2.62749 14.8947 2.815 14.707L7.4 10.121C7.96241 9.55845 8.27836 8.79553 8.27836 8.00004C8.27836 7.20454 7.96241 6.44162 7.4 5.87904V5.87904Z" ></path>
+                        </svg>
+                      </button>
+                    </div>
+                  {% endcomment %}
+                {%- endif -%}
+              </div>
+            {%- else -%}
+              <a
+                href="{{ link.url }}"
+                class="4489 mobile-nav__link mobile-nav__link--top-level{% if is_highlight %} mobile-nav__link--highlight{% endif %}"
+                {% if link.active %}
+                  data-active="true"
+                {% endif %}
+              >
+                {%- assign handle_menu_name = link.title | handleize -%}
+                {%- paginate meta_navigation.values by 150 -%}
+                  {%- for meta_menu in meta_navigation.values -%}
+                    {%- assign menu_name_handle = meta_menu.menu_name | handleize -%}
+                    {%- if handle_menu_name == menu_name_handle -%}
+                      {% comment %} <img src="{{ meta_menu.menu_icon | image_url }}" alt="icon-{{ link.title }}"/>  {% endcomment %}
+                      {%- comment -%} Start Customization by Better Sell Online GmbH (BSO) - render small icon image out of the original uploaded image {%- endcomment -%}
+                      {%- assign menu_icon = meta_menu.menu_icon -%}
+                      {%- assign alt_text = 'icon-' | append: link.title -%}
+                      {%- render 'image-element',
+                        img: menu_icon,
+                        loading: 'lazy',
+                        sizes: '100vw',
+                        widths: '100',
+                        alt: alt_text
+                      -%}
+                      {%- comment -%} End Customization by Better Sell Online GmbH (BSO) {%- endcomment -%}
+                      {%- break -%}
+                    {%- endif -%}
+                  {%- endfor -%}
+                {%- endpaginate -%}
+                {{ link.title -}}
+              </a>
+            {%- endif -%}
+          </li>
+          {%- if has_dropdown -%}
+            <div
+              id="Linklist-{{ child_list_handle }}"
+              class="mobile-nav__sublist bc-custom{% if link.active or link.child_active %} is-open{% endif %}"
+            >
+              <div class="collapsible-content__inner">
+                <div class="drawer__fixed-header">
+                  <div class="drawer__header">
+                    <div class="flex row">
+                      <div class="drawer__back">
+                        <button type="button" class="drawer__back-button">
+                          <svg class="Icon Icon--back" width="9" height="16" viewBox="0 0 9 16" fill="none">
+                            <g>
+                              <path d="M7.44802 16C7.27123 16 7.10169 15.9297 6.97669 15.8047L1.52869 10.3567C0.903786 9.7316 0.552734 8.88391 0.552734 8.00003C0.552734 7.11615 0.903786 6.26845 1.52869 5.64336L6.97669 0.19536C7.10242 0.0739218 7.27083 0.0067255 7.44562 0.00824444C7.62042 0.00976339 7.78763 0.079876 7.91124 0.203481C8.03484 0.327087 8.10495 0.494295 8.10647 0.669093C8.10799 0.843891 8.04079 1.01229 7.91936 1.13803L2.47136 6.58603C2.09641 6.96108 1.88578 7.4697 1.88578 8.00003C1.88578 8.53035 2.09641 9.03897 2.47136 9.41403L7.91936 14.862C8.01256 14.9553 8.07603 15.074 8.10175 15.2033C8.12746 15.3326 8.11426 15.4667 8.06381 15.5885C8.01336 15.7103 7.92794 15.8144 7.81833 15.8876C7.70872 15.9609 7.57986 16 7.44802 16Z" fill="black"></path>
+                            </g>
+                          </svg>
+                          <span class="icon__fallback-text">Zurück</span>
+                        </button>
+                      </div>
+                      <div class="mobile-nav__link--top-level">{{ link.title }}</div>
+                    </div>
+                    <div class="drawer__close">
+                      <button type="button" class="drawer__close-button">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="25"
+                          viewBox="0 0 24 25"
+                          fill="none"
+                          aria-hidden="true"
+                          focusable="false"
+                          role="presentation"
+                          class="icon icon-close"
+                        >
+                          <g opacity="0.6">
+                          <path d="M18.75 5.75L5.25 19.25" stroke="#505A6A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M18.75 19.25L5.25 5.75" stroke="#505A6A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </g>
+                        </svg>
+                        {% comment %}<svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 64 64"><title>icon-X</title><path d="m19 17.61 27.12 27.13m0-27.12L19 44.74"/></svg>{% endcomment %}
+                        <span class="icon__fallback-text">{{ 'general.drawers.close_menu' | t }}</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <ul class="mobile-nav__sublist">
+                  <li class="mobile-nav__item drawer_main_item">
+                    <div class="mobile-nav__child-item">
+                      <a href="{{ link.url }}" class="mobile-nav__link sub_menu_first">
+                        {{- 'general.drawers.submenu_first_menu' | t }}
+                        {{ link.title -}}
+                      </a>
+                    </div>
+                  </li>
+                  {%- for childlink in link.links -%}
+                    {%- assign has_sub_dropdown = false -%}
+                    {%- assign grand_child_list_handle = childlink.url | handleize | append: forloop.index -%}
+                    {%- if childlink.links != blank -%}
+                      {%- assign has_sub_dropdown = true -%}
+                    {%- endif -%}
+
+                    <li class="mobile-nav__item">
+                      <div class="mobile-nav__child-item">
+                        {%- if childlink.url == '#' and has_sub_dropdown -%}
+                          <button
+                            type="button"
+                            bc-controls="Sublinklist-{{ child_list_handle }}-{{ grand_child_list_handle }}"
+                            {% if childlink.active or childlink.child_active %}
+                              bc-open="true"
+                            {% endif %}
+                            class="mobile-nav__link--button collapsible-trigger{% if childlink.active or childlink.child_active %} is-open{% endif %}"
+                          >
+                            <span
+                              class="mobile-nav__faux-link"
+                              {% if childlink.active %}
+                                data-active="true"
+                              {% endif %}
+                            >
+                              {{- childlink.title | escape -}}
+                            </span>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="Icon Icon--next"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 16 16"
+                              fill="none"
+                            >
+                              <path d="M11.3538 8.35375L6.35378 13.3538C6.30733 13.4002 6.25218 13.4371 6.19148 13.4622C6.13079 13.4873 6.06573 13.5003 6.00003 13.5003C5.93434 13.5003 5.86928 13.4873 5.80859 13.4622C5.74789 13.4371 5.69274 13.4002 5.64628 13.3538C5.59983 13.3073 5.56298 13.2521 5.53784 13.1915C5.5127 13.1308 5.49976 13.0657 5.49976 13C5.49976 12.9343 5.5127 12.8693 5.53784 12.8086C5.56298 12.7479 5.59983 12.6927 5.64628 12.6463L10.2932 8L5.64628 3.35375C5.55246 3.25993 5.49976 3.13269 5.49976 3C5.49976 2.86732 5.55246 2.74007 5.64628 2.64625C5.7401 2.55243 5.86735 2.49973 6.00003 2.49973C6.13272 2.49973 6.25996 2.55243 6.35378 2.64625L11.3538 7.64625C11.4003 7.69269 11.4372 7.74783 11.4623 7.80853C11.4875 7.86923 11.5004 7.9343 11.5004 8C11.5004 8.06571 11.4875 8.13077 11.4623 8.19147C11.4372 8.25217 11.4003 8.30732 11.3538 8.35375Z" fill="#505A6A"/>
+                            </svg>
+                            {% comment %}
+                              <svg class="Icon Icon--next" width="9" height="16" viewBox="0 0 9 16" fill="none">
+                                <path d="M7.4 5.87904L2.811 1.29304C2.62059 1.12088 2.37127 1.02853 2.11466 1.03512C1.85805 1.04171 1.61379 1.14673 1.43247 1.32844C1.25115 1.51014 1.14665 1.75462 1.14061 2.01124C1.13456 2.26787 1.22744 2.517 1.4 2.70704L5.986 7.29304C6.17347 7.48057 6.27879 7.73487 6.27879 8.00004C6.27879 8.2652 6.17347 8.51951 5.986 8.70704L1.4 13.293C1.21249 13.4807 1.10721 13.7351 1.1073 14.0004C1.10739 14.2657 1.21286 14.52 1.4005 14.7075C1.58814 14.895 1.84259 15.0003 2.10786 15.0002C2.37313 15.0001 2.62749 14.8947 2.815 14.707L7.4 10.121C7.96241 9.55845 8.27836 8.79553 8.27836 8.00004C8.27836 7.20454 7.96241 6.44162 7.4 5.87904V5.87904Z" ></path>
+                              </svg>
+                            {% endcomment %}
+                          </button>
+                        {%- elsif childlink.url != '#' and has_sub_dropdown -%}
+                          <button
+                            type="button"
+                            bc-controls="Sublinklist-{{ child_list_handle }}-{{ grand_child_list_handle }}"
+                            {% if childlink.active or childlink.child_active %}
+                              bc-open="true"
+                            {% endif %}
+                            class="mobile-nav__link--button collapsible-trigger{% if childlink.active or childlink.child_active %} is-open{% endif %}"
+                          >
+                            <span
+                              class="mobile-nav__faux-link"
+                              {% if childlink.active %}
+                                data-active="true"
+                              {% endif %}
+                            >
+                              {%- assign handle_menu_name = childlink.title | handleize -%}
+                              {%- paginate meta_navigation.values by 150 -%}
+                                {%- for meta_menu in meta_navigation.values -%}
+                                  {%- assign menu_name_handle = meta_menu.menu_name | handleize -%}
+                                  {%- if handle_menu_name == menu_name_handle -%}
+                                    {% comment %} <img src="{{ meta_menu.menu_icon | image_url }}" alt="icon-{{ childlink.title }}"/> {% endcomment %}
+                                    {%- comment -%} Start Customization by Better Sell Online GmbH (BSO) - render small icon image out of the original uploaded image {%- endcomment -%}
+                                    {%- assign menu_icon = meta_menu.menu_icon -%}
+                                    {%- assign alt_text = 'icon-' | append: link.title -%}
+                                    {%- render 'image-element',
+                                      img: menu_icon,
+                                      loading: 'lazy',
+                                      sizes: '100vw',
+                                      widths: '100',
+                                      alt: alt_text
+                                    -%}
+                                    {%- comment -%} End Customization by Better Sell Online GmbH (BSO) {%- endcomment -%}
+                                    {%- break -%}
+                                  {%- endif -%}
+                                {%- endfor -%}
+                              {%- endpaginate -%}
+                              {{ childlink.title | escape }}
+                            </span>
+                            <div class="mobile-nav__toggle">
+                              <div class="faux-button">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="Icon Icon--next"
+                                  width="16"
+                                  height="16"
+                                  viewBox="0 0 16 16"
+                                  fill="none"
+                                >
+                                  <path d="M11.3538 8.35375L6.35378 13.3538C6.30733 13.4002 6.25218 13.4371 6.19148 13.4622C6.13079 13.4873 6.06573 13.5003 6.00003 13.5003C5.93434 13.5003 5.86928 13.4873 5.80859 13.4622C5.74789 13.4371 5.69274 13.4002 5.64628 13.3538C5.59983 13.3073 5.56298 13.2521 5.53784 13.1915C5.5127 13.1308 5.49976 13.0657 5.49976 13C5.49976 12.9343 5.5127 12.8693 5.53784 12.8086C5.56298 12.7479 5.59983 12.6927 5.64628 12.6463L10.2932 8L5.64628 3.35375C5.55246 3.25993 5.49976 3.13269 5.49976 3C5.49976 2.86732 5.55246 2.74007 5.64628 2.64625C5.7401 2.55243 5.86735 2.49973 6.00003 2.49973C6.13272 2.49973 6.25996 2.55243 6.35378 2.64625L11.3538 7.64625C11.4003 7.69269 11.4372 7.74783 11.4623 7.80853C11.4875 7.86923 11.5004 7.9343 11.5004 8C11.5004 8.06571 11.4875 8.13077 11.4623 8.19147C11.4372 8.25217 11.4003 8.30732 11.3538 8.35375Z" fill="#505A6A"/>
+                                </svg>
+                              </div>
+                            </div>
+                          </button>
+                          {% comment %}
+                            <button type="button"
+                              bc-controls="Sublinklist-{{ child_list_handle }}-{{ grand_child_list_handle }}"
+                              bc-labelledby="Sublabel-{{ grand_child_list_handle }}"
+                              class="collapsible-trigger{% if childlink.child_active %} is-open{% endif %}">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="Icon Icon--next" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M11.3538 8.35375L6.35378 13.3538C6.30733 13.4002 6.25218 13.4371 6.19148 13.4622C6.13079 13.4873 6.06573 13.5003 6.00003 13.5003C5.93434 13.5003 5.86928 13.4873 5.80859 13.4622C5.74789 13.4371 5.69274 13.4002 5.64628 13.3538C5.59983 13.3073 5.56298 13.2521 5.53784 13.1915C5.5127 13.1308 5.49976 13.0657 5.49976 13C5.49976 12.9343 5.5127 12.8693 5.53784 12.8086C5.56298 12.7479 5.59983 12.6927 5.64628 12.6463L10.2932 8L5.64628 3.35375C5.55246 3.25993 5.49976 3.13269 5.49976 3C5.49976 2.86732 5.55246 2.74007 5.64628 2.64625C5.7401 2.55243 5.86735 2.49973 6.00003 2.49973C6.13272 2.49973 6.25996 2.55243 6.35378 2.64625L11.3538 7.64625C11.4003 7.69269 11.4372 7.74783 11.4623 7.80853C11.4875 7.86923 11.5004 7.9343 11.5004 8C11.5004 8.06571 11.4875 8.13077 11.4623 8.19147C11.4372 8.25217 11.4003 8.30732 11.3538 8.35375Z" fill="#505A6A"/>
+                              </svg>
+                            </button>
+                          {% endcomment %}
+                        {%- else -%}
+                          <a
+                            href="{{ childlink.url }}"
+                            class="mobile-nav__link"
+                            id="Sublabel-{{ grand_child_list_handle }}"
+                            {% if childlink.active %}
+                              data-active="true"
+                            {% endif %}
+                          >
+                            {%- assign handle_menu_name = childlink.title | handleize -%}
+                            {%- paginate meta_navigation.values by 150 -%}
+                              {%- for meta_menu in meta_navigation.values -%}
+                                {%- assign menu_name_handle = meta_menu.menu_name | handleize -%}
+                                {%- if handle_menu_name == menu_name_handle -%}
+                                  {% comment %} <img src="{{ meta_menu.menu_icon | image_url }}" alt="icon-{{ childlink.title }}"/> {% endcomment %}
+                                  {%- comment -%} Start Customization by Better Sell Online GmbH (BSO) - render small icon image out of the original uploaded image {%- endcomment -%}
+                                  {%- assign menu_icon = meta_menu.menu_icon -%}
+                                  {%- assign alt_text = 'icon-' | append: link.title -%}
+                                  {%- render 'image-element',
+                                    img: menu_icon,
+                                    loading: 'lazy',
+                                    sizes: '100vw',
+                                    widths: '100',
+                                    alt: alt_text
+                                  -%}
+                                  {%- comment -%} End Customization by Better Sell Online GmbH (BSO) {%- endcomment -%}
+                                  {%- break -%}
+                                {%- endif -%}
+                              {%- endfor -%}
+                            {%- endpaginate -%}
+                            {{ childlink.title | escape }}
+                          </a>
+                        {%- endif -%}
+                      </div>
+                    </li>
+                    {%- if has_sub_dropdown -%}
+                      <div
+                        id="Sublinklist-{{ child_list_handle }}-{{ grand_child_list_handle }}"
+                        aria-labelledby="Sublabel-{{ grand_child_list_handle }}"
+                        class="mobile-nav__sublist bc-custom{% if childlink.child_active %} is-open{% endif %}"
+                        {% if childlink.child_active %}
+                          style="height: auto;"
+                        {% endif %}
+                      >
+                        <div class="collapsible-content__inner">
+                          <div class="drawer__fixed-header">
+                            <div class="drawer__header">
+                              <div class="flex row">
+                                <div class="drawer__back">
+                                  <button type="button" class="drawer__back-button">
+                                    <svg class="Icon Icon--back" width="9" height="16" viewBox="0 0 9 16" fill="none">
+                                      <g>
+                                        <path d="M7.44802 16C7.27123 16 7.10169 15.9297 6.97669 15.8047L1.52869 10.3567C0.903786 9.7316 0.552734 8.88391 0.552734 8.00003C0.552734 7.11615 0.903786 6.26845 1.52869 5.64336L6.97669 0.19536C7.10242 0.0739218 7.27083 0.0067255 7.44562 0.00824444C7.62042 0.00976339 7.78763 0.079876 7.91124 0.203481C8.03484 0.327087 8.10495 0.494295 8.10647 0.669093C8.10799 0.843891 8.04079 1.01229 7.91936 1.13803L2.47136 6.58603C2.09641 6.96108 1.88578 7.4697 1.88578 8.00003C1.88578 8.53035 2.09641 9.03897 2.47136 9.41403L7.91936 14.862C8.01256 14.9553 8.07603 15.074 8.10175 15.2033C8.12746 15.3326 8.11426 15.4667 8.06381 15.5885C8.01336 15.7103 7.92794 15.8144 7.81833 15.8876C7.70872 15.9609 7.57986 16 7.44802 16Z" fill="black"></path>
+                                      </g>
+                                    </svg>
+                                    <span class="icon__fallback-text">Zurück</span>
+                                  </button>
+                                </div>
+                                <div class="mobile-nav__link--top-level">{{ childlink.title }}</div>
+                              </div>
+                              <div class="drawer__close">
+                                <button type="button" class="drawer__close-button">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="25"
+                                    viewBox="0 0 24 25"
+                                    fill="none"
+                                    aria-hidden="true"
+                                    focusable="false"
+                                    role="presentation"
+                                    class="icon icon-close"
+                                  >
+                                    <g opacity="0.6">
+                                    <path d="M18.75 5.75L5.25 19.25" stroke="#505A6A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M18.75 19.25L5.25 5.75" stroke="#505A6A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </g>
+                                  </svg>
+                                  {% comment %}<svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 64 64"><title>icon-X</title><path d="m19 17.61 27.12 27.13m0-27.12L19 44.74"/></svg>{% endcomment %}
+                                  <span class="icon__fallback-text">{{ 'general.drawers.close_menu' | t }}</span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <ul class="mobile-nav__sublist">
+                            <li class="mobile-nav__item drawer_main_item">
+                              <a href="{{ childlink.url }}" class="mobile-nav__link sub_menu_first">
+                                {{- 'general.drawers.submenu_first_menu' | t }}
+                                {{ childlink.title -}}
+                              </a>
+                            </li>
+                            {%- for grandchildlink in childlink.links -%}
+                              <li class="mobile-nav__item">
+                                <a
+                                  href="{{ grandchildlink.url }}"
+                                  class="mobile-nav__link"
+                                  {% if grandchildlink.active %}
+                                    data-active="true"
+                                  {% endif %}
+                                >
+                                  {%- assign handle_menu_name = grandchildlink.title | handleize -%}
+                                  {%- paginate meta_navigation.values by 150 -%}
+                                    {%- for meta_menu in meta_navigation.values -%}
+                                      {%- assign menu_name_handle = meta_menu.menu_name | handleize -%}
+                                      {%- if handle_menu_name == menu_name_handle -%}
+                                        {% comment %} <img src="{{ meta_menu.menu_icon | image_url }}" alt="icon-{{ grandchildlink.title }}"/> {% endcomment %}
+                                        {%- comment -%} Start Customization by Better Sell Online GmbH (BSO) - render small icon image out of the original uploaded image {%- endcomment -%}
+                                        {%- assign menu_icon = meta_menu.menu_icon -%}
+                                        {%- assign alt_text = 'icon-' | append: link.title -%}
+                                        {%- render 'image-element',
+                                          img: menu_icon,
+                                          loading: 'lazy',
+                                          sizes: '100vw',
+                                          widths: '100',
+                                          alt: alt_text
+                                        -%}
+                                        {%- comment -%} End Customization by Better Sell Online GmbH (BSO) {%- endcomment -%}
+                                        {%- break -%}
+                                      {%- endif -%}
+                                    {%- endfor -%}
+                                  {%- endpaginate -%}
+                                  {{ grandchildlink.title }}
+                                </a>
+                              </li>
+                            {%- endfor -%}
+                          </ul>
+                        </div>
+                      </div>
+                    {%- endif -%}
+                  {%- endfor -%}
+                </ul>
+              </div>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+
+        {%- assign have_secondary_list = false -%}
+        {%- if section.settings.toolbar_menu != blank or shop.customer_accounts_enabled -%}
+          {%- assign have_secondary_list = true -%}
+        {%- endif -%}
+
+        {% comment %}
+          {%- if have_secondary_list -%}
+            <li class="mobile-nav__item mobile-nav__item--secondary">
+              <div class="grid">
+                {%- if section.settings.toolbar_menu != blank -%}
+                  {%- for link in toolbar_menu.links -%}
+                    {%- assign animation_row = animation_row | plus: 1 -%}
+                    <div class="grid__item one-half appear-animation appear-delay-{{ animation_row }} medium-up--hide">
+                      <a href="{{ link.url }}" class="mobile-nav__link">{{ link.title }}</a>
+                    </div>
+                  {%- endfor -%}
+                {%- endif -%}
+
+                {%- if shop.customer_accounts_enabled -%}
+                  {%- assign animation_row = animation_row | plus: 1 -%}
+                  <div class="grid__item one-half appear-animation appear-delay-{{ animation_row }}">
+                    <a href="{{ routes.account_url }}" class="mobile-nav__link">
+                      {%- if customer -%}
+                        {{ 'layout.customer.account' | t }}
+                      {%- else -%}
+                        {{ 'layout.customer.log_in' | t }}
+                      {%- endif -%}
+                    </a>
+                  </div>
+                {%- endif -%}
+              </div>
+            </li>
+          {%- endif -%}
+        {% endcomment %}
+      </ul>
+
+      {%- assign animation_row = animation_row | plus: 1 -%}
+      <div class="mobile-language__container">
+        <div class="mobile-nav__item mobile-nav__item--secondary">
+          <div class="grid">
+            {%- if section.settings.toolbar_menu != blank -%}
+              {%- for link in toolbar_menu.links -%}
+                {%- assign animation_row = animation_row | plus: 1 -%}
+                <div class="grid__item one-half appear-animation appear-delay-{{ animation_row }} medium-up--hide">
+                  <a href="{{ link.url }}" class="mobile-nav__link">{{ link.title }}</a>
+                </div>
+              {%- endfor -%}
+            {%- endif -%}
+
+            {%- if shop.customer_accounts_enabled -%}
+              {%- assign animation_row = animation_row | plus: 1 -%}
+              <div class="grid__item one-half appear-animation appear-delay-{{ animation_row }}" style="width: 100%;">
+                <a href="{{ routes.account_url }}" class="mobile-nav__link">
+                  <svg
+                    id="Layer_1"
+                    data-name="Layer 1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 386.87 353.91"
+                    class="icon icon-user"
+                    style="width: 24px; "
+                  >
+                    <path style="color: #000; stroke-width: 2;fill: #000;" d="m193.43,186.19c-39.52,0-71.67-32.15-71.67-71.67s32.15-71.67,71.67-71.67,71.67,32.15,71.67,71.67-32.15,71.67-71.67,71.67Zm0-133c-33.82,0-61.33,27.51-61.33,61.33s27.51,61.33,61.33,61.33,61.33-27.51,61.33-61.33-27.51-61.33-61.33-61.33Z"></path>
+                    <path style="color: #000; stroke-width: 12;" d="m84.67,299.89h217.52s-7.91-95.9-108.76-95.9-108.76,95.9-108.76,95.9Z"></path>
+                  </svg>
+                  {%- if customer -%}
+                    {{ 'layout.customer.account' | t }}
+                  {%- else -%}
+                    {{ 'layout.customer.log_in' | t }}
+                  {%- endif -%}
+                </a>
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+        <span class="ly-custom-1000"></span>
+      </div>
+      {% comment %} {% render 'drawer-social-icons', animation_row: animation_row %} {% endcomment %}
+    </div>
+  </div>
+</div>
+<script>
+  const bc_controls = document.querySelectorAll('button[bc-controls]');
+  console.log('bc_controls:', bc_controls);
+  if (!!bc_controls) {
+    bc_controls.forEach((control) => {
+      control.addEventListener('click', function () {
+        let collapsible_element = document.querySelector('#' + control.getAttribute('bc-controls'));
+        if (!!collapsible_element) {
+          collapsible_element.classList.add('is-open');
+        }
+      });
+    });
+  }
+
+  const drawer_backs = document.querySelectorAll('button.drawer__back-button');
+  if (!!drawer_backs) {
+    drawer_backs.forEach((button) => {
+      button.addEventListener('click', function () {
+        button.closest('.bc-custom').classList.remove('is-open');
+      });
+    });
+  }
+
+  const drawer_close = document.querySelectorAll('button.drawer__close-button');
+  if (!!drawer_close) {
+    drawer_close.forEach((button) => {
+      button.addEventListener('click', function () {
+        let nav_drawer = document.querySelector('button.js-drawer-close');
+        if (!!nav_drawer) nav_drawer.click();
+        document.querySelectorAll('.mobile-nav .is-open').forEach((elem) => {
+          elem.classList.remove('is-open');
+        });
+      });
+    });
+  }
+</script>

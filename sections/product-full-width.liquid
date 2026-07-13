@@ -1,0 +1,333 @@
+<style>
+  #shopify-section-{{section.id}} .tab.label.collapsible-trigger .spacing {
+    display: flex;
+  }
+
+  #shopify-section-{{section.id }} .rte p {
+    display: inline-block;
+  }
+</style>
+{%- if section.blocks.size > 0 -%}
+  <div class="page-width{% if section.settings.max_width %} page-width--narrow{% endif %} pro_info_main">
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+        {%- when '@app' -%}
+          {% render block %}
+        {%- when 'separator' -%}
+          <div class="product-block" {{ block.shopify_attributes }}><hr></div>
+        {%- when 'text' -%}
+          <div {{ block.shopify_attributes }} class="product-block">
+            {{ block.settings.text }}
+          </div>
+        {%- when 'tab' -%}
+          <div class="product-block product-block--tab" {{ block.shopify_attributes }}>
+            {% assign tab_id = block.id | append: product.id %}
+            {%- assign icon_plus = 'plus-minus' -%}
+            {% capture tab_content %}
+              {{ block.settings.content }}
+              {{ block.settings.page.content }}
+            {% endcapture %}
+
+            {% capture trustami_review %}
+              <div class="trustami_product_mini_1"></div>
+            {% endcapture %}
+
+            {%- render 'tab',
+              id: tab_id,
+              title: block.settings.title,
+              content: tab_content,
+              icon: icon_plus,
+              additional_content: trustami_review
+            -%}
+          </div>
+        {%- when 'custom_tab' -%}
+          <div class="product-block product-block--tab custom_tab" {{ block.shopify_attributes }}>
+            {% assign tab_id = block.id | append: product.id %}
+            {%- assign icon_plus = 'plus-minus' -%}
+            {%- render 'customTab',
+              id: tab_id,
+              title: block.settings.title,
+              block: block,
+              icon: icon_plus,
+              product: product
+            -%}
+          </div>
+        {%- when 'contact' -%}
+          <div class="product-block product-block--tab" {{ block.shopify_attributes }}>
+            {% assign tab_id = block.id | append: product.id %}
+            {%- assign icon_plus = 'plus-minus' -%}
+            {%- render 'tab-contact', id: tab_id, block: block, icon: icon_plus -%}
+          </div>
+        {%- when 'description' -%}
+          <div
+            class="product-block{% if block.settings.is_tab %} product-block--tab{% endif %}"
+            {{ block.shopify_attributes }}
+          >
+            {%- assign id = block.id | append: product.id -%}
+            {%- assign icon_plus = 'plus-minus' -%}
+            {%- render 'product-description',
+              id: id,
+              product: product,
+              is_tab: block.settings.is_tab,
+              icon: icon_plus
+            -%}
+          </div>
+        {%- when 'share' -%}
+          <div class="product-block" {{ block.shopify_attributes }}>
+            {%- render 'social-sharing',
+              share_title: product.title,
+              share_permalink: product.url,
+              share_image: product
+            -%}
+          </div>
+        {%- when 'custom' -%}
+          <div class="product-block" {{ block.shopify_attributes }}>
+            {{ block.settings.code }}
+          </div>
+      {%- endcase -%}
+    {%- endfor -%}
+  </div>
+{%- endif -%}
+
+<style>
+  .shopify-section.product-full-width .collapsible-trigger-btn {
+    text-align: {{section.settings.text_align}};
+    text-transform: {{section.settings.letter_size}};
+  }
+  .shopify-section.product-full-width .product-block.product-block--tab {
+    background: {{section.settings.background_color}};
+  }
+  .shopify-section.product-full-width .show {
+    display:block
+  }
+  .shopify-section.product-full-width .hide {
+    visibility: hidden;
+  }
+  .shopify-section.product-full-width .spacing {
+    margin: 0 14px;
+  }
+  .shopify-section.product-full-width .collapsible-trigger__icon {
+    right: 15px;
+  }
+  .shopify-section.product-full-width .collapsible-trigger-btn--borders,
+  .shopify-section.product-full-width .collapsibles-wrapper--border-bottom,
+  .shopify-section.product-full-width .collapsible-content__inner {
+    border: none;
+    margin-top: 18px;
+  }
+
+  .shopify-section.product-full-width .product-block.product-block--tab:not(:last-child) .collapsible-trigger-btn::before {
+    content: "";
+    position: absolute;
+    left: 26px;
+    bottom: -1px;
+    height: 1px;
+    width: 94%;
+    border-bottom: 1px solid {{section.settings.border_color}};
+  }
+  @media only screen and (max-width: 730px) {
+    .shopify-section.product-full-width .product-block.product-block--tab:not(:last-child) .collapsible-trigger-btn::before {
+      left: 23px;
+      width: 89%;
+    }
+  }
+</style>
+
+<script>
+  function changeIcon(e) {
+    var iconPlus = e.querySelector('.plus.collapsible-trigger__icon.collapsible-trigger__icon--open');
+    var iconMinus = e.querySelector('.minus.collapsible-trigger__icon.collapsible-trigger__icon--open');
+
+    if (iconPlus.classList.contains('show')) {
+      iconPlus.classList.add('hide');
+      iconMinus.classList.remove('hide');
+      iconPlus.classList.remove('show');
+    } else if (iconPlus.classList.contains('hide')) {
+      iconPlus.classList.remove('hide');
+      iconPlus.classList.add('show');
+      iconMinus.classList.add('hide');
+      iconMinus.classList.remove('show');
+    }
+  }
+</script>
+
+{% schema %}
+{
+  "name": "t:sections.product-full-width.name",
+  "class": "product-full-width",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:sections.product-full-width.settings.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "max_width",
+      "label": "t:sections.product-full-width.settings.max_width.label",
+      "info": "t:sections.product-full-width.settings.max_width.info",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "letter_size",
+      "label": "t:sections.product-full-width.settings.letter_size.label",
+      "default": "uppercase",
+      "options": [
+        {
+          "value": "uppercase",
+          "label": "t:sections.product-full-width.settings.letter_size.options.uppercase.label"
+        },
+        {
+          "value": "capitalize",
+          "label": "t:sections.product-full-width.settings.letter_size.options.capitalize.label"
+        },
+        {
+          "value": "lowercase",
+          "label": "t:sections.product-full-width.settings.letter_size.options.lowercase.label"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "t:sections.product-full-width.settings.text_align.label",
+      "default": "center",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.product-full-width.settings.text_align.options.left.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.product-full-width.settings.text_align.options.center.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.product-full-width.settings.text_align.options.right.label"
+        }
+      ]
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:sections.product-full-width.settings.background_color.label",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "t:settings_schema.colors.settings.border_color.label",
+      "default": "#000000"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    },
+    {
+      "type": "description",
+      "name": "t:sections.product-full-width.blocks.description.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "is_tab",
+          "label": "t:sections.product-full-width.blocks.description.settings.is_tab.label"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "t:sections.product-full-width.blocks.text.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "default": "Text block",
+          "label": "t:sections.product-full-width.blocks.text.settings.text.label"
+        }
+      ]
+    },
+    {
+      "type": "tab",
+      "name": "t:sections.product-full-width.blocks.tab.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.product-full-width.blocks.tab.settings.title.label",
+          "default": "Shipping information"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "t:sections.product-full-width.blocks.tab.settings.content.label",
+          "default": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.</p><p>Ex: Shipping and return policies, size guides, and other common questions.</p>"
+        },
+        {
+          "type": "page",
+          "id": "page",
+          "label": "t:sections.product-full-width.blocks.tab.settings.page.label"
+        }
+      ]
+    },
+    {
+      "type": "custom_tab",
+      "name": "Custom Tabs",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.product-full-width.blocks.tab.settings.title.label",
+          "default": "Shipping information"
+        },
+        {
+          "type": "text",
+          "id": "variant_metafield",
+          "label": "Variant Metafield",
+          "info": "Please, insert it as namespace.key",
+          "default": "product.details"
+        }
+      ]
+    },
+    {
+      "type": "contact",
+      "name": "t:sections.product-full-width.blocks.contact_form.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "t:sections.product-full-width.blocks.contact_form.settings.content"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.product-full-width.blocks.contact_form.settings.title.label",
+          "default": "Ask a question"
+        },
+        {
+          "type": "checkbox",
+          "id": "phone",
+          "label": "t:sections.product-full-width.blocks.contact_form.settings.phone.label"
+        }
+      ]
+    },
+    {
+      "type": "custom",
+      "name": "t:sections.product-full-width.blocks.html.name",
+      "settings": [
+        {
+          "type": "liquid",
+          "id": "code",
+          "label": "t:sections.product-full-width.blocks.html.settings.code.label",
+          "default": "<h4>Custom code block</h4><p>Use this advanced section to add custom HTML, app scripts, or liquid.</p>",
+          "info": "t:sections.product-full-width.blocks.html.settings.code.info"
+        }
+      ]
+    }
+  ],
+  "disabled_on": {
+    "groups": ["footer", "header", "custom.popups"]
+  }
+}
+{% endschema %}

@@ -1,0 +1,641 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_HeLrnV": {
+      "type": "slideshow",
+      "blocks": {
+        "image_Dpbcz3": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "subheading_desktop_font_size": 18,
+            "top_subheading_m": "",
+            "subheading_mobile_font_size": 17,
+            "title": "",
+            "title_size": 80,
+            "title_m": "",
+            "title_size_m": 20,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "text_align": "vertical-center horizontal-center",
+            "text_align_m": "m-vertical-center m-horizontal-center",
+            "image": "shopify://shop_images/shopify_desktop_2880x1620_986e9383-7e68-475d-bba2-c31bb9a1bd09.jpg",
+            "image_mobile": "shopify://shop_images/shopify_mobil_1334x666_f382dbba-8bec-431c-948d-15959bb1d418.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 0,
+            "color_subheading": "#ffffff",
+            "color_heading": "#ffffff",
+            "color_text": "#ffffff",
+            "color_accent_1": "rgba(0,0,0,0)",
+            "color_accent_2": "rgba(0,0,0,0)",
+            "color_btn_text_check": true,
+            "color_accent_t_1": "#000000",
+            "color_accent_t_2": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "image_Dpbcz3"
+      ],
+      "settings": {
+        "section_height": "natural",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5,
+        "lazyload_images": true
+      }
+    },
+    "5be5ea83-909b-4603-a37f-166c09b4aef6": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20174418477359__5be5ea83-909b-4603-a37f-166c09b4aef6-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Der Juskys Ratgeber bietet dir Spannendes rund um Haus, Garten und Freizeit. Wir helfen dir dabei deinen Alltag praktischer, erholsamer oder spannender zu gestalten. Geben praktische Tipps zur Gartengestaltung, stilvolle Inspiration für den Wohnbereich und vieles mehr. Mit unserem Haus & Garten Ratgeber findest du genau das richtige für deine Ansprüche. Lass dich jetzt inspirieren.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--20174418477359__5be5ea83-909b-4603-a37f-166c09b4aef6-text-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "tag": "h1",
+        "align_text": "left",
+        "narrow_column": false,
+        "divider": false
+      }
+    },
+    "5baf64f0-6f12-4ad1-80e9-21faa1f78696": {
+      "type": "logo-list",
+      "blocks": {
+        "template--20174418477359__5baf64f0-6f12-4ad1-80e9-21faa1f78696-logo_image-1": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/icon_wohnen.jpg",
+            "link": "shopify://blogs/wohnen"
+          }
+        },
+        "template--20174418477359__5baf64f0-6f12-4ad1-80e9-21faa1f78696-logo_image-2": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/icon_garten.jpg",
+            "link": "shopify://blogs/garten"
+          }
+        },
+        "template--20174418477359__5baf64f0-6f12-4ad1-80e9-21faa1f78696-logo_image-3": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/icon_fitness.jpg",
+            "link": "shopify://blogs/freizeit"
+          }
+        },
+        "ce94c7d0-b72b-49b8-9697-00b6856eb971": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/icon_tierbedarf.jpg",
+            "link": "shopify://blogs/tiere"
+          }
+        },
+        "d701a565-fdfc-45d0-bcdd-61b2982b8698": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/icon_wellness.jpg",
+            "link": "shopify://blogs/sauna"
+          }
+        }
+      },
+      "block_order": [
+        "template--20174418477359__5baf64f0-6f12-4ad1-80e9-21faa1f78696-logo_image-1",
+        "template--20174418477359__5baf64f0-6f12-4ad1-80e9-21faa1f78696-logo_image-2",
+        "template--20174418477359__5baf64f0-6f12-4ad1-80e9-21faa1f78696-logo_image-3",
+        "ce94c7d0-b72b-49b8-9697-00b6856eb971",
+        "d701a565-fdfc-45d0-bcdd-61b2982b8698"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Themengebiete:",
+        "logo_opacity": 100,
+        "divider": false
+      }
+    },
+    "slideshow_6BMqJb": {
+      "type": "slideshow",
+      "blocks": {
+        "image_BMKWWw": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "subheading_desktop_font_size": 18,
+            "top_subheading_m": "",
+            "subheading_mobile_font_size": 17,
+            "title": "",
+            "title_size": 80,
+            "title_m": "",
+            "title_size_m": 20,
+            "subheading": "",
+            "link": "shopify://blogs/news-updates",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "text_align": "vertical-center horizontal-center",
+            "text_align_m": "m-vertical-center m-horizontal-center",
+            "image": "shopify://shop_images/thema_news_schmal_f4171c56-c541-4bfe-9167-e44916572fb0.jpg",
+            "image_mobile": "shopify://shop_images/thema_news_schmal_f4171c56-c541-4bfe-9167-e44916572fb0.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 0,
+            "color_subheading": "#ffffff",
+            "color_heading": "#ffffff",
+            "color_text": "#ffffff",
+            "color_accent_1": "rgba(0,0,0,0)",
+            "color_accent_2": "rgba(0,0,0,0)",
+            "color_btn_text_check": true,
+            "color_accent_t_1": "#000000",
+            "color_accent_t_2": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "image_BMKWWw"
+      ],
+      "disabled": true,
+      "settings": {
+        "section_height": "natural",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5,
+        "lazyload_images": true
+      }
+    },
+    "advanced_content_BXBwCw": {
+      "type": "advanced-content",
+      "blocks": {
+        "image_JGU3w7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/thema_news_schmal2_82fcad9a-9e28-4aa9-9f36-9c3f8c2d4f37.jpg",
+            "link": "shopify://blogs/news-updates",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_JGU3w7"
+      ],
+      "disabled": true,
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 60,
+        "spacings_mobile_bottom": 40,
+        "full_width": false,
+        "space_around": true,
+        "lazyload_images": true
+      }
+    },
+    "f49ca3e1-0222-40e2-8fbb-f421d3cb97f5": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20174418477359__f49ca3e1-0222-40e2-8fbb-f421d3cb97f5-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Hier findest du unsere neusten Ratgeber-Artikel, aktuelle News zu unseren Produkten, spannende Informationen zu trendigen Themen und besondere Highlights aus der Haus & Garten Welt von Juskys.de. <strong>News & Aktuelles</strong> ist für dich immer auf dem neusten Stand.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--20174418477359__f49ca3e1-0222-40e2-8fbb-f421d3cb97f5-text-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 45,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "tag": "h1",
+        "align_text": "left",
+        "narrow_column": false,
+        "divider": false
+      }
+    },
+    "main": {
+      "type": "blog-template",
+      "disabled": true,
+      "settings": {
+        "blog_show_tag_filter": true,
+        "blog_show_rss": false,
+        "blog_show_tags": false,
+        "blog_show_date": false,
+        "blog_show_comments": true,
+        "blog_show_author": false,
+        "blog_show_excerpt": false,
+        "blog_image_size": "wide"
+      }
+    },
+    "39864f71-17f0-40f3-a0a6-07f4de6cae9a": {
+      "type": "blog-posts",
+      "disabled": true,
+      "settings": {
+        "title": "News",
+        "blog": "news-updates",
+        "post_limit": 3,
+        "blog_show_tags": false,
+        "blog_show_date": true,
+        "blog_show_comments": false,
+        "blog_show_author": true,
+        "view_all": true,
+        "blog_image_size": "wide",
+        "divider": false
+      }
+    },
+    "advanced_content_jhPzjr": {
+      "type": "advanced-content",
+      "blocks": {
+        "image_zUhWYd": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/thema_wohnen_schmal2.jpg",
+            "link": "shopify://blogs/wohnen",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_zUhWYd"
+      ],
+      "disabled": true,
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "full_width": false,
+        "space_around": true,
+        "lazyload_images": true
+      }
+    },
+    "rich_text_KFEJRh": {
+      "type": "rich-text",
+      "blocks": {
+        "text_eekTY3": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>In der Kategorie <strong>Wohnen & Haushalt</strong> informieren wir dich stets über neue Produkte für einen trendigen Lifestyle und halten dich über spannende Themen wie nachhaltiges Wohnen auf dem Laufenden. Zudem geben wir Tipps für einen einfachen und organisierten Alltag und unterstützen dich beim stilvollen Einrichten. Finde jetzt hier hilfreiche Artikel, die dein Zuhause auf ein neues Level bringen.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_eekTY3"
+      ],
+      "disabled": true,
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 50,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "tag": "h1",
+        "align_text": "left",
+        "narrow_column": false,
+        "divider": false
+      }
+    },
+    "b1b0ca7e-1138-42fc-8c1d-79fada8670cf": {
+      "type": "blog-posts",
+      "settings": {
+        "title": "Wohnen & Haushalt",
+        "blog": "wohnen",
+        "post_limit": 3,
+        "blog_show_tags": false,
+        "blog_show_date": false,
+        "blog_show_comments": false,
+        "blog_show_author": true,
+        "view_all": true,
+        "blog_image_size": "wide",
+        "divider": false
+      }
+    },
+    "advanced_content_pzUgLF": {
+      "type": "advanced-content",
+      "blocks": {
+        "image_Yha4JX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/thema_garten_schmal2.jpg",
+            "link": "shopify://blogs/garten",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_Yha4JX"
+      ],
+      "disabled": true,
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "full_width": false,
+        "space_around": true,
+        "lazyload_images": true
+      }
+    },
+    "f752af16-0828-422e-978c-2a999dfe7b18": {
+      "type": "rich-text",
+      "blocks": {
+        "15d340ef-c024-4d39-a3c4-6eafebe0acaf": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Wir helfen dir in unserer Kategorie <strong>Garten & Gartenmöbel </strong>dabei, deinen Außenbereich ideal nach deinen Wünschen zu gestalten und zu optimieren. Außerdem geben wir praktische Tipps zur Pflege von Gartenmöbel und für mehr Privatsphäre. Informiere dich jetzt hier und werde zum echten Gartenprofi.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "15d340ef-c024-4d39-a3c4-6eafebe0acaf"
+      ],
+      "disabled": true,
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "tag": "h1",
+        "align_text": "left",
+        "narrow_column": false,
+        "divider": false
+      }
+    },
+    "52646510-f6db-4a60-ad3e-4b0e36769e55": {
+      "type": "blog-posts",
+      "settings": {
+        "title": "Garten & Gartenmöbel",
+        "blog": "garten",
+        "post_limit": 3,
+        "blog_show_tags": false,
+        "blog_show_date": false,
+        "blog_show_comments": false,
+        "blog_show_author": true,
+        "view_all": true,
+        "blog_image_size": "wide",
+        "divider": false
+      }
+    },
+    "advanced_content_NjFwGj": {
+      "type": "advanced-content",
+      "blocks": {
+        "image_PLHGMk": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/thema_fitness_schmal2.jpg",
+            "link": "shopify://blogs/freizeit",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_PLHGMk"
+      ],
+      "disabled": true,
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "full_width": false,
+        "space_around": true,
+        "lazyload_images": true
+      }
+    },
+    "5dde35e7-57dc-478d-9806-e8db8758f70a": {
+      "type": "rich-text",
+      "blocks": {
+        "cae1bc1b-b8a1-4fc6-a1f6-58ca34c80550": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Mit unserer Hilfe steigst du auf den neuesten Trendsport auf, sparst ordentlich Geld mit deinem eigenen Fitnessstudio und findest das richtige Produkt für deinen Abenteuerurlaub. Für ein fitteres und gesünderes Leben mit einer ordentlichen Portion Action und Abenteuer. Lies dich jetzt schlau bei <strong>Sport & Freizeit</strong>.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "cae1bc1b-b8a1-4fc6-a1f6-58ca34c80550"
+      ],
+      "disabled": true,
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "tag": "h1",
+        "align_text": "left",
+        "narrow_column": false,
+        "divider": false
+      }
+    },
+    "5021c262-4563-4c6e-adae-d3e36e48e860": {
+      "type": "blog-posts",
+      "settings": {
+        "title": "Sport & Freizeit",
+        "blog": "freizeit",
+        "post_limit": 3,
+        "blog_show_tags": false,
+        "blog_show_date": false,
+        "blog_show_comments": false,
+        "blog_show_author": true,
+        "view_all": true,
+        "blog_image_size": "wide",
+        "divider": false
+      }
+    },
+    "advanced_content_4pmCMg": {
+      "type": "advanced-content",
+      "blocks": {
+        "image_gBjFND": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/thema_tierbedarf_schmal2.jpg",
+            "link": "shopify://blogs/tiere",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_gBjFND"
+      ],
+      "disabled": true,
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "full_width": false,
+        "space_around": true,
+        "lazyload_images": true
+      }
+    },
+    "e80ef760-c592-4d09-b735-4a912c79928f": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20174418477359__e80ef760-c592-4d09-b735-4a912c79928f-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Auch für den besten Freund des Menschen ist ein gemütliches und sicheres Zuhause die Grundlage für ein glückliches Leben. Wir helfen dir dabei, wenn es darum geht, das perfekte Heim deines Lieblings zu gestalten. Zusätzlich geben wir hilfreiche Tipps rund um das artgerechte Halten und Transportieren von Tieren sowie vieles mehr. Schaffe dir und deinen tierischen Freunden eine perfekte Heimat mithilfe unserer Ratgeber zum Thema <strong>Haustiere & Haustierbedarf</strong>.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--20174418477359__e80ef760-c592-4d09-b735-4a912c79928f-text-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "tag": "h1",
+        "align_text": "left",
+        "narrow_column": false,
+        "divider": false
+      }
+    },
+    "dce6b98f-4d36-42d1-bde9-e3662cb327e4": {
+      "type": "blog-posts",
+      "settings": {
+        "title": "Haustiere & Tierbedarf",
+        "blog": "tiere",
+        "post_limit": 3,
+        "blog_show_tags": false,
+        "blog_show_date": false,
+        "blog_show_comments": false,
+        "blog_show_author": true,
+        "view_all": true,
+        "blog_image_size": "wide",
+        "divider": false
+      }
+    },
+    "advanced_content_iXRUbB": {
+      "type": "advanced-content",
+      "blocks": {
+        "image_QCb3xN": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/thema_wellness_schmal2.jpg",
+            "link": "shopify://blogs/sauna",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_QCb3xN"
+      ],
+      "disabled": true,
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "full_width": false,
+        "space_around": true,
+        "lazyload_images": true
+      }
+    },
+    "ab80a413-6cd8-4661-b004-3c1474bb9b97": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20174418477359__ab80a413-6cd8-4661-b004-3c1474bb9b97-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Abschalten vom Alltag, die Füße hochlegen und die Seele baumeln lassen. Wellness für Körper und Geist ist ausgesprochen wichtig, um Stress zu reduzieren und die Gesundheit zu fördern. Was oft nur in einem professionellen Spa möglich ist, holen wir für dich nachhause. Mit wenigen Tricks schaffst du dir eine eigene Wellness-Oase und wir zeigen dir wie. Informiere dich hier über spannende Fakten zum Thema <strong>Sauna, Wellness, Wohlfühlen & Gesundheit</strong>.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--20174418477359__ab80a413-6cd8-4661-b004-3c1474bb9b97-text-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "tag": "h1",
+        "align_text": "left",
+        "narrow_column": false,
+        "divider": false
+      }
+    },
+    "4516f7dd-1750-4543-9622-1fea4baf4569": {
+      "type": "blog-posts",
+      "settings": {
+        "title": "Sauna & Wellness",
+        "blog": "sauna",
+        "post_limit": 3,
+        "blog_show_tags": false,
+        "blog_show_date": false,
+        "blog_show_comments": false,
+        "blog_show_author": true,
+        "view_all": true,
+        "blog_image_size": "wide",
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "slideshow_HeLrnV",
+    "5be5ea83-909b-4603-a37f-166c09b4aef6",
+    "5baf64f0-6f12-4ad1-80e9-21faa1f78696",
+    "slideshow_6BMqJb",
+    "advanced_content_BXBwCw",
+    "f49ca3e1-0222-40e2-8fbb-f421d3cb97f5",
+    "main",
+    "39864f71-17f0-40f3-a0a6-07f4de6cae9a",
+    "advanced_content_jhPzjr",
+    "rich_text_KFEJRh",
+    "b1b0ca7e-1138-42fc-8c1d-79fada8670cf",
+    "advanced_content_pzUgLF",
+    "f752af16-0828-422e-978c-2a999dfe7b18",
+    "52646510-f6db-4a60-ad3e-4b0e36769e55",
+    "advanced_content_NjFwGj",
+    "5dde35e7-57dc-478d-9806-e8db8758f70a",
+    "5021c262-4563-4c6e-adae-d3e36e48e860",
+    "advanced_content_4pmCMg",
+    "e80ef760-c592-4d09-b735-4a912c79928f",
+    "dce6b98f-4d36-42d1-bde9-e3662cb327e4",
+    "advanced_content_iXRUbB",
+    "ab80a413-6cd8-4661-b004-3c1474bb9b97",
+    "4516f7dd-1750-4543-9622-1fea4baf4569"
+  ]
+}

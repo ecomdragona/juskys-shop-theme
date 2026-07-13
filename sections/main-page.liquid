@@ -1,0 +1,48 @@
+<style>
+  #shopify-section-{{section.id}} .page-content{
+    padding-bottom: {{section.settings.spacing_bottom}}px;
+  }
+  #shopify-section-{{section.id}} .section-header{
+    margin-bottom: {{section.settings.spacing_bottom_header}}px;
+  }
+</style>
+
+<div class="page-width page-width--narrow page-content">
+  {%- render 'breadcrumbs' -%}
+  <header class="section-header">
+    <h1 class="section-header__title">{{ page.title }}</h1>
+  </header>
+
+  <div class="rte rte--nomargin">
+    {{ page.content }}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main-page.name",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "range",
+      "id": "spacing_bottom",
+      "label": "Spacing Bottom Section",
+      "min": 0,
+      "max": 80,
+      "step": 1,
+      "default": 50,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "spacing_bottom_header",
+      "label": "Spacing Bottom Title",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "default": 30,
+      "unit": "px"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,71 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "blog-template",
+      "settings": {
+        "blog_show_tag_filter": true,
+        "blog_show_rss": false,
+        "blog_show_tags": false,
+        "blog_show_date": true,
+        "blog_show_comments": false,
+        "blog_show_author": false,
+        "blog_show_excerpt": false,
+        "blog_image_size": "wide"
+      }
+    },
+    "7118c16e-c9a0-40e9-99e9-033f134e3a8b": {
+      "type": "blog-posts",
+      "disabled": true,
+      "settings": {
+        "title": "News & Updates",
+        "blog": "news-updates",
+        "post_limit": 12,
+        "blog_show_tags": false,
+        "blog_show_date": true,
+        "blog_show_comments": false,
+        "blog_show_author": false,
+        "view_all": true,
+        "blog_image_size": "wide",
+        "divider": false
+      }
+    },
+    "rich_text_WYnjHy": {
+      "type": "rich-text",
+      "blocks": {
+        "button_V7DLKR": {
+          "type": "button",
+          "settings": {
+            "link": "shopify://blogs/heim-garten-ratgeber",
+            "link_text": "Heim & Garten Ratgeber"
+          }
+        }
+      },
+      "block_order": [
+        "button_V7DLKR"
+      ],
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "7118c16e-c9a0-40e9-99e9-033f134e3a8b",
+    "rich_text_WYnjHy"
+  ]
+}

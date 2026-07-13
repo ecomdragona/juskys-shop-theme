@@ -1,0 +1,346 @@
+{%- liquid 
+  assign gap = gap | default: settings.grid_gap | default: 30 
+  assign max_items = max_items | default: 6 
+  
+-%}
+
+<style>
+
+  #shopify-section-{{section.id}} cs-slide img {
+      max-width: {{section.settings.image_width_desktop}}px; 
+  }
+  #shopify-section-{{section.id}} cs-nav {
+      margin-top: 60px;
+  }
+  #shopify-section-{{section.id}} .button_container {
+      text-align: center;
+      margin-top: 10px;
+      max-width: {{section.settings.image_width_desktop}}px; 
+      
+  }
+  #shopify-section-{{section.id}} cs-track {
+      padding: 20px;
+  }
+  #shopify-section-{{section.id}} .slider_viewport {
+      position: relative;
+  }
+  #shopify-section-{{section.id}} cs-prev,
+  #shopify-section-{{section.id}} cs-next {
+      position: absolute;
+      bottom: 47%;
+  }
+  #shopify-section-{{section.id}} cs-next {
+     right: 0;
+     transform: rotate(180deg);
+  }
+  #shopify-section-{{section.id}} .only_large {
+      display: block;
+  }
+  #shopify-section-{{section.id}} .only_small {
+      display: none;
+  }
+  @media (min-width:468px) and (max-width:990px) {
+      #shopify-section-{{section.id}} cs-slide img {
+          max-width: {{section.settings.image_width_medium}}px; 
+      }
+      #shopify-section-{{section.id}} .button_container {
+          text-align: center;
+          max-width: {{section.settings.image_width_medium}}px; 
+      }
+  }
+  @media only screen and (max-width: 467px) {
+      #shopify-section-{{section.id}} cs-slide img {
+      max-width: {{section.settings.image_width_mobile}}px; 
+      } 
+      #shopify-section-{{section.id}} .text-size-mobile {
+          font-size: {{section.settings.text-size_mobile}}px;
+          text-align: center;
+      }
+      #shopify-section-{{section.id}} .button_container {
+      text-align: center;
+      max-width: {{section.settings.image_width_mobile}}px; 
+      }
+      #shopify-section-{{section.id}} cs-next,
+      #shopify-section-{{section.id}} cs-prev,
+      .only_large {
+          display: none;
+      }
+      .only_small {
+          display: block;
+      }
+      {% for i in (1..max_items) %}
+      #shopify-section-{{section.id}} cs-slides:not(.gap).small_items-{{forloop.index}} > cs-slide,
+      #shopify-section-{{section.id}} cs-slides:not(.small_no-gap).small_items-{{forloop.index}} > cs-slide{
+          flex: 0 0  calc(100% / {{forloop.index}});
+      }  
+      {% assign in_view_gap = gap | times: forloop.index0 %}
+      #shopify-section-{{section.id}} cs-slides.gap.small_items-{{forloop.index}} > cs-slide,
+      #shopify-section-{{section.id}} cs-slides.small_gap.small_items-{{forloop.index}} > cs-slide{
+          flex: 0 0 calc(({{section.settings.grid_gap_mobile}}% - {{in_view_gap}}px) / {{forloop.index}});
+      }  
+  {% endfor %}
+  }
+
+  #shopify-section-{{section.id}} cs-prev[disabled],
+  #shopify-section-{{section.id}} cs-next[disabled]  {
+      z-index: -1;
+  }
+ 
+  @media only screen and (min-width: 769px) {
+      #shopify-section-{{section.id}} .index-section {
+          margin: 75px auto;
+      }
+      #shopify-section-{{section.id}} .page-width-desktop{
+          margin:0 auto;
+          max-width:1500px;
+      }
+  }
+  {% for i in (1..max_items) %}
+  #shopify-section-{{section.id}} cs-slides:not(.gap).items-{{forloop.index}} > cs-slide{
+      flex: 0 0  calc(100% / {{forloop.index}});
+  }  
+  {% assign in_view_gap = gap | times: forloop.index0 %}
+  #shopify-section-{{section.id}} cs-slides.gap.items-{{forloop.index}} > cs-slide{
+      flex: 0 0 calc(({{ section.settings.grid_gap}}% - {{in_view_gap}}px) / {{forloop.index}});
+  }  
+{% endfor %}
+
+@media only screen and (min-width: 467px) and (max-width: 990ox) {
+  {% for i in (1..max_items) %}
+  #shopify-section-{{section.id}} cs-slides:not(.gap).medium_items-{{forloop.index}} > cs-slide,
+  #shopify-section-{{section.id}} cs-slides.medium_no-gap.medium_items-{{forloop.index}} > cs-slide{
+          flex: 0 0  calc(100% / {{forloop.index}});
+      }  
+      {% assign in_view_gap = gap | times: forloop.index0 %}
+      #shopify-section-{{section.id}} cs-slides.gap.medium_items-{{forloop.index}} > cs-slide,
+      #shopify-section-{{section.id}} cs-slides.medium_gap.medium_items-{{forloop.index}} > cs-slide{
+          flex: 0 0 calc(({{ section.settings.grid_gap_medium }}% - {{in_view_gap}}px) / {{forloop.index}});
+      }  
+  {% endfor %}
+}
+  {}
+  
+
+</style>
+
+<div class="page-width-desktop">
+  {% if request.page_type == 'collection' %}
+      {% assign path_parts = request.path | split: "/" %}
+      {% assign handle = path_parts.last %}
+          {% for collection in collections %}
+              {% assign sub_collection_size = 0 %}
+              {%- for sub_collection in collection.metafields.sub_collection.data.value -%}
+                  {% assign sub_collection_size = sub_collection_size | plus: 1 %}
+              {%- endfor -%}
+              {% if sub_collection_size > 0 %}
+                  {% if handle == collection.handle %}
+                      <clever-slider id="MainSlider" class="only_large"
+                      options-large="align:start, containScroll: trimSnaps, dragFree: true" 
+                      options-medium="align:start" 
+                      options-small="align:start">
+                      <div class="slider_viewport">
+                          <cs-prev disabled>
+                              <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M249.49 0a35 35 0 0 1 24.75 59.75L84.49 249.49l189.75 189.74a35.002 35.002 0 1 1-49.5 49.5L10.25 274.24a35 35 0 0 1 0-49.5L224.74 10.25A34.89 34.89 0 0 1 249.49 0Z"/></svg>
+                          </cs-prev>
+                              <cs-track>
+                                  {% assign sub_collection_size = 0 %}
+                                  {%- for sub_collection in collection.metafields.sub_collection.data.value -%}
+                                      {% assign sub_collection_size = sub_collection_size | plus: 1 %}
+                                  {%- endfor -%}
+                                  {% assign items_size_desktop = section.settings.threshold %}
+                                  {% if sub_collection_size <= section.settings.threshold %}
+                                      {% assign items_size_desktop = sub_collection_size %}
+                                  {% endif %}
+                                  {% assign items_size_mobile = section.settings.threshold_mobile %}
+                                  {% if sub_collection_size <= section.settings.threshold_mobile %}
+                                      {% assign items_size_mobile = sub_collection_size %}
+                                  {% endif %}
+                                  <cs-slides class="items-{{items_size_desktop}} medium_items-{{items_size_desktop}} small_items-{{items_size_mobile}} gap small_no-gap">
+                                      <!--Slides go here-->
+                                      {%- for sub_collection in collection.metafields.sub_collection.data.value -%}
+                                          {% if sub_collection.image != blank %}
+                                              <cs-slide>        
+                                                      <a href="{{sub_collection.url}}">
+                                                          <img src="{{sub_collection.image | img_url: '800x'}}" alt="" width="" height="auto" loading="lazy">
+                                                      </a>
+                                                      {% if section.settings.show_button_label %}
+                                                      <div class="button_container">
+                                                          <a href="{{ sub_collection.url }}" class="text-size-mobile">
+                                                              {{ sub_collection.title }}
+                                                          </a>
+                                                      </div>
+                                                      {% endif %}
+                                              </cs-slide>
+                                          {% endif %}
+                                      {%- endfor -%}
+                                  </cs-slides>
+                              </cs-track>
+                          <cs-next>
+                              <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-left" viewBox="0 0 284.49 498.98"><path d="M249.49 0a35 35 0 0 1 24.75 59.75L84.49 249.49l189.75 189.74a35.002 35.002 0 1 1-49.5 49.5L10.25 274.24a35 35 0 0 1 0-49.5L224.74 10.25A34.89 34.89 0 0 1 249.49 0Z"/></svg>   
+                          </cs-next>
+                      </div>
+                   
+                      </clever-slider>
+
+                      <clever-slider id="MainSlider" class="only_small"
+                      options-large="align:start, containScroll: trimSnaps, dragFree: true, loop: true" 
+                      options-medium="align:start, containScroll: trimSnaps, dragFree: true" 
+                      options-small="align:start, containScroll: trimSnaps, dragFree: true, loop: true">
+                      <div class="slider_viewport">
+                          <cs-prev disabled>
+                              <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><path d="M249.49 0a35 35 0 0 1 24.75 59.75L84.49 249.49l189.75 189.74a35.002 35.002 0 1 1-49.5 49.5L10.25 274.24a35 35 0 0 1 0-49.5L224.74 10.25A34.89 34.89 0 0 1 249.49 0Z"/></svg>
+                          </cs-prev>
+                              <cs-track>
+                                  {% assign sub_collection_size = 0 %}
+                                  {%- for sub_collection in collection.metafields.sub_collection.data.value -%}
+                                      {% assign sub_collection_size = sub_collection_size | plus: 1 %}
+                                  {%- endfor -%}
+                                  {% assign items_size_desktop = section.settings.threshold %}
+                                  {% if sub_collection_size <= section.settings.threshold %}
+                                      {% assign items_size_desktop = sub_collection_size %}
+                                  {% endif %}
+                                  {% assign items_size_mobile = section.settings.threshold_mobile %}
+                                  {% if sub_collection_size <= section.settings.threshold_mobile %}
+                                      {% assign items_size_mobile = sub_collection_size %}
+                                  {% endif %}
+                                  <cs-slides class="items-{{items_size_desktop}} medium_items-{{items_size_desktop}} small_items-{{items_size_mobile}} gap small_no-gap">
+                                      <!--Slides go here-->
+                                      {%- for sub_collection in collection.metafields.sub_collection.data.value -%}
+                                          {% if sub_collection.image != blank %}
+                                              <cs-slide>        
+                                                      <a href="{{sub_collection.url}}">
+                                                          <img src="{{sub_collection.image | img_url: '800x'}}" alt="" width="" height="auto" loading="lazy">
+                                                      </a>
+                                                      {% if section.settings.show_button_label %}
+                                                      <div class="button_container">
+                                                          <a href="{{ sub_collection.url }}" class="text-size-mobile">
+                                                              {{ sub_collection.title }}
+                                                          </a>
+                                                      </div>
+                                                      {% endif %}
+                                              </cs-slide>
+                                          {% endif %}
+                                      {%- endfor -%}
+                                  </cs-slides>
+                              </cs-track>
+                          <cs-next>
+                              <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-left" viewBox="0 0 284.49 498.98"><path d="M249.49 0a35 35 0 0 1 24.75 59.75L84.49 249.49l189.75 189.74a35.002 35.002 0 1 1-49.5 49.5L10.25 274.24a35 35 0 0 1 0-49.5L224.74 10.25A34.89 34.89 0 0 1 249.49 0Z"/></svg>   
+                          </cs-next>
+                      </div>
+                   
+                      </clever-slider>
+                  {% endif %}
+              {% endif %}
+          {% endfor %}
+  {% endif %}
+</div>
+
+{% schema %}
+{
+"name": "Slider Metaobjects",
+"settings": [
+  {
+      "type": "range",
+      "id": "image_width_desktop",
+      "label": "Image width Desktop",
+      "default": 100,
+      "min": 50,
+      "max": 500,
+      "step": 10,
+      "unit": "px"
+  },
+  {
+      "type": "range",
+      "id": "image_width_medium",
+      "label": "Image width Tablet",
+      "default": 170,
+      "min": 20,
+      "max": 300,
+      "step": 5,
+      "unit": "px"
+  },
+  {
+      "type": "range",
+      "id": "image_width_mobile",
+      "label": "Image width Mobile",
+      "default": 120,
+      "min": 20,
+      "max": 200,
+      "step": 5,
+      "unit": "px"
+  },
+  {
+    "type": "range",
+    "id": "threshold",
+    "label": "Elemente im Viewport Desktop",
+    "default": 3,
+    "min": 2,
+    "max": 10,
+    "step": 1,
+    "unit": "px"
+  },
+  {
+    "type": "range",
+    "id": "threshold_mobile",
+    "label": "Elemente im Viewport Mobile",
+    "default": 2,
+    "min": 1,
+    "max": 10,
+    "step": 1,
+    "unit": "px"
+  },
+  {
+      "type": "range",
+      "id": "text-size_mobile",
+      "label": "Text Size Mobile",
+      "default": 15,
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px"
+    },
+  {
+      "type": "checkbox",
+      "id": "show_button_label",
+      "label": "Show Text",
+      "default": false
+  },
+  {
+    "type": "range",
+    "id": "grid_gap",
+    "label": "t:settings_schema.clever_slider.settings.clever_slider_desktop.label",
+    "default": 80,
+    "min": 1,
+    "max": 100,
+    "step": 1,
+    "unit": "%"
+  },
+  {
+    "type": "range",
+    "id": "grid_gap_medium",
+    "label": "t:settings_schema.clever_slider.settings.clever_slider_medium.label",
+    "default": 80,
+    "min": 1,
+    "max": 100,
+    "step": 1,
+    "unit": "%"
+  },
+  {
+    "type": "range",
+    "id": "grid_gap_mobile",
+    "label": "t:settings_schema.clever_slider.settings.clever_slider_mobile.label",
+    "default": 80,
+    "min": 1,
+    "max": 100,
+    "step": 1,
+    "unit": "%"
+  }
+
+],
+"presets": [
+  {
+    "name": "Slider Metaobjects"
+  }
+] 
+}
+{% endschema %} 

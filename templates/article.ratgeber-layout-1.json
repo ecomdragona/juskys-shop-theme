@@ -1,0 +1,56 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "article-template",
+      "custom_css": [
+        ".content {}",
+        ".side {background-color: #ffffff; margin-bottom: 20px; box-shadow: 0px 0px 4px #cccccc; padding: 10px 0px;}",
+        ".text {margin: 0px 10px; float: inherit; width: 67%;}",
+        ".content-media {float: inherit; width: 30%;}",
+        ".left {float: left;}",
+        ".right {float: right;}"
+      ],
+      "settings": {
+        "image_hero": true,
+        "blog_show_tags": true,
+        "blog_show_date": true,
+        "blog_show_comments": false,
+        "blog_show_author": true,
+        "social_sharing_blog": false
+      }
+    },
+    "ada0ee4f-cc1e-4ff9-bfd4-8d049133a1a4": {
+      "type": "text-and-image",
+      "settings": {
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Image with text",
+        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ada0ee4f-cc1e-4ff9-bfd4-8d049133a1a4"
+  ]
+}

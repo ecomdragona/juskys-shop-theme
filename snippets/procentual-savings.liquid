@@ -1,0 +1,27 @@
+{% liquid
+  assign has_custom_label = false 
+  if settings.tags_enable
+    assign product_tags = product.tags | join: ','
+    if product_tags contains '_label_'
+      if product_tags contains "_label_sale" or product_tags contains '_label_neu' or product_tags contains '_label_bundle'
+        assign has_custom_label = true
+      endif
+    endif
+  endif
+  
+  assign used_variant = product
+  if used_variant.variants
+    assign used_variant = product.selected_or_first_available_variant
+  endif
+%}
+
+{% if used_variant.compare_at_price %}
+  {% if used_variant.compare_at_price > 0 %}
+    {%- capture saved_amount -%}{{ used_variant.compare_at_price | minus: used_variant.price | times: 100.0 | divided_by: used_variant.compare_at_price | round | prepend: '-' }}%{%- endcapture -%}
+    <span class="percentage-container percentage-text-pdp {% if used_variant.price > 10000 %}hide_percentage_badge_100{% endif %} {% if used_variant.price > 5000 %}hide_percentage_badge_50{% endif %}">
+      <span class="cus-percent-badge">{{ 'products.general.cus_percent_badge' | t }} </span> {{ saved_amount }}
+    </span>  
+    <span class="saving_value_text_pdp {% if used_variant.price > 5000 %}uero_50_badge{% endif %}" style="display:none;"><span class="cus-percent-badge">{{ 'products.general.cus_percent_badge' | t }} </span> -{{ used_variant.compare_at_price | minus: used_variant.price | money }}</span>
+    <span class="saving_value_text_pdp {% if used_variant.price > 10000 %}uero_100_badge{% endif %}" style="display:none;"><span class="cus-percent-badge">{{ 'products.general.cus_percent_badge' | t }} </span> -{{ used_variant.compare_at_price | minus: used_variant.price | money }}</span>
+  {% endif %}
+{% endif %}

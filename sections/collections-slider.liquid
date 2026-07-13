@@ -1,0 +1,70 @@
+<section class="section-collections-slider">
+  <div class="page-container">
+    {% for block in section.blocks %}
+      {% assign collection = block.settings.collection %}
+      {% if collection %}
+        {%- assign loading_strat = 'lazy' -%}
+        {%- assign fetchpriority = 'auto' -%}
+        {% if forloop.index  <= 3 %}
+          {%- assign loading_strat = 'eager' -%}
+          {%- assign fetchpriority = 'high' -%}
+        {% endif %}
+        <a href="{{ collection.url }}">
+          <div class="collections-slider-slide">
+            {% if block.settings.image %}
+              {{ block.settings.image | image_url: width: 200 | image_tag : loading: loading_strat, fetchpriority: fetchpriority }}
+            {% else %}
+              {% if collection.image %}
+                {{ collection.image | image_url: width: 200 | image_tag : loading: loading_strat, fetchpriority: fetchpriority }}
+              {% endif %}
+            {% endif %}
+            <div class="collections-slider-text">{{ collection.title }}</div>
+          </div>
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+{% unless section.settings.show %}
+<style>
+  .section-collections-slider {
+    display: none; 
+  }
+</style>
+{% endunless %}
+{% schema %}
+{
+  "name": "Collections slider",
+  "settings": [
+    {
+      "type" : "checkbox",
+      "id" : "show",
+      "label" : "Show",
+      "default" : false
+    }
+  ],
+  "blocks": [
+    {
+      "type" : "collection",
+      "name" : "Collection",
+      "settings": [
+        {
+          "type" : "collection",
+          "id" : "collection",
+          "label" : "Collection"
+        },
+        {
+          "type" : "image_picker",
+          "id" : "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name" : "Collection slider"
+    }
+  ]
+}
+{% endschema %}

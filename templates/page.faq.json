@@ -1,0 +1,435 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "spacing_bottom": 50,
+        "spacing_bottom_header": 30
+      }
+    },
+    "bf507c17-ecc5-4ed4-addd-c40f2ab9e09f": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20174419296559__bf507c17-ecc5-4ed4-addd-c40f2ab9e09f-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "FAQ - Häufig gestellte Fragen"
+          }
+        },
+        "template--20174419296559__bf507c17-ecc5-4ed4-addd-c40f2ab9e09f-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Hier findest du Antworten auf die Fragen, die uns häufig gestellt werden. Sollte deine Frage nicht dabei sein, sende uns gerne eine <a href=\"https://juskysshop.myshopify.com/pages/contact\" title=\"https://juskysshop.myshopify.com/pages/contact\">Nachricht</a> oder ruf uns an. Unser Kundenservice hilft dir gerne weiter.</p><p><a href=\"tel:+495062965660\">+49 (0)5062 - 965660</a></p><p>Mo - Fr: 08:00 - 20:00 Uhr<br/>Sa: 09:00 - 18:00 Uhr</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--20174419296559__bf507c17-ecc5-4ed4-addd-c40f2ab9e09f-heading-1",
+        "template--20174419296559__bf507c17-ecc5-4ed4-addd-c40f2ab9e09f-text-1"
+      ],
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "faq-0": {
+          "type": "rich-text",
+          "settings": {
+            "title": "Fragen zu deiner Bestellung",
+            "text": "",
+            "align_text": "left"
+          }
+        },
+        "faq-1": {
+          "type": "question",
+          "settings": {
+            "title": "Wie storniere ich meine Bestellung?",
+            "text": "<p>Eine Stornierung der Bestellung ist ohne Angabe von Gründen möglich, solange die Ware noch nicht verschickt wurde. Hierfür wende dich bitte an unseren <a href=\"https://www.juskys.de/kontaktformular\" target=\"_blank\" title=\"Zum Kontaktformular\">Kundenservice.</a></p>"
+          }
+        },
+        "faq-2": {
+          "type": "question",
+          "settings": {
+            "title": "Wie kann ich im Juskys Onlineshop bestellen?",
+            "text": "<p>Schau dich bei uns im Onlineshop um und wähle deine gewünschten Artikel aus. Klicke danach auf der Produktseite auf die Schaltfläche „in den Warenkorb“, um den Artikel in den Warenkorb zu verschieben.</p><p>Sobald du alles gefunden hast, kannst du einfach über den Button „zur Kasse“ deine Bestellung abschließen.</p><p>Möchtest Du noch weitere Artikel der Bestellung hinzufügen, kannst Du einfach weiter stöbern und zu einem späteren Zeitpunkt über das Einkaufssymbol am oberen Bildrand zum Warenkorb zurückkehren.</p><p>Hier gibst Du deine Rechnungsadresse und Deine gewünschte Bezahlart ein. Außerdem kannst du noch einmal Deine Bestellung kontrollieren.</p><p>Zum Abschließen der Bestellung musst Du nur noch auf „Jetzt kaufen“ klicken</p>"
+          }
+        },
+        "7d1e3332-ca0b-4aa1-afff-4f771ea7722c": {
+          "type": "question",
+          "settings": {
+            "title": "Wie erfahre ich, ob meine Bestellung eingegangen ist?",
+            "text": "<p>Nachdem Du die Bestellung getätigt hast, erhältst Du an Deine angegebene<br/> E-Mail eine automatisierte Bestätigung mit allen Informationen zu <br/>Deiner Bestellung.</p>"
+          }
+        },
+        "56c8caf9-e77e-4f75-90b1-68ac8cc03dba": {
+          "type": "question",
+          "settings": {
+            "title": "Wie erhalte ich die Rechnung zu meiner Bestellung?",
+            "text": "<p>Falls du eine Rechnung benötigst, wende dich bitte an unseren <a href=\"https://www.juskys.de/kontaktformular\" target=\"_blank\" title=\"Zum Kontaktformular\">Kundenservice</a>. Diese wird dir dann umgehend an die hinterlegte E-Mail-Adresse zugeschickt.</p>"
+          }
+        },
+        "faq-3": {
+          "type": "rich-text",
+          "settings": {
+            "title": "Zahlungsmöglichkeiten",
+            "text": "",
+            "align_text": "left"
+          }
+        },
+        "200733c9-afb5-42af-b4e4-92862728cb98": {
+          "type": "question",
+          "settings": {
+            "title": "Welche Zahlungsarten habe ich im Juskys-Onlineshop zur Auswahl?",
+            "text": "<ul><li>Im Juskys Onlineshop hast Du als <strong>Zahlungsmittel</strong> die freie Wahl zwischen folgenden:</li></ul><p></p><ul><li>Kauf auf Rechnung</li><li>PayPal</li><li>Kreditkarte (MasterCard & Visa)</li><li>Lastschrift</li><li>Vorkasse</li></ul>"
+          }
+        },
+        "58ba99c3-b363-4c0b-bafb-a0fe57b05329": {
+          "type": "question",
+          "settings": {
+            "title": "Wie funktioniert die PayPal Zahlung?",
+            "text": "<p>Bei der Zahlung über PayPal wirst Du auf paypal.com weitergeleitet, um <br/>dort die Zahlung abzuschließen. Anschließend wirst Du automatisch wieder auf die Bestellübersicht in unserem Shop geleitet.</p>"
+          }
+        },
+        "faq-4": {
+          "type": "question",
+          "settings": {
+            "title": "Was ist bei der Zahlung per Kreditkarte zu beachten?",
+            "text": "<p>Seit Beginn dieses Jahrs gelten neue, <br/>verschärfte Sicherheitsauflagen für die Bezahlung mit einer Kreditkarte.<br/> Zusätzlich zu der Kreditkartennummer, dem Verfallsdatum und der <br/>dreistelligen Prüfnummer ist seitdem eine zusätzliche Identifizierung – <br/>meist über eine Smartphone-App Deiner Bank – nötig. Solltest du kein <br/>Mobiltelefon besitzen, kann auch ein spezielles Kartenlesegerät genutzt <br/>werden. Ähnlich wie beim Online-Banking wird eine transaktionsbezogene TAN generiert.</p><p>Damit Du künftig auch mit Kreditkarte bequem bei Juskys einkaufen kannst, gibt es die Möglichkeit, uns bei Deiner Bank auf eine sogenannte „Whitelist“ zu setzen. Die Zwei-Faktor Authentifizierung fällt dann weg.</p>"
+          }
+        },
+        "79822031-2bc0-431c-b5bf-a2d4fd902b72": {
+          "type": "question",
+          "settings": {
+            "title": "Wie funktioniert die Zahlart Vorkasse/Banküberweisung?",
+            "text": "<p>Überweise den Gesamtbetrag Deiner Bestellung bequem auf unser Konto. Die Kontoverbindung geht Dir nach Abschluss der Bestellung per E-Mail zu. <br/>Zusätzlich findest Du sie unter der Option <a href=\"https://www.juskys.de/versand-zahlung\" target=\"_blank\" title=\"Versand-Zahlung\">Versand&Zahlung</a>. Nachdem wir Deine Zahlung erhalten haben, versenden wir die Ware umgehend.</p>"
+          }
+        },
+        "0144bed3-2d0b-403c-9acf-560c71ecf2e0": {
+          "type": "question",
+          "settings": {
+            "title": "Wie funktioniert die Zahlart Kauf auf Rechnung?",
+            "text": "<p>Die Zahlart Kauf auf Rechnung wird durch den Zahlungsdienst PayPal <br/>angeboten. Hierbei wirst Du auf paypal.com weitergeleitet, um dort Deine Zahlung abzuschließen. Du benötigst dafür kein PayPal Konto. Befolge einfach die Schritte, die Dir angezeigt werden, bis zur Bestätigung des Kaufs. Anschließend wirst Du automatisch wieder auf die Bestellübersicht in unserem Shop geleitet.</p>"
+          }
+        },
+        "fc499daa-c3b8-408d-a372-3747d2a99c9d": {
+          "type": "question",
+          "settings": {
+            "title": "Wie funktioniert die Zahlung per Lastschrift?",
+            "text": "<p>Die Zahlart Lastschrift wird durch den Zahlungsdienst PayPal angeboten. <br/>Hierbei wirst Du auf paypal.com weitergeleitet, um dort Deine Zahlung <br/>abzuschließen. Du benötigst dafür kein PayPal Konto. Befolge einfach die<br/> Schritte, die dir angezeigt werden, bis zur Bestätigung des Kaufs. Anschließend wirst Du automatisch wieder auf die Bestellübersicht in <br/>unserem Shop geleitet.</p>"
+          }
+        },
+        "04370e27-f6ca-47e2-93b0-a2ba44869271": {
+          "type": "question",
+          "settings": {
+            "title": "Kann ich auch per Nachnahme zahlen oder meine Bestellung in Raten abbezahlen?",
+            "text": "<p>Beide Optionen bieten wir nicht an, sicher findest du aber eine Alternative unter einer unseren anderen Zahlungsoptionen.</p>"
+          }
+        },
+        "740d8476-0d0c-4de6-ae91-d4c484fe56f6": {
+          "type": "question",
+          "settings": {
+            "title": "Kann ich meine Zahlungsart ändern, obwohl ich meine Bestellung schon abgeschickt habe?",
+            "text": "<p>Nein, das ist ab diesem Zeitpunkt dann nicht mehr möglich. Solltest du <br/>jedoch eine Änderung wünschen, können wir versuchen, deine Bestellung zu stornieren. Hierfür wende dich bitte an unseren Kundenservice über unser <a href=\"https://www.juskys.de/kontaktformular\" target=\"_blank\" title=\"Kontaktformular Juskys\">Kontaktformular</a>.</p>"
+          }
+        },
+        "425195ea-6dbc-4041-a582-79862cf17840": {
+          "type": "rich-text",
+          "settings": {
+            "title": "Versand & Lieferung",
+            "text": "",
+            "align_text": "left"
+          }
+        },
+        "dbd91575-c8ea-48d5-9b9b-4d675bdb9e5a": {
+          "type": "question",
+          "settings": {
+            "title": "Wie hoch sind die Versandkosten?",
+            "text": "<p>Der Versand innerhalb Deutschlands ist bei Juskys immer versandkostenfrei! Eine detaillierte Übersicht über die Versandkosten und die Lieferzeiten sowie den Auslandsversand erfährst Du unter <a href=\"https://www.juskys.de/versand-zahlung\" target=\"_blank\" title=\"Versand-Zahlung\">Versand&Zahlung</a>.</p>"
+          }
+        },
+        "593de303-5ecf-4c96-bf1a-388c1b5eb8e9": {
+          "type": "question",
+          "settings": {
+            "title": "Wie lange dauert der Versand?",
+            "text": "<p>Deine Bestellung wird noch am selben Tag verschickt, wenn die Zahlung <br/>bis 12:00 Uhr (werktags) eingeht. Die Lieferzeit beträgt 1 - 3 Werktage <br/>innerhalb Deutschlands.</p>"
+          }
+        },
+        "62d040e7-f3e3-4392-9d61-e2b934943481": {
+          "type": "question",
+          "settings": {
+            "title": "Wie kann ich den Status meiner Bestellung verfolgen?",
+            "text": "<p>Sobald deine Bestellung verschickt wurde, erhältst du per E-Mail weitere Informationen zur Sendungsverfolgung.</p>"
+          }
+        },
+        "1aadcb4c-ebf9-40dd-81fb-d5c5954da25e": {
+          "type": "question",
+          "settings": {
+            "title": "Mit welchem Versanddienstleister wird meine Bestellung versendet?",
+            "text": "<p>Wir arbeiten mit renommierten Versanddienstleistern wie DHL, Hermes, GLS, DPD u.v.a aus der Branche zusammen, um den bestmöglichen Lieferservice zu bieten. Welcher Versanddienstleister für Deine <br/>Bestellung zuständig ist, wird individuell für die Lieferung festgelegt.</p>"
+          }
+        },
+        "09dc7ba8-b4a9-4e3d-a3f4-ec6b1b3de841": {
+          "type": "question",
+          "settings": {
+            "title": "Was kann ich tun, wenn meine Lieferung unvollständig ankommt?",
+            "text": "<p>Hierbei wende dich bitte an unseren <a href=\"https://www.juskys.de/kontaktformular\" target=\"_blank\" title=\"Kontaktformular Juskys\">Kundenservice</a>, damit wir genau prüfen können, woran dies liegt.</p>"
+          }
+        },
+        "d8dfcc13-2f56-4f54-b4d5-d89e0c3cbf94": {
+          "type": "question",
+          "settings": {
+            "title": "Gibt es einen Versand ins Ausland?",
+            "text": "<p>Ja, wir versenden auch ins Ausland, wohin genau und wie sich die Versandkosten dabei zusammen setzen findest du unter: <a href=\"https://www.juskys.de/versand-zahlung\" target=\"_blank\" title=\"Versand-Zahlung\">Versand&Zahlung</a>.</p>"
+          }
+        },
+        "9835dbd9-540a-4cbe-b46c-68dbe2650466": {
+          "type": "question",
+          "settings": {
+            "title": "Kann ich meine Bestellung bei euch abholen?",
+            "text": "<p>Eine Abholmöglichkeit können wir nicht anbieten, da wir die Artikel nicht hier bei uns vor Ort lagernd haben.</p>"
+          }
+        },
+        "1f65f81f-9d3c-439a-8dd6-7880bf909edf": {
+          "type": "rich-text",
+          "settings": {
+            "title": "Widerruf & Retouren",
+            "text": "",
+            "align_text": "left"
+          }
+        },
+        "fe414d87-b07e-4516-bc3a-1236c87ed5d2": {
+          "type": "question",
+          "settings": {
+            "title": "Wie kann ich meinen Kauf widerrufen?",
+            "text": "<p>Detaillierte Informationen zu deinem Widerrufsrecht kannst du in der <a href=\"https://www.juskys.de/widerrufsrecht\" target=\"_blank\" title=\"Widerrufsrecht Juskys\">Widerrufsbelehrung </a>nachlesen.</p>"
+          }
+        },
+        "13837251-beda-42ec-82ac-d4144f81e251": {
+          "type": "question",
+          "settings": {
+            "title": "Wie sende ich einen Artikel zurück?",
+            "text": "<p>Hierbei wende dich bitte an unseren <a href=\"https://www.juskys.de/kontaktformular\" target=\"_blank\" title=\"Kontaktformular Juskys\">Kundenservice</a>, da der Ablauf je nach Artikel variieren kann.</p>"
+          }
+        },
+        "c868de23-3afd-4c51-bbb1-9ec9affff121": {
+          "type": "question",
+          "settings": {
+            "title": "Ist die Retoure für mich kostenlos?",
+            "text": "<p>Hierbei wende dich bitte an unseren <a href=\"https://www.juskys.de/kontaktformular\" target=\"_blank\" title=\"Kontaktformular Juskys\">Kundenservice</a>, da der Ablauf je nach Artikel variieren kann.</p>"
+          }
+        },
+        "3dbb7210-da70-4b7c-81e7-34a8f45f4e23": {
+          "type": "rich-text",
+          "settings": {
+            "title": "Gewährleistung & Ersatzteile",
+            "text": "",
+            "align_text": "left"
+          }
+        },
+        "f23cd447-0e39-45d3-abb6-182e493eeb10": {
+          "type": "question",
+          "settings": {
+            "title": "Wie lange habe ich Anspruch auf Gewährleistung?",
+            "text": "<p>Du hast bei uns das Recht auf die 2-jährige gesetzliche Gewährleistung. Weitere Informationen dazu findest du <a href=\"https://www.juskys.de/custom/index/sCustom/4\" target=\"_blank\" title=\"Juskys AGB\">hier</a>.</p>"
+          }
+        },
+        "06559986-ecb4-49ea-8bb1-242a466e3eee": {
+          "type": "question",
+          "settings": {
+            "title": "Was kann ich tun, wenn meine Bestellung defekt bzw. beschädigt ankommt?",
+            "text": "<p>Dies sollte nicht passieren. Falls es doch einmal vorkommt, bitten wir <br/>das zu entschuldigen und wollen Dir schnellstmöglich helfen. Nimm direkt<br/> Kontakt mit unserem <a href=\"https://www.juskys.de/kontaktformular\" target=\"_blank\" title=\"Kontaktformular Juskys\">Kundenservice</a>, auf, sodass wir den Mangel beseitigen können.</p>"
+          }
+        },
+        "ae58672f-169a-46a3-aa81-8edea5acf6b2": {
+          "type": "rich-text",
+          "settings": {
+            "title": "Produkte",
+            "text": "",
+            "align_text": "left"
+          }
+        },
+        "68d3ae9f-3c35-4eaf-89a3-742b675f223a": {
+          "type": "question",
+          "settings": {
+            "title": "Die Seitenteile meines Betts Paris/Verona fehlen. Was muss ich tun?",
+            "text": "<p>Keine Sorge, diese wurden für den Versand einfach nur gesondert <br/>verstaut. Schau einfach auf der Rückseite des Kopfteils nach, dort <br/>befindet sich ein Reiß- bzw. Klettverschluss. Öffne diese und entnehme <br/>die entsprechenden Teile aus dem Kopfteil.</p>"
+          }
+        },
+        "219e40e2-20c9-4be5-b629-1933a9b8ec4b": {
+          "type": "question",
+          "settings": {
+            "title": "Das Lattenrost meines Betts Lyon/Manresa fehlt. Was muss ich tun?",
+            "text": "<p>Keine Sorge, diese wurden für den Versand einfach nur gesondert <br/>verstaut. Schau einfach auf der Rückseite des Kopfteils nach, dort <br/>befindet sich ein Reiß-/ oder Klettverschluss. Öffne diese und entnehme die entsprechenden Teile aus dem Kopfteil.</p>"
+          }
+        },
+        "42bef277-d873-416c-99a3-3cc596954b06": {
+          "type": "question",
+          "settings": {
+            "title": "Kann man sich die Produkte auch vor Ort anschauen?",
+            "text": "<p>Wir sind ein reiner Onlinehandel und bieten keinen Verkauf oder Ausstellungsflächen vor Ort an.</p>"
+          }
+        },
+        "75f83807-db12-41b1-a855-db83998aa398": {
+          "type": "rich-text",
+          "settings": {
+            "title": "Website & Datenschutz",
+            "text": "",
+            "align_text": "left"
+          }
+        },
+        "6c622266-bf36-4714-8cfd-0c414db156f6": {
+          "type": "question",
+          "settings": {
+            "title": "Welche Browsereinstellung ist für den Juskys Onlineshop erforderlich?",
+            "text": "<p>Mit der aktuellsten Version Deines Browsers kannst Du fehlerfrei auf der Juskys Website surfen.</p>"
+          }
+        },
+        "0c3d9408-b56f-4800-ad68-ffe71970a4e6": {
+          "type": "question",
+          "settings": {
+            "title": "Werden meine Daten sicher übertragen?",
+            "text": "<p>Ja, deine Datenübertragung ist sicher. Alles über die getroffenen Vorkehrungen findest Du <a href=\"https://www.juskys.de/datenschutz\" target=\"_blank\" title=\"Datenschutz Juskys\">hier</a>.</p>"
+          }
+        },
+        "1adf3448-93bd-423f-b708-b91a6f301a8d": {
+          "type": "question",
+          "settings": {
+            "title": "Werden Cookies auf der Website verwendet?",
+            "text": "<p>Ja, wir setzen Cookies für Dich ein, um Dir nützliche Funktionen bieten <br/>zu können. Du kannst allerdings selbst entscheiden, ob Du Cookies <br/>zulässt. Solltest Du Dich entscheiden, Cookies auf der Webseite von <br/>juskys.de nicht anzunehmen, kann es sein, dass die Funktionalität <br/>unserer Seiten vermindert ist, und manche Dienste nicht in Anspruch <br/>genommen werden können. Dafür bitten wir Dich um Verständnis. Weitere Informationen findest Du in unserer <a href=\"https://www.juskys.de/datenschutz\" target=\"_blank\" title=\"Datenschutz Juskys\">Datenschutzerklärung</a>.</p>"
+          }
+        },
+        "35562ead-f1bb-41fe-96e5-29b8da48711f": {
+          "type": "rich-text",
+          "settings": {
+            "title": "Verschiedenes",
+            "text": "",
+            "align_text": "left"
+          }
+        },
+        "fe96c78e-5410-4373-8f96-32b17d795ae1": {
+          "type": "question",
+          "settings": {
+            "title": "Wie kann ich euch erreichen?",
+            "text": "<p>Du kannst uns Mo – Fr von 8 bis 20 Uhr sowie Sa von 9 bis 18 Uhr telefonisch unter folgender Rufnummer erreichen: <a href=\"tel:+4953418672990\">+49 (0)5062-965660</a>.</p><p>Alternativ kannst du uns eine E-Mail an <a href=\"mailto:service@shop.juskys.de\" title=\"Kontakt-Mailadresse\">service@shop.juskys.de</a> senden oder unser <a href=\"https://juskysshop.myshopify.com/pages/contact\" target=\"_blank\" title=\"https://juskysshop.myshopify.com/pages/contact\">Kontaktformular</a> nutzen.</p>"
+          }
+        },
+        "d12aaadb-7589-4c59-b03d-cd363c5128d0": {
+          "type": "question",
+          "settings": {
+            "title": "Konnte deine Frage hierbei nicht beantwortet werden?",
+            "text": "<p>Dann nehme bitte Kontakt zu unserem <a href=\"https://www.juskys.de/kontaktformular\" target=\"_blank\" title=\"Kontaktformular Juskys\">Kundenservice </a>auf, damit wir dein Anliegen klären können.</p>"
+          }
+        },
+        "89ac6f8a-08ee-4a61-b6a0-115915a5d1c3": {
+          "type": "question",
+          "settings": {
+            "title": "Gibt es Entsorgungshinweise?",
+            "text": "<p>Elektro- und Elektronikartikel, Altbatterien und verbrauchte Akkumotoren dürfen nicht im Hausmüll entsorgt werden. Wir helfen dir gerne bei der ordnungsgemäßen Entsorgung. Mehr Infos zu diesem Thema findest du hier: <a href=\"https://www.juskys.de/custom/index/sCustom/134\" target=\"_self\" title=\"Zu den Entsorgungshinweisen\">Entsorgungshinweise</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq-0",
+        "faq-1",
+        "faq-2",
+        "7d1e3332-ca0b-4aa1-afff-4f771ea7722c",
+        "56c8caf9-e77e-4f75-90b1-68ac8cc03dba",
+        "faq-3",
+        "200733c9-afb5-42af-b4e4-92862728cb98",
+        "58ba99c3-b363-4c0b-bafb-a0fe57b05329",
+        "faq-4",
+        "79822031-2bc0-431c-b5bf-a2d4fd902b72",
+        "0144bed3-2d0b-403c-9acf-560c71ecf2e0",
+        "fc499daa-c3b8-408d-a372-3747d2a99c9d",
+        "04370e27-f6ca-47e2-93b0-a2ba44869271",
+        "740d8476-0d0c-4de6-ae91-d4c484fe56f6",
+        "425195ea-6dbc-4041-a582-79862cf17840",
+        "dbd91575-c8ea-48d5-9b9b-4d675bdb9e5a",
+        "593de303-5ecf-4c96-bf1a-388c1b5eb8e9",
+        "62d040e7-f3e3-4392-9d61-e2b934943481",
+        "1aadcb4c-ebf9-40dd-81fb-d5c5954da25e",
+        "09dc7ba8-b4a9-4e3d-a3f4-ec6b1b3de841",
+        "d8dfcc13-2f56-4f54-b4d5-d89e0c3cbf94",
+        "9835dbd9-540a-4cbe-b46c-68dbe2650466",
+        "1f65f81f-9d3c-439a-8dd6-7880bf909edf",
+        "fe414d87-b07e-4516-bc3a-1236c87ed5d2",
+        "13837251-beda-42ec-82ac-d4144f81e251",
+        "c868de23-3afd-4c51-bbb1-9ec9affff121",
+        "3dbb7210-da70-4b7c-81e7-34a8f45f4e23",
+        "f23cd447-0e39-45d3-abb6-182e493eeb10",
+        "06559986-ecb4-49ea-8bb1-242a466e3eee",
+        "ae58672f-169a-46a3-aa81-8edea5acf6b2",
+        "68d3ae9f-3c35-4eaf-89a3-742b675f223a",
+        "219e40e2-20c9-4be5-b629-1933a9b8ec4b",
+        "42bef277-d873-416c-99a3-3cc596954b06",
+        "75f83807-db12-41b1-a855-db83998aa398",
+        "6c622266-bf36-4714-8cfd-0c414db156f6",
+        "0c3d9408-b56f-4800-ad68-ffe71970a4e6",
+        "1adf3448-93bd-423f-b708-b91a6f301a8d",
+        "35562ead-f1bb-41fe-96e5-29b8da48711f",
+        "fe96c78e-5410-4373-8f96-32b17d795ae1",
+        "d12aaadb-7589-4c59-b03d-cd363c5128d0",
+        "89ac6f8a-08ee-4a61-b6a0-115915a5d1c3"
+      ],
+      "settings": {
+        "title": ""
+      }
+    },
+    "959917dc-7b43-4392-9a56-b236c03fbbb6": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20174419296559__959917dc-7b43-4392-9a56-b236c03fbbb6-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "Antwort nicht gefunden?"
+          }
+        },
+        "template--20174419296559__959917dc-7b43-4392-9a56-b236c03fbbb6-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Nutze unser Kontaktformular um uns deine Frage zu stellen <a href=\"https://juskysshop.myshopify.com/pages/contact\" title=\"https://juskysshop.myshopify.com/pages/contact\">zum Kontaktformular</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--20174419296559__959917dc-7b43-4392-9a56-b236c03fbbb6-heading-1",
+        "template--20174419296559__959917dc-7b43-4392-9a56-b236c03fbbb6-text-1"
+      ],
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "bf507c17-ecc5-4ed4-addd-c40f2ab9e09f",
+    "faq",
+    "959917dc-7b43-4392-9a56-b236c03fbbb6"
+  ]
+}

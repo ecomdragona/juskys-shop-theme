@@ -1,0 +1,127 @@
+<!-- START Google Ads dynamic remarketing by ondevi.com v1.6 -->
+
+{% assign AW-ID = "AW-1034473212" -%}{%- comment -%}Google Ads conversion ID.{%- endcomment -%}
+
+{%- assign product-id = "sku" -%}{%- comment -%}The format of the product IDs in the feed. 3 accepted values "sku" (SKU of the variant e.g. aga-012), "variant-id" (variant ID e.g. 21283160948841), or "product-id_variant-id" (product ID underscore then variant ID e.g. 28541777444969_21283160948841).{%- endcomment -%}
+
+{%- assign product-id-prefix = "" -%}{%- comment -%}Prefix to product-id. Leave blank if there's no prefix. This is likely needed if product-id_variant-id is selected so 28541777444969_21283160948841 becomes shopify_AU_28541777444969_21283160948841.{%- endcomment -%}
+
+{%- assign price-decimal-fs = false -%}{%- comment -%}If the decimal separator is a full stop like in USD and AUD currencies, set to true. If it is a comma like in some European countries, set to false.{%- endcomment -%}
+
+
+
+{% if template contains 'product' or template contains 'collection' or template contains 'search' or template contains 'cart' %}
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ AW-ID }}"></script>
+
+<script>
+
+window.dataLayer = window.dataLayer || [];
+
+function gtag(){dataLayer.push(arguments);}
+
+gtag('js', new Date());
+
+gtag('config', '{{ AW-ID }}');
+
+{%- if template contains 'product' -%}
+
+gtag('event', 'view_item', { 'items': [
+
+{%- if product-id == "product-id_variant-id" -%}
+
+{ 'id': '{{ product-id-prefix }}{{ product.id }}_{{ product.selected_or_first_available_variant.id }}', 'google_business_vertical': 'retail' }
+
+{%- elsif product-id == 'variant-id' -%}
+
+{ 'id': '{{ product-id-prefix }}{{ product.selected_or_first_available_variant.id }}', 'google_business_vertical': 'retail' }
+
+{%- elsif product-id == 'sku' -%}
+
+{ 'id': '{{ product-id-prefix }}{{ product.selected_or_first_available_variant.sku }}', 'google_business_vertical': 'retail' }
+
+{%- endif -%}
+
+] });
+
+{%- elsif template contains 'collection' -%}
+
+gtag('event', 'view_item_list', { 'items': [
+
+{%- for item in collection.products limit:3 -%}
+
+{%- if product-id == "product-id_variant-id" -%}
+
+{ 'id': '{{ product-id-prefix }}{{ item.id }}_{{ item.selected_or_first_available_variant.id }}', 'google_business_vertical': 'retail' }{% unless forloop.last %},{% endunless %}
+
+{%- elsif product-id == 'variant-id' -%}
+
+{ 'id': '{{ product-id-prefix }}{{ item.variants.first.id }}', 'google_business_vertical': 'retail' }{% unless forloop.last %},{% endunless %}
+
+{%- elsif product-id == 'sku' -%}
+
+{ 'id': '{{ product-id-prefix }}{{ item.selected_or_first_available_variant.sku }}', 'google_business_vertical': 'retail' }{% unless forloop.last %},{% endunless %}
+
+{%- endif -%}
+
+{%- endfor -%}
+
+] });
+
+{%- elsif template contains 'search' -%}
+
+gtag('event', 'view_search_results', { 'items': [
+
+{%- for item in search.results limit:3 -%}
+
+{%- if product-id == "product-id_variant-id" -%}
+
+{ 'id': '{{ product-id-prefix }}{{ item.id }}_{{ item.selected_or_first_available_variant.id }}', 'google_business_vertical': 'retail' }{% unless forloop.last %},{% endunless %}
+
+{%- elsif product-id == 'variant-id' -%}
+
+{ 'id': '{{ product-id-prefix }}{{ item.variants.first.id }}', 'google_business_vertical': 'retail' }{% unless forloop.last %},{% endunless %}
+
+{%- elsif product-id == 'sku' -%}
+
+{ 'id': '{{ product-id-prefix }}{{ item.selected_or_first_available_variant.sku }}', 'google_business_vertical': 'retail' }{% unless forloop.last %},{% endunless %}
+
+{%- endif -%}
+
+{%- endfor -%}
+
+] });
+
+{%- elsif template contains 'cart' -%}
+
+gtag('event', 'add_to_cart', { 'items': [
+
+{%- for item in cart.items limit:3 -%}
+
+{%- if product-id == "product-id_variant-id" -%}
+
+{ 'id': '{{ product-id-prefix }}{{ item.product_id }}_{{ item.variant_id }}', 'google_business_vertical': 'retail' }{% unless forloop.last %},{% endunless %}
+
+{%- elsif product-id == 'variant-id' -%}
+
+{ 'id': '{{ product-id-prefix }}{{ item.variant_id }}', 'google_business_vertical': 'retail' }{% unless forloop.last %},{% endunless %}
+
+{%- elsif product-id == 'sku' -%}
+
+{ 'id': '{{ product-id-prefix }}{{ item.sku }}', 'google_business_vertical': 'retail' }{% unless forloop.last %},{% endunless %}
+
+{%- endif -%}
+
+{%- endfor -%}
+
+] });
+
+{%- endif -%}
+
+</script>
+
+{% endif %}
+
+<!-- END Google Ads dynamic remarketing by ondevi.com -->

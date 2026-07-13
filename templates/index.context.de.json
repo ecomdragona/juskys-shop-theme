@@ -1,0 +1,62 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "index.json",
+  "context": {
+    "market": "de"
+  },
+  "sections": {
+    "promo-grid": {
+      "settings": {},
+      "blocks": {
+        "3dbab011-318b-43f4-8410-c3179bdcab80": {
+          "settings": {
+            "cta_link1": "shopify://collections/sofas"
+          }
+        },
+        "promo-1": {
+          "settings": {
+            "cta_link1": "shopify://collections/geraeteschuppen-metall"
+          }
+        },
+        "promo-0": {
+          "settings": {
+            "cta_link1": "shopify://collections/schminktische"
+          }
+        },
+        "939f41dc-c6e5-47e2-a1af-9d8d34c6d55b": {
+          "settings": {
+            "cta_link1": "shopify://collections/heizgeraete"
+          }
+        },
+        "cc0f194b-93fa-4b4c-adc7-1d4f024e42b5": {
+          "settings": {
+            "cta_link1": "shopify://collections/schwerlastregale"
+          }
+        }
+      }
+    },
+    "b26c3847-c819-4625-aad3-61a8c50e778c": {
+      "settings": {},
+      "blocks": {
+        "template--20174419099951__b26c3847-c819-4625-aad3-61a8c50e778c-advanced-1": {
+          "settings": {
+            "cta_link1": "shopify://collections/uberdachungen"
+          }
+        },
+        "template--20174419099951__b26c3847-c819-4625-aad3-61a8c50e778c-advanced-2": {
+          "settings": {
+            "cta_link1": "shopify://collections/indoor-spielzeug"
+          }
+        }
+      }
+    }
+  }
+}

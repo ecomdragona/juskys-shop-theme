@@ -1,0 +1,281 @@
+{% if template.name == 'collection' or template.name == 'product' %}
+  <div class="page-width navigation-based-breadcrumb-wrapper">
+    {%- capture breadcrumb -%}
+  {%- assign main_menu = linklists['main-menu'] -%}
+  
+  <nav class="custom-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li>
+        <a href="/">Startseite</a>
+      </li>
+      
+      {%- if template.name == 'collection' -%}
+        {%- assign current_collection = collection -%}
+        {%- assign found_path = false -%}
+          {%- for link in main_menu.links -%}
+          {%- if link.url == current_collection.url -%}
+            <li>
+              <a href="{{ link.url }}">{{ link.title }}</a>
+            </li>
+            {%- assign found_path = true -%}
+            {%- break -%}
+          {%- endif -%}
+
+          {%- if link.links.size > 0 -%}
+            {%- for child_link in link.links -%}
+              {%- if child_link.url == current_collection.url -%}
+                <li>
+                  <a href="{{ link.url }}">{{ link.title }}</a>
+                </li>
+                <li>
+                  <a href="{{ child_link.url }}">{{ child_link.title }}</a>
+                </li>
+                {%- assign found_path = true -%}
+                {%- break -%}
+              {%- endif -%}
+              
+              {%- if child_link.links.size > 0 -%}
+                {%- for grandchild_link in child_link.links -%}
+                  {%- if grandchild_link.url == current_collection.url -%}
+                    <li>
+                      <a href="{{ link.url }}">{{ link.title }}</a>
+                    </li>
+                    <li>
+                      <a href="{{ child_link.url }}">{{ child_link.title }}</a>
+                    </li>
+                    <li>
+                      <a href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
+                    </li>
+                    {%- assign found_path = true -%}
+                    {%- break -%}
+                  {%- endif -%}
+                  
+                  {%- if grandchild_link.links.size > 0 -%}
+                    {%- for great_grandchild_link in grandchild_link.links -%}
+                      {%- if great_grandchild_link.url == current_collection.url -%}
+                        <li>
+                          <a href="{{ link.url }}">{{ link.title }}</a>
+                        </li>
+                        <li>
+                          <a href="{{ child_link.url }}">{{ child_link.title }}</a>
+                        </li>
+                        <li>
+                          <a href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
+                        </li>
+                        <li>
+                          <a href="{{ great_grandchild_link.url }}">{{ great_grandchild_link.title }}</a>
+                        </li>
+                        {%- assign found_path = true -%}
+                        {%- break -%}
+                      {%- endif -%}
+                    {%- endfor -%}
+                  {%- endif -%}
+                  
+                  {%- if found_path -%}{%- break -%}{%- endif -%}
+                {%- endfor -%}
+              {%- endif -%}
+              
+              {%- if found_path -%}{%- break -%}{%- endif -%}
+            {%- endfor -%}
+          {%- endif -%}
+          
+          {%- if found_path -%}{%- break -%}{%- endif -%}
+        {%- endfor -%}
+      
+      {%- elsif template.name == 'product' -%}
+        {%- assign product_collections = product.collections -%}
+        {%- assign deepest_match = nil -%}
+        {%- assign deepest_level = -1 -%}
+        {%- assign already_included_collection = false -%}
+        
+
+        {%- for collection in product_collections -%}
+          {%- assign current_collection = collection -%}
+          
+          {%- for link in main_menu.links -%}
+            {%- assign level = 0 -%}
+            
+            {%- if link.url == current_collection.url -%}
+              {%- if level > deepest_level -%}
+                {%- assign deepest_match = current_collection -%}
+                {%- assign deepest_level = level -%}
+                {%- assign already_included_collection = true -%}
+              {%- endif -%}
+            {%- endif -%}
+            
+            {%- if link.links.size > 0 -%}
+              {%- assign level = 1 -%}
+              {%- for child_link in link.links -%}
+                {%- if child_link.url == current_collection.url -%}
+                  {%- if level > deepest_level -%}
+                    {%- assign deepest_match = current_collection -%}
+                    {%- assign deepest_level = level -%}
+                    {%- assign already_included_collection = true -%}
+                  {%- endif -%}
+                {%- endif -%}
+                
+                {%- if child_link.links.size > 0 -%}
+                  {%- assign level = 2 -%}
+                  {%- for grandchild_link in child_link.links -%}
+                    {%- if grandchild_link.url == current_collection.url -%}
+                      {%- if level > deepest_level -%}
+                        {%- assign deepest_match = current_collection -%}
+                        {%- assign deepest_level = level -%}
+                        {%- assign already_included_collection = true -%}
+                      {%- endif -%}
+                    {%- endif -%}
+                    
+                    {%- if grandchild_link.links.size > 0 -%}
+                      {%- assign level = 3 -%}
+                      {%- for great_grandchild_link in grandchild_link.links -%}
+                        {%- if great_grandchild_link.url == current_collection.url -%}
+                          {%- if level > deepest_level -%}
+                            {%- assign deepest_match = current_collection -%}
+                            {%- assign deepest_level = level -%}
+                            {%- assign already_included_collection = true -%}
+                          {%- endif -%}
+                        {%- endif -%}
+                      {%- endfor -%}
+                    {%- endif -%}
+                  {%- endfor -%}
+                {%- endif -%}
+              {%- endfor -%}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endfor -%}
+        
+
+        {%- if deepest_match -%}
+          {%- assign current_collection = deepest_match -%}
+          {%- assign found_path = false -%}
+          
+          {%- for link in main_menu.links -%}
+            {%- if link.url == current_collection.url -%}
+              <li>
+                <a href="{{ link.url }}">{{ link.title }}</a>
+              </li>
+              {%- assign found_path = true -%}
+              {%- break -%}
+            {%- endif -%}
+            
+            {%- if link.links.size > 0 -%}
+              {%- for child_link in link.links -%}
+                {%- if child_link.url == current_collection.url -%}
+                  <li>
+                    <a href="{{ link.url }}">{{ link.title }}</a>
+                  </li>
+                  <li>
+                    <a href="{{ child_link.url }}">{{ child_link.title }}</a>
+                  </li>
+                  {%- assign found_path = true -%}
+                  {%- break -%}
+                {%- endif -%}
+                
+                {%- if child_link.links.size > 0 -%}
+                  {%- for grandchild_link in child_link.links -%}
+                    {%- if grandchild_link.url == current_collection.url -%}
+                      <li>
+                        <a href="{{ link.url }}">{{ link.title }}</a>
+                      </li>
+                      <li>
+                        <a href="{{ child_link.url }}">{{ child_link.title }}</a>
+                      </li>
+                      <li>
+                        <a href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
+                      </li>
+                      {%- assign found_path = true -%}
+                      {%- break -%}
+                    {%- endif -%}
+                    
+                    {%- if grandchild_link.links.size > 0 -%}
+                      {%- for great_grandchild_link in grandchild_link.links -%}
+                        {%- if great_grandchild_link.url == current_collection.url -%}
+                          <li>
+                            <a href="{{ link.url }}">{{ link.title }}</a>
+                          </li>
+                          <li>
+                            <a href="{{ child_link.url }}">{{ child_link.title }}</a>
+                          </li>
+                          <li>
+                            <a href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
+                          </li>
+                          <li>
+                            <a href="{{ great_grandchild_link.url }}">{{ great_grandchild_link.title }}</a>
+                          </li>
+                          {%- assign found_path = true -%}
+                          {%- break -%}
+                        {%- endif -%}
+                      {%- endfor -%}
+                    {%- endif -%}
+                    
+                    {%- if found_path -%}{%- break -%}{%- endif -%}
+                  {%- endfor -%}
+                {%- endif -%}
+                
+                {%- if found_path -%}{%- break -%}{%- endif -%}
+              {%- endfor -%}
+            {%- endif -%}
+            
+            {%- if found_path -%}{%- break -%}{%- endif -%}
+          {%- endfor -%}
+          
+
+          {%- unless already_included_collection -%}
+            <li>
+              <a href="{{ current_collection.url }}">{{ current_collection.title }}</a>
+            </li>
+          {%- endunless -%}
+        {%- endif -%}
+      
+      {%- endif -%}
+   
+    </ol>
+  </nav>
+{%- endcapture -%}
+    <div class="navigation-based-breadcrumb">
+      {{ breadcrumb }}
+    </div>
+
+    <style>
+        .navigation-based-breadcrumb ol {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .navigation-based-breadcrumb li {
+        display: inline-block;
+        margin-right: 6.63px;
+      }
+
+      .navigation-based-breadcrumb li:not(:last-child)::after {
+        content: '›';
+        margin-left: 6.63px;
+        font-size: 11.05px;
+        font-family: var(--typeBasePrimary),var(--typeBaseFallback);
+      }
+
+      .navigation-based-breadcrumb a {
+        font-family: var(--typeBasePrimary),var(--typeBaseFallback);
+        color: #000000;
+        font-size: 11px;
+        line-height: 13px;
+        font-weight: 400;
+        text-decoration: underline;
+      }
+        {% if template.name == 'collection' %}
+       .navigation-based-breadcrumb li:last-child a{
+         color: #4f5969;
+         cursor: auto;
+         pointer-events: none;
+         text-decoration: none; 
+       }
+      {% endif %}
+      .navigation-based-breadcrumb-wrapper{
+        margin-top: 10px;
+      }
+    </style>
+  </div>
+{% endif %}

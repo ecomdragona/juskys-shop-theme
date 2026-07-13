@@ -1,0 +1,40 @@
+<div class="js-qty__wrapper">
+  <input type="text" id="Quantity-{{ id }}"
+    class="js-qty__num"
+    value="{{ qty }}"
+    min="{{ min }}"
+    aria-label="quantity"
+    pattern="[0-9]*"
+    form="{{ form_id }}"
+    name="quantity">
+  <button type="button"
+    class="js-qty__adjust js-qty__adjust--minus"
+    aria-label="{{ 'cart.general.reduce_quantity' | t }}">
+      <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-minus" viewBox="0 0 20 20"><path fill="#444" d="M17.543 11.029H2.1A1.032 1.032 0 0 1 1.071 10c0-.566.463-1.029 1.029-1.029h15.443c.566 0 1.029.463 1.029 1.029 0 .566-.463 1.029-1.029 1.029z"/></svg>
+      <span class="icon__fallback-text" aria-hidden="true">&minus;</span>
+  </button>
+  <button type="button"
+    class="js-qty__adjust js-qty__adjust--plus"
+    aria-label="{{ 'cart.general.increase_quantity' | t }}">
+      <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-plus" viewBox="0 0 20 20"><path fill="#444" d="M17.409 8.929h-6.695V2.258c0-.566-.506-1.029-1.071-1.029s-1.071.463-1.071 1.029v6.671H1.967C1.401 8.929.938 9.435.938 10s.463 1.071 1.029 1.071h6.605V17.7c0 .566.506 1.029 1.071 1.029s1.071-.463 1.071-1.029v-6.629h6.695c.566 0 1.029-.506 1.029-1.071s-.463-1.071-1.029-1.071z"/></svg>
+      <span class="icon__fallback-text" aria-hidden="true">+</span>
+  </button>
+  <button type="button" 
+    class="js-qty__adjust js-qty__adjust--remove" style="display: none;">
+    <svg id="Objects" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 344.96 353.91">
+      <defs>
+        <style>
+          .cls-1-custom {
+            stroke: #4f5969;
+            stroke-miterlimit: 10;
+            stroke-width: 5px;
+          }
+        </style>
+      </defs>
+      <path class="cls-1-custom" d="m292.01,97.32h-59.47v-34.86c0-3.08-2.39-5.13-5.13-5.13h-99.8c-3.08,0-5.13,2.39-5.13,5.13v34.86h-59.47c-3.08,0-5.13,2.39-5.13,5.13,0,3.08,2.39,5.13,5.13,5.13h34.86v183.87c0,3.08,2.39,5.13,5.13,5.13h149.35c2.73,0,4.79-2.05,5.13-4.78V107.58h34.52c2.73,0,5.13-2.39,5.13-5.13,0-3.08-2.39-5.13-5.13-5.13Zm-159.27-29.39h89.54v29.39h-89.54v-29.39Zm114.49,218.73H107.8V107.58h139.44v179.09Z"/>
+      <path class="cls-1-custom" d="m142.66,137.31c-3.08,0-5.13,2.39-5.13,5.13v109.37c0,3.08,2.39,5.13,5.13,5.13s5.13-2.39,5.13-5.13v-109.37c0-3.08-2.05-5.13-5.13-5.13Z"/>
+      <path class="cls-1-custom" d="m177.52,137.31c-3.08,0-5.13,2.39-5.13,5.13v109.37c0,3.08,2.39,5.13,5.13,5.13s5.13-2.39,5.13-5.13v-109.37c0-3.08-2.39-5.13-5.13-5.13Z"/>
+      <path class="cls-1-custom" d="m212.38,137.31c-3.08,0-5.13,2.39-5.13,5.13v109.37c0,3.08,2.39,5.13,5.13,5.13s5.13-2.39,5.13-5.13v-109.37c0-3.08-2.05-5.13-5.13-5.13Z"/>
+    </svg>
+  </button>
+</div>

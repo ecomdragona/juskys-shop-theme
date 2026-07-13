@@ -1,0 +1,1448 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collections_slider_X8GnT6": {
+      "type": "collections-slider",
+      "blocks": {
+        "collection_YVWh4D": {
+          "type": "collection",
+          "settings": {
+            "collection": "garten",
+            "image": "shopify://shop_images/Garten_e63768bd-88c0-4c6e-937c-8893e6ab74bc.png"
+          }
+        },
+        "collection_3XeHMR": {
+          "type": "collection",
+          "settings": {
+            "collection": "haushalt",
+            "image": "shopify://shop_images/Haushalt_c8a3571b-631f-46c6-8c80-0c74d63444f8.png"
+          }
+        },
+        "collection_jnCAVX": {
+          "type": "collection",
+          "settings": {
+            "collection": "tierbedarf",
+            "image": "shopify://shop_images/Tierbedarf_4c36a7c3-afe4-4cb9-8b9a-5bfa5736d195.png"
+          }
+        },
+        "collection_UKbnhX": {
+          "type": "collection",
+          "settings": {
+            "collection": "betten",
+            "image": "shopify://shop_images/Betten_fa93c27f-9076-406d-be43-4132b425c3b9.png"
+          }
+        },
+        "collection_gWP7FD": {
+          "type": "collection",
+          "settings": {
+            "collection": "fitnessgeraete",
+            "image": "shopify://shop_images/Fitness_9b500839-82e3-4286-b668-ba25c8119b31.png"
+          }
+        },
+        "collection_TNeVCq": {
+          "type": "collection",
+          "settings": {
+            "collection": "schwerlastregale",
+            "image": "shopify://shop_images/Schwerlastregale_8a424171-9172-4e98-8220-a387e2959b81.png"
+          }
+        },
+        "collection_dRcddi": {
+          "type": "collection",
+          "settings": {
+            "collection": "geraeteschuppen-metall",
+            "image": "shopify://shop_images/Geraeteschuppen_532d446f-eed4-49b1-b32e-466e385ebd64.png"
+          }
+        },
+        "collection_eCFQHp": {
+          "type": "collection",
+          "settings": {
+            "collection": "spielzeug",
+            "image": "shopify://shop_images/Indoor_Spielzeug_f7aab732-b50a-4dfa-ba3e-779fd14c6d82.png"
+          }
+        }
+      },
+      "block_order": [
+        "collection_YVWh4D",
+        "collection_3XeHMR",
+        "collection_jnCAVX",
+        "collection_UKbnhX",
+        "collection_gWP7FD",
+        "collection_TNeVCq",
+        "collection_dRcddi",
+        "collection_eCFQHp"
+      ],
+      "settings": {
+        "show": true
+      }
+    },
+    "slideshow_7bXiqA": {
+      "type": "slideshow",
+      "blocks": {
+        "image_cC66Ki": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "subheading_desktop_font_size": 24,
+            "top_subheading_m": "",
+            "subheading_mobile_font_size": 20,
+            "title": "Garten Trends 2026",
+            "title_size": 40,
+            "title_m": "Garten Trends 2026",
+            "title_size_m": 20,
+            "subheading": "",
+            "link": "https://juskys.de/collections/sale",
+            "link_text": "Jetzt entdecken",
+            "link_2": "https://juskys.de/collections/sale",
+            "link_text_2": "",
+            "text_align": "vertical-bottom horizontal-right",
+            "text_align_m": "m-vertical-bottom m-horizontal-left",
+            "image": "shopify://shop_images/shopify_desktop_1920x1080-verlaengert_475fe690-f913-4dee-bc04-fb2ad22f4971.webp",
+            "image_mobile": "shopify://shop_images/shopify_mobile_750x800-verlaengert_c0219054-f9ad-4ad6-ba62-b9e4fc91f624.webp",
+            "parallax_direction": "top",
+            "overlay_opacity": 0,
+            "color_subheading": "#ffffff",
+            "color_heading": "#ffffff",
+            "color_text": "#ffffff",
+            "color_accent_1": "#92c020",
+            "color_accent_2": "rgba(0,0,0,0)",
+            "color_btn_text_check": false,
+            "color_accent_t_1": "#ffffff",
+            "color_accent_t_2": "#ffffff"
+          }
+        },
+        "image_hGDfAF": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "Gartenmöbel Sets Genua & Turin",
+            "subheading_desktop_font_size": 22,
+            "top_subheading_m": "Gartenmöbel Genua & Turin",
+            "subheading_mobile_font_size": 14,
+            "title": "Komfort trifft Stil",
+            "title_size": 40,
+            "title_m": "Komfort trifft Stil",
+            "title_size_m": 32,
+            "subheading": "",
+            "link": "https://juskys.de/collections/neu-im-shop",
+            "link_text": "Jetzt entdecken",
+            "link_2": "https://juskys.de/collections/neu-im-shop",
+            "link_text_2": "",
+            "text_align": "vertical-bottom horizontal-right",
+            "text_align_m": "m-vertical-bottom m-horizontal-center",
+            "image": "shopify://shop_images/shopify_desktop_1920x1080_cbae89ac-2070-4173-942f-7769c1e5f442.webp",
+            "image_mobile": "shopify://shop_images/shopify_mobile_750x800_2baed7c3-159e-46a9-96ee-e5679444dd24.webp",
+            "parallax_direction": "top",
+            "overlay_opacity": 0,
+            "color_subheading": "#ffffff",
+            "color_heading": "#ffffff",
+            "color_text": "#ffffff",
+            "color_accent_1": "#92c020",
+            "color_accent_2": "#92c020",
+            "color_btn_text_check": false,
+            "color_accent_t_1": "#ffffff",
+            "color_accent_t_2": "#000000"
+          }
+        },
+        "image_TnM8aq": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "top_subheading": "-----↑ Fertig↑-----",
+            "subheading_desktop_font_size": 25,
+            "top_subheading_m": "Happy Days",
+            "subheading_mobile_font_size": 18,
+            "title": "-----↑ Fertig↑-----",
+            "title_size": 50,
+            "title_m": "Viele Artikel stark reduziert",
+            "title_size_m": 30,
+            "subheading": "",
+            "link": "shopify://collections/happy-days",
+            "link_text": "Jetzt entdecken",
+            "link_2": "https://juskys.de/collections/happy-days",
+            "link_text_2": "",
+            "text_align": "vertical-bottom horizontal-right",
+            "text_align_m": "m-vertical-bottom m-horizontal-left",
+            "image": "shopify://shop_images/shopify_desktop_1511x850-happy_days_91f8473a-ff1b-4732-a69e-e49a6403641e.jpg",
+            "image_mobile": "shopify://shop_images/shopify_mobile_800x800_454b4732-0113-4ebd-9020-635ab8b2a3fe.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 0,
+            "color_subheading": "#ffffff",
+            "color_heading": "#ffffff",
+            "color_text": "#ffffff",
+            "color_accent_1": "#f45a2a",
+            "color_accent_2": "#000000",
+            "color_btn_text_check": false,
+            "color_accent_t_1": "#ffffff",
+            "color_accent_t_2": "#ffffff"
+          }
+        },
+        "image_TiQLAW": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "top_subheading": "Frühlings Warm-Up",
+            "subheading_desktop_font_size": 34,
+            "top_subheading_m": "",
+            "subheading_mobile_font_size": 20,
+            "title": "",
+            "title_size": 55,
+            "title_m": "",
+            "title_size_m": 34,
+            "subheading": "",
+            "link": "https://juskys.de/collections/sale",
+            "link_text": "Jetzt sparen",
+            "link_2": "https://juskys.de/collections/sale",
+            "link_text_2": "",
+            "text_align": "vertical-bottom horizontal-right",
+            "text_align_m": "m-vertical-bottom m-horizontal-center",
+            "image": "shopify://shop_images/shopify_desktop_1920x1080_f9160353-0a7b-4fd2-8aeb-ebd34d378cce.webp",
+            "image_mobile": "shopify://shop_images/shopify_mobile_750x800-verlaengert-20.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 0,
+            "color_subheading": "#ffffff",
+            "color_heading": "#ffffff",
+            "color_text": "#ffffff",
+            "color_accent_1": "#92c020",
+            "color_accent_2": "#92c020",
+            "color_btn_text_check": false,
+            "color_accent_t_1": "#ffffff",
+            "color_accent_t_2": "#ffffff"
+          }
+        },
+        "image_XUWfMV": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "top_subheading": "Winterlieblinge",
+            "subheading_desktop_font_size": 27,
+            "top_subheading_m": "Winterlieblinge",
+            "subheading_mobile_font_size": 18,
+            "title": "",
+            "title_size": 45,
+            "title_m": "",
+            "title_size_m": 25,
+            "subheading": "",
+            "link": "https://juskys.de/collections/weihnachten",
+            "link_text": "Jetzt shoppen",
+            "link_2": "https://juskys.de/collections/weihnachten",
+            "link_text_2": "",
+            "text_align": "vertical-bottom horizontal-left",
+            "text_align_m": "m-vertical-bottom m-horizontal-left",
+            "image": "shopify://shop_images/shopify_desktop_1920x1080_b1926c3d-fdfa-4fed-aeae-b5c3d6661199.webp",
+            "image_mobile": "shopify://shop_images/shopify_mobile_750x800_19f6dba5-07e4-4edf-a91d-31055fa095b4.webp",
+            "parallax_direction": "top",
+            "overlay_opacity": 0,
+            "color_subheading": "#ffffff",
+            "color_heading": "#ffffff",
+            "color_text": "#ffffff",
+            "color_accent_1": "#ff4f33",
+            "color_accent_2": "rgba(0,0,0,0)",
+            "color_btn_text_check": false,
+            "color_accent_t_1": "#ffffff",
+            "color_accent_t_2": "#000000"
+          }
+        },
+        "image_rxbhhp": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "top_subheading": "",
+            "subheading_desktop_font_size": 27,
+            "top_subheading_m": "",
+            "subheading_mobile_font_size": 18,
+            "title": "",
+            "title_size": 55,
+            "title_m": "",
+            "title_size_m": 40,
+            "subheading": "",
+            "link": "https://juskys.de/collections/sale",
+            "link_text": "Jetzt sparen",
+            "link_2": "https://juskys.de/collections/sale",
+            "link_text_2": "",
+            "text_align": "vertical-bottom horizontal-left",
+            "text_align_m": "m-vertical-bottom m-horizontal-center",
+            "image": "shopify://shop_images/shopify_desktop_1920x1080_8761c9e5-473b-4346-a9fb-6b30547731b1.webp",
+            "image_mobile": "shopify://shop_images/shopify_mobile_750x800_3ab8092e-75d5-4c2b-816f-ae7e83f882fb.webp",
+            "parallax_direction": "top",
+            "overlay_opacity": 10,
+            "color_subheading": "#ffffff",
+            "color_heading": "#ffffff",
+            "color_text": "#ffffff",
+            "color_accent_1": "#92c020",
+            "color_accent_2": "#000000",
+            "color_btn_text_check": false,
+            "color_accent_t_1": "#ffffff",
+            "color_accent_t_2": "#ffffff"
+          }
+        },
+        "image_RzxymN": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "top_subheading": "Winterlieblinge",
+            "subheading_desktop_font_size": 26,
+            "top_subheading_m": "Winterlieblinge",
+            "subheading_mobile_font_size": 19,
+            "title": "",
+            "title_size": 41,
+            "title_m": "",
+            "title_size_m": 25,
+            "subheading": "",
+            "link": "https://juskys.de/collections/sale",
+            "link_text": "Jetzt entdecken",
+            "link_2": "https://juskys.de/collections/sale",
+            "link_text_2": "",
+            "text_align": "vertical-bottom horizontal-left",
+            "text_align_m": "m-vertical-bottom m-horizontal-center",
+            "image": "shopify://shop_images/shopify_desktop_1920x1080_2c53111e-37b5-47f0-86f7-ef3cc49c7824.webp",
+            "image_mobile": "shopify://shop_images/shopify_mobile_750x800_4c719441-1ae5-49ef-852e-15f25dd8d23f.webp",
+            "parallax_direction": "top",
+            "overlay_opacity": 0,
+            "color_subheading": "#ffffff",
+            "color_heading": "#ffffff",
+            "color_text": "#ffffff",
+            "color_accent_1": "#92c020",
+            "color_accent_2": "#000000",
+            "color_btn_text_check": false,
+            "color_accent_t_1": "#ffffff",
+            "color_accent_t_2": "#ffffff"
+          }
+        },
+        "image_chd6gU": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "top_subheading": "Deal der Woche",
+            "subheading_desktop_font_size": 20,
+            "top_subheading_m": "Deal der Woche",
+            "subheading_mobile_font_size": 15,
+            "title": "",
+            "title_size": 45,
+            "title_m": "Bierzeltgarnitur Bayreuth",
+            "title_size_m": 26,
+            "subheading": "",
+            "link": "shopify://products/bierzeltgarnitur-bayreuth",
+            "link_text": "Jetzt sparen",
+            "link_2": "shopify://products/bierzeltgarnitur-bayreuth",
+            "link_text_2": "",
+            "text_align": "vertical-bottom horizontal-right",
+            "text_align_m": "m-vertical-bottom m-horizontal-left",
+            "image": "shopify://shop_images/shopify_desktop_1920x1080_11c2edb1-9303-4e36-ba95-7cae467c1952.webp",
+            "image_mobile": "shopify://shop_images/shopify_mobile_750x800_30f3bf45-0cb2-4be7-a487-a027fdd8a4ea.webp",
+            "parallax_direction": "top",
+            "overlay_opacity": 0,
+            "color_subheading": "#ffffff",
+            "color_heading": "#ffffff",
+            "color_text": "#ffffff",
+            "color_accent_1": "#ff4f33",
+            "color_accent_2": "#000000",
+            "color_btn_text_check": false,
+            "color_accent_t_1": "#ffffff",
+            "color_accent_t_2": "#ffffff"
+          }
+        },
+        "image_geMnWg": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "top_subheading": "Sommer Start",
+            "subheading_desktop_font_size": 25,
+            "top_subheading_m": "Sommer Start",
+            "subheading_mobile_font_size": 15,
+            "title": "",
+            "title_size": 50,
+            "title_m": "Topseller im Sale",
+            "title_size_m": 30,
+            "subheading": "",
+            "link": "https://juskys.de/collections/sommer-start",
+            "link_text": "Jetzt sparen",
+            "link_2": "https://juskys.de/collections/sommer-start",
+            "link_text_2": "",
+            "text_align": "vertical-bottom horizontal-right",
+            "text_align_m": "m-vertical-bottom m-horizontal-center",
+            "image": "shopify://shop_images/shopify_desktop_1920x1080_56ee45f5-133c-464a-8bd9-086a72dbecfe.webp",
+            "image_mobile": "shopify://shop_images/shopify_mobile_750x800_41a5e6ab-c08b-4e17-907e-4659cd696872.webp",
+            "parallax_direction": "top",
+            "overlay_opacity": 0,
+            "color_subheading": "#ffffff",
+            "color_heading": "#ffffff",
+            "color_text": "#ffffff",
+            "color_accent_1": "#ff4f33",
+            "color_accent_2": "#000000",
+            "color_btn_text_check": false,
+            "color_accent_t_1": "#ffffff",
+            "color_accent_t_2": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "image_cC66Ki",
+        "image_hGDfAF",
+        "image_TnM8aq",
+        "image_TiQLAW",
+        "image_XUWfMV",
+        "image_rxbhhp",
+        "image_RzxymN",
+        "image_chd6gU",
+        "image_geMnWg"
+      ],
+      "settings": {
+        "section_height": "550px",
+        "mobile_height": "400px",
+        "parallax": false,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 6,
+        "lazyload_images": false
+      }
+    },
+    "usp_section_new_eRqMTH": {
+      "type": "usp-section-new",
+      "blocks": {
+        "block_X7ahPb": {
+          "type": "block",
+          "settings": {
+            "liquid": "",
+            "icon": "package",
+            "heading": "Kostenloser Versand",
+            "link": "shopify://policies/shipping-policy"
+          }
+        },
+        "block_9a6Bmm": {
+          "type": "block",
+          "settings": {
+            "liquid": "",
+            "icon": "trophy",
+            "heading": "Über 500.000 zufriedene Kunden",
+            "link": "https://juskys.de/pages/philosophie"
+          }
+        },
+        "block_9XtbbD": {
+          "type": "block",
+          "settings": {
+            "liquid": "",
+            "icon": "truck",
+            "heading": "Kostenloser Rückversand",
+            "link": "https://juskys.de/pages/bestellvorgang"
+          }
+        }
+      },
+      "block_order": [
+        "block_X7ahPb",
+        "block_9a6Bmm",
+        "block_9XtbbD"
+      ],
+      "settings": {
+        "bg_color": "#e6dfd9",
+        "text_color": "#000000",
+        "slider_mobile": false,
+        "enable_auto": true,
+        "auto_speed": 5,
+        "show_arrows": false,
+        "section_class": "top_usp_section"
+      }
+    },
+    "rich_text_n6BtXR": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_zKXPVB": {
+          "type": "heading",
+          "settings": {
+            "title": "Unsere Topseller"
+          }
+        },
+        "text_pWX3yn": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Diese Produkte sind besonders beliebt.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_zKXPVB",
+        "text_pWX3yn"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".theme-block {margin-bottom: 10px;}",
+        ".h2,h2 {font-weight: 600;}"
+      ],
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 20,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 30,
+        "tag": "h1",
+        "align_text": "center",
+        "narrow_column": false,
+        "divider": false
+      }
+    },
+    "c7cdeeee-7aaa-4f53-8201-896f0dbb999a": {
+      "type": "featured-collection-slider_new",
+      "settings": {
+        "title": "Unsere Highlights des Monats",
+        "collection": "frontpage",
+        "button_label": "",
+        "button_url": "",
+        "per_row": 6,
+        "per_row_mobile": 2
+      }
+    },
+    "featured_collection_7QPzPe": {
+      "type": "featured-collection",
+      "disabled": true,
+      "name": "t:sections.featured-collection.presets.featured_collection.name",
+      "settings": {
+        "title": "Unsere Highlights des Monats",
+        "home_featured_products": "frontpage",
+        "button_label": "mehr ansehen",
+        "button_url": "",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": false,
+        "view_all": false,
+        "divider": false
+      }
+    },
+    "rich_text_k8fbbd": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_9LeCfc": {
+          "type": "heading",
+          "settings": {
+            "title": "Beliebte Kategorien"
+          }
+        },
+        "text_wn8GLC": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Diese Kategorien sind gerade im Trend.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_9LeCfc",
+        "text_wn8GLC"
+      ],
+      "disabled": true,
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 20,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 30,
+        "tag": "h1",
+        "align_text": "center",
+        "narrow_column": false,
+        "divider": false
+      }
+    },
+    "1756813604671133b7": {
+      "type": "apps",
+      "blocks": {
+        "klaviyo_email_marketing_sms_form_embed_block_j8dMQH": {
+          "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/form-embed-block/2632fe16-c075-4321-a88b-50b567f42507",
+          "settings": {
+            "formId": "T7pYWs"
+          }
+        }
+      },
+      "block_order": [
+        "klaviyo_email_marketing_sms_form_embed_block_j8dMQH"
+      ],
+      "settings": {
+        "full_width": true,
+        "space_around": true,
+        "custom_class": "abtest-klaviyo-form"
+      }
+    },
+    "promo-grid": {
+      "type": "promo-grid",
+      "blocks": {
+        "5e1ba581-e4ae-4d52-8cd4-8bbc8b79c20c": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "Betten",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "shopify://collections/betten",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/detroit_2e503655-09a2-41cd-b133-b02d7eac6a5e.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 500,
+            "text_size": 100,
+            "text_align": "vertical-bottom horizontal-left",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "3dbab011-318b-43f4-8410-c3179bdcab80": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "Sofas",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "https://juskys.de/collections/sofas",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/domas_ohne_kuerbis_b921df35-9898-4fdb-9ed0-50d4cd68ca4a.png",
+            "video_url": "",
+            "width": "33",
+            "height": 500,
+            "text_size": 100,
+            "text_align": "vertical-bottom horizontal-left",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "promo-1": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "Geräteschuppen",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "https://juskys.de/collections/geraeteschuppen-metall",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/luzern.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 500,
+            "text_size": 100,
+            "text_align": "vertical-bottom horizontal-left",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "promo-0": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "Schminktische",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "https://juskys.de/collections/schminktische",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Gemini_Generated_Image_gppn5ggppn5ggppn_63eaff99-bafe-4d5f-ad97-2c7e4c93514b.png",
+            "video_url": "",
+            "width": "33",
+            "height": 500,
+            "text_size": 100,
+            "text_align": "vertical-bottom horizontal-left",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "939f41dc-c6e5-47e2-a1af-9d8d34c6d55b": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "Heizgeräte",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "https://juskys.de/collections/heizgeraete",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Gemini_Generated_Image_zezstgzezstgzezs.png",
+            "video_url": "",
+            "width": "33",
+            "height": 500,
+            "text_size": 100,
+            "text_align": "vertical-bottom horizontal-left",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "cc0f194b-93fa-4b4c-adc7-1d4f024e42b5": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "Schwerlastregale",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "https://juskys.de/collections/schwerlastregale",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/lagerregal_basic.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 500,
+            "text_size": 100,
+            "text_align": "vertical-bottom horizontal-left",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        }
+      },
+      "block_order": [
+        "5e1ba581-e4ae-4d52-8cd4-8bbc8b79c20c",
+        "3dbab011-318b-43f4-8410-c3179bdcab80",
+        "promo-1",
+        "promo-0",
+        "939f41dc-c6e5-47e2-a1af-9d8d34c6d55b",
+        "cc0f194b-93fa-4b4c-adc7-1d4f024e42b5"
+      ],
+      "settings": {
+        "full_width": false,
+        "gutter_size": 14,
+        "space_above": false,
+        "space_below": true,
+        "lazyload_images": true
+      }
+    },
+    "custom_featured_collection_tabs_ECJwJH": {
+      "type": "custom_featured_collection_tabs",
+      "blocks": {
+        "tab_ffByWU": {
+          "type": "tab",
+          "settings": {
+            "title": "Garten",
+            "collection": "garten"
+          }
+        },
+        "tab_egAcen": {
+          "type": "tab",
+          "settings": {
+            "title": "Haushalt",
+            "collection": "haushalt"
+          }
+        },
+        "tab_azjf67": {
+          "type": "tab",
+          "settings": {
+            "title": "Sale",
+            "collection": "sale"
+          }
+        }
+      },
+      "block_order": [
+        "tab_ffByWU",
+        "tab_egAcen",
+        "tab_azjf67"
+      ],
+      "settings": {
+        "title": "Unsere beliebtesten Produktkategorien",
+        "per_row": 5,
+        "per_row_mobile": 2,
+        "section_class": ""
+      }
+    },
+    "promo_grid_BwkX3h": {
+      "type": "promo-grid",
+      "blocks": {
+        "advanced_bUfbJW": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "Geschenke für Erwachsene",
+            "textarea": "Bis 15.12. bestellen, vor Weihnachten erhalten",
+            "cta_text1": "Jetzt shoppen",
+            "cta_link1": "https://juskys.de/collections/sale",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Lieferfrist-Weihnachten.jpg",
+            "video_url": "",
+            "width": "50",
+            "height": 500,
+            "text_size": 100,
+            "text_align": "vertical-center horizontal-center",
+            "color_accent": "#92c020",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "advanced_kd4w9B": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "Geschenke für Kinder",
+            "textarea": "Bis 15.12. bestellen, vor Weihnachten erhalten",
+            "cta_text1": "Jetzt shoppen",
+            "cta_link1": "shopify://collections/kinder",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Gemini_Generated_Image_xhxu37xhxu37xhxu.png",
+            "video_url": "",
+            "width": "50",
+            "height": 500,
+            "text_size": 100,
+            "text_align": "vertical-center horizontal-center",
+            "color_accent": "#92c020",
+            "boxed": false,
+            "framed": false
+          }
+        }
+      },
+      "block_order": [
+        "advanced_bUfbJW",
+        "advanced_kd4w9B"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "gutter_size": 21,
+        "space_above": false,
+        "space_below": true,
+        "lazyload_images": true
+      }
+    },
+    "ccb31d61-1e0e-4976-b74f-722453717d43": {
+      "type": "hotspots",
+      "blocks": {
+        "template--20174419099951__ccb31d61-1e0e-4976-b74f-722453717d43-product-1": {
+          "type": "product",
+          "settings": {
+            "featured_product": "infrarotkabine-warmekabine-aalborg-mit-triplex-heizsystem-hemlockholz",
+            "vertical": 25,
+            "horizontal": 25
+          }
+        }
+      },
+      "block_order": [
+        "template--20174419099951__ccb31d61-1e0e-4976-b74f-722453717d43-product-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Deal der Woche",
+        "heading_size": "h2",
+        "heading_position": "center",
+        "image": "shopify://shop_images/2_Vertrieb_Kategorie_Artsauna_800x669px.jpg",
+        "indent_image": false,
+        "image_position": "left",
+        "hotspot_style": "bag",
+        "hotspot_color": "#000000",
+        "lazyload_images": true
+      }
+    },
+    "74125ef4-3250-4aa6-a6b0-997528d288c9": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20174419099951__74125ef4-3250-4aa6-a6b0-997528d288c9-heading-1": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--20174419099951__74125ef4-3250-4aa6-a6b0-997528d288c9-heading-1"
+      ],
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "tag": "h1",
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "slideshow_BiPXxc": {
+      "type": "slideshow",
+      "blocks": {
+        "image_mrbt9B": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "Garten Trends Aktion verlängert",
+            "subheading_desktop_font_size": 27,
+            "top_subheading_m": "Garten Trends Aktion verlängert",
+            "subheading_mobile_font_size": 18,
+            "title": "Bis zu -44% Rabatt sichern",
+            "title_size": 50,
+            "title_m": "Bis zu -44% Rabatt sichern",
+            "title_size_m": 30,
+            "subheading": "",
+            "link": "https://juskys.de/collections/sale",
+            "link_text": "Jetzt shoppen",
+            "link_2": "",
+            "link_text_2": "",
+            "text_align": "vertical-center horizontal-center",
+            "text_align_m": "m-vertical-center m-horizontal-center",
+            "image": "shopify://shop_images/schwarz_0c1d9de6-3717-4f0a-b627-ac6fa62a3087.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 0,
+            "color_subheading": "#ffffff",
+            "color_heading": "#ffffff",
+            "color_text": "#ffffff",
+            "color_accent_1": "#92c020",
+            "color_accent_2": "rgba(0,0,0,0)",
+            "color_btn_text_check": true,
+            "color_accent_t_1": "#000000",
+            "color_accent_t_2": "#000000"
+          }
+        },
+        "image_Kx7ymP": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "top_subheading": "Frühlings Warm-Up",
+            "subheading_desktop_font_size": 27,
+            "top_subheading_m": "Frühlings Warm-Up",
+            "subheading_mobile_font_size": 17,
+            "title": "-20% auf alles mit Code: SPRING",
+            "title_size": 50,
+            "title_m": "-20% auf alles mit Code: SPRING",
+            "title_size_m": 20,
+            "subheading": "",
+            "link": "https://juskys.de/collections/sale",
+            "link_text": "JETZT SHOPPEN",
+            "link_2": "",
+            "link_text_2": "",
+            "text_align": "vertical-center horizontal-center",
+            "text_align_m": "m-vertical-center m-horizontal-center",
+            "image": "shopify://shop_images/schwarz_0c1d9de6-3717-4f0a-b627-ac6fa62a3087.jpg",
+            "image_mobile": "shopify://shop_images/schwarz_0c1d9de6-3717-4f0a-b627-ac6fa62a3087.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 0,
+            "color_subheading": "#ffffff",
+            "color_heading": "#ffffff",
+            "color_text": "#ffffff",
+            "color_accent_1": "#92c020",
+            "color_accent_2": "rgba(0,0,0,0)",
+            "color_btn_text_check": true,
+            "color_accent_t_1": "#000000",
+            "color_accent_t_2": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "image_mrbt9B",
+        "image_Kx7ymP"
+      ],
+      "name": "t:sections.slideshow.presets.hero_optional_slideshow.name",
+      "settings": {
+        "section_height": "450px",
+        "mobile_height": "auto",
+        "parallax": true,
+        "style": "minimal",
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "lazyload_images": true
+      }
+    },
+    "b26c3847-c819-4625-aad3-61a8c50e778c": {
+      "type": "promo-grid",
+      "blocks": {
+        "template--20174419099951__b26c3847-c819-4625-aad3-61a8c50e778c-advanced-1": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "Überdachungen",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "https://juskys.de/collections/uberdachungen",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/wintergarten_mit_winterbaum.png",
+            "video_url": "",
+            "width": "50",
+            "height": 500,
+            "text_size": 100,
+            "text_align": "vertical-bottom horizontal-left",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "template--20174419099951__b26c3847-c819-4625-aad3-61a8c50e778c-advanced-2": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "Indoor Spielzeug",
+            "textarea": "",
+            "cta_text1": "",
+            "cta_link1": "https://juskys.de/collections/indoor-spielzeug",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/Gemini_Generated_Image_2za5zc2za5zc2za5.png",
+            "video_url": "",
+            "width": "50",
+            "height": 500,
+            "text_size": 100,
+            "text_align": "vertical-bottom horizontal-left",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        }
+      },
+      "block_order": [
+        "template--20174419099951__b26c3847-c819-4625-aad3-61a8c50e778c-advanced-1",
+        "template--20174419099951__b26c3847-c819-4625-aad3-61a8c50e778c-advanced-2"
+      ],
+      "settings": {
+        "full_width": false,
+        "gutter_size": 5,
+        "space_above": true,
+        "space_below": true,
+        "lazyload_images": true
+      }
+    },
+    "liquid_ygDW83": {
+      "type": "liquid",
+      "settings": {
+        "liquid": "<script src=\"https://widget.reviews.io/carousel-inline-iframeless/dist.js?_t=2024081509\"></script>\n<link rel=\"stylesheet\" href=\"https://assets.reviews.io/css/widgets/carousel-widget.css?_t=2024081509\">\n<link rel=\"stylesheet\" href=\"https://assets.reviews.io/iconfont/reviewsio-icons/style.css?_t=2024081509\">\n<div id=\"reviewsio-carousel-widget\"></div>\n<script>\n\nnew carouselInlineWidget('reviewsio-carousel-widget',{\n      /*Your REVIEWS.io account ID:*/\n      store: 'juskys.de',\n      sku: '',\n      lang: 'de',\n      carousel_type: 'default',\n      styles_carousel: 'CarouselWidget--sideHeader--withcards',\n\n      /*Widget settings:*/\n      options:{\n        general:{\n          /*What reviews should the widget display? Available options: company, product, third_party. You can choose one type or multiple separated by comma.*/\n          review_type: 'company, product',\n          /*Minimum number of reviews required for widget to be displayed*/\n          min_reviews: '1',\n          /*Maximum number of reviews to include in the carousel widget.*/\n          max_reviews: '20',\n          address_format: 'CITY, COUNTRY',\n          /*Carousel auto-scrolling speed. 3000 = 3 seconds. If you want to disable auto-scroll, set this value to false.*/\n          enable_auto_scroll: 10000,\n        },\n        header:{\n          /*Show overall rating stars*/\n          enable_overall_stars: true,\n          rating_decimal_places: 2,\n        },\n        reviews: {\n          /*Show customer name*/\n          enable_customer_name: true,\n          /*Show customer location*/\n          enable_customer_location: true,\n          /*Show \"verified review\" badge*/\n          enable_verified_badge: true,\n          /*Show \"verified subscriber\" badge*/\n          enable_subscriber_badge: true,\n          /*Show \"I recommend this product\" badge (Only for product reviews)*/\n          enable_recommends_badge: true,\n          /*Show photos attached to reviews*/\n          enable_photos: true,\n          /*Show videos attached to reviews*/\n          enable_videos: true,\n          /*Show when review was written*/\n          enable_review_date: true,\n          /*Hide reviews written by the same customer (This may occur when customer reviews multiple products)*/\n          disable_same_customer: true,\n          /*Minimum star rating*/\n          min_review_percent: 4,\n          /*Show 3rd party review source*/\n          third_party_source: true,\n          /*Hide reviews without comments (still shows if review has a photo)*/\n          hide_empty_reviews: true,\n          /*Show product name*/\n          enable_product_name: true,\n          /*Show only reviews which have specific tags (multiple semicolon separated tags allowed i.e tag1;tag2)*/\n          tags: \"allgemein\",\n          /*Show branch, only one input*/\n          branch: \"\",\n          enable_branch_name: false,\n        },\n        popups: {\n          /*Make review items clickable (When they are clicked, a popup appears with more information about a customer and review)*/\n          enable_review_popups:  true,\n          /*Show \"was this review helpful\" buttons*/\n          enable_helpful_buttons: true,\n          /*Show how many times review was upvoted as helpful*/\n          enable_helpful_count: true,\n          /*Show share buttons*/\n          enable_share_buttons: true,\n        },\n    },\n    translations: {\n      verified_customer:  \"Verifizierter Kunde\",\n    },\n    styles:{\n      /*Base font size is a reference size for all text elements. When base value gets changed, all TextHeading and TexBody elements get proportionally adjusted.*/\n      '--base-font-size': '16px',\n      '--base-maxwidth':'100%',\n\n      /*Logo styles:*/\n      '--reviewsio-logo-style':'var(--logo-normal)',\n\n      /*Star styles:*/\n      '--common-star-color':'#FFC30F',\n      '--common-star-disabled-color':' rgba(0,0,0,0.25)',\n      '--medium-star-size':' 22px',\n      '--small-star-size':'19px', /*Modal*/\n      '--x-small-star-size':'16px',\n      '--x-small-star-display':'inline-flex',\n\n      /*Header styles:*/\n      '--header-order':'1',\n      '--header-width':'280px',\n      '--header-bg-start-color':'#E6DFD9',\n      '--header-bg-end-color':'#E6DFD9',\n      '--header-gradient-direction':'135deg',\n      '--header-padding':'1.5em',\n      '--header-border-width':'0px',\n      '--header-border-color':'rgba(0,0,0,0.1)',\n      '--header-border-radius':'0px',\n      '--header-shadow-size':'10px',\n      '--header-shadow-color':'rgba(0, 0, 0, 0.05)',\n\n      /*Header content styles:*/\n      '--header-star-color':'#FFC30F',\n      '--header-disabled-star-color':'inherit',\n      '--header-heading-text-color':'#000000',\n      '--header-heading-font-size':'inherit',\n      '--header-heading-font-weight':'inherit',\n      '--header-heading-line-height':'inherit',\n      '--header-heading-text-transform':'inherit',\n      '--header-subheading-text-color':'#000000',\n      '--header-subheading-font-size':'inherit',\n      '--header-subheading-font-weight':'300',\n      '--header-subheading-line-height':'inherit',\n      '--header-subheading-text-transform':'inherit',\n\n      /*Review item styles:*/\n      '--item-maximum-columns':'5',/*Must be 3 or larger*/\n      '--item-background-start-color':'#ffffff',\n      '--item-background-end-color':'#ffffff',\n      '--item-gradient-direction':'135deg',\n      '--item-padding':'1.5em',\n      '--item-border-width':'0px',\n      '--item-border-color':'rgba(0,0,0,0.1)',\n      '--item-border-radius':'1px',\n      '--item-shadow-size':'10px',\n      '--item-shadow-color':'rgba(0,0,0,1)',\n\n      /*Heading styles:*/\n      '--heading-text-color':' #0E1311',\n      '--heading-text-font-weight':' 600',\n      '--heading-text-font-family':' inherit',\n      '--heading-text-line-height':' 1.4',\n      '--heading-text-letter-spacing':'0',\n      '--heading-text-transform':'none',\n\n      /*Body text styles:*/\n      '--body-text-color':' #0E1311',\n      '--body-text-font-weight':'400',\n      '--body-text-font-family':' inherit',\n      '--body-text-line-height':' 1.4',\n      '--body-text-letter-spacing':'0',\n      '--body-text-transform':'none',\n\n      /*Scroll button styles:*/\n      '--scroll-button-icon-color':'#0E1311',\n      '--scroll-button-icon-size':'24px',\n      '--scroll-button-bg-color':'transparent',\n\n      '--scroll-button-border-width':'0px',\n      '--scroll-button-border-color':'rgba(0,0,0,0.1)',\n\n      '--scroll-button-border-radius':'60px',\n      '--scroll-button-shadow-size':'0px',\n      '--scroll-button-shadow-color':'rgba(0,0,0,0.1)',\n      '--scroll-button-horizontal-position':'3px',\n      '--scroll-button-vertical-position':'0px',\n\n      /*Badge styles:*/\n      '--badge-icon-color':'#18CF86',\n      '--badge-icon-font-size':'15px',\n      '--badge-text-color':'#0E1311',\n      '--badge-text-font-size':'inherit',\n      '--badge-text-letter-spacing':'inherit',\n      '--badge-text-transform':'inherit',\n\n      /*Author styles:*/\n      '--author-font-size':'inherit',\n      '--author-font-weight':'inherit',\n      '--author-text-transform':'inherit',\n\n      /*Product photo or review photo styles:*/\n      '--photo-video-thumbnail-size':'60px',\n      '--photo-video-thumbnail-border-radius':'0px',\n\n      /*Popup styles:*/\n      '--popup-backdrop-color':'rgba(0,0,0,0.75)',\n      '--popup-color':'#ffffff',\n      '--popup-star-color':'inherit',\n      '--popup-disabled-star-color':'inherit',\n      '--popup-heading-text-color':'inherit',\n      '--popup-body-text-color':'inherit',\n      '--popup-badge-icon-color':'inherit',\n      '--popup-badge-icon-font-size':'19px',\n      '--popup-badge-text-color':'inherit',\n      '--popup-badge-text-font-size':'14px',\n      '--popup-border-width':'1px',\n      '--popup-border-color':'rgbargba(0,0,0,1)',\n      '--popup-border-radius':'1px',\n      '--popup-shadow-size':'1px',\n      '--popup-shadow-color':'rgba(0,0,0,0.1)',\n      '--popup-icon-color':'#000000',\n\n      /*Tooltip styles:*/\n      '--tooltip-bg-color':'#0E1311',\n      '--tooltip-text-color':'#ffffff',\n    },\n});\n\n</script>",
+        "margin_top": 15,
+        "margin_bottom": 10
+      }
+    },
+    "usp_section_EiEDU8": {
+      "type": "usp_section",
+      "blocks": {
+        "text_block_9WEpte": {
+          "type": "text_block",
+          "settings": {
+            "icon_svg": "<svg aria-hidden=\"true\" focusable=\"false\" role=\"presentation\" class=\"icon icon-tcwi-package\" viewBox=\"0 0 100 100\"><path d=\"M50 89.87 15.33 69.86V30.08l34.78-19.95 34.56 19.95v39.78L50 89.87z\"></path><path d=\"M67.33 50.78V40.09L32.76 20.14m-17.43 9.94L50 50.09\"></path><path d=\"M50 89.87V50.09l34.67-20.01\"></path></svg>",
+            "icon": "chat",
+            "title": "<h3><strong>Gratis Versand</strong></h3>",
+            "subtitle": "<p>Deine Lieferung innerhalb von Deutschland ist kostenlos.</p>",
+            "link_text": "mehr erfahren",
+            "link": "shopify://policies/shipping-policy"
+          }
+        },
+        "text_block_y6keKi": {
+          "type": "text_block",
+          "settings": {
+            "icon_svg": "<svg aria-hidden=\"true\" focusable=\"false\" role=\"presentation\" class=\"icon icon-tcwi-trophy\" viewBox=\"0 0 100 100\"><path d=\"M33.62 87.94h32.76m4.79-37.86a8.85 8.85 0 0 0 3.21-.93c4.16-2.09 7.12-7.42 7.12-13.65V18.63H73M28.83 50.08a8.85 8.85 0 0 1-3.21-.93c-4.16-2.09-7.12-7.42-7.12-13.65V18.63H27M55.94 38.9l1.4 8.17L50 43.21l-7.34 3.86 1.4-8.17-5.94-5.79 8.21-1.19L50 24.48l3.67 7.44 8.21 1.19-5.94 5.79z\"></path><path d=\"M27 12.06V40a27.76 27.76 0 0 0 .45 5 4.1 4.1 0 0 0 .11.61 27 27 0 0 0 1.26 4.44c3.18 8.38 10.12 14.49 18.43 15.6a19.25 19.25 0 0 0 2.75.19 18.87 18.87 0 0 0 2.73-.19 22 22 0 0 0 13.52-7.38 26.16 26.16 0 0 0 4.91-8.19 27 27 0 0 0 1.26-4.44 4.1 4.1 0 0 0 .11-.61A27.76 27.76 0 0 0 73 40V12.06Zm22.97 53.78v22.1\"></path></svg>",
+            "icon": "chat",
+            "title": "<h3><strong>Über 200.000 zufriedene Kunden</strong></h3>",
+            "subtitle": "<p>Entdecke preiswerte Möbel und Gartenartikel für Dein Zuhause.</p>",
+            "link_text": "mehr erfahren",
+            "link": "https://juskys.de/pages/philosophie"
+          }
+        },
+        "text_block_9pzTEq": {
+          "type": "text_block",
+          "settings": {
+            "icon_svg": "<svg aria-hidden=\"true\" focusable=\"false\" role=\"presentation\" class=\"icon icon-tcwi-truck\" viewBox=\"0 0 100 100\"><path d=\"m44.36 67.09-2.17.01h20.46V28.83H22.27v3.93m0 23.71V67.1h8.78l-2.18-.01\"></path><path d=\"M36.62 59.5a5.83 5.83 0 0 0-5.84 5.83 5.84 5.84 0 0 0 11.68 0 5.84 5.84 0 0 0-5.84-5.83Zm41.38 0a5.84 5.84 0 0 0-5.85 5.83 5.84 5.84 0 0 0 11.68 0A5.83 5.83 0 0 0 78 59.5Z\"></path><path d=\"m70.26 67.09 2.17.01h-9.78V34.03h12.31l15.06 15.06h4.67V67.1H83.57l2.18-.01\"></path><path d=\"M66.95 49.1V38h5.49l11.04 11.03-16.53.07zm-38.69-4.57H5.31m27.5-6.72h-15.3m15.3 13.44h-15.3\"></path></svg>",
+            "icon": "chat",
+            "title": "<h3><strong>Gratis Rückversand</strong></h3>",
+            "subtitle": "<p>Innerhalb von Deutschland ist die Rücksendung kostenlos für Dich.</p>",
+            "link_text": "mehr erfahren",
+            "link": "https://juskys.de/pages/bestellvorgang"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_9WEpte",
+        "text_block_y6keKi",
+        "text_block_9pzTEq"
+      ],
+      "disabled": true,
+      "settings": {
+        "bg_color": "#92c020",
+        "title": "",
+        "align_text": "center",
+        "desktop_columns_per_row": 3,
+        "icon_color": "#000000",
+        "divider": false,
+        "title_size": 16,
+        "subtitle_size": 12,
+        "title_size_m": 16,
+        "subtitle_size_m": 12,
+        "hide_subtext": true
+      }
+    },
+    "usp_section_new_VbU37H": {
+      "type": "usp-section-new",
+      "blocks": {
+        "block_ndLhh3": {
+          "type": "block",
+          "settings": {
+            "liquid": "",
+            "icon": "package",
+            "heading": "Kostenloser Versand",
+            "link": "shopify://policies/shipping-policy"
+          }
+        },
+        "block_4RbVUB": {
+          "type": "block",
+          "settings": {
+            "liquid": "",
+            "icon": "trophy",
+            "heading": "Über 200.000 zufriedene Kunden",
+            "link": "https://juskys.de/pages/philosophie"
+          }
+        },
+        "block_qCi8rH": {
+          "type": "block",
+          "settings": {
+            "liquid": "",
+            "icon": "truck",
+            "heading": "Kostenloser Rückversand",
+            "link": "https://juskys.de/pages/bestellvorgang"
+          }
+        }
+      },
+      "block_order": [
+        "block_ndLhh3",
+        "block_4RbVUB",
+        "block_qCi8rH"
+      ],
+      "settings": {
+        "bg_color": "#e6dfd9",
+        "text_color": "#000000",
+        "slider_mobile": true,
+        "enable_auto": true,
+        "auto_speed": 5,
+        "show_arrows": false,
+        "section_class": "bottom_usp_section"
+      }
+    },
+    "34c0883c-6315-4134-9513-d6cb6b9d0fb0": {
+      "type": "rich-text",
+      "blocks": {
+        "text_xngAPH": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>*Von der Aktion ausgeschlossen sind Infrarotkabinen, Saunen<br/>und bereits reduzierte Artikel.</p>"
+          }
+        },
+        "template--20174419099951__34c0883c-6315-4134-9513-d6cb6b9d0fb0-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<h1>Juskys - Dein Online Shop rund um Wohnen, Garten, Sport & Freizeit</h1><p><br/>Seit 2005 ist Juskys dein zuverlässiger Partner für den bequemen und preiswerten Einkaufsbummel im Internet. Bei uns findest du ein stetig wachsendes Sortiment an Produkten für einen gemütlichen Garten und ein stilvolles Zuhause. Gleichzeitig erhältst du in unserem Onlineshop eine große Auswahl an Fitness- und Sportgeräten für das heimische Training sowie zahlreiche Artikel für eine artgerechte Unterkunft deiner Haustiere. Nimm dir die Zeit und stöbere durch unser riesiges Sortiment. Profitiere von unseren günstigen Preisen sowie der schnellen und versandkostenfreien Lieferung innerhalb Deutschlands.</p>"
+          }
+        },
+        "4a43cbf4-8f9a-4983-979c-4b2eeb17c6aa": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<h2>Gartenmöbel, Grills und vieles mehr für Garten, Balkon oder Terrasse</h2><p>Verwandle deinen Garten, deine Terrasse oder deinen Balkon in ein traumhaftes Paradies zum Wohlfühlen. Edle Sitzgruppen, <a href=\"/collections/bierzeltgarnituren\" title=\"Bierzeltgarnituren\">Bierzeltgarnituren</a>, schicke <a href=\"/collections/gartenbanke\" title=\"Gartenbänke\">Sitzbänke</a>, gemütliche <a href=\"/collections/gartenliegen\" title=\"Gartenliegen\">Gartenliegen</a> und <a href=\"/collections/korbhangesessel\" title=\"Korbhängesessel\">Hollywoodschaukeln</a> machen den Aufenthalt im Freien zu einem entspannten Erlebnis. <a href=\"/collections/sonnen-sichtschutz\" title=\"Sonnen- & Sichtschutz\">Sonnen- und Sichtschutzprodukte</a> wie Seitenmarkisen, Ampelschirme, Pavillons und Terrassendächer spenden kühlen Schatten und schützen dich obendrein vor der gefährlichen UV-Strahlung. Mit unseren <a href=\"https://juskys.de/collections/geraeteschuppen-metall\" title=\"Geräteschuppen aus Metall\">Geräteschuppen aus Metall</a> und <a href=\"https://juskys.de/collections/muelltonnenboxen\" title=\"Mülltonnenboxen\">Mülltonnenboxen</a> bewahrst du Gartengeräte, Werkzeuge und Mülltonnen sauber und ordentlich auf. <a href=\"/collections/whirlpool-poolbedarf\" title=\"Whirlpool- & Poolbedarf\">Poolbedarf</a> und <a href=\"/collections/gasgrills\" title=\"Gasgrills\">Gasgrills</a> runden das umfangreiche Gartensortiment im Juskys-Onlineshop ab.</p>"
+          }
+        },
+        "b9f5f851-a72e-455c-b07d-2ae056613c91": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<h2>Dekorative Einrichtungsgegenstände für ein gemütliches Heim</h2><p>Ob Mietwohnung, Reihenhaus, Einfamilienhaus oder WG, auch der Innenbereich will liebevoll und komfortabel gestaltet sein. Deshalb findest du bei uns eine große Auswahl an Möbeln für deinen Wohnbereich. Die dekorativen Einrichtungsgegenstände überzeugen durch eine hohe Funktionalität und sind eine tolle Ergänzung zu deiner Einrichtung. Die zeitlos modernen <a href=\"/collections/schminktische\" title=\"Schminktische\">Schminktische</a> mit Spiegel und Hocker erleichtern dir das tägliche Styling. Mit ihren Schubladen bieten sie obendrein Stauraum für deine Schminkutensilien. Edle <a href=\"/collections/wohn-esszimmermobel\" title=\"Wohn- & Esszimmermöbel\">Esszimmermöbel</a> laden zum geselligen Beisammensein mit Freunden oder der Familie ein. Für dein heimisches Arbeitszimmer findest du im Juskys Onlineshop auch <a href=\"/collections/buromobel\" title=\"Büromöbel\">Schreibtischstühle und Aktenschränke</a>. Bequeme <a href=\"/collections/betten\" title=\"Betten\">Betten</a> mit unterschiedlichen Extras in diversen Größen oder ein individuell nach deinen Wünschen konfiguriertes Boxspringbett von <a href=\"https://bettboutique.de/\" title=\"https://bettboutique.de/\">Bettboutique</a> sorgen garantiert für einen erholsamen Schlaf.</p>"
+          }
+        },
+        "878875d4-e5ff-4bc1-96d3-0f83639fac99": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<h2>Zuhause effektiv den Körper in Form bringen</h2><p>Du möchtest gerne ein paar Kilos abspecken? Oder möchtest du Muskeln aufbauen und deinen Körper besser definieren? Dann entdecke unser Angebot an Sport- und Fitnessgeräten! Mit den <a href=\"/collections/laufbander\" title=\"Laufbänder\">Laufbändern</a> von ArtSport verbesserst du deine Ausdauer, stärkst deine Beinmuskulatur und verbrennst jede Menge Kalorien. <a href=\"/collections/kraftsport\" title=\"Kraftsport\">Kraftstationen, Hantelbänke sowie Lang-, Curl- und Kurzhanteln</a> ermöglichen dir ein intensives Krafttraining. Die flexibel einsetzbaren Hantel-Sets geben dir die Möglichkeit, nahezu alle Muskelgruppen deines Körpers effektiv zu stärken. Unsere <a href=\"/collections/wassersport\" title=\"Wassersport\">Schlauchboote</a> eignen sich ideal für gemütliche Bootsausflüge mit der gesamten Familie. Du kannst Seen, Flüsse und küstennahe Gewässer unsicher machen und die Umgebung erkunden.</p>"
+          }
+        },
+        "bfab94f6-dace-4b3e-9b27-ce536b93647d": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<h2>Alles für den begeisterten Heimwerker</h2><p><a href=\"/collections/werkzeug\" title=\"Werkzeug\">Werkzeug</a>, <a href=\"/collections/schwerlastregale\" title=\"Schwerlastregale\">Lagerregale</a> und <a href=\"/collections/unterwegs\" title=\"Unterwegs\">Transportwagen</a> erleichtern dir Arbeiten in deinem Zuhause. Multifunktionsleitern und Gerüste leisten treue Dienste in luftiger Höhe. So hast du einen sicheren Stand und erledigst alle anfallenden Arbeiten schnell. Die Schwerlastregale zum Zusammenstecken von Juskys bringen mehr Ordnung in Keller, Garage, Hobbyraum, Lagerraum oder Werkstatt. Durch die flexibel montierbaren Einlegeböden passt du die Abstände zwischen den einzelnen Böden optimal an die eingelagerten Gegenstände an. Die Druckluftschlauch-Aufroller sind eine praktische Ergänzung für Druckluftkompressoren. Sie gewährleisten ein flexibles und effizientes Arbeiten und sind somit ein Muss für jeden, der regelmäßig mit Druckluftwerkzeugen arbeitet.</p>"
+          }
+        },
+        "8e5229aa-534a-47bb-8a3c-63bd6f17dcd6": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<h2>Damit sich dein Haustier rundum wohl bei dir fühlt</h2><p>Hunde, Katzen, Vögel und andere Kleintiere sind für viele Menschen nicht bloß Mitbewohner, sondern auch Familienmitglieder, Spielkameraden, Aufpasser, Zuhörer und nicht selten sogar Kinderersatz. Du bist daher stets um das Wohl deiner Lieblinge bemüht und möchtest, dass es ihnen an nichts in ihrem neuen Heim fehlt? Im Juskys-Shop findest du passend dazu eine große Auswahl an <a href=\"/collections/tierbedarf\" title=\"Tierbedarf\">Tierbedarf</a>. Produkte rund um den Hund entdeckst du unter <a href=\"/collections/hundebedarf\" title=\"Hundebedarf\">Hundebedarf</a> und Katzenbesitzer werden unter <a href=\"/collections/katzenbedarf\" title=\"Katzenbedarf\">Katzenbedarf</a> fündig. Bei Fahrten im Auto bieten Transportboxen aus Aluminium oder Stoff deinem Hund einen sicheren und zugleich komfortablen Rückzugsort. Nach einem ausgiebigen Spaziergang kann sich dein treuer Begleiter in einem unserer weichen Hundebetten erholen. Katzen kommen mit unseren beliebten Katzenhöhlen und Kratzbäumen voll auf ihre Kosten. Die stabilen Kratzmöbel laden zum Spielen, Toben und Ausruhen ein und dienen mit ihren großzügigen Sisalflächen gleichzeitig zur Krallenpflege.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_xngAPH",
+        "template--20174419099951__34c0883c-6315-4134-9513-d6cb6b9d0fb0-text-1",
+        "4a43cbf4-8f9a-4983-979c-4b2eeb17c6aa",
+        "b9f5f851-a72e-455c-b07d-2ae056613c91",
+        "878875d4-e5ff-4bc1-96d3-0f83639fac99",
+        "bfab94f6-dace-4b3e-9b27-ce536b93647d",
+        "8e5229aa-534a-47bb-8a3c-63bd6f17dcd6"
+      ],
+      "custom_css": [
+        "a {color: #05477a;}"
+      ],
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "tag": "h1",
+        "align_text": "left",
+        "narrow_column": false,
+        "divider": false
+      }
+    },
+    "adcee3d6-3446-4f85-ba7a-4e9e03a531a9": {
+      "type": "newsletter",
+      "blocks": {
+        "06fd94a0-1585-44bd-8376-e979a146e052": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Spare 10€ bei deiner ersten Bestellung!</h2>"
+          }
+        },
+        "0199c92f-1be0-4446-9ac9-2cabe15bf864": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Melde dich jetzt zu unserem Newsletter an und verpasse keine Rabatte & Aktionen. Und das Beste: für deine erste Bestellung gibt's direkt einen Willkommens-Gutschein 😍</p>"
+          }
+        },
+        "template--19928941494575__adcee3d6-3446-4f85-ba7a-4e9e03a531a9-16891468959b8ff4bd-2": {
+          "type": "form",
+          "settings": {}
+        },
+        "9061bc53-073d-4fc0-8cbf-5a1e5e51a3c8": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>Eine Abmeldung ist jederzeit möglich. Hier findest du unsere <a href=\"/policies/privacy-policy\" target=\"_blank\" title=\"Privacy Policy\">Datenschutzerklärung.</a></h3>"
+          }
+        }
+      },
+      "block_order": [
+        "06fd94a0-1585-44bd-8376-e979a146e052",
+        "0199c92f-1be0-4446-9ac9-2cabe15bf864",
+        "template--19928941494575__adcee3d6-3446-4f85-ba7a-4e9e03a531a9-16891468959b8ff4bd-2",
+        "9061bc53-073d-4fc0-8cbf-5a1e5e51a3c8"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "p {font-size: 17px;}",
+        "h2 {margin: 0; padding: 0;}",
+        "h3 {font-size: 13px; color: grey;}",
+        "a {color: grey;}"
+      ],
+      "settings": {
+        "align_text": "left",
+        "image": "shopify://shop_images/NL-Juskys_1.jpg",
+        "image_width": "33",
+        "image_mask": "landscape",
+        "image_position": "left",
+        "color_background": "#e6e6e6",
+        "color_text": "#000000",
+        "top_padding": true,
+        "bottom_padding": true
+      }
+    },
+    "hotspots_9PbAYq": {
+      "type": "hotspots",
+      "blocks": {
+        "product_MfLTGt": {
+          "type": "product",
+          "settings": {
+            "featured_product": "modulares-sofa-domas-s",
+            "vertical": 46,
+            "horizontal": 64
+          }
+        },
+        "product_c8zhX3": {
+          "type": "product",
+          "settings": {
+            "featured_product": "fleecedecke-in-2-grossen-4-farben",
+            "vertical": 67,
+            "horizontal": 40
+          }
+        },
+        "product_QCDJ3J": {
+          "type": "product",
+          "settings": {
+            "featured_product": "loungesessel-tarje",
+            "vertical": 65,
+            "horizontal": 85
+          }
+        }
+      },
+      "block_order": [
+        "product_MfLTGt",
+        "product_c8zhX3",
+        "product_QCDJ3J"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Shop the look",
+        "heading_size": "h2",
+        "heading_position": "left",
+        "image": "shopify://shop_images/shopping.webp",
+        "indent_image": false,
+        "image_position": "left",
+        "hotspot_style": "dot",
+        "hotspot_color": "#000000",
+        "lazyload_images": true
+      }
+    },
+    "hotspots_ybTUhM": {
+      "type": "hotspots",
+      "blocks": {
+        "product_QcbMq6": {
+          "type": "product",
+          "settings": {
+            "featured_product": "sofa-vals",
+            "vertical": 37,
+            "horizontal": 23
+          }
+        },
+        "product_iXcnJU": {
+          "type": "product",
+          "settings": {
+            "featured_product": "sitzsack-chillex-mit-hocker",
+            "vertical": 60,
+            "horizontal": 84
+          }
+        },
+        "product_UHcHPY": {
+          "type": "product",
+          "settings": {
+            "featured_product": "couchtisch-60-x-60-x-40-cm-mit-ablage",
+            "vertical": 64,
+            "horizontal": 40
+          }
+        }
+      },
+      "block_order": [
+        "product_QcbMq6",
+        "product_iXcnJU",
+        "product_UHcHPY"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Deine Wohnzimmer Must-Haves",
+        "heading_size": "h2",
+        "heading_position": "left",
+        "image": "shopify://shop_images/ChatGPT_Image_28._Maerz_2025_12_59_01.png",
+        "indent_image": false,
+        "image_position": "left",
+        "hotspot_style": "bag",
+        "hotspot_color": "#000000",
+        "lazyload_images": true
+      }
+    },
+    "9d0dbccb-19cc-4f78-b4d8-3d552be6533c": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20174419099951__9d0dbccb-19cc-4f78-b4d8-3d552be6533c-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "Noch nicht das richtige gefunden?"
+          }
+        },
+        "text_gDaFCL": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Wofür interessierst du dich?</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--20174419099951__9d0dbccb-19cc-4f78-b4d8-3d552be6533c-heading-1",
+        "text_gDaFCL"
+      ],
+      "disabled": true,
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "tag": "h1",
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "advanced_content_egYmk9": {
+      "type": "advanced-content",
+      "blocks": {
+        "liquid_Ux6Www": {
+          "type": "liquid",
+          "settings": {
+            "code": "<center><button id=\"gartenmoebel\" data-quiz-trigger=\"gartenmoebel\" style=\"color: #fff; background: #92c020; padding: 10px 20px; border: none; border-radius: 0px; cursor: pointer; font-weight: bold;\">\n    Garten\n</button></center>",
+            "width": "25%",
+            "alignment": "center"
+          }
+        },
+        "liquid_KYVHCG": {
+          "type": "liquid",
+          "settings": {
+            "code": "<center><button id=\"gartenmoebel\" data-quiz-trigger=\"gartenmoebel\" style=\"color: #fff; background: #92c020; padding: 10px 20px; border: none; border-radius: 0px; cursor: pointer; font-weight: bold;\">\n    Möbel\n</button></center>",
+            "width": "25%",
+            "alignment": "center"
+          }
+        },
+        "liquid_8PTDqr": {
+          "type": "liquid",
+          "settings": {
+            "code": "<center><button id=\"gartenmoebel\" data-quiz-trigger=\"gartenmoebel\" style=\"color: #fff; background: #92c020; padding: 10px 20px; border: none; border-radius: 0px; cursor: pointer; font-weight: bold;\">\n    Freizeit\n</button></center>",
+            "width": "25%",
+            "alignment": "center"
+          }
+        },
+        "liquid_e79JMi": {
+          "type": "liquid",
+          "settings": {
+            "code": "<center><button id=\"gartenmoebel\" data-quiz-trigger=\"gartenmoebel\" style=\"color: #fff; background: #92c020; padding: 10px 20px; border: none; border-radius: 0px; cursor: pointer; font-weight: bold;\">\n    Tierbedarf\n</button></center>",
+            "width": "25%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_Ux6Www",
+        "liquid_KYVHCG",
+        "liquid_8PTDqr",
+        "liquid_e79JMi"
+      ],
+      "disabled": true,
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "full_width": false,
+        "space_around": true,
+        "lazyload_images": true
+      }
+    }
+  },
+  "order": [
+    "collections_slider_X8GnT6",
+    "slideshow_7bXiqA",
+    "usp_section_new_eRqMTH",
+    "rich_text_n6BtXR",
+    "c7cdeeee-7aaa-4f53-8201-896f0dbb999a",
+    "featured_collection_7QPzPe",
+    "rich_text_k8fbbd",
+    "1756813604671133b7",
+    "promo-grid",
+    "custom_featured_collection_tabs_ECJwJH",
+    "promo_grid_BwkX3h",
+    "ccb31d61-1e0e-4976-b74f-722453717d43",
+    "74125ef4-3250-4aa6-a6b0-997528d288c9",
+    "slideshow_BiPXxc",
+    "b26c3847-c819-4625-aad3-61a8c50e778c",
+    "liquid_ygDW83",
+    "usp_section_EiEDU8",
+    "usp_section_new_VbU37H",
+    "34c0883c-6315-4134-9513-d6cb6b9d0fb0",
+    "adcee3d6-3446-4f85-ba7a-4e9e03a531a9",
+    "hotspots_9PbAYq",
+    "hotspots_ybTUhM",
+    "9d0dbccb-19cc-4f78-b4d8-3d552be6533c",
+    "advanced_content_egYmk9"
+  ]
+}

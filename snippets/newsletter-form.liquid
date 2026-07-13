@@ -1,0 +1,56 @@
+<style>
+  .text-left .newsletter-section__content form {
+    display: flex;
+    flex-direction: column;
+  }
+  .newsletter-section__content {
+    padding-left: 0px;
+  }
+</style>
+{%- assign newsletter_form_id = 'newsletter-' | append: section_id -%}
+{% form 'customer', id: newsletter_form_id %}
+  {%- if form.posted_successfully? -%}
+    <div class="note note--success">
+      {{ 'general.newsletter_form.newsletter_confirmation' | t }}
+    </div>
+  {%- endif -%}
+  {%- if form.errors and form.context == snippet_context -%}
+    {{ form.errors | default_errors }}
+  {%- endif -%}
+  <div class="already-registered-email" style="display: none;">
+    <div class="note note--success newsletter_already_subscribe">
+      {{ 'general.newsletter_form.newsletter_already' | t }}
+    </div>
+  </div>
+  
+  {%- unless form.posted_successfully? -%}
+  <label for="Email-{{ section_id }}" class="hidden-label">{{ 'general.newsletter_form.newsletter_email' | t }}</label>
+  <label for="newsletter-form-submit-{{ section_id }}" class="hidden-label">{{ 'general.newsletter_form.submit' | t }}</label>
+  <input type="hidden" name="contact[tags]" value="prospect,newsletter">
+  <input type="hidden" name="contact[context]" value="{{ snippet_context }}">
+  <div class="input-group newsletter__input-group">
+    <input type="email" value="{% if customer %}{{ customer.email }}{% endif %}" placeholder="{{ 'general.newsletter_form.newsletter_email' | t }}" name="contact[email]" id="Email-{{ section_id }}" class="input-group-field newsletter__input" autocorrect="off" autocapitalize="off" required>
+    <div class="input-group-btn">
+      <button type="submit" id="newsletter-form-submit-{{ section_id }}" class="btn" name="commit">
+        <span class="form__submit--large">{{ 'general.newsletter_form.submit' | t }}</span>
+        <span class="form__submit--small">
+          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-arrow-right" viewBox="0 0 50 15"><title>icon-right-arrow</title><path d="M0 9.63V5.38h35V0l15 7.5L35 15V9.63Z"/></svg>
+        </span>
+      </button>
+    </div>
+  </div>
+  {%- endunless -%}
+
+{% endform %}
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var live_url = window.location.href;
+    var result = live_url.includes('form_type=customer');
+    var newsletter_form_id_js = `{{ newsletter_form_id }}`;
+    var container_note = document.querySelector('#'+newsletter_form_id_js+' .already-registered-email');
+    if(result && container_note != undefined){
+      container_note.style.display = 'block';
+    }
+  });
+</script>

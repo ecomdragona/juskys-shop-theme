@@ -1,0 +1,172 @@
+<style>
+  .search-desktop {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+
+.site-nav__search-form {
+  position: relative;
+  width: 240px; /* adjust if needed */
+}
+
+.search-wrapper {
+  position: relative;
+}
+
+.site-nav__search-input {
+  width: 100%;
+  padding: 8px 12px 8px 36px; /* left space for icon */
+  border: 1px solid #999;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.search-desktop .icon-search {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  stroke: #000;
+  fill: none;
+  pointer-events: none;
+}
+/* Hide by default */
+.search-desktop-wrapper {
+  display: none;
+}
+
+/* Show only on desktop */
+@media screen and (min-width: 768px) {
+  .search-desktop-wrapper {
+    display: block;
+  }
+}
+  .site-nav__icons {
+    display: flex;
+   
+}
+  @media only screen and (min-width: 769px) {
+    .header-item.header-item--icons {
+    flex: 0 0 auto;
+}
+  }
+  .search-desktop {
+    display: none;
+}
+  </style>
+<div class="site-nav">
+  <div class="site-nav__icons">
+     {%- if settings.search_enable -%}
+       <!-- Desktop search with icon inside input -->
+  <div class="search-desktop">
+    <form action="{{ routes.search_url }}" method="get" role="search" class="site-nav__search-form">
+      <div class="search-wrapper">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 299.46 355.34" class="icon icon-search">
+          <circle cx="123.85" cy="143.08" r="92.06" style="stroke-width: 14;" />
+          <line x1="189.83" y1="216.99" x2="249.83" y2="300.32" style="stroke-width: 10;" />
+        </svg>
+        <input
+          type="search"
+          name="q"
+          placeholder="Wonach suchst du..."
+          class="site-nav__search-input"
+          aria-label="Wonach suchst du..."
+        >
+      </div>
+    </form>
+  </div>
+      <a href="javascript:void(0)" class="mobile_search">
+        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 299.46 355.34" class="icon icon-search" style="width: 24px">
+          <circle style="color: #000; stroke-width: 14;" cx="123.85" cy="143.08" r="92.06"/>
+          <line style="color: #000; stroke-width: 10;" x1="189.83" y1="216.99" x2="249.83" y2="300.32"/>
+        </svg>
+      </a>
+    {%- endif -%}
+    {%- if shop.customer_accounts_enabled -%}
+      <a class="site-nav__link site-nav__link--icon small--hide" href="{{ routes.account_url }}">
+      
+        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 386.87 353.91" class="icon icon-user" style="width: 24px; ">
+          <path style="color: #000; stroke-width: 2;fill: #000;" d="m193.43,186.19c-39.52,0-71.67-32.15-71.67-71.67s32.15-71.67,71.67-71.67,71.67,32.15,71.67,71.67-32.15,71.67-71.67,71.67Zm0-133c-33.82,0-61.33,27.51-61.33,61.33s27.51,61.33,61.33,61.33,61.33-27.51,61.33-61.33-27.51-61.33-61.33-61.33Z"/>
+          <path style="color: #000; stroke-width: 12;" d="m84.67,299.89h217.52s-7.91-95.9-108.76-95.9-108.76,95.9-108.76,95.9Z"/>
+        </svg>
+
+        <span class="icon__fallback-text">
+          {%- if customer -%}
+            {{ 'layout.customer.account' | t }}
+          {%- else -%}
+            {{ 'layout.customer.log_in' | t }}
+          {%- endif -%}
+        </span>
+      </a>
+    {%- endif -%}
+
+    {%- if settings.search_enable -%}
+      {%- comment -%}medium-up--hide{%- endcomment -%}
+      <a href="{{ routes.search_url }}" class="site-nav__link site-nav__link--icon js-search-header{% if section.settings.main_menu_alignment == 'center' or section.settings.main_menu_alignment == 'center-split' %} {% endif %}">
+        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 299.46 355.34" class="icon icon-search" style="width: 24px">
+          <circle style="color: #000; stroke-width: 14;" cx="123.85" cy="143.08" r="92.06"/>
+          <line style="color: #000; stroke-width: 10;" x1="189.83" y1="216.99" x2="249.83" y2="300.32"/>
+        </svg>
+
+      
+        <span class="icon__fallback-text">{{ 'general.search.title' | t }}</span>
+      </a>
+      <a href="javascript:void(0)" class="mobile_search">
+        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 299.46 355.34" class="icon icon-search" style="width: 24px">
+          <circle style="color: #000; stroke-width: 14;" cx="123.85" cy="143.08" r="92.06"/>
+          <line style="color: #000; stroke-width: 10;" x1="189.83" y1="216.99" x2="249.83" y2="300.32"/>
+        </svg>
+      </a>
+    {%- endif -%}
+
+    {%- if section.settings.main_menu_alignment == 'left' or section.settings.main_menu_alignment == 'left-center' or section.settings.main_menu_alignment == 'left-drawer' -%}
+      <button
+        type="button"
+        class="site-nav__link site-nav__link--icon js-drawer-open-nav{% if section.settings.main_menu_alignment == 'left' or section.settings.main_menu_alignment == 'left-center' %} medium-up--hide{% endif %}
+          {% if section.settings.force_icon_dawer_mobile_left %} hide {% endif %}"
+        aria-controls="NavDrawer">
+        <svg id="Objects" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 299.46 355.34" class="icon icon-hamburger" style="width: 24px">
+          <line style="color: #000; stroke-width: 10;"" x1="70.81" y1="119.25" x2="228.65" y2="119.25"/>
+          <line style="color: #000; stroke-width: 10;" x1="70.81" y1="163.66" x2="228.65" y2="163.66"/>
+          <line style="color: #000; stroke-width: 10;" x1="70.81" y1="208.08" x2="228.65" y2="208.08"/>
+        </svg>
+        <span class="icon__fallback-text">{{ 'general.drawers.navigation' | t }}</span>
+      </button>
+    {%- endif -%}
+
+           
+
+    <a href="{{ routes.cart_url }}" class="site-nav__link site-nav__link--icon js-drawer-open-cart" aria-controls="CartDrawer" data-icon="{{ settings.cart_icon }}">
+      <span class="cart-link">
+        {%- if settings.cart_icon == 'cart' -%}
+        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 305.19 353.91" class="icon icon-cart" style="width: 24px">
+          <polygon style="color: #000; stroke-width: 10;" points="222.39 301.02 70.07 301.02 43.11 138.95 252.05 138.95 222.39 301.02"/>
+          <path style="color: #000; stroke-width: 10;" d="m78.84,138.95s6.03-92.06,66.05-92.06c62.15,0,64.84,92.06,64.84,92.06"/>
+        </svg>
+        {%- elsif settings.cart_icon == 'bag-minimal' -%}
+          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-bag-minimal" viewBox="0 0 64 64"><title>icon-bag-minimal</title><path stroke="null" fill-opacity="null" stroke-opacity="null" fill="null" d="M11.375 17.863h41.25v36.75h-41.25z"/><path stroke="null" d="M22.25 18c0-7.105 4.35-9 9.75-9s9.75 1.895 9.75 9"/></svg>
+        {%- else -%}
+        <svg version="1.1" class="icon icon-bag" style="color: #212529;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 305.19 353.91" style="enable-background:new 0 0 305.19 353.91;" xml:space="preserve">
+     <g id="Ebene_1" style="color: #212529;">
+     </g>
+     <g id="Layer_1">
+       <polygon class="icon-border" style="stroke-width: 25px" points="227.1,301.02 65.19,301.02 36.54,128.74 258.63,128.74"/>
+       <path class="icon-border" style="stroke-width: 25px" d="M74.51,128.74c0,0,6.41-76.44,70.21-76.44c66.06,0,68.93,76.44,68.93,76.44"/>
+     </g>
+     <g id="Objects">
+     </g>
+   </svg>
+   
+   
+        {%- endif -%}
+        <span class="icon__fallback-text">{{ 'layout.cart.title' | t }}</span>
+        <span class="cart-link__bubble{% if cart.item_count > 0 %} cart-link__bubble--visible{% endif %}"></span>
+      </span>
+    </a>
+  </div>
+</div>

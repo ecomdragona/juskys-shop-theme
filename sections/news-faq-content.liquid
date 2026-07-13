@@ -1,0 +1,454 @@
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .faq-categories-container {
+    position: relative;
+    z-index: 10;
+    margin-top: -55px;
+  }
+  .faq-category-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    max-width: 996px;
+    margin: 0 auto 24px;
+  }
+  .faq-container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 996px;
+  }
+  .faq-category-btn {
+    width: 100%;
+    padding: 20px 45px;
+    text-align: left;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.13);
+    border-radius: 4px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    background: #ffffff;
+    font-size: 20px;
+    color: #9e9e9e;
+    font-weight: bold;
+    height: 120px;
+  }
+  .faq-category-btn:hover {
+    border: 2px solid #ffd600;
+    background: #fffbe6;
+    color: #3e3e3e;
+  }
+  .faq-category-btn.active {
+    border: 2px solid #ffd600;
+    background: #fffbe6;
+    color: #3e3e3e;
+  }
+  .faq-content {
+    padding: 20px 0px;
+    margin-top: 10px;
+  }
+
+  .faq-title {
+    display: flex;
+    align-items: center;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 0px;
+    color: #3e3e3e;
+    transition: all 0.5s;
+  }
+
+  .faq-title:focus .arrow-drop {
+    transform: rotate(0deg);
+  }
+
+  .faq-title-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .copy-container {
+    display: flex;
+    position: relative;
+    padding: 18px 19px 18px 15px;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+
+  .copy-container button {
+    opacity: 0;
+  }
+
+  .copy-container:hover button {
+    opacity: 1;
+  }
+
+  .copy-container p {
+    margin-bottom: 0px;
+    font-size: 16px;
+    color: #3e3e3e;
+    font-weight: 600;
+  }
+
+  .copy-container button {
+    margin-top: -5px;
+  }
+
+  .faq-answer {
+    font-size: 14px;
+    color: #3e3e3e;
+    line-height: 1.715;
+    word-break: break-word;
+  }
+
+  .faq-answer > div {
+    margin-bottom: 15px;
+    padding: 1px 19px 15px 15px;
+  }
+
+  .faq-question {
+    display: flex;
+    cursor: pointer;
+  }
+
+  .faq-panel {
+    border: 1px solid #d8d8d8;
+    margin-bottom: 16px;
+    border-radius: 4px;
+  }
+
+  .faq-panels .faq-panel:first-child {
+    margin-top: 20px;
+  }
+
+  .arrow-show::before {
+    content: '';
+    background-color: rgb(62, 62, 62);
+    width: 100%;
+    height: 1px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .arrow-show {
+    transition: all 0.2s;
+  }
+
+  .arrow-show {
+    display: flex;
+    align-items: center;
+    height: 17px;
+    width: 17px;
+    position: absolute;
+    right: 0;
+    flex: 0 0 17px;
+    margin-right: 19px;
+  }
+
+  .arrow-drop {
+    display: flex;
+    align-items: center;
+    margin-right: 18px;
+    transform: rotate(0deg);
+  }
+
+  .arrow-show::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    top: 50%;
+    opacity: 1;
+    transform: translateY(-50%);
+    transition: opacity 0.2s;
+    background-color: rgb(62, 62, 62);
+  }
+
+  .arrow-show.hide-after::after {
+    opacity: 0;
+  }
+
+  /* tooltip */
+
+  .btn-tooltip {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .tooltiptext:empty {
+    display: none;
+  }
+
+  .tooltiptext {
+    visibility: visible;
+    background-color: #000a;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 4px 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .btn-tooltip:hover .tooltiptext {
+    opacity: 1;
+  }
+
+  /* responsive */
+
+  @media screen and (max-width: 996px) {
+    .faq-categories-container {
+      padding: 0px 30px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .faq-categories-container {
+      padding-left: 16px;
+      padding-right: 16px;
+      margin-top: -30px;
+    }
+
+    .faq-category-buttons {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 16px;
+      max-width: 996px;
+      margin: 0 auto 24px;
+    }
+    .faq-title {
+      font-size: 22px;
+    }
+
+    .faq-content {
+      padding: 14px 0px;
+    }
+
+    .faq-category-btn {
+      height: unset;
+      font-size: 18px;
+      padding: 18px 25px;
+    }
+  }
+
+  .accordion-header {
+    width: 100%;
+    transition: 300ms;
+  }
+
+  .accordion-header .triangle {
+    transition: transform 300ms ease;
+  }
+
+  .accordion-content {
+    max-height: 0;
+    opacity: 1;
+    overflow: hidden;
+    transition: max-height 400ms ease, opacity 400ms ease;
+  }
+
+  .accordion-content.show {
+    opacity: 0;
+  }
+
+  .accordion-header .triangle {
+    transition: transform 300ms ease;
+  }
+
+  .accordion-header.rotated .triangle {
+    transform: rotate(180deg);
+  }
+  .ui-accordion-header {
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .ui-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .ui-accordion-content.open {
+    padding: 15px 20px;
+  }
+</style>
+
+<section class="faq-categories-container">
+  <div class="faq-categories">
+    <div class="faq-category-buttons">
+      {% for block in section.blocks %}
+        <button
+          class="faq-category-btn{% if forloop.first %} active{% endif %}"
+          data-category="{{ block.id }}"
+          onclick="showCategory('{{ block.id }}', this)"
+        >
+          {{ block.settings.title }}
+        </button>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="faq-container accordion"  id="scroll">
+    {% for block in section.blocks %}
+      {% assign categories = block.settings.my_material_setting %}
+      {% for category in categories %}
+        <div data-title="{{ block.id }}" class="faq-content">
+          <div class="faq-title-container accordion-header">
+            <p
+              class="faq-title"
+            >
+              <span class="arrow-drop triangle">
+                <svg width="24" height="15" viewBox="0 0 24 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22 13L12 3L2 13" stroke="#3E3E3E" stroke-width="3"></path>
+                </svg>
+              </span>
+              {{ category.titles }}
+            </p>
+          </div>
+          <div class="faq-content faq-panels accordion-content" style="margin-top: 0px; padding: 0px; max-height: 100%;" >
+            {% for faq in category.faq_lists.value %}
+              <div class="faq-panel">
+                <div class="copy-container ui-accordion-header">
+                  <p
+                    class="faq-question"
+                    id="title-{{ forloop.index0 }}-{{ block.id }}"
+                    data-target="answer-{{ forloop.index0 }}-{{ block.id }}"
+                  >
+                    {{ faq.question }}
+                    <span class="arrow-show"></span>
+                  </p>
+                </div>
+                <div class="faq-answer ui-accordion-content" id="answer-{{ forloop.index0 }}-{{ block.id }}">
+                  <div>
+                    {{ faq.answer }}
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    {% endfor %}
+  </div>
+</section>
+
+<script>
+  let hasInteracted = false;
+  
+  function showCategory(categoryId, button) {
+    if (hasInteracted) {
+      const target = document.getElementById('scroll');
+      if (target) {
+        const offset = 50;
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    }
+  
+    document.querySelectorAll('.faq-category-btn').forEach((btn) => btn.classList.remove('active'));
+    button.classList.add('active');
+  
+    document.querySelectorAll('.faq-container > div').forEach((div) => {
+      div.style.display = 'none';
+    });
+  
+    document.querySelectorAll(`.faq-container [data-title="${categoryId}"]`).forEach((div) => {
+      div.style.display = 'block';
+    });
+  
+    // Mark that the user has interacted
+    hasInteracted = true;
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const firstButton = document.querySelector('.faq-category-btn');
+    if (firstButton) firstButton.click();
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const accordion = document.querySelector('.accordion');
+    const headers = accordion.querySelectorAll('.accordion-header');
+
+    function handleHeaderClick(header) {
+      const item = header.parentElement;
+      const content = item.querySelector('.accordion-content');
+      const isOpen = content.classList.contains('show');
+
+      const mode = accordion.dataset.mode;
+      if (isOpen) {
+        content.style.maxHeight = content.scrollHeight + 'px';
+        requestAnimationFrame(() => {
+          content.style.maxHeight = '100%';
+        });
+      } else {
+        content.style.maxHeight = '0px';
+      }
+
+      content.classList.toggle('show', !isOpen);
+      header.classList.toggle('rotated', !isOpen);
+    }
+
+    headers.forEach((header) => {
+      header.addEventListener('click', () => handleHeaderClick(header));
+    });
+  });
+  const ui_headers = document.querySelectorAll('.ui-accordion-header');
+
+  ui_headers.forEach((item) => {
+    item.addEventListener('click', () => {
+      const ui_content = item.nextElementSibling;
+      const ui_span = item.querySelector('span');
+
+      if (ui_span) {
+        ui_span.classList.toggle('hide-after');
+      }
+
+      if (ui_content.style.maxHeight) {
+        ui_content.style.maxHeight = null;
+      } else {
+        ui_content.style.maxHeight = ui_content.scrollHeight + 'px';
+      }
+    });
+  });
+</script>
+{% schema %}
+{
+  "name": "Advanced FAQ",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "faq_metaobject",
+      "name": "Faq Metaobject",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "metaobject_list",
+          "id": "my_material_setting",
+          "label": "Material",
+          "metaobject_type": "faq_group"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Advanced FAQ"
+    }
+  ]
+}
+{% endschema %}

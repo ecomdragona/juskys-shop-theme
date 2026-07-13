@@ -1,0 +1,66 @@
+<script>
+    /**
+     * Triggers the events when the current cookie-first consent has been loaded.
+     *
+     * Available events:
+     *
+     * "is_analytics_accepted"
+     * "is_marketing_accepted"
+     * "is_sale_of_data_accepted"
+     * "is_preferences_accepted"
+     *
+     * @example for Shop
+         (()=>{
+            const callback = function ( event ) {
+                const accepted = event.detail;
+                if( !!accepted ) {
+                    // code
+                }
+            }
+            //
+            window.addEventListener( 'REPLACE_BY_DESIRED_EVENT', callback )
+         })();
+
+     @example for Checkout
+        (()=>{
+            try {
+                const accepted = sessionStorage.getItem( 'REPLACE_BY_DESIRED_CONSENT_TYPE' );
+                if( !!accepted ) {
+                    // code
+                }
+            } catch(e) {
+                console.log('SessionStorage not available!')
+            }
+        })();
+     */
+    (()=>{
+        const saveConsentInSessionStorage = function ( consent ) {
+            if( 'sessionStorage' in window ) {
+                try {
+                    sessionStorage.setItem('is_analytics_accepted', consent.performance );
+                    sessionStorage.setItem('is_marketing_accepted', consent.advertising );
+                    sessionStorage.setItem('is_sale_of_data_accepted', consent.advertising );
+                    sessionStorage.setItem('is_preferences_accepted', consent.functional );
+                } catch (e) {
+                    console.log("SessionStorage not available!")
+                }
+            }
+        }
+        function dispatchCFEvent( eventName, value ) {
+            window.dispatchEvent( new CustomEvent( eventName, { detail: value }))
+        }
+        function handleCFConsent( event ) {
+            const consent = event.detail;
+            if(!!consent) {
+                saveConsentInSessionStorage( consent );
+                dispatchCFEvent('is_analytics_accepted', Boolean(consent.performance));
+                dispatchCFEvent('is_marketing_accepted', Boolean(consent.advertising));
+                dispatchCFEvent('is_sale_of_data_accepted', Boolean(consent.advertising));
+                dispatchCFEvent('is_preferences_accepted', Boolean(consent.functional));
+            }
+        }
+
+        window.addEventListener("cf_consent", handleCFConsent);
+        window.addEventListener("cf_consent_loaded", handleCFConsent);
+    })();
+</script>

@@ -1,0 +1,151 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "c43869c3-1c5d-4baa-8c25-edcf8bd58ddd": {
+      "type": "slideshow",
+      "blocks": {
+        "template--21050404503855__c43869c3-1c5d-4baa-8c25-edcf8bd58ddd-image-1": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "JUSKYS GRUPPE GMBH",
+            "title": "Stellenanzeige Juskys",
+            "title_size": 80,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/Philosophie_Titelbanner_1900x550px.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 0,
+            "color_subheading": "#ffffff",
+            "color_heading": "#ffffff",
+            "color_text": "#ffffff",
+            "color_accent_1": "rgba(0,0,0,0)",
+            "color_accent_2": "rgba(0,0,0,0)",
+            "color_btn_text_check": true,
+            "color_accent_t_1": "#000000",
+            "color_accent_t_2": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "template--21050404503855__c43869c3-1c5d-4baa-8c25-edcf8bd58ddd-image-1"
+      ],
+      "settings": {
+        "section_height": "450px",
+        "mobile_height": "auto",
+        "parallax": true,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5,
+        "lazyload_images": true
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "spacing_bottom": 50,
+        "spacing_bottom_header": 30
+      }
+    },
+    "262bbced-1df9-4387-8ed6-d37234faa95d": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21050404503855__262bbced-1df9-4387-8ed6-d37234faa95d-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>{{ page.metafields.pages.stellenanzeige_key_facts.value }}</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--21050404503855__262bbced-1df9-4387-8ed6-d37234faa95d-text-1"
+      ],
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "1704871634db330ace": {
+      "type": "apps",
+      "blocks": {
+        "637c95c0-dadd-497e-8daa-e3c8b57dd698": {
+          "type": "shopify://apps/easify-attachments/blocks/page-attachments/cc218f93-dff3-4a2d-af6e-04e2bc66e693",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "637c95c0-dadd-497e-8daa-e3c8b57dd698"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "16945961824eee61c4": {
+      "type": "apps",
+      "blocks": {
+        "8881c78c-f055-4229-b0c0-5d57883c4610": {
+          "type": "shopify://apps/hulk-form-builder/blocks/form-block/b6b8dd14-356b-4725-a4ed-77232212b3c3",
+          "settings": {
+            "form_uuid": "VAOFo4PCvBOBUNXRYm48JA",
+            "form_settings": false,
+            "font_color": "#000000",
+            "size": 14,
+            "input_background_color": "#ffffff",
+            "input_background_color_focus": "#f4dada",
+            "input_border_radius": 1,
+            "input_border_color": "#ebe9e9",
+            "input_border_color_focus": "#2d2727",
+            "input_font_color": "#3d3131",
+            "input_size": 14,
+            "border_color": "#121212",
+            "border_radius": 2,
+            "border": 1,
+            "fill_color": "#ebe9e9",
+            "padding": 35,
+            "form_width": 600,
+            "btn_text": "Submit",
+            "sub_btn_txt_color": "#f3f3f3",
+            "sub_btn_bg_color": "#3f3333",
+            "sub_btn_font_size": 14,
+            "sub_btn_bdr_color": "#ffffff",
+            "sub_btn_bdr_rad": 3,
+            "sub_btn_bdr_width": 1,
+            "fonts": "Times New Roman"
+          }
+        }
+      },
+      "block_order": [
+        "8881c78c-f055-4229-b0c0-5d57883c4610"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    }
+  },
+  "order": [
+    "c43869c3-1c5d-4baa-8c25-edcf8bd58ddd",
+    "main",
+    "262bbced-1df9-4387-8ed6-d37234faa95d",
+    "1704871634db330ace",
+    "16945961824eee61c4"
+  ]
+}

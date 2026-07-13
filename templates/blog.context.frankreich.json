@@ -1,0 +1,280 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "blog.json",
+  "context": {
+    "market": "frankreich"
+  },
+  "sections": {
+    "rich_text_rQj9c": {
+      "type": "rich-text",
+      "disabled": false,
+      "settings": {
+        "header-4a50ddae2b44540ef2b92a44c4071cf9": null,
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "tag": "h1",
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      },
+      "blocks": {
+        "text_ELGqM": {
+          "type": "text",
+          "disabled": false,
+          "settings": {
+            "enlarge_text": true,
+            "text": "<h1>Heim und Garten Ratgeber</h1>"
+          }
+        }
+      },
+      "block_order": [
+        "text_ELGqM"
+      ],
+      "name": "t:sections.rich-text.presets.rich_text.name"
+    },
+    "rich_text_KU7Ca": {
+      "type": "rich-text",
+      "disabled": false,
+      "settings": {
+        "header-ae34fa365473a7fa51010b7dd8437308": null,
+        "spacings_desktop_top": 100,
+        "spacings_desktop_bottom": 40,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "tag": "h1",
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      },
+      "blocks": {
+        "text_GEjBE": {
+          "type": "text",
+          "disabled": false,
+          "settings": {
+            "enlarge_text": true,
+            "text": "<h2>News und Aktuelles</h2>"
+          }
+        }
+      },
+      "block_order": [
+        "text_GEjBE"
+      ],
+      "name": "t:sections.rich-text.presets.rich_text.name"
+    },
+    "rich_text_XEn4z": {
+      "type": "rich-text",
+      "disabled": false,
+      "settings": {
+        "header-0efc9875ba9744db6dd96ce5880045fc": null,
+        "spacings_desktop_top": 90,
+        "spacings_desktop_bottom": 40,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "tag": "h1",
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      },
+      "blocks": {
+        "text_xmPQc": {
+          "type": "text",
+          "disabled": false,
+          "settings": {
+            "enlarge_text": true,
+            "text": "<h2>Wohnen und Haushalt</h2>"
+          }
+        }
+      },
+      "block_order": [
+        "text_xmPQc"
+      ],
+      "name": "t:sections.rich-text.presets.rich_text.name"
+    },
+    "rich_text_YM4bg": {
+      "type": "rich-text",
+      "disabled": false,
+      "settings": {
+        "header-eccf48214f98bf8146068e7691714c47": null,
+        "spacings_desktop_top": 90,
+        "spacings_desktop_bottom": 40,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "tag": "h1",
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      },
+      "blocks": {
+        "text_W8Vrp": {
+          "type": "text",
+          "disabled": false,
+          "settings": {
+            "enlarge_text": true,
+            "text": "<h2>Garten und Gartenmöbel</h2>"
+          }
+        }
+      },
+      "block_order": [
+        "text_W8Vrp"
+      ],
+      "name": "t:sections.rich-text.presets.rich_text.name"
+    },
+    "rich_text_fYnUY": {
+      "type": "rich-text",
+      "disabled": false,
+      "settings": {
+        "header-f2b61c4ec6d7287c64878fd96691b8ac": null,
+        "spacings_desktop_top": 90,
+        "spacings_desktop_bottom": 40,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "tag": "h1",
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      },
+      "blocks": {
+        "text_xJVJi": {
+          "type": "text",
+          "disabled": false,
+          "settings": {
+            "enlarge_text": true,
+            "text": "<h2>Sport und Freizeit</h2>"
+          }
+        }
+      },
+      "block_order": [
+        "text_xJVJi"
+      ],
+      "name": "t:sections.rich-text.presets.rich_text.name"
+    },
+    "rich_text_4pxEM": {
+      "type": "rich-text",
+      "disabled": false,
+      "settings": {
+        "header-cc7c23b0d0f98d7c70be71b651277f8c": null,
+        "spacings_desktop_top": 90,
+        "spacings_desktop_bottom": 40,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "tag": "h1",
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      },
+      "blocks": {
+        "text_gEF4z": {
+          "type": "text",
+          "disabled": false,
+          "settings": {
+            "enlarge_text": true,
+            "text": "<h2>Haustiere und Tierbedarf</h2>"
+          }
+        }
+      },
+      "block_order": [
+        "text_gEF4z"
+      ],
+      "name": "t:sections.rich-text.presets.rich_text.name"
+    },
+    "rich_text_bE63U": {
+      "type": "rich-text",
+      "disabled": false,
+      "settings": {
+        "header-86a02497d08773398676201e3f9ce40c": null,
+        "spacings_desktop_top": 90,
+        "spacings_desktop_bottom": 40,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "tag": "h1",
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      },
+      "blocks": {
+        "text_np88q": {
+          "type": "text",
+          "disabled": false,
+          "settings": {
+            "enlarge_text": true,
+            "text": "<h2>Sauna und Wellness</h2>"
+          }
+        }
+      },
+      "block_order": [
+        "text_np88q"
+      ],
+      "name": "t:sections.rich-text.presets.rich_text.name"
+    },
+    "f49ca3e1-0222-40e2-8fbb-f421d3cb97f5": {
+      "settings": {
+        "spacings_desktop_top": 0
+      },
+      "blocks": {}
+    },
+    "rich_text_KFEJRh": {
+      "settings": {
+        "spacings_desktop_top": 0
+      },
+      "blocks": {}
+    },
+    "f752af16-0828-422e-978c-2a999dfe7b18": {
+      "settings": {
+        "spacings_desktop_top": 0
+      },
+      "blocks": {}
+    },
+    "5dde35e7-57dc-478d-9806-e8db8758f70a": {
+      "settings": {
+        "spacings_desktop_top": 0
+      },
+      "blocks": {}
+    },
+    "e80ef760-c592-4d09-b735-4a912c79928f": {
+      "settings": {
+        "spacings_desktop_top": 0
+      },
+      "blocks": {}
+    },
+    "ab80a413-6cd8-4661-b004-3c1474bb9b97": {
+      "settings": {
+        "spacings_desktop_top": 0
+      },
+      "blocks": {}
+    }
+  },
+  "order": [
+    "rich_text_rQj9c",
+    "5be5ea83-909b-4603-a37f-166c09b4aef6",
+    "5baf64f0-6f12-4ad1-80e9-21faa1f78696",
+    "rich_text_KU7Ca",
+    "f49ca3e1-0222-40e2-8fbb-f421d3cb97f5",
+    "main",
+    "39864f71-17f0-40f3-a0a6-07f4de6cae9a",
+    "rich_text_XEn4z",
+    "rich_text_KFEJRh",
+    "b1b0ca7e-1138-42fc-8c1d-79fada8670cf",
+    "rich_text_YM4bg",
+    "f752af16-0828-422e-978c-2a999dfe7b18",
+    "52646510-f6db-4a60-ad3e-4b0e36769e55",
+    "rich_text_fYnUY",
+    "5dde35e7-57dc-478d-9806-e8db8758f70a",
+    "5021c262-4563-4c6e-adae-d3e36e48e860",
+    "rich_text_4pxEM",
+    "e80ef760-c592-4d09-b735-4a912c79928f",
+    "dce6b98f-4d36-42d1-bde9-e3662cb327e4",
+    "rich_text_bE63U",
+    "ab80a413-6cd8-4661-b004-3c1474bb9b97",
+    "4516f7dd-1750-4543-9622-1fea4baf4569"
+  ]
+}

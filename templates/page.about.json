@@ -1,0 +1,346 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "slideshow-0": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "Juskys Gruppe GmbH",
+            "title": "Ihr Partner im E-Commerce",
+            "title_size": 62,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "text_align": "vertical-center horizontal-left",
+            "parallax_direction": "top",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "slideshow-0"
+      ],
+      "settings": {
+        "section_height": "650px",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": false,
+        "autoplay_speed": 7,
+        "lazyload_images": true
+      }
+    },
+    "27af34a1-dd44-4a10-b341-d2b391dfa0ba": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20174418379055__27af34a1-dd44-4a10-b341-d2b391dfa0ba-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "Online Shopping rund um die Themen Wohnen, Garten und Freizeit"
+          }
+        },
+        "template--20174418379055__27af34a1-dd44-4a10-b341-d2b391dfa0ba-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Vom kleinen Onlinehändler hin zum stark expandierenden E-Commerce-Unternehmen mit mehr als 150 MitarbeiterInnen an vier Standorten – das ist die beeindruckende Erfolgsgeschichte der Juskys Gruppe GmbH. Und ein Ende dieses Wachstumskurses ist längst nicht in Sicht.</p><p>Werfen Sie einen Blick hinter die Kulissen unseres Unternehmens. Lernen Sie die vielfältigen Chancen und Möglichkeiten kennen, die wir Ihnen als Handelspartner oder als MitarbeiterIn bieten.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--20174418379055__27af34a1-dd44-4a10-b341-d2b391dfa0ba-heading-1",
+        "template--20174418379055__27af34a1-dd44-4a10-b341-d2b391dfa0ba-text-1"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "6c867c1c-7a59-40ad-a43e-a9b639e87860": {
+      "type": "text-and-image",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/Tierbedarf-800x558px-mobile-portrait_finalePN2tvmMTYpS7_1920x1920_03afa2eb-44ad-4009-ad7c-06a8e4af8270.jpg",
+        "image_mask": "square",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Juskys - Jung, dynamisch & zukunftsgerichtet",
+        "text": "<p>Seit der Gründung im Jahr 2005 ist die Juskys Gruppe GmbH ein inhabergeführtes E-Commerce Unternehmen unter der Leitung von Philipp Juskys. Durch das stetige Wachstum der letzten Jahre gehört das Unternehmen inzwischen zu den größten Onlinehändlern in Deutschland. Das breite Produktsortiment aus den Bereichen Wohnen, Garten, Heimwerken, Tierbedarf, Sport und Freizeit deckt den kompletten Bedarf für ein modernes und gemütliches Zuhause ab.</p><p>Alle Produkte erfüllen die hohen Ansprüche unserer Kunden. Regelmäßige Qualitätskontrollen und Visiten bei unseren Herstellern vor Ort stellen eine exzellente Qualität sicher. Die enge Zusammenarbeit mit unseren Herstellern ermöglicht uns eine kontinuierliche Weiterentwicklung der Produkte sowie ein hervorragendes Preis-Leistungs-Verhältnis.</p><p>Unsere Kunden profitieren zudem von einer hohen Warenverfügbarkeit und einer zuverlässigen Lieferung mit kurzen Lieferzeiten. Durch unsere eigenen Lager sowie zusätzliche Lagerflächen bei externen Dienstleistern stehen uns mehr als 60.000 m² Lagerkapazitäten zur Verfügung. Eine moderne Ausstattung sowie effiziente Prozesse ermöglichen eine schnelle Abwicklung von Warenein- und -ausgängen.</p><p>Unsere Mitarbeiter sind die Basis für unseren Erfolg. Sie haben mit ihrer hohen Leistungs- und Lernbereitschaft das Wachstum nachhaltig vorgetrieben. Daher legen wir großen Wert auf ein angenehmes Arbeitsumfeld, flache Hierarchien und eine kontinuierliche Weiterbildung. </p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "9f92f2e3-86b8-4c25-b6ea-079652317fb5": {
+      "type": "text-columns",
+      "blocks": {
+        "template--20174418379055__9f92f2e3-86b8-4c25-b6ea-079652317fb5-text_block-1": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_mask": "square",
+            "image_width": 350,
+            "title": "",
+            "text": "",
+            "button_label": "Marken",
+            "button_link": ""
+          }
+        },
+        "template--20174418379055__9f92f2e3-86b8-4c25-b6ea-079652317fb5-text_block-2": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_mask": "square",
+            "image_width": 350,
+            "title": "",
+            "text": "",
+            "button_label": "Vertrieb",
+            "button_link": ""
+          }
+        },
+        "template--20174418379055__9f92f2e3-86b8-4c25-b6ea-079652317fb5-text_block-3": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_mask": "square",
+            "image_width": 650,
+            "title": "",
+            "text": "",
+            "button_label": "Standorte",
+            "button_link": ""
+          }
+        },
+        "340231c6-c4f5-44b2-ad89-aa3d71cd0d9a": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_mask": "square",
+            "image_width": 650,
+            "title": "",
+            "text": "",
+            "button_label": "Historie",
+            "button_link": ""
+          }
+        },
+        "2be81b2e-fa9b-4328-b197-340cff65b1a0": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_mask": "square",
+            "image_width": 650,
+            "title": "",
+            "text": "",
+            "button_label": "Philosophie",
+            "button_link": ""
+          }
+        },
+        "ddfb3b1f-b322-43a3-b50a-8f3c87f0355f": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_mask": "square",
+            "image_width": 650,
+            "title": "",
+            "text": "",
+            "button_label": "Karriere",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--20174418379055__9f92f2e3-86b8-4c25-b6ea-079652317fb5-text_block-1",
+        "template--20174418379055__9f92f2e3-86b8-4c25-b6ea-079652317fb5-text_block-2",
+        "template--20174418379055__9f92f2e3-86b8-4c25-b6ea-079652317fb5-text_block-3",
+        "340231c6-c4f5-44b2-ad89-aa3d71cd0d9a",
+        "2be81b2e-fa9b-4328-b197-340cff65b1a0",
+        "ddfb3b1f-b322-43a3-b50a-8f3c87f0355f"
+      ],
+      "settings": {
+        "title": "",
+        "align_text": "center",
+        "divider": false
+      }
+    },
+    "ebc1444d-7de9-420c-aa15-c5785ce01566": {
+      "type": "text-and-image",
+      "settings": {
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Unsere Mission",
+        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "left",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "text-columns": {
+      "type": "text-columns",
+      "blocks": {
+        "column1": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Example title",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "column2": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Example title",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "column3": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Example title",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column1",
+        "column2",
+        "column3"
+      ],
+      "settings": {
+        "title": "Unsere Werte",
+        "align_text": "center",
+        "divider": false
+      }
+    },
+    "7f9db10a-0079-40f3-9aa4-e5b0aedd1ad7": {
+      "type": "text-and-image",
+      "settings": {
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Unsere Vision",
+        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "3fa2b1a0-819f-436f-b19b-72ae809bba35": {
+      "type": "text-columns",
+      "blocks": {
+        "template--20174418379055__3fa2b1a0-819f-436f-b19b-72ae809bba35-text_block-1": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_mask": "square",
+            "image_width": 650,
+            "title": "",
+            "text": "",
+            "button_label": "Kontakt",
+            "button_link": ""
+          }
+        },
+        "template--20174418379055__3fa2b1a0-819f-436f-b19b-72ae809bba35-text_block-2": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_mask": "square",
+            "image_width": 650,
+            "title": "",
+            "text": "",
+            "button_label": "Presse",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--20174418379055__3fa2b1a0-819f-436f-b19b-72ae809bba35-text_block-1",
+        "template--20174418379055__3fa2b1a0-819f-436f-b19b-72ae809bba35-text_block-2"
+      ],
+      "settings": {
+        "title": "",
+        "align_text": "center",
+        "divider": false
+      }
+    },
+    "bbf91d08-d0c3-4bb4-bcff-e7f5eeb5ff69": {
+      "type": "blog-posts",
+      "settings": {
+        "title": "News & Updates",
+        "blog": "heim-garten-ratgeber",
+        "post_limit": 3,
+        "blog_show_tags": false,
+        "blog_show_date": true,
+        "blog_show_comments": false,
+        "blog_show_author": false,
+        "view_all": false,
+        "blog_image_size": "landscape",
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "slideshow",
+    "27af34a1-dd44-4a10-b341-d2b391dfa0ba",
+    "6c867c1c-7a59-40ad-a43e-a9b639e87860",
+    "9f92f2e3-86b8-4c25-b6ea-079652317fb5",
+    "ebc1444d-7de9-420c-aa15-c5785ce01566",
+    "text-columns",
+    "7f9db10a-0079-40f3-9aa4-e5b0aedd1ad7",
+    "3fa2b1a0-819f-436f-b19b-72ae809bba35",
+    "bbf91d08-d0c3-4bb4-bcff-e7f5eeb5ff69"
+  ]
+}

@@ -1,0 +1,257 @@
+{%- comment -%}
+Clever Slider by beeclever
+Author: André Neder
+Version 1.1.1
+{%- endcomment -%}
+
+{%- liquid
+    assign gap = gap | default: settings.grid_gap | default: 30 
+    assign gap_small = gap_small | default: settings.grid_gap_small | default: 15 
+    assign max_items = max_items | default: 6 
+    assign vertical_slider_height = vertical_slider_height | default: 300 
+    assign breakpoint_small = breakpoint_small | default: settings.breakpoint_small | default: 768 
+    assign breakpoint_medium = breakpoint_medium | default: settings.breakpoint_medium | default: 959
+    assign nav_item_color = nav_item_color | default: '#000000'
+-%}
+
+
+<style>
+clever-slider{
+    display:block;
+    overflow: hidden;
+    position: relative;
+}
+cs-nav,
+cs-track,
+cs-slide,
+cs-nav-item{
+    display:block;
+}
+cs-slide{
+    position: relative;
+}
+cs-nav-item{
+    cursor:pointer;
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    border:1px solid {{ nav_item_color }};
+    background-color: transparent;
+}
+cs-nav-item.in-view{
+    background-color: {{ nav_item_color }};
+}
+cs-nav{
+    display: flex;
+    padding:10px;
+    gap:5px;
+    justify-content: center;
+}
+cs-nav.left{
+    justify-content: flex-start;
+}
+cs-nav:empty{
+    display:none;
+}
+cs-nav.right{
+    justify-content: flex-end;
+}
+cs-nav.overlayed{
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+}
+clever-slider[fade] cs-slides{
+    transform: none !important;
+}
+clever-slider[fade] cs-slide{
+    opacity:0;
+    pointer-events: none;
+    left: 0 !important;
+    right: 0 !important;
+}
+clever-slider[fade] cs-slide.in-view{
+    opacity:1;
+    pointer-events: initial;
+}
+cs-nav-item:only-child{
+    display: none;
+}
+cs-next,
+cs-prev{
+    display:block;
+    cursor:pointer;
+    z-index:2;
+}
+cs-next[disabled],
+cs-prev[disabled]{
+   opacity: 0.5;
+}
+cs-next.cs_next,
+cs-prev.cs_prev{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    padding:20px;
+}
+cs-prev.cs_prev{
+    left:0;
+}
+cs-next.cs_next{
+    right:0;
+}
+
+cs-slides{
+    display: flex;
+    align-items: stretch;
+    position: relative;
+    will-change: transform;
+    will-change: height;
+    transition: height 0.6s;
+}
+clever-slider[auto-height] cs-slides{
+    align-items: flex-start;
+}
+clever-slider cs-track.is-draggable{
+    cursor: grab;
+}
+clever-slider cs-track.is-dragging{
+    cursor: grabbing;
+}
+clever-slider:not(.vertical) cs-slides{
+    flex-direction: row;
+}
+clever-slider.vertical cs-slides{
+    flex-direction: column;
+    height:{{ vertical_slider_height }}px;
+}
+{% for i in (1..max_items) %}
+    cs-slides:not(.gap).items-{{ forloop.index }} > cs-slide{
+        flex: 0 0  calc(100% / {{ forloop.index }});
+    }  
+    {% assign in_view_gap = gap | times: forloop.index0 %}
+    cs-slides.gap.items-{{ forloop.index }} > cs-slide{
+        flex: 0 0 calc((100% - {{ in_view_gap }}px) / {{ forloop.index }});
+    }  
+    {% assign in_view_gap = gap_small | times: forloop.index0 %}
+    cs-slides.gap-small.items-{{ forloop.index }} > cs-slide{
+        flex: 0 0 calc((100% - {{ in_view_gap }}px) / {{ forloop.index }});
+    }  
+{% endfor %}
+clever-slider:not(.vertical) cs-slides.gap > cs-slide{
+    margin-right:{{ gap }}px; 
+}
+clever-slider.vertical cs-slides.gap > cs-slide{
+    margin-bottom:{{ gap }}px; 
+    width:100%;
+}
+clever-slider:not(.vertical) cs-slides.gap-small > cs-slide{
+    margin-right:{{ gap_small }}px; 
+}
+clever-slider.vertical cs-slides.gap-small > cs-slide{
+    margin-bottom:{{ gap_small }}px; 
+    width:100%;
+}
+@media (min-width:{{ breakpoint_small | plus: 1 }}px) and (max-width:{{ breakpoint_medium }}px){
+    clever-slider.medium_horizontal cs-slides{
+        flex-direction: row;
+        height:initial
+    }
+    clever-slider.medium_vertical cs-slides{
+        flex-direction: column;
+        height:{{ vertical_slider_height }}px;
+    }
+
+    {% for i in (1..max_items) %}
+        cs-slides:not(.gap).medium_items-{{ forloop.index }} > cs-slide,
+        cs-slides.medium_no-gap.medium_items-{{ forloop.index }} > cs-slide{
+            flex: 0 0  calc(100% / {{ forloop.index }});
+        }  
+        {% assign in_view_gap = gap | times: forloop.index0 %}
+        cs-slides.gap.medium_items-{{ forloop.index }} > cs-slide,
+        cs-slides.medium_gap.medium_items-{{ forloop.index }} > cs-slide{
+            flex: 0 0 calc((100% - {{ in_view_gap }}px) / {{ forloop.index }});
+        }  
+        {% assign in_view_gap = gap_small | times: forloop.index0 %}
+        cs-slides.gap-small.medium_items-{{ forloop.index }} > cs-slide,
+        cs-slides.medium_gap-small.medium_items-{{ forloop.index }} > cs-slide{
+            flex: 0 0 calc((100% - {{ in_view_gap }}px) / {{ forloop.index }});
+        }  
+    {% endfor %}
+
+    clever-slider.vertical:not(.medium_horizontal) cs-slides.gap:not(.medium_no-gap) > cs-slide,
+    clever-slider.vertical:not(.medium_horizontal) cs-slides.medium_gap > cs-slide {
+        margin-bottom:{{ gap }}px; 
+        margin-right:0;
+    }
+    clever-slider:not(.vertical):not(.medium_vertical) cs-slides.gap:not(.medium_no-gap) > cs-slide,
+    clever-slider:not(.vertical):not(.medium_vertical) cs-slides.medium_gap > cs-slide {
+        margin-right:{{ gap }}px; 
+        margin-bottom:0;
+        width:100%;
+    }
+    clever-slider.vertical:not(.medium_horizontal) cs-slides.gap:not(.medium_no-gap) > cs-slide,
+    clever-slider.vertical:not(.medium_horizontal) cs-slides.medium_gap-small > cs-slide {
+        margin-bottom:{{ gap_small }}px; 
+        margin-right:0;
+    }
+    clever-slider:not(.vertical):not(.medium_vertical) cs-slides.gap:not(.medium_no-gap) > cs-slide,
+    clever-slider:not(.vertical):not(.medium_vertical) cs-slides.medium_gap-small > cs-slide {
+        margin-right:{{ gap_small }}px; 
+        margin-bottom:0;
+        width:100%;
+    }
+}
+@media (max-width:{{ breakpoint_small }}px){
+    clever-slider.small_horizontal cs-slides{
+        flex-direction: row;
+        height:initial
+    }
+    clever-slider.small_vertical cs-slides{
+        flex-direction: column;
+        height:{{ vertical_slider_height }}px;
+    }
+
+    {% for i in (1..max_items) %}
+        cs-slides:not(.gap).small_items-{{ forloop.index }} > cs-slide,
+        cs-slides:not(.small_no-gap).small_items-{{ forloop.index }} > cs-slide{
+            flex: 0 0  calc(100% / {{ forloop.index }});
+        }  
+        {% assign in_view_gap = gap | times: forloop.index0 %}
+        cs-slides.gap.small_items-{{ forloop.index }} > cs-slide,
+        cs-slides.small_gap.small_items-{{ forloop.index }} > cs-slide{
+            flex: 0 0 calc((100% - {{ in_view_gap }}px) / {{ forloop.index }});
+        } 
+        {% assign in_view_gap = gap_small | times: forloop.index0 %}
+        cs-slides.gap-small.small_items-{{ forloop.index }} > cs-slide,
+        cs-slides.small_gap-small.small_items-{{ forloop.index }} > cs-slide{
+            flex: 0 0 calc((100% - {{ in_view_gap }}px) / {{ forloop.index }});
+        }  
+    {% endfor %}
+
+    clever-slider.vertical:not(.small_horizontal) cs-slides.gap:not(.small_no-gap) > cs-slide,
+    clever-slider.vertical:not(.small_horizontal) cs-slides.small_gap > cs-slide {
+        margin-right:0;
+        margin-bottom:{{ gap }}px; 
+    }
+    clever-slider.small_horizontal:not(.small_vertical) cs-slides.gap:not(.small_no-gap) > cs-slide,
+    clever-slider.small_horizontal:not(.small_vertical) cs-slides.small_gap > cs-slide {
+        margin-bottom:0;
+        margin-right:{{ gap }}px; 
+        width:100%;
+    }
+    clever-slider.vertical:not(.small_horizontal) cs-slides.gap:not(.small_no-gap) > cs-slide,
+    clever-slider.vertical:not(.small_horizontal) cs-slides.small_gap-small > cs-slide {
+        margin-right:0;
+        margin-bottom:{{ gap_small }}px; 
+    }
+    clever-slider:not(.vertical):not(.small_vertical) cs-slides.gap:not(.small_no-gap) > cs-slide,
+    clever-slider:not(.vertical):not(.small_vertical) cs-slides.small_gap-small > cs-slide {
+        margin-bottom:0;
+        margin-right:{{ gap_small }}px; 
+        width:100%;
+    }
+}
+{} 
+</style>

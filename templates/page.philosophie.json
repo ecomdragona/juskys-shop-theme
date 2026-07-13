@@ -1,0 +1,156 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "spacing_bottom": 50,
+        "spacing_bottom_header": 30
+      }
+    },
+    "61ea7f5c-de99-42ae-89df-5798ad9d5475": {
+      "type": "slideshow",
+      "blocks": {
+        "template--20758329295151__61ea7f5c-de99-42ae-89df-5798ad9d5475-image-1": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "Philosophie",
+            "title": "Kultur, Leitbild und Strategie",
+            "title_size": 80,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/2880x1621_Philosophie_bde3e640-5a10-4a46-8c04-122bdc0feae7.jpg",
+            "image_mobile": "shopify://shop_images/800x800-Philosophie_aa30fa70-3c58-4c98-9bc4-048d554a244f.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 0,
+            "color_subheading": "#ffffff",
+            "color_heading": "#ffffff",
+            "color_text": "#ffffff",
+            "color_accent_1": "rgba(0,0,0,0)",
+            "color_accent_2": "rgba(0,0,0,0)",
+            "color_btn_text_check": true,
+            "color_accent_t_1": "#000000",
+            "color_accent_t_2": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "template--20758329295151__61ea7f5c-de99-42ae-89df-5798ad9d5475-image-1"
+      ],
+      "settings": {
+        "section_height": "650px",
+        "mobile_height": "auto",
+        "parallax": true,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5,
+        "lazyload_images": true
+      }
+    },
+    "cdf6458e-5e6e-41e6-a58a-b7e79cefa1f7": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/Sourcing-800x669px.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "SOURCING & PRODUKTION",
+        "title": "Ein starkes Netzwerk in Asien und Europa",
+        "text": "<p>Innerhalb der letzten 15 Jahre haben wir ein sehr breites Lieferantennetz von über 100 Herstellern in Asien und Europa aufgebaut. Durch den Einsatz von Muttersprachlern gewährleisten wir eine reibungslose Kommunikation. Die vertrauensvolle und langjährige Zusammenarbeit mit den Herstellern ermöglichen uns bessere Konditionen, Liefertermintreue und eine hohe Produktqualität. Wir arbeiten ausschließlich direkt mit dem Hersteller ohne Zwischenvermittler zusammen, sodass wir schnelle Anpassungen bei Produktoptimierungsmaßnahmen gewährleisten können. Durch eine kontinuierliche Marktbeobachtung erkennen wir frühzeitig Trends und generieren Ideen für neue Produkte. Ein stetiges Wachstum und Erweiterung unserer Produktpalette ist uns wichtig.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "db713017-9d60-4f2c-911c-50f572b4ea3e": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/Qualitaet-800x669px.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "PRODUKTQUALITÄT",
+        "title": "Ein starkes Qualitätsmanagement",
+        "text": "<p>Unsere Anforderungen an Produkte und MitarbeiterInnen sind hoch, die Zufriedenheit der Kunden hat für uns höchste Priorität. Wir kontrollieren regelmäßig die Produktqualität und verbessern stetig unser Sortiment. Freundliche MitarbeiterInnen stehen den Kunden bei Fragen zur Verfügung und geben kompetent Auskunft. Effiziente Prozesse ermöglichen eine reibungslose Abwicklung der Bestellungen und schnelle Lieferungen. Geschultes Fachpersonal vor Ort führt bei den Herstellern regelmäßige Visiten durch, um eine optimale Qualität zu garantieren. Alle Produkte werden nach hohen europäischen Standards hergestellt. Durch externe Prüfinstitute wird eine volle Transparenz gewährleistet.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "left",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "444933de-2b3a-44d2-869a-729ed7328677": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/Team-800x669px.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "TEAM",
+        "title": "Ein starkes Team",
+        "text": "<p>Wir legen Wert auf flache Hierarchien, direkte Kommunikationswege und individuellen Entwicklungsspielraum für jeden unserer mittlerweile mehr als 150 MitarbeiterInnen. So ermöglichen wir regelmäßige Weiterbildungsmaßnahmen und unterstützen durch große Meetingräume und gemütliche Sitzecken die Kommunikation untereinander. Teamevents stärken den Zusammenhalt zusätzlich.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "953ab802-ae29-4a24-a8bf-2e63e92d4351": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/Logistik-800x669px_neu.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "VERSAND & LOGISTIK",
+        "title": "Eine starke Logistik",
+        "text": "<p>Ab Oktober 2021 stehen uns an insgesamt drei Logistikstandorten über 60.000 m² mit Nähe zum Hamburger Hafen und zu den Hauptverteilzentren aller großen Versanddienstleister zur Verfügung. Damit stellen wir eine ständige Lagerverfügbarbeit und schnelle Transportwege sicher.</p><p>Durch langfristige und zuverlässige Zusammenarbeit mit unseren KEP-Dienstleistern und Speditionen haben wir effiziente Prozesse geschaffen, um eine schnelle Abwicklung von Bestellungen und Warenanlieferungen zu gewährleisten.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "left",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "61ea7f5c-de99-42ae-89df-5798ad9d5475",
+    "cdf6458e-5e6e-41e6-a58a-b7e79cefa1f7",
+    "db713017-9d60-4f2c-911c-50f572b4ea3e",
+    "444933de-2b3a-44d2-869a-729ed7328677",
+    "953ab802-ae29-4a24-a8bf-2e63e92d4351"
+  ]
+}

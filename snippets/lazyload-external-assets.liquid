@@ -1,0 +1,42 @@
+<script>
+function revertDataAttrToTargetAttr(){document.querySelectorAll("[data-src]").forEach(function(t){let e=t.getAttribute("data-src");e&&(t.setAttribute("src",e),t.removeAttribute("data-src"))}),document.querySelectorAll("[data-href]").forEach(function(t){let e=t.getAttribute("data-href");e&&(t.setAttribute("href",e),t.removeAttribute("data-href"))})}function addAttributesToNodesWithSubstrings(t){function e(t,e){for(let r=0;r<t.attributes.length;r++){let o=t.attributes[r].value;if(e.some(t=>o.includes(t)))return!0}return!1}function r(t,e){e&&e.forEach(function(e){if(void 0!==e.value&&t.setAttribute(e.name,e.value),e.srcToDataSrc){let r=t.getAttribute("src");r&&(t.setAttribute("data-src",r),t.removeAttribute("src"))}if(e.hrefToDataHref){let o=t.getAttribute("href");o&&(t.setAttribute("data-href",o),t.removeAttribute("href"))}})}let o=new MutationObserver(function(o){o.forEach(function(o){o.addedNodes.forEach(function(o){1===o.nodeType&&e(o,t.map(t=>t.substring))&&t.forEach(function(t){e(o,[t.substring])&&("link"===o.nodeName.toLowerCase()?r(o,t.linkAttributes):"script"===o.nodeName.toLowerCase()&&r(o,t.scriptAttributes))})})})});o.observe(document,{childList:!0,subtree:!0}),document.querySelectorAll("*").forEach(function(o){e(o,t.map(t=>t.substring))&&t.forEach(function(t){e(o,[t.substring])&&("link"===o.nodeName.toLowerCase()?r(o,t.linkAttributes):"script"===o.nodeName.toLowerCase()&&r(o,t.scriptAttributes))})}),["mousemove","touchstart","keydown","scroll","click","keypress","touchmove"].forEach(t=>{document.addEventListener(t,revertDataAttrToTargetAttr)}),setTimeout(revertDataAttrToTargetAttr,2e4)}
+
+const substringsAndAttributes = [
+  // {
+  //   substring: '/assets/klip-app.js',
+  //   scriptAttributes: [
+  //     { srcToDataSrc: true }
+  //   ]
+  // },
+  {
+    substring: '/assets/lb-upsell.js',
+    scriptAttributes: [
+      { srcToDataSrc: true }
+    ]
+  },
+  {
+    substring: '/assets/njt-whatsapp.min.js',
+    scriptAttributes: [
+      { srcToDataSrc: true }
+    ]
+  },
+  {
+    substring: '/assets/klip-app.css',
+    linkAttributes: [
+      { name: "media", value: "print" },
+      { name: "onload", value: "this.media='all'" },
+      { hrefToDataHref: true }
+    ]
+  },
+  {
+    substring: '/widgets/carousel-widget.css',
+    linkAttributes: [
+      { name: "media", value: "print" },
+      { name: "onload", value: "this.media='all'" },
+      { hrefToDataHref: true }
+    ]
+  }
+];
+
+addAttributesToNodesWithSubstrings(substringsAndAttributes);
+</script>

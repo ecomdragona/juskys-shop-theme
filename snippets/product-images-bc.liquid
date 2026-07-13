@@ -1,0 +1,937 @@
+{%- liquid
+  assign featured_media = product.selected_or_first_available_variant.featured_media | default: product.featured_media
+  assign first_3d_model = product.media | where: 'media_type', 'model' | first
+
+  # Product images and thumbnails on the main product template should load early
+  if context == 'main-product'
+    assign loading = 'eager'
+  endif
+
+  assign variant_images_json = product.selected_or_first_available_variant.metafields.product.images.value
+  assign variant_images_ids = null | sort
+  for entry in variant_images_json
+    assign image_id = entry.shopify_image_id | sort
+    assign variant_images_ids = variant_images_ids | concat: image_id
+  endfor
+
+  assign variants_size = product.variants.size | minus: 1
+  assign variant_images_map = '' | sort
+  for temp_variant in product.variants
+    if temp_variant.id != product.selected_or_first_available_variant.id
+      for temp_variant_images_json in temp_variant.metafields.product.images.value
+        unless hide_images and forloop.index > 2 and forloop.index < 6
+          for temp_entry in temp_variant_images_json
+              assign image_id = temp_entry | last
+              assign image_map = temp_variant.id | append: '_' | append: image_id
+              assign image_map = image_map | sort
+              assign variant_images_map = variant_images_map | concat: image_map
+          endfor
+        endunless
+      endfor
+    endif
+  endfor
+
+  assign non_image_media = null | sort
+  for media in product.media
+    if media.media_type != 'image'
+      assign temp = media | sort
+      assign non_image_media = non_image_media | concat: temp
+    endif
+  endfor
+-%}
+
+
+<style>
+    .product__main-photos {
+        width: 100%;
+    }
+    .product__photos {
+      gap: 10px;
+    }
+
+    .product__photos .hidden {
+      display: none;
+    }
+
+    .product__photos .thumbnail_slider {
+      width: 130px;
+    }
+    .product__photos .thumbnail_slider clever-slider {
+      height: 100%;
+    }
+    .product__photos .thumbnail_slider cs-slide.current img {
+      border: 2px solid var(--colorBorder);
+    }
+
+    .product__main-photos cs-prev,
+    .product__main-photos cs-next {
+      position: absolute;
+      top: 50%;
+      padding: 10px;
+    }
+    .product__main-photos cs-prev {
+      left: 0%;
+      transform: rotate(90deg)
+    }
+    .product__main-photos cs-next {
+      right: 0%;
+      transform: rotate(-90deg)
+    }
+    .product__main-photos cs-prev svg,
+    .product__main-photos cs-next svg {
+      width: 30px;
+      height: 30px;
+    }
+
+    .product__photos .only_large {
+      display: block;
+    }
+    .product__photos .only_small {
+      display: none;
+    }
+
+    /* Customize by Better Sell Online GmbH (BSO) - remove the hover effects on product image */
+    /* .product__main-photos cs-slide:hover image-element {
+      opacity: 0;
+    }
+    .product__main-photos cs-slide image-element {
+      transition: opacity .2s ease;
+    } */
+
+    .thumbnail_slider-mobile-gap {
+      gap: 10px;
+    }
+
+    @media only screen and (max-width:768px){
+      .product__photos .only_large {
+        display: none;
+      }
+      .product__photos .only_small {
+        display: block;
+      }
+
+      .product__photos  cs-nav.only_small {
+        display: flex;
+      }
+      .product__photos .thumbnail_slider {
+      width: 100%;
+      }
+      .product__photos--beside {
+        flex-direction: column;
+      }
+      .thumbnail_slider {
+        order: 2;
+      }
+      #ThumbnailSlider-mobile-{{ product.id }} {
+        margin-top: 10px;
+      }
+      .product__main-photos {
+        margin-left: 0px;
+      }
+      .product-single__sticky {
+        position: relative;
+        padding-top: 20px;
+      }
+
+      .grid-product__tags {
+        position: absolute;
+        right: 0px;
+      }
+    }
+  /*Modal*/
+  .product__photos__modal {
+    position: fixed;
+    height:100%;
+    width:100%;
+    top: 0;
+    left:0;
+    background-color: white;
+    z-index:30;
+    padding: 50px;
+    display:flex;
+    justify-content:center;
+    flex-direction: column;
+    gap: 10px 0px;
+    align-items:center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  .product__photos__modal.hidden {
+    display:none;
+  }
+  .product__photos__modal .product__photos,
+  .product__photos__modal__controlls__container {
+    width:80%;
+    max-width: 1200px;
+  }
+  .product__photos__modal clever-slider,
+  .product__photos__modal clever-slider cs-slides.items-1 cs-slide img {
+    height: 75vh;
+    max-height: 1200px;
+  }
+  .product__photos__modal clever-slider cs-slides.items-1 cs-slide img {
+    object-fit:contain;
+    background-color:#fff;
+    transition: ease 0.2s;
+  }
+  .product__photos__modal clever-slider cs-slides.items-5 cs-slide.is-selected img{
+    border: 1px solid var(--colorBtnPrimary);
+  }
+  .product__photos__modal .product__photos__modal__controlls__container{
+    display: flex;
+    justify-content: start;
+  }
+  .product__photos__modal .product__photos__modal__controlls__container .product__photos__modal__zoom{
+    display: flex;
+  }
+  .product__photos__modal .product__photos__modal__closer{
+    margin-left: auto;
+  }
+  .product__photos__modal .product__photos__modal__controlls__container span{
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    cursor: pointer;
+    border:1px solid var(--colorBorder);
+    background-color: #f6f6f6;
+    transition:ease 0.2s;
+  }
+  .product__photos__modal .product__photos__modal__controlls__container span:hover {
+    background-color: var(--colorBtnPrimary);
+    color: #fff;
+    border: 1px solid var(--colorBtnPrimary);
+    transform:scale(1.1);
+  }
+  .product__photos__modal clever-slider cs-next,
+  .product__photos__modal clever-slider cs-prev {
+    background-color:rgba(246,	246, 246, 0.5);
+    border-radius:100%;
+    transition: ease 0.2s;
+    border: 2px solid rgba(0, 0, 0, 0)
+  }
+  .product__photos__modal clever-slider cs-next:hover,
+  .product__photos__modal clever-slider cs-prev:hover {
+     border: 2px solid var(--colorBtnPrimary)
+  }
+  @media screen and (max-width:1200px) {
+    .product__photos__modal clever-slider,
+    .product__photos__modal clever-slider cs-slide,
+    .product__photos__modal clever-slider cs-slides.items-1 cs-slide img {
+      height: 600px;
+    }
+  }
+  @media screen and (max-width:820px) {
+    .product__photos__modal clever-slider,
+    .product__photos__modal clever-slider cs-slide,
+    .product__photos__modal clever-slider cs-slides.items-1 cs-slide img {
+      height: 500px;
+    }
+  }
+  @media screen and (max-width:768px) {
+    .product__photos__modal {
+      padding:10px;
+      justify-content: start;
+    }
+    .product__photos__modal .product__main-photos {
+      margin-left:0px;
+      margin-right:0px;
+    }
+    .product__photos__modal .product__photos,
+    .product__photos__modal__controlls__container {
+      width:100%;
+    }
+    .product__photos__modal .product__photos .thumbnail_slider {
+      width:fit-content;
+    }
+    .product__photos__modal clever-slider .slider_viewport cs-track,
+    .product__photos__modal clever-slider .slider_viewport cs-track img {
+      max-height:65vh;
+    }
+    .product__photos__modal clever-slider,
+    .product__photos__modal clever-slider cs-slide,
+    .product__photos__modal clever-slider cs-slides.items-1 cs-slide image-element img.image-element {
+      width:100%;
+    }
+  }
+  /* display vertical slider instead of horizontal slider in modal */
+  .product__photos__modal .thumbnail_slider--desktop{
+    display: none;
+  }
+  .product__photos__modal .product__main-photos .thumbnail_slider clever-slider{
+    display: block;
+    margin-top: 10px;
+    height: 100%;
+    width: 100%;
+  }
+  .product__photos__modal .product__main-photos .thumbnail_slider clever-slider cs-slides{
+    flex-direction: row;
+    height: initial;
+  }
+  .product__photos__modal .product__main-photos .thumbnail_slider clever-slider cs-slides cs-slide{
+    margin-bottom: 0;
+    margin-right: 31px;
+    width: 100%;
+    height: fit-content;
+  }
+  .product__photos__modal .product__main-photos .thumbnail_slider clever-slider cs-slides cs-slide:hover image-element {
+      opacity: 1;
+  }
+  .product__photos__modal .product__main-photos clever-slider cs-slides cs-slide:hover image-element {
+      opacity: 1;
+  }
+  @media screen and (min-width:769px){
+    .product__photos__modal .product__main-photos .thumbnail_slider clever-slider cs-slides cs-slide image-element img,
+    .product__photos__modal .product__main-photos .thumbnail_slider clever-slider cs-slides cs-slide image-element,
+    .product__photos__modal .product__main-photos .thumbnail_slider clever-slider cs-slides cs-slide {
+      height: 100px;
+      max-width: 100px;
+    }
+  }
+  .product__photos__modal .product__main-photos .thumbnail_slider{
+    width: fit-content;
+  }
+  .product__photos__modal .product__photos .product__photos{
+    margin: 0 auto;
+    width: 100%;
+  }
+  .product__photos__modal > .product__photos{
+    max-height: 90vh;
+  }
+  /* image zoom */
+  .product__photos__modal .modal__image--zoomedx1{
+    transform: scale(1.3);
+  }
+  .product__photos__modal .modal__image--zoomedx2{
+    transform: scale(1.6);
+  }
+  .product__photos__modal .product__main-photos clever-slider cs-slides cs-slide:hover image-element img{
+    cursor: default;
+  }
+  .product__photos__modal .product__main-photos .thumbnail_slider clever-slider cs-slides cs-slide:hover image-element img{
+    cursor: pointer;
+  }
+</style>
+
+<script type="application/json" id="variant-images-map-{{ product.id }}">
+  {
+    {% for variant in product.variants %}
+      "{{ variant.id }}": {{ variant.metafields.product.images.value | map: 'shopify_image_id' | json }}{% if forloop.last == false %},{% endif %}
+    {% endfor %}
+  }
+</script>
+
+{%- assign video_alt_text = product.metafields.custom.video_alt_text.value -%}
+
+{%- unless product.empty? -%}
+  <div
+    class="product_media__original product__photos product__photos-{{ product.id }} product__photos--{{ thumbnail_position }}"
+    data-product-images
+  >
+    {% render 'ed-video-popup', video_alt_text: video_alt_text %}
+    {% render '3d-popup', blocks:blocks %}
+    <div class="thumbnail_slider thumbnail_slider--desktop">
+      <clever-slider
+        id="ThumbnailSlider-{{ product.id }}"
+        for="ProductPhotosSlider-{{ product.id }}"
+        class="vertical only_large"
+        options-large="loop: true, align:start, containScroll: keepSnaps, dragFree: true, axis: y"
+        options-small="loop: true, align:start, containScroll: keepSnaps, dragFree: true"
+      >
+        <cs-track>
+          <cs-slides class="items-5 gap">
+            <!-- Slides go here -->
+            {%- comment -%}Non-image media {%- endcomment -%}
+            {%- for media in non_image_media -%}
+              <cs-slide>
+                {%- render 'media',
+                  section_id: product.id,
+                  media: media,
+                  featured_media: featured_media,
+                  loopIndex0: forloop.index0,
+                  loopIndex: forloop.index,
+                  product_zoom_enable: product_zoom_enable,
+                  product_zoom_size: product_zoom_size,
+                  product_image_size: product_image_size,
+                  isModal: isModal,
+                  video_looping: video_looping,
+                  video_style: video_style,
+                  sizes: sizes,
+                  sizeVariable: sizeVariable,
+                  fallback: fallback,
+                  loading: loading,
+                  mobile_layout: mobile_layout
+                -%}
+              </cs-slide>
+            {%- endfor -%}
+
+            {% for image_id in variant_images_ids %}
+              {% assign matched_image = product.images | where: 'id', image_id | first %}
+              {% if matched_image %}
+                {% unless hide_images and forloop.index > 2 and forloop.index < 6 %}
+                  <cs-slide
+                    data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+                    class="image-{{ matched_image.id }}"
+                  >
+                    {%- render 'image-element',
+                      img: matched_image,
+                      alt: matched_image.alt,
+                      widths: '120, 360, 540, 720',
+                      loading: loading
+                    -%}
+                  </cs-slide>
+                {% endunless %}
+              {% endif %}
+            {% endfor %}
+
+            
+            {% comment %}
+             {% for image in product.images %}
+              {% if variant_images_ids contains image.id %}
+                <cs-slide
+                  data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+                  class="image-{{ image.id }}"
+                >
+                  {%- render 'image-element',
+                    img: image,
+                    alt: image.alt,
+                    widths: '120, 360, 540, 720',
+                    loading: loading
+                  -%}
+                </cs-slide>
+              {% endif %}
+            {%- endfor -%} 
+            {% endcomment %}
+          </cs-slides>
+        </cs-track>
+      </clever-slider>
+    </div>
+
+    <div class="product__main-photos" data-aos data-product-single-media-group>
+      {% if settings.tags_enable %}
+        <style>
+          .product__main-photos .grid-product__tags {
+            left: 0;
+            right: auto;
+          }
+        </style>
+        {% render 'product_tags', product: product %}
+      {% endif %}
+      <div
+        data-product-photos
+        data-zoom="{{ product_zoom_enable }}"
+        class="product-slideshow"
+        id="ProductPhotos-{{ product.id }}"
+      >
+        <clever-slider
+          id="ProductPhotosSlider-{{ product.id }}"
+          options-large="loop:true,align:start"
+          options-medium="loop:true,align:start"
+          options-small="loop:true,align:start"
+          pause-on-hover
+        >
+          <div class="slider_viewport">
+            <cs-prev>
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                role="presentation"
+                class="icon icon--wide icon-chevron-down"
+                viewBox="0 0 28 16"
+              >
+                <path d="m1.57 1.59 12.76 12.77L27.1 1.59" stroke-width="2" stroke="#000" fill="none"/>
+              </svg>
+            </cs-prev>
+            <cs-track>
+              <cs-slides class="items-1 sss">
+                {%- comment -%}Non-image media {%- endcomment -%}
+                {%- for media in non_image_media -%}
+                  <cs-slide>
+                    {%- render 'media',
+                      section_id: product.id,
+                      media: media,
+                      featured_media: featured_media,
+                      loopIndex0: forloop.index0,
+                      loopIndex: forloop.index,
+                      product_zoom_enable: product_zoom_enable,
+                      product_zoom_size: product_zoom_size,
+                      product_image_size: product_image_size,
+                      isModal: isModal,
+                      video_looping: video_looping,
+                      video_style: video_style,
+                      sizes: sizes,
+                      sizeVariable: sizeVariable,
+                      fallback: fallback,
+                      loading: loading,
+                      mobile_layout: mobile_layout
+                    -%}
+                  </cs-slide>
+                {%- endfor -%}
+
+                {% assign imagecounter = 0 %}
+                {%- comment -%} Only show images that are assigned to the variant {%- endcomment -%}
+                {% for image in product.images %}
+                  {% if variant_images_ids contains image.id %}
+                    {% assign imagecounter = imagecounter | plus: 1 %}
+                    {% unless hide_images and imagecounter > 2 and imagecounter < 6 %}
+                      {% comment %} onmousemove="zoom(event)" {% endcomment %}
+                      <cs-slide
+                        data-variant-id="{{product.selected_or_first_available_variant.id}}"
+                        class="image-{{image.id}}"
+                      >
+                        {% if forloop.index == 1 %}
+                          {%- assign loading = 'eager' -%}
+                          {%- assign fetchpriority = 'high' -%}
+                          {%- assign animation = 'none' -%}
+                        {%- else -%}
+                          {%- assign loading = 'lazy' -%}
+                          {%- assign fetchpriority = 'auto' -%}
+                          {%- assign animation = 'image-fade-in' -%}
+                        {% endif %}
+                        {% comment %}  Customize by Better Sell Online GmbH (BSO) - remove the hover effects on product image {% endcomment %}
+                        {% comment %} 
+                        <style>
+                          
+                          .image-{{ image.id }} {
+                            background-image: url('{{ image | image_url }}');
+                            background-position: 50% 50%;
+                            cursor: zoom-in;
+                          }
+                        </style>
+                        {% endcomment %}
+                        {%- render 'image-element',
+                          img: image,
+                          alt: image.alt,
+                          widths: '120, 360, 540, 720',
+                          loading: loading,
+                          animation: animation,
+                          fetchpriority: fetchpriority
+                        -%}
+                      </cs-slide>
+                    {% endunless %}
+                  {% endif %}
+                {%- endfor -%}
+              </cs-slides>
+            </cs-track>
+            <cs-next>
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                role="presentation"
+                class="icon icon--wide icon-chevron-down"
+                viewBox="0 0 28 16"
+              >
+                <path d="m1.57 1.59 12.76 12.77L27.1 1.59" stroke-width="2" stroke="#000" fill="none"/>
+              </svg>
+            </cs-next>
+          </div>
+        </clever-slider>
+        <div
+          class="product__photos product__photos-{{ product.id }} product__photos--{{ thumbnail_position }}"
+          data-product-images
+        >
+          <div class="thumbnail_slider">
+            <clever-slider
+              id="ThumbnailSlider-mobile-{{ product.id }}"
+              for="ProductPhotosSlider-{{ product.id }}"
+              class="vertical only_small small_horizontal"
+              options-large="loop: true, align:start,containScroll: keepSnaps, dragFree: true"
+              options-small="loop: true, align:start,containScroll: keepSnaps, dragFree: true"
+            >
+              <cs-track>
+                <cs-slides class="items-5 small_gap">
+                  <!-- Slides go here -->
+                  {%- comment -%}Non-image media {%- endcomment -%}
+                  {%- for media in non_image_media -%}
+                    <cs-slide>
+                      {%- render 'media',
+                        section_id: product.id,
+                        media: media,
+                        featured_media: featured_media,
+                        loopIndex0: forloop.index0,
+                        loopIndex: forloop.index,
+                        product_zoom_enable: product_zoom_enable,
+                        product_zoom_size: product_zoom_size,
+                        product_image_size: product_image_size,
+                        isModal: isModal,
+                        video_looping: video_looping,
+                        video_style: video_style,
+                        sizes: sizes,
+                        sizeVariable: sizeVariable,
+                        fallback: fallback,
+                        loading: loading,
+                        mobile_layout: mobile_layout
+                      -%}
+                    </cs-slide>
+                  {%- endfor -%}
+
+                  {% assign imagecounter = 0 %}
+                  {%- comment -%} Only show images that are assigned to the variant {%- endcomment -%}
+                  {% for image in product.images %}
+                    {% if variant_images_ids contains image.id %}
+                      {% assign imagecounter = imagecounter | plus: 1 %}
+                      {% unless hide_images and imagecounter > 2 and imagecounter < 6 %}
+                        <cs-slide
+                          data-variant-id="{{product.selected_or_first_available_variant.id}}"
+                          class="image-{{image.id}}"
+                        >
+                          {% if forloop.index == 1 %}
+                            {%- assign loading = 'eager' -%}
+                            {%- assign fetchpriority = 'high' -%}
+                            {%- assign animation = 'none' -%}
+                          {%- else -%}
+                            {%- assign loading = 'lazy' -%}
+                            {%- assign fetchpriority = 'auto' -%}
+                            {%- assign animation = 'image-fade-in' -%}
+                          {% endif %}
+                          {%- render 'image-element',
+                            img: image,
+                            alt: image.alt,
+                            widths: '120, 360, 540, 720',
+                            loading: loading,
+                            animation: animation,
+                            fetchpriority: fetchpriority
+                          -%}
+                        </cs-slide>
+                      {% endunless %}
+                    {% endif %}
+                  {%- endfor -%}
+                </cs-slides>
+              </cs-track>
+            </clever-slider>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-product-slide-container class="product__photos-{{ product.id }} hidden">
+      {%- comment -%} Only show images that are assigned to the variant {%- endcomment -%}
+
+      {% assign imagecounter = 0 %}
+      {% for image in product.images %}
+        {% if variant_images_ids contains image.id %}
+          {% assign imagecounter = imagecounter | plus: 1 %}
+          {% unless hide_images and imagecounter > 2 and imagecounter < 6 %}
+            <cs-slide data-variant-id="{{ product.selected_or_first_available_variant.id }}" class="image-{{ image.id }}">
+              {% comment %}  Customize by Better Sell Online GmbH (BSO) - remove the hover effects on product image {% endcomment %}
+              {%- comment -%}
+              <style>
+                .image-{{image.id}} {
+                  background-image: url('{{ image | image_url }}');
+                  background-position: 50% 50%;
+                }
+              </style>
+              {%- endcomment -%}
+              {% if forloop.index == 1 %}
+                {%- assign loading = 'eager' -%}
+                {%- assign fetchpriority = 'high' -%}
+                {%- assign animation = 'none' -%}
+              {%- else -%}
+                {%- assign loading = 'lazy' -%}
+                {%- assign fetchpriority = 'auto' -%}
+                {%- assign animation = 'image-fade-in' -%}
+              {% endif %}
+              {%- render 'image-element', img: image, alt: image.alt, widths: '120, 360, 540, 720', loading: loading, animation: animation,  fetchpriority: fetchpriority -%}
+            </cs-slide>
+            {% endunless %}
+        {% endif %}
+      {%- endfor -%}
+
+      {%- comment -%} Load images that are not assigned to the variant, but hide them {%- endcomment -%}
+      {% for map_entry in variant_images_map %}
+        {% assign variant_id = map_entry | split: '_' | first %}
+        {% assign image_id = map_entry | split: '_' | last %}
+        {% unless variant_id == blank or image_id == blank %}
+          {% for image in product.images %}
+            {% if image_id contains image.id %}
+              <cs-slide data-variant-id="{{variant_id}}" class="image-{{image.id}}">
+                <style>
+                  .image-{{image.id}} {
+                    background-image: url('{{ image | image_url }}');
+                    background-position: 50% 50%;
+                  }
+                </style>
+                {%- render 'image-element',
+                  img: image,
+                  alt: image.alt,
+                  widths: '120, 360, 540, 720',
+                  loading: loading
+                -%}
+              </cs-slide>
+              {% break %}
+            {% endif %}
+          {%- endfor -%}
+        {% endunless %}
+      {% endfor %}
+    </div>
+  </div>
+{%- else -%}
+  {%- comment -%}
+    Product empty
+  {%- endcomment -%}
+  <div class="product__photos product__photos-{{ product.id }}">
+    <div class="product__main-photos" style="width: 100%">
+      <div data-product-photos>
+        <div class="product-main-slide" data-index="{{ forloop.index0 }}">
+          <a href="#">
+            {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+{%- endunless -%}
+
+<div id="mbcBundleItems"></div>
+<div id="mbcBundleItemsWidget"></div>
+<div id="mbcBundleVolumeDiscount"></div>
+
+<script>
+  //product detail modal
+  {% if context == 'main-product' %}
+  window.onload = function(){
+    prepareMainSlider();
+    getModalCloser();
+  }
+  //modal controlls
+  var modalIsOpen = false;
+  function prepareMainSlider(){
+    var mainSlider = document.querySelector('.product__main-photos cs-track');
+    if (mainSlider){
+      mainSlider.onclick = function(){
+        openModal()
+      }
+    }
+  }
+  function getModalCloser(){
+    var productImageModalCloser = document.querySelector('.product__photos__modal__closer');
+    if(productImageModalCloser){
+      productImageModalCloser.onclick = function(){
+        closeModal();
+      }
+    }
+  }
+  //open modal
+  function openModal(){
+    if(!modalIsOpen){
+      var modalContainer = document.querySelector('.product__photos__modal');
+      var productImageSlider = document.querySelector('.product__photos');
+      if(productImageSlider && modalContainer){
+        modalContainer.classList.remove('hidden');
+        modalContainer.appendChild(productImageSlider);
+        modalIsOpen = true;
+
+        //remove zoom when changing slide
+        prevSlide = document.querySelector('.product__photos__modal cs-prev');
+        nextSlide = document.querySelector('.product__photos__modal cs-next');
+        if(prevSlide){
+          prevSlide.onclick = function(){
+            removeZoomClasses();
+          }
+        }
+        if (nextSlide){
+          nextSlide.onclick = function(){
+            removeZoomClasses();
+          }
+        }
+      }
+    }
+  }
+
+  //close modal
+  function closeModal(){
+    if(modalIsOpen){
+      var modalContainer = document.querySelector('.product__photos__modal');
+      if(modalContainer){
+        var productImageSlider = modalContainer.querySelector('.product__photos');
+      }
+      var productImageContainer = document.querySelector('.grid__item.medium-up--one-half.product-single__sticky')
+      if(productImageSlider && productImageContainer){
+        productImageContainer.prepend(productImageSlider);
+        modalContainer.classList.add('hidden');
+        modalIsOpen = false;
+      }
+    }
+  }
+
+  //zoom in and out of images using controlls
+  //buttons
+  var zoomInButton = document.querySelector('.product__photos__modal__zoom .zoom--in');
+  var zoomOutButton = document.querySelector('.product__photos__modal__zoom .zoom--out');
+  var zoomResetButton = document.querySelector('.product__photos__modal__zoom .zoom--reset');
+
+  //zoom in
+  if(zoomInButton){
+    zoomInButton.onclick = function(){
+      var currentSlideImage = document.querySelector('.product__photos__modal .product__main-photos .is-selected img');
+      //add class with zoom x1.5
+      if(currentSlideImage){
+        // add: if classList doesent contain this class yet:
+        if(!currentSlideImage.classList.contains('modal__image--zoomedx1')){
+          currentSlideImage.classList.add('modal__image--zoomedx1');
+          //add class with zoom x2 if zoom x1.5 class is already set:
+        } else if(currentSlideImage.classList.contains('modal__image--zoomedx1') && !currentSlideImage.classList.contains('modal__image--zoomedx2')){
+          currentSlideImage.classList.add('modal__image--zoomedx2');
+        }
+      }
+    }
+  }
+
+  //zoom out
+  if(zoomOutButton){
+    zoomOutButton.onclick = function(){
+      var currentSlideImage = document.querySelector('.product__photos__modal .product__main-photos .is-selected img');
+      //remove class zoom2
+      if(currentSlideImage){
+        // add: if classList doesent contain this class yet:
+        if(currentSlideImage.classList.contains('modal__image--zoomedx2')){
+          currentSlideImage.classList.remove('modal__image--zoomedx2');
+          //remove class with zoom x1 if zoom x2 class is not set:
+        } else if(currentSlideImage.classList.contains('modal__image--zoomedx1') && !currentSlideImage.classList.contains('modal__image--zoomedx2')){
+          currentSlideImage.classList.remove('modal__image--zoomedx1');
+        }
+      }
+    }
+  }
+
+  //reset zoom (zoom out all the way)
+  if(zoomResetButton){
+    zoomResetButton.onclick = function(){
+      removeZoomClasses();
+    }
+  }
+
+  function removeZoomClasses(){
+    var currentSlideImage = document.querySelector('.product__photos__modal .product__main-photos .is-selected img');
+    if(currentSlideImage){
+      if(currentSlideImage.classList.contains('modal__image--zoomedx1')){
+        currentSlideImage.classList.remove('modal__image--zoomedx1');
+      }
+      if(currentSlideImage.classList.contains('modal__image--zoomedx2')){
+        currentSlideImage.classList.remove('modal__image--zoomedx2');
+      }
+    }
+  }
+
+
+  {% endif %}
+</script>
+
+<script
+  class="initProductThumbnailSlider"
+  type="module"
+>  
+  document.addEventListener('update:variant:image', updateVariantImages.bind(this));
+
+  // function updateVariantImages(event) {
+  //   const variant_id = event.detail.variant_id
+  //   const product_image_slider = document.querySelectorAll('#ProductPhotosSlider-{{ product.id }}, #ThumbnailSlider-{{ product.id }}, #ThumbnailSlider-mobile-{{ product.id }}');
+  //   const product_image_container = document.querySelector('.product__photos-{{ product.id }}[data-product-slide-container]');
+  //   if (product_image_slider.length > 0 && !!product_image_container) {
+  //     product_image_slider.forEach((slider) => {
+  //       //remove current slides
+  //       slider.querySelectorAll('cs-slide[data-variant-id]').forEach((slide) => {        
+  //         slider.querySelector('cs-slides').removeChild(slide)
+  //      });
+  //      //add new slides
+  //      product_image_container.querySelectorAll(`cs-slide[data-variant-id="${variant_id}"]`).forEach((slide) => {
+  //        var temp_slide = slide.cloneNode(true);
+  //        slider.querySelector('cs-slides').appendChild(temp_slide)
+  //      })
+
+  //      if (typeof slider.rebuild === "function") {
+  //        slider.rebuild();
+  //      }
+  //     })    
+  //     //product_image_slider.rebuild()
+  //   }
+  //    //append zoom function to main slider
+  //    const main_slider = document.querySelector('#ProductPhotosSlider-{{ product.id }}');
+  //    if(main_slider) {
+  //      main_slider.querySelectorAll('cs-slide').forEach((slide) => {
+  //         slide.addEventListener('mousemove', (event) => {
+  //           zoom(event);
+  //         });
+  //        slide.style.cursor = "zoom-in"
+  //      })
+  //    }
+  //  openModal();
+  //  closeModal();
+  // }
+
+  function updateVariantImages(event) {
+    const variant_id = event.detail.variant_id;
+    const product_image_slider = document.querySelectorAll('#ProductPhotosSlider-{{ product.id }}, #ThumbnailSlider-{{ product.id }}, #ThumbnailSlider-mobile-{{ product.id }}');
+    const product_image_container = document.querySelector('.product__photos-{{ product.id }}[data-product-slide-container]');
+
+    const variantImagesMap = JSON.parse(document.getElementById('variant-images-map-{{ product.id }}').textContent);
+    const variantImagesIds = variantImagesMap[variant_id] || []; 
+
+    if (product_image_slider.length > 0 && !!product_image_container) {
+      product_image_slider.forEach((slider) => {
+        // Remove current slides
+        slider.querySelectorAll('cs-slide[data-variant-id]').forEach((slide) => {
+          slider.querySelector('cs-slides').removeChild(slide);
+        });
+
+        // Add new slides
+        variantImagesIds.forEach((image_id) => {
+          const slideToAdd = product_image_container.querySelector(`cs-slide.image-${image_id}[data-variant-id="${variant_id}"]`);
+          if (slideToAdd) {
+            const temp_slide = slideToAdd.cloneNode(true);
+            slider.querySelector('cs-slides').appendChild(temp_slide);
+          }
+        });
+
+        if (typeof slider.rebuild === "function") {
+          slider.rebuild();
+        }
+      });
+    }
+
+    // Append zoom function to main slider
+    const main_slider = document.querySelector('#ProductPhotosSlider-{{ product.id }}');
+    if (main_slider) {
+      main_slider.querySelectorAll('cs-slide').forEach((slide) => {
+        slide.addEventListener('mousemove', (event) => {
+          zoom(event);
+        });
+        slide.style.cursor = "zoom-in";
+      });
+    }
+
+    openModal();
+    closeModal();
+  }
+
+
+  function zoom(e) {
+    var zoomer = e.currentTarget; 
+    let offsetX = 0;
+    let offsetY = 0;
+    if(e) {
+      e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX
+      e.offsetY ? offsetY = e.offsetY : offsetX = e.touches[0].pageX
+      let x = 0;
+      let y = 0;
+      if (zoomer.offsetHeight > 0) {
+        x = offsetX/zoomer.offsetWidth*100
+      }
+      if (zoomer.offsetWidth > 0) {
+        y = offsetY/zoomer.offsetHeight*100
+      }
+      if(x && y > 0)
+        zoomer.style.backgroundPosition = x + '% ' + y + '%';
+    }
+  }
+
+
+  {% if template.suffix == "modal" or template.name == "product" %}
+    document.dispatchEvent(new CustomEvent('update:variant:image', {
+      detail: {
+        variant_id: {{ product.selected_or_first_available_variant.id }}
+      }
+    }));
+  {% endif %}
+</script>

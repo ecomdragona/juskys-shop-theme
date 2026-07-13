@@ -1,0 +1,637 @@
+{% if product.metafields.custom.three_dimensional_image != blank %}
+  <style>
+    .product-single__sticky{
+      z-index: 5;
+    }
+    .psy-popup-active .product-section, .psy-popup-active .main-product-container{
+      z-index: 1001;
+      position: relative;
+    }
+    .psy-variant-selector {
+      margin-top: 20px;
+    }
+    .psy-variant-group {
+      margin-bottom: 15px;
+    }
+    .psy-variant-group p {
+      margin-bottom:8px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16.32px;
+      letter-spacing: 4.08px;
+      text-transform: uppercase;
+    }
+    .psy-variant-radio {
+      display: flex;
+      align-items: center;
+    }
+    .psy-variant-radio input[type="radio"] {
+      display: none;
+    }
+    .psy-variant-radio label.color-variants {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin: 0;
+      display: inline-block;
+      vertical-align: middle;
+      cursor: pointer;
+      border: 2px solid #ccc;
+      background-size: cover;
+      background-position: center;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .psy-variant-radio input[type="radio"]:checked + label.color-variants {
+      border: 2px solid #333;
+      box-shadow: 0 0 0 2px #fff inset;
+    }
+    .psy-variant-radio label.color-variants:hover {
+      border: 2px solid #666;
+      transform: scale(1.1);
+    }
+    .psy-variant-radio label.auther-variants {
+      font-size: 14px;
+      line-height: 20px;
+      vertical-align: middle;
+      cursor: pointer;
+      padding: 4px 8px;
+      border: 2px solid #ccc;
+      border-radius: 2px;
+      transition: border-color 0.2s, background-color 0.2s;
+    }
+    .psy-variant-radio input[type="radio"]:checked + label.auther-variants {
+      border: 2px solid #000;
+      background-color: #f5f5f5;
+    }
+    .psy-variant-radio label.auther-variants:hover {
+      border-color: #666;
+    }
+    .psy-add-to-cart {
+      display: inline-block;
+      background: var(--colorBtnPrimary);
+      border: none;
+      border-radius: 0px;
+      cursor: pointer;
+      color: #FFF;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 18.46px; /* 142% */
+      letter-spacing: 3.9px;
+      text-transform: uppercase;
+      height:49px;
+      width:100%;
+    }
+    .psy-add-to-cart:disabled {
+      background: #cccccc;
+      cursor: not-allowed;
+    }
+    .psy-cart-error {
+      color: red;
+      font-size: 14px;
+      margin-top: 10px;
+      display: none;
+    }
+    body.popup-open {
+      overflow: hidden;
+    }
+    body.popup-open > *:not(.psy-overlay):not(.psy-popup) {
+      pointer-events: none;
+    }
+    .psy-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 10000;
+      pointer-events: auto;
+    }
+    .psy-popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      border-radius: 2px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 10001;
+      max-width: 100%;
+      width: 88%;
+      pointer-events: auto;
+      height: 85%;
+    }
+    .psy-popup-content {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      position:relative;
+    }
+    .psy-popup-image {
+      max-width: 72%;
+      width: 100%;
+      background: #F7F7F7;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+    .psy-popup-text {
+      padding: 40px 24px 24px 24px;
+      max-width: 28%;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    #model-container {
+      width: 100%;
+      /* height: 100%; */
+      overflow: hidden;
+      position: relative;
+    }
+    #model-container canvas {
+      display: block;
+      width: 100% !important;
+      height: 100% !important;
+    }
+    #loading {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #333;
+      font-size: 16px;
+    }
+    .psy-close-btn {
+      position: absolute;
+      top: 16px;
+      right: 24px;
+      background: transparent;
+      color: #333;
+      border: none;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 0;
+      line-height: 1;
+      transition: color 0.2s;
+      z-index: 111;
+    }
+    .psy-close-btn:hover {
+      color: #ff4d4d;
+    }
+    #error {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: red;
+      font-size: 16px;
+      text-align: center;
+      max-width: 80%;
+    }
+    .psy-popup-product-title {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 8px;
+    }
+    .psy-popup-subtitle {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .psy-variant-group-farben  .psy-variant-group-values {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .product_title_mobile{
+      display:none;
+    }
+    button.psy-custom3dmodle {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+      background:#000;
+      color:#fff;
+    }
+    button.psy-custom3dmodle .thumbnail-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        font-size: 11.5px;
+        padding: 4px;
+    }
+    @media (min-width: 1024px) {
+      .psy-variant-group-farben {
+        position: absolute;
+        bottom: 16px;
+        left: 32px;
+      }
+    }
+    @media (max-width:767px){
+      .desk_componant{
+        display:none;
+      }
+      .psy-popup-content{
+        flex-direction: column;
+      }
+      .psy-popup-text, .psy-popup-image{
+        max-width: 100%;
+        padding-top: 0;
+        flex-direction: column;
+      }
+      .psy-popup{
+        top: unset;
+        transform: unset;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        overflow: auto;
+      }
+      .product_title_mobile {
+        display: block;
+        padding: 40px 24px 24px;
+        width: 100%;
+        background: #fff;
+      }
+      .psy-variant-selector {
+        margin-top: 0px;
+      }
+      .psy-variant-group-farben {
+        background: #F7F7F7;
+        margin: 0 -24px 24px;
+        padding: 0 24px 24px;
+      }
+      .psy-variant-group-values {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 10px;
+      }
+    }
+  </style>
+
+  <button type="button" class="psy-custom3dmodle">
+    <div class="thumbnail-container">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.76318 11.3207C9.10453 11.4866 9.47908 11.5727 9.85858 11.5727C10.2381 11.5727 10.6126 11.4866 10.954 11.3207L14.3362 9.66961C14.6792 9.50076 14.9683 9.23957 15.171 8.9154C15.3737 8.59122 15.4819 8.21693 15.4835 7.83461V3.74083C15.4695 3.36133 15.3562 2.99215 15.1548 2.67015C14.9535 2.34816 14.6712 2.08461 14.3362 1.90583L10.954 0.254727C10.6131 0.0871448 10.2384 0 9.85858 0C9.47877 0 9.10402 0.0871448 8.76318 0.254727L5.38102 1.90583C5.04519 2.08365 4.76225 2.34697 4.56078 2.66917C4.35932 2.99137 4.24647 3.36105 4.23364 3.74083V7.83461C4.23525 8.21693 4.34349 8.59122 4.54618 8.9154C4.74888 9.23957 5.038 9.50076 5.38102 9.66961L8.76318 11.3207ZM14.684 7.83461C14.6824 8.06665 14.6166 8.29374 14.4938 8.49064C14.371 8.68753 14.1961 8.84654 13.9883 8.95L10.6062 10.6011C10.4941 10.6525 10.3777 10.6939 10.2584 10.725V5.38394C10.499 5.34838 10.7333 5.27837 10.954 5.17605L14.3362 3.52495C14.4333 3.47483 14.5256 3.41595 14.612 3.34904C14.6591 3.4771 14.6834 3.61239 14.684 3.74883V7.83461ZM9.11499 0.974336C9.34693 0.860068 9.60203 0.800639 9.86058 0.800639C10.1191 0.800639 10.3742 0.860068 10.6062 0.974336L13.9883 2.62544C14.0308 2.6497 14.0709 2.6778 14.1083 2.70939C14.0643 2.73738 14.0323 2.78135 13.9883 2.80534L10.6062 4.45644C10.3747 4.56979 10.1203 4.6286 9.86258 4.62835C9.60612 4.62856 9.35306 4.56974 9.12298 4.45644L5.72883 2.80134C5.68485 2.77736 5.65287 2.73338 5.6089 2.70539C5.64622 2.6738 5.68637 2.6457 5.72883 2.62144L9.11499 0.974336ZM5.03321 3.74083C5.03373 3.6044 5.05808 3.4691 5.10517 3.34105C5.19157 3.40796 5.28391 3.46684 5.38102 3.51695L8.76318 5.16806C8.98407 5.26986 9.21827 5.33985 9.4588 5.37594V10.725C9.34097 10.6933 9.22598 10.6518 9.11499 10.6011L5.72883 8.95C5.52112 8.84654 5.34615 8.68753 5.22335 8.49064C5.10055 8.29374 5.03473 8.06665 5.03321 7.83461V3.74083Z" fill="white"/>
+        <path d="M19.7293 10.6171C19.7293 10.0374 19.3895 9.22989 17.9583 8.48229L18.1981 8.37435C18.246 8.35239 18.289 8.3212 18.3248 8.28256C18.3606 8.24392 18.3883 8.1986 18.4065 8.1492C18.4247 8.09979 18.433 8.04728 18.4309 7.99467C18.4287 7.94206 18.4162 7.8904 18.394 7.84264C18.3721 7.79378 18.3406 7.74981 18.3014 7.71336C18.2621 7.6769 18.216 7.64871 18.1656 7.63043C18.1153 7.61216 18.0618 7.60419 18.0083 7.60699C17.9548 7.6098 17.9025 7.62331 17.8543 7.64675L16.8309 8.11849C16.741 8.15973 16.6696 8.23282 16.6304 8.32365C16.5913 8.41447 16.5872 8.51657 16.619 8.61022L16.9868 9.68564C17.0008 9.73859 17.0256 9.7881 17.0595 9.83109C17.0935 9.87408 17.1359 9.90963 17.1841 9.93554C17.2324 9.96146 17.2855 9.97717 17.3401 9.98172C17.3947 9.98627 17.4496 9.97955 17.5015 9.96198C17.5534 9.94441 17.6011 9.91637 17.6417 9.87959C17.6823 9.84281 17.7149 9.79808 17.7375 9.74818C17.7601 9.69827 17.7721 9.64426 17.773 9.58949C17.7738 9.53471 17.7634 9.48035 17.7424 9.42978L17.6784 9.23788C18.478 9.67364 18.9297 10.1654 18.9297 10.6171C18.9297 11.9644 15.2038 13.4676 9.85866 13.4676C4.51357 13.4676 0.787593 11.9644 0.787593 10.6171C0.787593 10.1654 1.24335 9.67364 2.03891 9.23788L1.97495 9.42978C1.95391 9.48035 1.94349 9.53471 1.94433 9.58949C1.94518 9.64426 1.95727 9.69827 1.97986 9.74818C2.00245 9.79808 2.03505 9.84281 2.07565 9.87959C2.11624 9.91637 2.16396 9.94441 2.21585 9.96198C2.26773 9.97955 2.32267 9.98627 2.37726 9.98172C2.43185 9.97717 2.48492 9.96146 2.53318 9.93554C2.58144 9.90963 2.62387 9.87408 2.65782 9.83109C2.69176 9.7881 2.71652 9.73859 2.73054 9.68564L3.09834 8.61022C3.13009 8.51657 3.12601 8.41447 3.08688 8.32365C3.04774 8.23282 2.97633 8.15973 2.88645 8.11849L1.86301 7.64675C1.76699 7.60322 1.65767 7.59939 1.55883 7.63608C1.46 7.67276 1.37966 7.74701 1.3353 7.84264C1.31312 7.8904 1.3006 7.94206 1.29845 7.99467C1.29631 8.04728 1.30457 8.09979 1.32277 8.1492C1.34097 8.1986 1.36875 8.24392 1.40452 8.28256C1.44029 8.3212 1.48333 8.35239 1.53119 8.37435L1.77106 8.48229C0.339837 9.22989 2.12237e-05 10.0374 2.12237e-05 10.6171C-0.0119723 12.9878 5.06127 14.2671 9.85866 14.2671C14.6561 14.2671 19.7293 12.9878 19.7293 10.6171Z" fill="white"/>
+        <path d="M8.48356 15.6984H7.22425C7.11822 15.6984 7.01653 15.7405 6.94156 15.8155C6.86658 15.8904 6.82446 15.9921 6.82446 16.0981C6.82446 16.2042 6.86658 16.3059 6.94156 16.3808C7.01653 16.4558 7.11822 16.4979 7.22425 16.4979H8.48356C8.57687 16.4979 8.66635 16.535 8.73233 16.601C8.7983 16.6669 8.83537 16.7564 8.83537 16.8497C8.83537 16.943 8.7983 17.0325 8.73233 17.0985C8.66635 17.1645 8.57687 17.2015 8.48356 17.2015H7.72397C7.61794 17.2015 7.51626 17.2437 7.44128 17.3186C7.36631 17.3936 7.32419 17.4953 7.32419 17.6013C7.32419 17.7074 7.36631 17.809 7.44128 17.884C7.51626 17.959 7.61794 18.0011 7.72397 18.0011H8.25968C8.41873 18.0011 8.57126 18.0643 8.68372 18.1768C8.79618 18.2892 8.85936 18.4417 8.85936 18.6008C8.85936 18.7598 8.79618 18.9124 8.68372 19.0248C8.57126 19.1373 8.41873 19.2005 8.25968 19.2005H7.22425C7.11822 19.2005 7.01653 19.2426 6.94156 19.3176C6.86658 19.3925 6.82446 19.4942 6.82446 19.6002C6.82446 19.7063 6.86658 19.808 6.94156 19.8829C7.01653 19.9579 7.11822 20 7.22425 20H8.25968C8.52806 19.9996 8.7906 19.9217 9.01584 19.7758C9.24108 19.6299 9.41946 19.4221 9.52959 19.1773C9.63973 18.9326 9.67694 18.6613 9.63677 18.3959C9.5966 18.1306 9.48075 17.8825 9.30312 17.6813C9.46851 17.5224 9.58252 17.3177 9.63043 17.0934C9.67834 16.8692 9.65795 16.6357 9.57189 16.4232C9.48584 16.2106 9.33806 16.0287 9.14764 15.9009C8.95721 15.7732 8.73287 15.7054 8.50355 15.7064L8.48356 15.6984Z" fill="white"/>
+        <path d="M10.7382 15.8583C10.6321 15.8583 10.5304 15.9004 10.4555 15.9754C10.3805 16.0503 10.3384 16.152 10.3384 16.2581V19.4323C10.3384 19.5384 10.3805 19.64 10.4555 19.715C10.5304 19.79 10.6321 19.8321 10.7382 19.8321H11.6177C11.9559 19.8321 12.2803 19.6978 12.5195 19.4586C12.7586 19.2194 12.893 18.895 12.893 18.5568V17.1336C12.893 16.7954 12.7586 16.471 12.5195 16.2318C12.2803 15.9926 11.9559 15.8583 11.6177 15.8583H10.7382ZM12.0934 17.1336V18.5568C12.0934 18.683 12.0433 18.804 11.9541 18.8932C11.8649 18.9824 11.7439 19.0326 11.6177 19.0326H11.1379V16.6578H11.6177C11.7435 16.6589 11.8639 16.7093 11.9529 16.7983C12.0419 16.8873 12.0924 17.0077 12.0934 17.1336Z" fill="white"/>
+      </svg>
+      <span>3D Ansicht</span>
+    </div>
+  </button>
+  <div class="psy-overlay" id="overlay"></div>
+  <div class="psy-popup" id="popup">
+    <button class="psy-close-btn" id="close-popup-btn" aria-label="Close popup">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M12.8535 12.1463C12.9 12.1927 12.9368 12.2479 12.962 12.3086C12.9871 12.3693 13.0001 12.4343 13.0001 12.5C13.0001 12.5657 12.9871 12.6308 12.962 12.6915C12.9368 12.7522 12.9 12.8073 12.8535 12.8538C12.8071 12.9002 12.7519 12.9371 12.6912 12.9622C12.6305 12.9874 12.5655 13.0003 12.4998 13.0003C12.4341 13.0003 12.369 12.9874 12.3083 12.9622C12.2476 12.9371 12.1925 12.9002 12.146 12.8538L7.99979 8.70691L3.85354 12.8538C3.75972 12.9476 3.63247 13.0003 3.49979 13.0003C3.36711 13.0003 3.23986 12.9476 3.14604 12.8538C3.05222 12.76 2.99951 12.6327 2.99951 12.5C2.99951 12.3674 3.05222 12.2401 3.14604 12.1463L7.29291 8.00003L3.14604 3.85378C3.05222 3.75996 2.99951 3.63272 2.99951 3.50003C2.99951 3.36735 3.05222 3.2401 3.14604 3.14628C3.23986 3.05246 3.36711 2.99976 3.49979 2.99976C3.63247 2.99976 3.75972 3.05246 3.85354 3.14628L7.99979 7.29316L12.146 3.14628C12.2399 3.05246 12.3671 2.99976 12.4998 2.99976C12.6325 2.99976 12.7597 3.05246 12.8535 3.14628C12.9474 3.2401 13.0001 3.36735 13.0001 3.50003C13.0001 3.63272 12.9474 3.75996 12.8535 3.85378L8.70666 8.00003L12.8535 12.1463Z" fill="black"/>
+      </svg>
+    </button>
+    <div class="psy-popup-content">
+      <div class="psy-popup-image">
+        <div class="product_title_mobile">
+          <h2 class="psy-popup-product-title">{{ product.title }}</h2>
+          {%- for block in blocks -%}
+            {%- if block.type == 'text' -%}
+              <div class="psy-popup-subtitle" {{ block.shopify_attributes }}>
+                {{ block.settings.text }}
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+        <div id="model-container">
+          <div id="loading">Loading model...</div>
+          <div id="error" style="display: none;"></div>
+        </div>
+      </div>
+      <div class="psy-popup-text">
+        <div class="psy-popup-text-first">
+          <h2 class="psy-popup-product-title desk_componant">{{ product.title }}</h2>
+          {%- for block in blocks -%}
+            {%- if block.type == 'text' -%}
+              <div class="psy-popup-subtitle desk_componant" {{ block.shopify_attributes }}>
+                {{ block.settings.text }}
+              </div>
+            {% endif %}
+          {% endfor %}
+          {% if product.variants.size > 1 %}
+            <div class="psy-variant-selector">
+              {% for option in product.options_with_values %}
+                <div class="psy-variant-group psy-variant-group-{{ option.name | handleize }}">
+                  <p>{{ option.name }}:</p>
+                  <div class="psy-variant-group-values">
+                    {% for value in option.values %}
+                      <div class="psy-variant-radio">
+                        <input
+                          type="radio"
+                          name="option_{{ forloop.parentloop.index }}"
+                          value="{{ value }}"
+                          id="option_{{ forloop.parentloop.index }}_{{ forloop.index }}"
+                          data-option-index="{{ forloop.parentloop.index0 }}"
+                          {% if forloop.index == 1 %}
+                            checked
+                          {% endif %}
+                        >
+                        {%- assign swatch_file_extension = 'png' -%}
+                        {%- liquid
+                          assign color_file_name = value | handle | append: '.' | append: swatch_file_extension
+                          assign color_image = color_file_name | file_img_url: '50x50' | prepend: 'https:' | split: '?' | first
+                          assign color_swatch_fallback = value | split: ' ' | last | handle
+                        -%}
+                        {% if option.name == 'Farben' %}
+                          <label
+                            for="option_{{ forloop.parentloop.index }}_{{ forloop.index }}"
+                            class="color-variants"
+                            style="background-color: {{ color_swatch_fallback }};{% if images[color_file_name] != blank %} background-image: url({{ color_image }});{% endif %}"
+                          ></label>
+                        {% else %}
+                          <label
+                            class="auther-variants"
+                            for="option_{{ forloop.parentloop.index }}_{{ forloop.index }}"
+                          >
+                            {{- value -}}
+                          </label>
+                        {% endif %}
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              {% endfor %}
+              {% for variant in product.variants %}
+                <input
+                  type="hidden"
+                  data-variant-id="{{ variant.id }}"
+                  value="{{ variant.metafields.custom.three_dimensional_image.value }}"
+                >
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+        <div class="psy-popup-text-atc">
+          <button class="psy-add-to-cart" data-variant-id="{{ product.selected_or_first_available_variant.id }}">
+            {{ 'products.product.add_to_cart' | t }}
+          </button>
+          <div class="psy-cart-error" id="cart-error"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const openBtn = document.querySelector('.psy-custom3dmodle');
+      const overlay = document.getElementById('overlay');
+      const popup = document.getElementById('popup');
+      const closeBtn = document.getElementById('close-popup-btn');
+      const body = document.body;
+      let currentModel = null;
+
+      openBtn.addEventListener('click', () => {
+        overlay.style.display = 'block';
+        popup.style.display = 'block';
+        body.classList.add('popup-open', 'psy-popup-active');
+        setTimeout(()=>{
+          document.querySelector('.psy-variant-radio label').click()
+        },200)
+        resetVariantSelections();
+        init3DModel();
+      });
+
+      function closePopup() {
+        overlay.style.display = 'none';
+        popup.style.display = 'none';
+        body.classList.remove('popup-open', 'psy-popup-active');
+        if (currentModel) {
+          currentModel.scene.remove(currentModel.model);
+          currentModel = null;
+        }
+      }
+
+      if (overlay) {
+        overlay.addEventListener('click', closePopup);
+      } 
+      if (closeBtn) {
+        closeBtn.addEventListener('click', closePopup);
+      } 
+      function init3DModel(variantId = '{{ product.selected_or_first_available_variant.id }}') {
+        const container = document.getElementById('model-container');
+        while (container.firstChild) {
+          container.removeChild(container.firstChild);
+        }
+        container.dataset.initialized = 'true';
+        const scene = new THREE.Scene();
+        scene.background = new THREE.Color(0xF7F7F7);
+        const camera = new THREE.PerspectiveCamera(75, container.clientWidth / 300, 0.1, 1000);
+        camera.position.set(0, 2, 5);
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(container.clientWidth, 350);
+        container.appendChild(renderer.domElement);
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+        scene.add(ambientLight);
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.6);
+        directionalLight.position.set(5, 5, 5);
+        scene.add(directionalLight);
+        const controls = new THREE.OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+        controls.dampingFactor = 0.05;
+        controls.minDistance = 2;
+        controls.maxDistance = 10;
+        const loadingDiv = document.getElementById('loading');
+        const errorDiv = document.getElementById('error');
+        loadingDiv.style.display = 'block';
+        errorDiv.style.display = 'none';
+        const glbInput = document.querySelector(`input[data-variant-id="${variantId}"]`);
+        const glbUrl = glbInput ? glbInput.value : '';
+        if (!glbUrl) {
+          loadingDiv.style.display = 'none';
+          errorDiv.style.display = 'block';
+          errorDiv.textContent = 'No 3D model available for this variant.';
+          return;
+        }
+        const loader = new THREE.GLTFLoader();
+        loader.load(
+          glbUrl,
+          (gltf) => {
+            const model = gltf.scene;
+            scene.add(model);
+            const box = new THREE.Box3().setFromObject(model);
+            const center = box.getCenter(new THREE.Vector3());
+            const size = box.getSize(new THREE.Vector3());
+            const maxDim = Math.max(size.x, size.y, size.z);
+            const scale = (3 / maxDim) * 3;
+            model.scale.set(scale, scale, scale);
+            model.position.sub(center.multiplyScalar(scale));
+            loadingDiv.style.display = 'none';
+            camera.lookAt(model.position);
+            currentModel = { scene, model };
+          },
+          (xhr) => {
+            const percent = (xhr.loaded / xhr.total * 100).toFixed(2);
+            loadingDiv.textContent = `Loading model... ${percent}%`;
+          },
+          (error) => {
+            loadingDiv.style.display = 'none';
+            errorDiv.style.display = 'block';
+            errorDiv.textContent = 'Failed to load model.';
+          }
+        );
+        function animate() {
+          requestAnimationFrame(animate);
+          controls.update();
+          renderer.render(scene, camera);
+        }
+        animate();
+        const onResize = () => {
+          renderer.setSize(container.clientWidth, 300);
+          camera.aspect = container.clientWidth / 300;
+          camera.updateProjectionMatrix();
+        };
+        window.addEventListener('resize', onResize);
+        if (!renderer.capabilities.isWebGL2 && !renderer.capabilities.isWebGL1) {
+          loadingDiv.style.display = 'none';
+          errorDiv.style.display = 'block';
+          errorDiv.textContent = 'WebGL is not supported in this browser.';
+        }
+      }
+
+      function resetVariantSelections() {
+        const variantGroups = document.querySelectorAll('.psy-variant-group');
+        variantGroups.forEach(group => {
+          const firstRadio = group.querySelector('.psy-variant-radio input[type="radio"]');
+          if (firstRadio) {
+            firstRadio.checked = true;
+          }
+        });
+        const changeEvent = new Event('change');
+        const variantSelector = document.querySelector('.psy-variant-selector');
+        if (variantSelector) {
+          variantSelector.dispatchEvent(changeEvent);
+        } 
+      }
+
+      const variantSelector = document.querySelector('.psy-variant-selector');
+      const addToCartBtn = document.querySelector('.psy-add-to-cart');
+      const cartError = document.getElementById('cart-error');
+      let selectedVariantId = '{{ product.selected_or_first_available_variant.id }}';
+      const productVariants = {{ product.variants | json }};
+
+      if (!addToCartBtn) {
+        console.error('Debug: Add to Cart button (.psy-add-to-cart) not found.');
+        return;
+      }
+
+      function updateSelectedVariant() {
+        const selectedOptions = [];
+        document.querySelectorAll('.psy-variant-radio input:checked').forEach(input => {
+          selectedOptions.push(input.value);
+        });
+
+        const selectedVariant = productVariants.find(variant => {
+          return variant.options.every((option, index) => option === selectedOptions[index]);
+        });
+
+        if (selectedVariant) {
+          selectedVariantId = selectedVariant.id;
+          addToCartBtn.dataset.variantId = selectedVariantId;
+          addToCartBtn.disabled = !selectedVariant.available;
+          cartError.style.display = 'none';
+          if (!selectedVariant.available) {
+            cartError.style.display = 'block';
+            cartError.textContent = 'Selected variant is out of stock.';
+          } else {
+            init3DModel(selectedVariantId);
+          }
+        } else {
+          addToCartBtn.disabled = true;
+          cartError.style.display = 'block';
+          cartError.textContent = 'Selected variant is not available.';
+        }
+      }
+
+      if (variantSelector) {
+        variantSelector.addEventListener('change', updateSelectedVariant);
+        updateSelectedVariant();
+      } 
+
+      addToCartBtn.addEventListener('click', async () => {
+        if (addToCartBtn.disabled) {
+          return;
+        }
+
+        addToCartBtn.disabled = true;
+        addToCartBtn.textContent = 'wird hinzugefügt';
+
+        try {
+          const variantIdNum = parseInt(selectedVariantId);
+          if (isNaN(variantIdNum)) {
+            throw new Error('Invalid variant ID');
+          }
+          const response = await fetch('/cart/add.js', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+              items: [{
+                id: variantIdNum,
+                quantity: 1
+              }]
+            })
+          });
+          const data = await response.json();
+
+          addToCartBtn.disabled = false;
+          addToCartBtn.textContent = 'Add to Cart';
+
+          if (!response.ok || data.status === 'error') {
+            cartError.style.display = 'block';
+          } else {
+            cartError.style.display = 'none';
+            document.dispatchEvent(new CustomEvent('cart:build'));
+            openCartDrawer()
+            closePopup();
+          }
+        } catch (error) {
+          addToCartBtn.disabled = false;
+          addToCartBtn.textContent = 'Add to Cart';
+          cartError.style.display = 'block';
+        }
+      });
+    });
+function openCartDrawer() {
+  const cartDrawer = document.getElementById('CartDrawer');
+  if (!cartDrawer) return;
+
+  cartDrawer.classList.add('drawer--is-open');
+  document.documentElement.classList.add('js-drawer-open', 'lock-scroll');
+
+  function handleOutsideClick(e) {
+    const isInsideDrawer = e.target.closest('#CartDrawer');
+    const isCloseBtn = e.target.closest('.js-drawer-close');
+
+    if (!isInsideDrawer || isCloseBtn) {
+      cartDrawer.classList.remove('drawer--is-open');
+      document.documentElement.classList.remove('js-drawer-open', 'lock-scroll');
+      window.removeEventListener('click', handleOutsideClick);
+    }
+  }
+
+  window.addEventListener('click', handleOutsideClick);
+}
+
+
+
+  </script>
+{% endif %}

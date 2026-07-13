@@ -1,0 +1,64 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "spacing_bottom": 50,
+        "spacing_bottom_header": 30
+      }
+    },
+    "4ae48e13-ebf1-4c01-b1df-80db515cad48": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21475311681839__4ae48e13-ebf1-4c01-b1df-80db515cad48-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "Entsorgungshinweise"
+          }
+        },
+        "template--21475311681839__4ae48e13-ebf1-4c01-b1df-80db515cad48-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<h3><strong>Batteriegesetz (BattG)</strong></h3><p>Altbatterien und verbrauchte Akkumulatoren dürfen nicht im Hausmüll entsorgt werden. Als Verbraucher sind Sie dazu verpflichtet, Batterien und Akkumulatoren am Ende ihrer Lebensdauer zu einer geeigneten kommunalen Sammelstelle zu bringen oder im Handel abzugeben. Dort können diese unentgeltlich zurückgegeben werden. Eine örtliche Sammelstelle finden Sie hier: https://www.stiftung-ear.de/de/themen/battg/ruecknahmestellen/freiwillige-ruecknahmestellen.</p><p>Die durchgestrichene Mülltonne besagt, dass Batterien und Akkus nicht im Hausmüll entsorgt werden dürfen. Wenn Zeichen unterhalb des Mülltonnensymbols vorhanden sind, stehen diese für die folgenden chemischen Elemente:</p><p>Cd: Batterie/Akkumulator enthält Kadmium</p><p>Hg: Batterie/Akkumulator enthält Quecksilber</p><p>Pb: Batterie/Akkumulator enthält Blei</p>"
+          }
+        },
+        "acfca7ca-4b9b-419a-b3da-77194ef86610": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<h3><strong>Elektronikgerätegesetz (ElektroG)</strong></h3><p>Alte Elektro- und Elektronikgeräte dürfen nicht im Hausmüll entsorgt werden. Als Besitzer eines solchen sind Sie gesetzlich dazu verpflichtet, diese einer vom Hausmüll getrennten Entsorgung zuzuführen. Dies betrifft unabhängig des Alters alle elektronischen und elektrischen Geräte von der Fernbedienung bis zur Sauna.</p><p>Die getrennte Sammlung dieser Geräte soll einerseits die Wiederverwendung sowie Verwertung wertvoller Teile dieses Gerätes sicherstellen und andererseits negative Folgen im Rahmen der Entsorgung für die Umwelt vermeiden helfen. Zur Rückgabe der Altgeräte stehen Ihnen in Ihrer Nähe kostenfreie Sammelstellen zur Verfügung.</p><p>Des Weiteren haben Sie die Möglichkeit, alte Elektro- oder Elektronikgeräte mit einer Kantenlänge der längsten Seite von weniger als 25 Zentimetern im Handel ohne Neukauf eines solchen vor Ort abzugeben.</p><p>Elektro- oder Elektronikaltgeräte mit einer Kantenlänge von mehr als 25 Zentimetern können Sie im „Eins-zu-eins-Austausch“ im Handel abgeben, wenn Sie dort ein Elektro- oder Elektronikgerät gleicher Entsorgungsklasse kaufen.</p><p>Bitte stellen Sie vor der Entsorgung eines Altgerätes unbedingt Folgendes sicher:</p><p>Sorgen Sie dafür, dass alle personenbezogenen Daten, die auf dem zu entsorgenden Altgerät oder genauer dessen Datenspeicher gespeichert sind, von Ihnen eigenverantwortlich vor Entsorgung gelöscht werden.</p><p>Stellen Sie zusätzlich sicher, dass Altbatterien und Altakkumulatoren, die nicht fest im Altgerät verbaut sind, vor der Entsorgung ausgebaut werden.</p><p>Das Symbol einer durchgestrichenen Mülltonne besagt, dass Sie Elektro und Elektronikgeräte getrennt vom unsortierten Hausmüll entsorgen sollen. Eine örtliche Sammelstelle finden Sie hier:<a href=\"http://www.ear-system.de/ear-verzeichnis/sammel-und-ruecknahmestellen\" target=\"_blank\" title=\"Verzeichnis: Sammel- und Rücknahmestellen\">www.ear-system.de/ear-verzeichnis/sammel-und-ruecknahmestellen</a>. Informationen zur Entsorgung Ihrer Produkte finden Sie auch in dessen Betriebs- oder Gebrauchsanleitung.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--21475311681839__4ae48e13-ebf1-4c01-b1df-80db515cad48-heading-1",
+        "template--21475311681839__4ae48e13-ebf1-4c01-b1df-80db515cad48-text-1",
+        "acfca7ca-4b9b-419a-b3da-77194ef86610"
+      ],
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "4ae48e13-ebf1-4c01-b1df-80db515cad48"
+  ]
+}

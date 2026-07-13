@@ -1,0 +1,47 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "page.marken.json",
+  "context": {
+    "market": "frankreich"
+  },
+  "sections": {
+    "d37e79f8-11df-4668-9deb-a58ab1f42879": {
+      "settings": {},
+      "blocks": {
+        "template--20758329065775__d37e79f8-11df-4668-9deb-a58ab1f42879-liquid-1": {
+          "settings": {
+            "code": "<h2>La marque pour une maison conviviale et un jardin élégant</h2>\n<p>Depuis 2008, nous regroupons nos articles dans les domaines de l’habitat, du jardin, du bricolage et des besoins pour animaux sous la marque Juskys. Par exemple, nous proposons des meubles faciles à monter et de construction solide. Outre nos meubles de jardin, les lits capitonnés, les lits boxspring et les coiffeuses comptent parmi nos meilleures ventes. Dans notre gamme pour animaux, vous trouverez des produits pratiques pour les amis des animaux, tandis que les bricoleurs trouveront chez Juskys des outils de qualité pour leur prochain projet. Nous vendons nos produits sur www.juskys.de ainsi que sur de nombreuses places de marché.<br><br>Comment prononce-t-on Juskys ? Même si beaucoup pensent que le nom devrait sonner anglais, c’est pourtant la prononciation allemande qui est correcte. À l’oral, Juskys se prononce « Juskies ».</p>"
+          }
+        }
+      }
+    },
+    "5ac707e5-8e36-4add-8e71-4b9aac811329": {
+      "settings": {},
+      "blocks": {
+        "template--20758329065775__5ac707e5-8e36-4add-8e71-4b9aac811329-liquid-1": {
+          "settings": {
+            "code": "<h2>La marque pour des saunas et cabines infrarouges de haute qualité</h2>\n<p>Sous la marque Artsauna, nous commercialisons depuis 2006 des cabines infrarouges et des saunas haut de gamme sur la boutique en ligne www.artsauna.de. Nous vendons nos cabines chauffantes à des clients privés et professionnels (hôtels, cabinets de physiothérapie…). Les cabines favorisent la santé tout en procurant une détente optimale. Le bois noble de pruche garantit une longue durabilité. Les émetteurs infrarouges et les poêles de sauna répondent aux dernières normes techniques. Les produits Artsauna ont fait leurs preuves dans la pratique quotidienne et ont été testés positivement à de nombreuses reprises.</p>"
+          }
+        }
+      }
+    },
+    "12d6b54d-77e8-48d5-81b6-73f3b450f88b": {
+      "settings": {},
+      "blocks": {
+        "template--20758329065775__12d6b54d-77e8-48d5-81b6-73f3b450f88b-liquid-1": {
+          "settings": {
+            "code": "<h2>La marque dédiée aux loisirs et au fitness</h2>\n<p>Les tapis de course, vélos d’appartement, équipements de musculation, planches de SUP, bateaux pneumatiques et de nombreux autres articles de sport font partie de notre marque Artsport depuis 2009. Au cours des dernières années, la demande en équipements sportifs à domicile a fortement augmenté, et avec la marque Artsport, nous accompagnons cette tendance. Pour l’entraînement d’endurance, nos tapis de course sont parfaitement adaptés ; les sets d’haltères et les bancs de musculation facilitent le renforcement musculaire. Les produits sont prêts à l’emploi en quelques gestes seulement, fabriqués à partir de matériaux résistants et faciles à ranger de manière compacte. Les produits Artsport améliorent la forme physique, la santé et le bien-être.</p>"
+          }
+        }
+      }
+    }
+  }
+}

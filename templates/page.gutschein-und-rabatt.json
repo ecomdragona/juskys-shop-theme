@@ -1,0 +1,408 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "spacing_bottom": 0,
+        "spacing_bottom_header": 0
+      }
+    },
+    "2ce22699-59ce-460b-93f8-76796017d318": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21034259644719__2ce22699-59ce-460b-93f8-76796017d318-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "Newsletter"
+          }
+        }
+      },
+      "block_order": [
+        "template--21034259644719__2ce22699-59ce-460b-93f8-76796017d318-heading-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "tag": "h1",
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "f83a1a13-1f80-4e3a-b48d-ed9c9c50c6a6": {
+      "type": "advanced-content",
+      "blocks": {
+        "template--21034259644719__f83a1a13-1f80-4e3a-b48d-ed9c9c50c6a6-liquid-1": {
+          "type": "liquid",
+          "settings": {
+            "code": "<iframe width=\"540\" height=\"1100\" src=\"https://0e240665.sibforms.com/serve/MUIFAOuB1_tHpKegNrOjDFyl91xLSya9szouSvJohF3owJECzA2aqQcP7G6AUxmKOayo8AdTfRXBYopjf-vczoHYXnVFKKINBE5zCSdq0MlQ_wElCBWqlDu5gmrBUDX-q1xr7Lhowd-rqTHhtDzgSEmng4_8YfJsfIsZUleD8_99LyOiLpWAXgfLykioKuKP7xn7vBZgluB9_dNS\" frameborder=\"0\" scrolling=\"auto\" allowfullscreen style=\"display: block;margin-left: auto;margin-right: auto;max-width: 100%;\"></iframe>",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--21034259644719__f83a1a13-1f80-4e3a-b48d-ed9c9c50c6a6-liquid-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "full_width": true,
+        "space_around": false,
+        "lazyload_images": true
+      }
+    },
+    "rich_text_ALkhMm": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_DBFk8b": {
+          "type": "heading",
+          "settings": {
+            "title": "Dein Juskys Gutschein Code wartet auf dich!"
+          }
+        },
+        "text_jUjxGG": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Profitiere von<strong> exklusiven Rabatten und Aktionen</strong> für Haus, Garten und Freizeit – mit Gutscheinen bei Juskys.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_DBFk8b",
+        "text_jUjxGG"
+      ],
+      "settings": {
+        "spacings_desktop_top": 30,
+        "spacings_desktop_bottom": 30,
+        "spacings_mobile_top": 30,
+        "spacings_mobile_bottom": 10,
+        "tag": "h1",
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "background_image_text_tJJfx3": {
+      "type": "background-image-text",
+      "custom_css": [
+        ".h3 {margin-top: 25px; margin-bottom: 25px; font-weight: 600; color: red;}"
+      ],
+      "settings": {
+        "subtitle": "Aktuell: Garten Trends 2026",
+        "title": "Bis zu -44% Rabatt auf ausgewählte Artikel",
+        "text": "<p></p><p>Bis zum <strong>01.03.2026</strong> erhältst du in unserem Onlineshop <strong>bis zu -44% Rabatt auf ausgewählte Artikel </strong>– ideal, um dein Zuhause oder deinen Garten noch schöner zu gestalten.</p><p>Einfach stöbern und sparen!</p>",
+        "button_label": "Jetzt shoppen",
+        "button_link": "shopify://collections/sale",
+        "image": "shopify://shop_images/frau-smartphone-betrachtet-juskys-shop_cfa59a12-c08f-4c6a-8e92-ddce98d458e9.jpg",
+        "layout": "left",
+        "height": 550,
+        "framed": false,
+        "parallax": false,
+        "parallax_direction": "top",
+        "lazyload_images": true
+      }
+    },
+    "rich_text_AxYWkb": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_cm4qYm": {
+          "type": "heading",
+          "settings": {
+            "title": "Sichere dir exklusive Rabatte und bleibe immer informiert"
+          }
+        },
+        "text_ytMyp7": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Egal, ob du neu bei Juskys bist oder regelmäßig bei uns shoppst – wir bieten dir verschiedene Möglichkeiten, um von attraktiven Rabatten zu profitieren und <strong>bei deinem Einkauf zu sparen</strong>. Hier kannst du unsere Gutscheinangebote und Rabatte finden:</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_cm4qYm",
+        "text_ytMyp7"
+      ],
+      "settings": {
+        "spacings_desktop_top": 40,
+        "spacings_desktop_bottom": 40,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "tag": "h1",
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "text_with_icons_iAQdNd": {
+      "type": "text-with-icons",
+      "blocks": {
+        "text_block_rgjEwW": {
+          "type": "text_block",
+          "settings": {
+            "icon": "store",
+            "title": "Auf unserer Webseite",
+            "text": "<p>Unsere Gutscheine und Aktionen siehst du direkt oben auf unserer Webseite – hier informieren wir dich über <strong>aktuelle Rabattcodes & Specials</strong>. Auf unserer Startseite präsentieren wir dir ebenfalls unsere Top-Deals und laufenden Aktionen.</p>"
+          }
+        },
+        "text_block_AwajmF": {
+          "type": "text_block",
+          "settings": {
+            "icon": "chat",
+            "title": "Werbeanzeigen & Social Media",
+            "text": "<p>Auch in unseren Online-Anzeigen und auf unseren Social-Media-Kanälen wie<strong> </strong><a href=\"https://www.facebook.com/Juskysde/\"><span style=\"text-decoration:underline\"><strong>Facebook</strong></span></a> und <a href=\"https://www.instagram.com/juskys.de/\"><span style=\"text-decoration:underline\"><strong>Instagram</strong></span></a> findest du regelmäßig exklusive Gutscheine und Rabattaktionen. <strong>Folge uns gerne</strong>, um immer auf dem Laufenden zu bleiben!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_rgjEwW",
+        "text_block_AwajmF"
+      ],
+      "settings": {
+        "title": "",
+        "align_text": "center",
+        "desktop_columns_per_row": 3,
+        "icon_color": "#000000",
+        "button_label": "",
+        "button_link": "",
+        "divider": false
+      }
+    },
+    "rich_text_pJVD88": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_bCcaH7": {
+          "type": "heading",
+          "settings": {
+            "title": "Noch mehr Vorteile: Attraktive Angebote mit dem Juskys Newsletter"
+          }
+        },
+        "text_iiAU4Q": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Mit unserem<strong> Juskys Newsletter Gutschein </strong>sicherst du dir<strong> </strong>einen <strong>Überraschungs-Rabatt</strong> auf deine erste Bestellung. Melde dich einfach zu unserem Newsletter an und freue dich nicht nur über deinen exklusiven<strong> Juskys Gutschein Code</strong>, sondern erhalte auch regelmäßige Updates über unsere neuesten Angebote, Sonderaktionen und viele Inspirationen rund um Haus und Garten.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_bCcaH7",
+        "text_iiAU4Q"
+      ],
+      "settings": {
+        "spacings_desktop_top": -40,
+        "spacings_desktop_bottom": 30,
+        "spacings_mobile_top": -40,
+        "spacings_mobile_bottom": 30,
+        "tag": "h1",
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "17108331049a77f6d8": {
+      "type": "apps",
+      "blocks": {
+        "klaviyo_email_marketing_sms_form_embed_block_PRPCRK": {
+          "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/form-embed-block/2632fe16-c075-4321-a88b-50b567f42507",
+          "settings": {
+            "formId": "V2y6xe"
+          }
+        }
+      },
+      "block_order": [
+        "klaviyo_email_marketing_sms_form_embed_block_PRPCRK"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": false,
+        "custom_class": ""
+      }
+    },
+    "rich_text_cpYMat": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_dDbDfG": {
+          "type": "heading",
+          "settings": {
+            "title": "Warum lohnt sich die Anmeldung zum Newsletter?"
+          }
+        },
+        "text_6VbztC": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<ul><li><strong>Geheimer Rabatt-Code für deine erste Bestellung:</strong> Starte dein Einkaufserlebnis bei Juskys mit einem exklusiven Gutschein – ideal, um deine neuen Lieblingsprodukte besonders günstig zu entdecken.<br/><br/></li><li><strong>Immer informiert über neue Aktionen und Rabatte:</strong> Verpasse keine Gelegenheit mehr, bei unseren attraktiven Angeboten zu sparen.<br/><br/></li><li><strong>Einmalige Specials und Aktionen:</strong> Als Newsletter-Abonnent wirst du bei exklusiven Aktionen wie unserem <strong>Black Week Special</strong> zuerst informiert und sicherst dir so das ganze Jahr über die besten Juskys Gutscheine und Rabatte.</li></ul><p><em><strong>➤ Hinweis: </strong></em><em>Der Willkommens-Gutschein gilt einmalig für die erste Bestellung und ist nicht kombinierbar mit anderen Aktionen oder Rabatten.</em></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_dDbDfG",
+        "text_6VbztC"
+      ],
+      "settings": {
+        "spacings_desktop_top": 30,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 30,
+        "spacings_mobile_bottom": 40,
+        "tag": "h1",
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "advanced_content_frLePQ": {
+      "type": "advanced-content",
+      "blocks": {
+        "image_yYHHUM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/frau-haelt-geschenk_2bd14d5b-97a1-4126-8d45-5e6c63920d10.jpg",
+            "link": "",
+            "width": "33%",
+            "alignment": "center"
+          }
+        },
+        "liquid_FNiMYi": {
+          "type": "liquid",
+          "settings": {
+            "code": "<h2>Verschenke individuelle Freude mit einem Juskys Geschenkgutschein</h2><p>Du suchst ein<strong> ideales Geschenk</strong>, das wirklich jedem eine Freude macht? Mit einem <strong>Juskys Geschenkgutschein</strong>&nbsp;liegst du immer richtig! Ob f&uuml;r Fitnessfans, Einrichtungsliebhaber oder Gartenfreunde &ndash; der Gutschein bietet maximale Flexibilit&auml;t.</p>\n<p>W&auml;hle einfach die passende Gutscheinsumme und lass die Beschenkten selbst entscheiden, wor&uuml;ber sie sich am meisten freuen, denn der Gutschein <strong>gilt f&uuml;r unser gesamtes Sortiment</strong>.</p>\n<p>Egal, ob stilvolles M&ouml;belst&uuml;ck, hochwertiges Sportger&auml;t oder Wellnessoase f&uuml;r zuhause, unser Shop hat f&uuml;r jeden das Richtige. Der <strong><a href=\"https://juskys.de/products/gutschein\">Gutschein</a></strong>&nbsp;wird bequem<strong> per E-Mail zugestellt</strong> und ist damit auch ideal f&uuml;r spontane &Uuml;berraschungen.</p>",
+            "width": "66%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_yYHHUM",
+        "liquid_FNiMYi"
+      ],
+      "disabled": true,
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "full_width": false,
+        "space_around": true,
+        "lazyload_images": true
+      }
+    },
+    "background_image_text_fFfXhn": {
+      "type": "background-image-text",
+      "disabled": true,
+      "settings": {
+        "subtitle": "",
+        "title": "",
+        "text": "<h2>Valentinstagsspecial – 15 % Rabatt mit dem Code LIEBE15!</h2><p><strong><br/></strong>Zum Valentinstag gibt es bei Juskys ein besonderes Geschenk für dich und deine Liebsten!<br/><br/>Bis zum <strong>16. Februar</strong> erhältst du <strong>15 % Rabatt auf unser gesamtes Sortiment*</strong> – ideal, um dein Zuhause gemütlicher zu gestalten oder deinen Liebsten eine Freude zu machen. Einfach den Gutscheincode <strong>LIEBE15</strong> im Warenkorb eingeben und sparen!<br/><br/>*Von der Aktion ausgeschlossen sind Infrarotkabinen, Saunen und bereits reduzierte Artikel.</p>",
+        "button_label": "",
+        "button_link": "",
+        "image": "shopify://shop_images/5846.jpg",
+        "layout": "left",
+        "height": 650,
+        "framed": false,
+        "parallax": false,
+        "parallax_direction": "top",
+        "lazyload_images": true
+      }
+    },
+    "faq_Vz6NPU": {
+      "type": "faq",
+      "blocks": {
+        "question_EpJzzx": {
+          "type": "question",
+          "settings": {
+            "title": "Gelten Juskys Gutscheine auch auf reduzierte Artikel?",
+            "text": "<p>Unter welchen Konditionen ein Gutschein anwendbar ist, ist der jeweiligen Aktion zu entnehmen.</p>"
+          }
+        },
+        "question_aqVhWL": {
+          "type": "question",
+          "settings": {
+            "title": "Was passiert, wenn ich meinen Gutschein nicht rechtzeitig einlöse?",
+            "text": "<p>Sollte der Gutschein-Code ablaufen, verfällt der Rabatt leider und kann nicht reaktiviert werden.</p>"
+          }
+        },
+        "question_tX6YHG": {
+          "type": "question",
+          "settings": {
+            "title": "Wie gebe ich den Juskys Gutschein Code im Bestellprozess ein?",
+            "text": "<p>Während des Bestellvorgangs findest du ein Feld zur Eingabe des Gutscheincodes im Warenkorb. Einfach den Code einfügen, und der Rabatt wird automatisch abgezogen.</p>"
+          }
+        },
+        "question_NFLg3n": {
+          "type": "question",
+          "settings": {
+            "title": "Kann ich den Gutschein auch telefonisch oder per E-Mail einlösen?",
+            "text": "<p>Der Gutschein Code ist nur für Online-Bestellungen über unsere Webseite gültig und kann nicht telefonisch oder per E-Mail eingelöst werden.</p>"
+          }
+        },
+        "question_ECaaUL": {
+          "type": "question",
+          "settings": {
+            "title": "Wie hoch ist der Mindestbestellwert für den Gutschein?",
+            "text": "<p>Für den Überraschungs-Gutschein des Newsletters gibt es keinen Mindestbestellwert, sodass du ihn bei jeder Bestellung nutzen kannst.</p>"
+          }
+        },
+        "question_xp43YX": {
+          "type": "question",
+          "settings": {
+            "title": "Erhalte ich den Newsletter-Willkommens-Gutschein auch, wenn ich bereits ein Kundenkonto habe?",
+            "text": "<p>Der Willkommens-Gutschein ist ausschließlich für Neukunden verfügbar. Falls du bereits ein Konto hast, profitierst du dennoch von anderen Aktionen und Angeboten, über die wir dich in unserem Newsletter regelmäßig informieren.</p>"
+          }
+        },
+        "question_Nmcptb": {
+          "type": "question",
+          "settings": {
+            "title": "Wie melde ich mich vom Newsletter ab, wenn ich keine weiteren Angebote erhalten möchte?",
+            "text": "<p>In jedem Newsletter findest du einen Link zum Abmelden. Durch einen Klick darauf kannst du dich jederzeit problemlos vom Newsletter abmelden.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_EpJzzx",
+        "question_aqVhWL",
+        "question_tX6YHG",
+        "question_NFLg3n",
+        "question_ECaaUL",
+        "question_xp43YX",
+        "question_Nmcptb"
+      ],
+      "settings": {
+        "title": "FAQ – Häufig gestellte Fragen rund um das Thema Gutscheincode & Rabatt bei Juskys"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "2ce22699-59ce-460b-93f8-76796017d318",
+    "f83a1a13-1f80-4e3a-b48d-ed9c9c50c6a6",
+    "rich_text_ALkhMm",
+    "background_image_text_tJJfx3",
+    "rich_text_AxYWkb",
+    "text_with_icons_iAQdNd",
+    "rich_text_pJVD88",
+    "17108331049a77f6d8",
+    "rich_text_cpYMat",
+    "advanced_content_frLePQ",
+    "background_image_text_fFfXhn",
+    "faq_Vz6NPU"
+  ]
+}

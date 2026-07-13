@@ -1,0 +1,219 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "t:sections.header-group.name",
+  "sections": {
+    "bso_announcement_bar_8DdFdH": {
+      "type": "bso-announcement-bar",
+      "blocks": {
+        "content_6BqxTt": {
+          "type": "content",
+          "settings": {
+            "heading_desktop": "Aktion verlängert",
+            "heading_desktop_font_size": 20,
+            "heading_mobile": "Aktion verlängert",
+            "heading_mobile_font_size": 16,
+            "text_desktop": "<p>Bis zu -44% Rabatt sichern</p>",
+            "text_desktop_font_size": 15,
+            "text_mobile": "<p>Bis zu -44% Rabatt sichern</p>",
+            "text_mobile_font_size": 12,
+            "content_alignment": "center"
+          }
+        },
+        "timer_pyc7Jt": {
+          "type": "timer",
+          "settings": {
+            "year": "2026",
+            "month": "03",
+            "day": "1",
+            "hour": "23",
+            "minute": "59",
+            "show_success_message": false,
+            "text": "<p>Aktion beendet</p>"
+          }
+        },
+        "button_RgcG7D": {
+          "type": "button",
+          "settings": {
+            "button_link": "https://juskys.de/collections/sale",
+            "button": "Zur Aktion",
+            "button_color": "#ffffff",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "content_6BqxTt",
+        "timer_pyc7Jt",
+        "button_RgcG7D"
+      ],
+      "name": "BSO Announcement bar",
+      "settings": {
+        "text_color": "#000000",
+        "background_color": "#92c020",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0,
+        "lazyload_images": true,
+        "show_close_button": false,
+        "hide_when_timer_ends": true
+      }
+    },
+    "bso_announcement_bar_6acwBV": {
+      "type": "bso-announcement-bar",
+      "blocks": {
+        "content_ApcwNh": {
+          "type": "content",
+          "settings": {
+            "heading_desktop": "Frühlings Warm-Up",
+            "heading_desktop_font_size": 20,
+            "heading_mobile": "Frühlings Warm-Up",
+            "heading_mobile_font_size": 16,
+            "text_desktop": "<p>-20% auf alles. Code: SPRING</p>",
+            "text_desktop_font_size": 15,
+            "text_mobile": "<p>-20% auf alles. Code: SPRING</p>",
+            "text_mobile_font_size": 12,
+            "content_alignment": "center"
+          }
+        },
+        "timer_Gi6KrV": {
+          "type": "timer",
+          "disabled": true,
+          "settings": {
+            "year": "2026",
+            "month": "03",
+            "day": "8",
+            "hour": "23",
+            "minute": "59",
+            "show_success_message": false,
+            "text": "<p>Aktion beendet</p>"
+          }
+        },
+        "button_33rFhC": {
+          "type": "button",
+          "settings": {
+            "button_link": "https://juskys.de/collections/sale",
+            "button": "Zur Aktion",
+            "button_color": "#ffffff",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "content_ApcwNh",
+        "timer_Gi6KrV",
+        "button_33rFhC"
+      ],
+      "disabled": true,
+      "name": "BSO Announcement bar",
+      "settings": {
+        "text_color": "#000000",
+        "background_color": "#92c020",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0,
+        "lazyload_images": true,
+        "show_close_button": false,
+        "hide_when_timer_ends": true
+      }
+    },
+    "announcement": {
+      "type": "announcement",
+      "blocks": {
+        "reviews_io_widget_KTPDqF": {
+          "type": "reviews-io-widget",
+          "disabled": true,
+          "settings": {
+            "link": "https://www.reviews.io/product-reviews/store/juskys.de",
+            "text": "basierend auf [total] Bewertungen",
+            "text_color": "#545d6d"
+          }
+        },
+        "announcement-0": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "🧾 Kauf auf Rechnung",
+            "link_text": "",
+            "link": ""
+          }
+        },
+        "announcement-1": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "📦 KOSTENLOSER VERSAND (DE)",
+            "link_text": "",
+            "link": ""
+          }
+        },
+        "46da5b71-ce9b-487d-b966-69957add2a77": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "✔ SICHER & SCHNELL BEZAHLEN",
+            "link_text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "reviews_io_widget_KTPDqF",
+        "announcement-0",
+        "announcement-1",
+        "46da5b71-ce9b-487d-b966-69957add2a77"
+      ],
+      "disabled": true,
+      "settings": {
+        "announcement_compact": false
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "header-0": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Juskys_Logo_2021-2-min_1_43b2fbe4-203a-449b-8b1c-14c7cabac3a0_1.svg",
+            "logo-inverted": "shopify://shop_images/Juskys_Logo_2021-2-min_1_2e63c0a9-e39d-4a96-b3c0-08d5b1c8c787.png",
+            "desktop_logo_width": 160,
+            "mobile_logo_width": 110
+          }
+        }
+      },
+      "block_order": [
+        "header-0"
+      ],
+      "settings": {
+        "main_menu_link_list": "main-menu",
+        "link_text_color": "#c20000",
+        "hover_menu": true,
+        "mega_menu_images": false,
+        "main_menu_alignment": "left-center",
+        "header_style": "sticky",
+        "sticky_index": false,
+        "sticky_collection": false,
+        "choose_drawer_side": true,
+        "drawer_side": "left",
+        "force_icon_dawer_mobile_left": true,
+        "toolbar_menu": "",
+        "toolbar_social": false,
+        "show_locale_selector": false,
+        "show_currency_selector": false,
+        "show_currency_flags": false
+      }
+    }
+  },
+  "order": [
+    "bso_announcement_bar_8DdFdH",
+    "bso_announcement_bar_6acwBV",
+    "announcement",
+    "header"
+  ]
+}

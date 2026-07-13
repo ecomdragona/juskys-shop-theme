@@ -1,0 +1,297 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_GQ9Qep": {
+      "type": "slideshow",
+      "blocks": {
+        "image_pnaeA9": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "Garten & Gartenmöbel",
+            "title_size": 50,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/thema_garten_0c82e3a1-779a-47e2-a235-ae6b5c1cc000.jpg",
+            "image_mobile": "shopify://shop_images/thema_garten_0c82e3a1-779a-47e2-a235-ae6b5c1cc000.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 0,
+            "color_subheading": "#ffffff",
+            "color_heading": "#ffffff",
+            "color_text": "#ffffff",
+            "color_accent_1": "rgba(0,0,0,0)",
+            "color_accent_2": "rgba(0,0,0,0)",
+            "color_btn_text_check": true,
+            "color_accent_t_1": "#000000",
+            "color_accent_t_2": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "image_pnaeA9"
+      ],
+      "settings": {
+        "section_height": "natural",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5,
+        "lazyload_images": true
+      }
+    },
+    "5be5ea83-909b-4603-a37f-166c09b4aef6": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20174418477359__5be5ea83-909b-4603-a37f-166c09b4aef6-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Wünschst du dir einen idyllischen Rückzugsort oder doch eher einen actionreichen Spielplatz für deine Kinder? Mit unserer Kategorie <strong>Garten & Gartenmöbel </strong>hast du die Möglichkeit, deinen Außenbereich ganz nach deinen Vorstellungen zu gestalten und zu perfektionieren. Wir bieten nicht nur praktische Tipps zur Möbelpflege, sondern auch für mehr Privatsphäre. Informiere dich jetzt und werde zum wahren Gartenexperten.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--20174418477359__5be5ea83-909b-4603-a37f-166c09b4aef6-text-1"
+      ],
+      "settings": {
+        "spacings_desktop_top": 50,
+        "spacings_desktop_bottom": 0,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "align_text": "left",
+        "narrow_column": false,
+        "divider": false
+      }
+    },
+    "bd129321-1d70-499d-9b34-d50873226680": {
+      "type": "advanced-content",
+      "blocks": {
+        "a132b270-0f3e-423b-88d3-bf2fb91d6cf3": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/banner_news_aktuell.png",
+            "link": "",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "a132b270-0f3e-423b-88d3-bf2fb91d6cf3"
+      ],
+      "disabled": true,
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "full_width": false,
+        "space_around": true,
+        "lazyload_images": true
+      }
+    },
+    "f49ca3e1-0222-40e2-8fbb-f421d3cb97f5": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20174418477359__f49ca3e1-0222-40e2-8fbb-f421d3cb97f5-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Hier findest du unsere neusten Ratgeber-Artikel, aktuelle News zu unseren Produkten, spannende Informationen zu trendigen Themen und besondere Highlights aus der Haus & Garten Welt von Juskys.de.</p><p><strong>News & Aktuelles</strong> ist für dich immer auf dem neusten Stand.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--20174418477359__f49ca3e1-0222-40e2-8fbb-f421d3cb97f5-text-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "2d3628cc-a6ad-494b-8d9c-afa5d4e5f1bc": {
+      "type": "advanced-content",
+      "blocks": {
+        "template--20174418477359__2d3628cc-a6ad-494b-8d9c-afa5d4e5f1bc-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/icon_wohnen.png",
+            "link": "",
+            "width": "25%",
+            "alignment": "center"
+          }
+        },
+        "a7673b5e-b1b6-41af-ace8-f24857cb8f91": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/icon_garten_b8996fa2-33dc-4c90-9e0e-d2b16eee1aa9.png",
+            "link": "",
+            "width": "25%",
+            "alignment": "center"
+          }
+        },
+        "f7c1042f-de0e-43be-8bd0-0f78539cb527": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/icon_freizeit.png",
+            "link": "",
+            "width": "25%",
+            "alignment": "top-middle"
+          }
+        }
+      },
+      "block_order": [
+        "template--20174418477359__2d3628cc-a6ad-494b-8d9c-afa5d4e5f1bc-image-1",
+        "a7673b5e-b1b6-41af-ace8-f24857cb8f91",
+        "f7c1042f-de0e-43be-8bd0-0f78539cb527"
+      ],
+      "disabled": true,
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "full_width": false,
+        "space_around": false,
+        "lazyload_images": true
+      }
+    },
+    "main": {
+      "type": "blog-template",
+      "settings": {
+        "blog_show_tag_filter": true,
+        "blog_show_rss": false,
+        "blog_show_tags": false,
+        "blog_show_date": false,
+        "blog_show_comments": false,
+        "blog_show_author": false,
+        "blog_show_excerpt": false,
+        "blog_image_size": "wide"
+      }
+    },
+    "39864f71-17f0-40f3-a0a6-07f4de6cae9a": {
+      "type": "blog-posts",
+      "disabled": true,
+      "settings": {
+        "title": "Aktuell relevante Themen & neue Beiträge:",
+        "blog": "garten",
+        "post_limit": 9,
+        "blog_show_tags": false,
+        "blog_show_date": false,
+        "blog_show_comments": false,
+        "blog_show_author": false,
+        "view_all": true,
+        "blog_image_size": "wide",
+        "divider": false
+      }
+    },
+    "logo_list_rKy6hE": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_image_UnLFaB": {
+          "type": "logo_image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/icon_news.jpg",
+            "link": "shopify://blogs/news-updates"
+          }
+        },
+        "logo_image_kdihWA": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/icon_wohnen.jpg",
+            "link": "shopify://blogs/wohnen"
+          }
+        },
+        "logo_image_NXRpBE": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/icon_fitness.jpg",
+            "link": "shopify://blogs/freizeit"
+          }
+        },
+        "logo_image_9gG3La": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/icon_tierbedarf.jpg",
+            "link": "shopify://blogs/tiere"
+          }
+        },
+        "logo_image_9k7j8m": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/icon_wellness.jpg",
+            "link": "shopify://blogs/sauna"
+          }
+        }
+      },
+      "block_order": [
+        "logo_image_UnLFaB",
+        "logo_image_kdihWA",
+        "logo_image_NXRpBE",
+        "logo_image_9gG3La",
+        "logo_image_9k7j8m"
+      ],
+      "settings": {
+        "title": "",
+        "logo_opacity": 76,
+        "divider": false
+      }
+    },
+    "rich_text_WytjDE": {
+      "type": "rich-text",
+      "blocks": {
+        "button_r77nWz": {
+          "type": "button",
+          "settings": {
+            "link": "shopify://blogs/heim-garten-ratgeber",
+            "link_text": "Heim & Garten Ratgeber"
+          }
+        }
+      },
+      "block_order": [
+        "button_r77nWz"
+      ],
+      "settings": {
+        "spacings_desktop_top": 0,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "slideshow_GQ9Qep",
+    "5be5ea83-909b-4603-a37f-166c09b4aef6",
+    "bd129321-1d70-499d-9b34-d50873226680",
+    "f49ca3e1-0222-40e2-8fbb-f421d3cb97f5",
+    "2d3628cc-a6ad-494b-8d9c-afa5d4e5f1bc",
+    "main",
+    "39864f71-17f0-40f3-a0a6-07f4de6cae9a",
+    "logo_list_rKy6hE",
+    "rich_text_WytjDE"
+  ]
+}

@@ -1,0 +1,309 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "spacing_bottom": 50,
+        "spacing_bottom_header": 30
+      }
+    },
+    "f540dd6a-30aa-48c8-a707-e6cb1d1fb8a6": {
+      "type": "slideshow",
+      "blocks": {
+        "template--20758329262383__f540dd6a-30aa-48c8-a707-e6cb1d1fb8a6-image-1": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "Historie",
+            "title": "Entstehung und Erfolgsgeschichte",
+            "title_size": 80,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/2880x1621_Historie_60a8bcab-edd5-4541-8184-76d490942e2f.jpg",
+            "image_mobile": "shopify://shop_images/800x800-Historie_71d3ad15-b091-4111-8051-6c04edf78e3f.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 0,
+            "color_subheading": "#ffffff",
+            "color_heading": "#ffffff",
+            "color_text": "#ffffff",
+            "color_accent_1": "rgba(0,0,0,0)",
+            "color_accent_2": "rgba(0,0,0,0)",
+            "color_btn_text_check": true,
+            "color_accent_t_1": "#000000",
+            "color_accent_t_2": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "template--20758329262383__f540dd6a-30aa-48c8-a707-e6cb1d1fb8a6-image-1"
+      ],
+      "settings": {
+        "section_height": "650px",
+        "mobile_height": "auto",
+        "parallax": true,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5,
+        "lazyload_images": true
+      }
+    },
+    "c36253f2-0226-4112-aedb-508d73ab838a": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20758329262383__c36253f2-0226-4112-aedb-508d73ab838a-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "Rich text"
+          }
+        },
+        "template--20758329262383__c36253f2-0226-4112-aedb-508d73ab838a-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--20758329262383__c36253f2-0226-4112-aedb-508d73ab838a-heading-1",
+        "template--20758329262383__c36253f2-0226-4112-aedb-508d73ab838a-text-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "cce98c94-00c8-437f-b392-ea287f63d384": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20758329262383__cce98c94-00c8-437f-b392-ea287f63d384-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "Juskys Gruppe GmbH"
+          }
+        },
+        "template--20758329262383__cce98c94-00c8-437f-b392-ea287f63d384-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p><strong>Durch ständige Weiterentwicklung hin zu Millionenumsätzen</strong></p><p>Seit 2005 haben wir als E-Commerce Unternehmen ein einzigartiges Wachstum erzielt und sind mit unseren Produkten erfolgreich auf verschiedenen Plattformen und in unseren eigenen Onlineshops vertreten. Durch unsere stetige Weiterentwicklung erwirtschaften wir heute mit über 150 MitarbeiterInnen jährlich Millionenumsätze. Im Folgenden geben wir einen Rückblick auf unsere Entstehungsgeschichte und eindrucksvolle Entwicklung.</p><p><strong>- Gegründet 2005</strong></p><p><strong>- GmbH seit 2009</strong></p><p><strong>- 150+ Mitarbeiter</strong></p><p><strong>- Hauptsitz in Holle</strong></p><p><strong>- 100+ Lieferanten</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--20758329262383__cce98c94-00c8-437f-b392-ea287f63d384-heading-1",
+        "template--20758329262383__cce98c94-00c8-437f-b392-ea287f63d384-text-1"
+      ],
+      "settings": {
+        "spacings_desktop_top": 75,
+        "spacings_desktop_bottom": 75,
+        "spacings_mobile_top": 40,
+        "spacings_mobile_bottom": 40,
+        "align_text": "center",
+        "narrow_column": false,
+        "divider": false
+      }
+    },
+    "23631eee-26a4-4f64-bb52-e8c595cedea0": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/1_Content_History_Kategorie_StartUp_800x669px.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "2005 - 2006",
+        "title": "Gründung und erste Schritte",
+        "text": "<p>Im Jahr 2005 begannen Philipp Juskys und Claudia Rach-Juskys damit Ultraschallreiniger und Softeismaschinen über Ebay zu verkaufen. Qualitativ hochwertige Artikel und ein ausgezeichnetes Preis-Leistungs-Verhältnis waren schon damals die Erfolgsfaktoren. Deshalb entwickelten sich die Umsätze gut und schon im nächsten Jahr kam mit den Infrarotkabinen ein neues spannendes Produktsegment dazu. Die Wärmekabinen erzielten von Beginn an hohe Verkaufszahlen, so dass ein weiterer Ausbau des Unternehmens bevor stand.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "a6363ac0-d4f2-47e1-ad43-20d0dd2c5aa2": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/2_History_Kategorie_Salzgitter_800x669px.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "2007 - 2010",
+        "title": "Einzug in unseren Firmensitz in Salzgitter",
+        "text": "<p>Im eigenen Artsauna Onlineshop boten wir bereits 2007 ein großes Sortiment an Wärmekabinen an. Die geprüften Kabinen erfüllten von Anfang an die strengen europäischen Normen und gehören seitdem zu unseren Verkaufsschlagern. Parallel dazu erfolgte eine Erweiterung des Produktsortiments um Polyrattan Gartenmöbel, die bis heute einen wichtigen Teil des Gesamtumsatzes ausmachen. Im Jahr 2009 zogen wir mit der gesamten Firma nach Salzgitter. Durch die Bündelung der Kräfte entstanden umfangreiche Synergieeffekte und die verkehrsgünstige Lage in unmittelbarer Nähe zur A39 erleichterte den Warentransport.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "left",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "f8a3c804-19eb-43d3-8f1e-ae74d13f311c": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/3_Content_History_Kategorie_Produktpalette_800x669px.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "2011 - 2012",
+        "title": "Erweiterung der Produktpalette",
+        "text": "<p>Der Gesundheits- und Fitnessmarkt bot 2011 große Wachstumschancen. Wir entschieden uns daher, unter der Marke Artsport Laufbänder und Kraftstationen zu verkaufen. In unserer Ausstellung in Salzgitter gab es die Möglichkeit die Produkte zu begutachten und eine umfassende telefonische Beratung gehörte schon damals zu unseren Serviceleistungen. Die große Auswahl an unterschiedlichen Modellen in verschiedenen Ausführungen und Größen ermöglichte unseren Kunden, das optimale Produkt für ihr effektives Heimtraining zu finden.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "145fb539-d2b0-4e61-a77c-288074679d79": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/4_Content_History_Kategorie_Logistik_800x669px.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "2013 - 2016",
+        "title": "Ausbau der Logistikflächen & neuer Standort",
+        "text": "<p>Im Jahr 2013 erweiterten wir das Sortiment um zusätzliche Artikel in den Bereichen Wohnen und Tierbedarf. Um weiterhin eine hohe Warenverfügbarkeit zu garantieren und eine immer größer werdende Nachfrage zu bedienen, erwarben wir unser Logistiklager in Hohenhameln. Dies ermöglichte uns eine Vergrößerung des Sortiments im Bereich Wohnen. Ab sofort verkauften wir auch Saunakabinen, Polsterbetten und Boxspringbetten. Im Jahr 2015 verstärkten viele Fachkräfte das Team. Zu diesem Zeitpunkt arbeiteten über 25 MitarbeiterInnen fleißig für die Zufriedenheit der Kunden. 2016 erweiterten wir durch externe Dienstleister nochmals unsere Lagerflächenkapazität.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "left",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "4c0be04c-de8f-44f5-9edf-f0512256b22e": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/5_Content_History_Kategorie_Absatzkanaele_800x669px_047516b7-69d9-4523-a164-fc3b48dd2071.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "2017 - 2018",
+        "title": "Investition in weitere Logistikflächen und Absatzkanäle",
+        "text": "<p>Auch 2017 ging der Expansionskurs weiter, in Isernhagen entstand auf über 7.000 m² Lagerfläche ein Hochregallager. Dieser Schritt erhöhte die Warenverfügbarkeit und der Personalbestand stieg auf über 40 MitarbeiterInnen an. Im Zuge dieser Expansion konnten wir unser Sortiment 2018 stark vergrößern und mit Kaufland einen neuen Absatzkanal gewinnen.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "53372bcc-188a-4a38-a10d-661d931837c3": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/6_Content_History_Kategorie_WachstumCorona_800x669px.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "2019 - 2020",
+        "title": "Aufschwung im Onlinehandel",
+        "text": "<p>2019 und 2020 stiegen die Umsätze erneut stark an. Wir bestellten überdurchschnittlich viele Waren bei unseren Lieferanten nach. Um den zusätzlichen Bedarf zu decken, erwarben wir eine neue Logistikimmobilie in Hohenwestedt (in der Nähe von Hamburg). Insgesamt über 100 MitarbeiterInnen sorgten 2020 für einen Umsatzrekord und bewältigten die stark gestiegene Anzahl an Bestellungen. Somit kamen wir auf mehr als 1.000.000 verschickte Paketsendungen und 2.000 importierte Seecontainer im Jahr 2020.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "left",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "b34913f1-3dd9-481d-8b02-a6c7580f7676": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/7_History_Kategorie_Wachstum_800x669px.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "2021 - 2022",
+        "title": "Neues Bürogebäude und erneutes Wachstum",
+        "text": "<p>Wie in den Jahren zuvor kamen auch seit 2021 neue Produkte dazu. Wir bauten die Bereiche Garten, Wohnen und Heimtierbedarf weiter aus. Außerdem entschieden wir uns dazu, neue Logos für Juskys und ArtSport zu entwerfen. Wir ersetzen das eckige grün-blaue Juskys Logo durch ein rundes und dynamischer wirkendes grünes Logo. Im Sommer 2021 zogen wir zudem in unseren neuen Hauptstandort in Holle um. Die hellen Räumlichkeiten, die moderne technische Ausstattung sowie ein großes Workcafé sorgen für optimale Arbeitsbedingungen. Ende 2021 haben wir mit dem neuen 20.500 m² großen Lagerstandort in Hildesheim den Grundstein für weiteres Wachstum gelegt. Ein besonderes Highlight war unser erfolgreicher Start auf dem Marktplatz OTTO, der uns sogar mit dem OTTO-Market-Award in der Kategorie „Durchstarter des Jahres 2022“ auszeichnete. Wir haben uns als Firma enorm weiterentwickelt und planen auch in Zukunft mit modernen Produkten zu fairen Preisen für unsere Kunden da zu sein.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "text_and_image_wdCqWi": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/internationaliserung-globus-eu---klein.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "Seit 2023",
+        "title": "Wir wachsen weiter – auch international",
+        "text": "<p>Juskys ist weiterhin auf Erfolgskurs. Im Jahr 2023 haben wir unser Sortiment vor allem im Garten- und Wohnbereich erweitert, sodass Produkte rund um Camping, Outdoor-Saunen, Wohnmöbel wie Sofas und Esszimmerstühle hinzugekommen sind. Als dynamischer Onlinehändler setzen wir uns für eine bessere Zukunft ein und wurden zum Anbieter von Solarprodukten (Balkonkraftwerke, Wechselrichter, Solarmodule) für Endverbraucher. Damit leisten wir einen wertvollen Beitrag zur Energiewende. Aufgrund des starken Unternehmenswachstums wurde Daniel Heidrich Ende 2023 als zusätzlicher CEO in die Geschäftsführung berufen und führt jetzt zusammen mit Philipp Juskys (CEO) das Unternehmen. Seit Frühjahr 2023 sind wir auch international tätig. Nach einem erfolgreichen Start bei Amazon Frankreich erschließen wir mit Amazon Italien und Spanien weitere Märkte im Ausland. Ein weiteres Highlight war das 15-jährige Jubiläum der Juskys Gruppe GmbH im Jahr 2024.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "left",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "f540dd6a-30aa-48c8-a707-e6cb1d1fb8a6",
+    "c36253f2-0226-4112-aedb-508d73ab838a",
+    "cce98c94-00c8-437f-b392-ea287f63d384",
+    "23631eee-26a4-4f64-bb52-e8c595cedea0",
+    "a6363ac0-d4f2-47e1-ad43-20d0dd2c5aa2",
+    "f8a3c804-19eb-43d3-8f1e-ae74d13f311c",
+    "145fb539-d2b0-4e61-a77c-288074679d79",
+    "4c0be04c-de8f-44f5-9edf-f0512256b22e",
+    "53372bcc-188a-4a38-a10d-661d931837c3",
+    "b34913f1-3dd9-481d-8b02-a6c7580f7676",
+    "text_and_image_wdCqWi"
+  ]
+}
